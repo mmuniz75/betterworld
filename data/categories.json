@@ -1,0 +1,32 @@
+{
+    "categories" : [
+                {
+                    "id" : 1,
+                    "name": "saude"
+                },   
+                {
+                    "id" : 2,
+                    "name": "educação"
+                },   
+                {
+                    "id" : 3,
+                    "name": "energia"
+                },   
+                {
+                    "id" : 4,
+                    "name": "economia"
+                },   
+                {
+                    "id" : 5,
+                    "name": "alimentação"
+                },   
+                {
+                    "id" : 6,
+                    "name": "desenvolvimento pessoal"
+                },   
+                {
+                    "id" : 7,
+                    "name": "organização social"
+                }
+                ]
+}
