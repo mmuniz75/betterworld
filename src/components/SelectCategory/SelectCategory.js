@@ -3,13 +3,17 @@ import React from 'react';
 import './SelectCategory.css';
 
 const SelectCategory = (props) => (
-    <select className="SelectTest">
-        {props.categories.map(category => {
+    <select className="SelectTest" onChange={props.changed}>
+        <option defaultValue value="0">Escolha uma Categoria</option>
+        {
+        props.categories?     
+            props.categories.map(category => {
                 return (
-                    <option key={category.id} value={category.id}>{category.name}</option>
+                    <option key={category.id} value={category.name}>{category.name}</option>
                 )    
             })
-        }
+            :null        }
+
     </select>
 
 )
