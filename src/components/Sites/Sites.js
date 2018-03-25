@@ -3,32 +3,23 @@ import React from 'react';
 import './Sites.css';
 
 const Sites = (props) => (
-    <div style={!props.show?{display:'none'}:null}>
-        <table border="1">
-            <tbody>
-                <tr>
-                    <th>Nome</th>
-                    <th>Descricao</th>
-                    <th>Site</th>
-                </tr>
 
+       <ul style={!props.show?{display:'none'}:null} className="product-list-vertical">
                 {props.sites?props.sites.map(site => {
                     return (
-                        <tr key={site.nome} >
-                            <td>{site.nome}</td>
-                            <td><textarea rows="5" cols="100" readOnly
-                                    value={site.descrição}
-                                />
-                            </td>
-                            <td><a target="blank" href={site.site}>{site.site}</a></td>
-                        </tr>
+                        <li key={site.nome}>
+                            <div className="product-details">
+                                <h2>{site.nome}</h2>
+                                <p className="product-description">{site.descrição}</p>
+                                <button onClick={() => window.open(site.site)}>More info</button>
+                            </div>
+                        </li>
                     )
                     }      
                   ):null
                 }
-            </tbody>    
-        </table>
-    </div>    
+        </ul>
+   
 )
 
 export default Sites;
