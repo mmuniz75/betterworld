@@ -27,7 +27,7 @@ class Home extends Component {
             .then(response => {
                 const categoriesLoaded = [];
                 Object.keys(response.data).map(key => {
-                    categoriesLoaded.push(response.data[key])
+                    return categoriesLoaded.push(response.data[key])
                 }
 
                 );
@@ -43,7 +43,6 @@ class Home extends Component {
     }
 
     getData = (data, tabletop) => {
-        console.log(data);
         this.setState({sites:data})
     }
 
