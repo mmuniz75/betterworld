@@ -56,13 +56,10 @@ class Home extends Component {
     render(){
         return (
             <div className="Home">
-                <h1>Veja como o mundo esta mudando</h1>
-                <p>
                 <SelectCategory 
                     categories={this.state.categories}
                     changed={(event) => this.showSitesHandler(event)}
                 />
-                </p>
                 <Sites show={this.state.showSites} sites={this.state.sitesFromCategory}/>
             </div>    
         )
