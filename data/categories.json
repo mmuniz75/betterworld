@@ -2,31 +2,38 @@
     "categories" : [
                 {
                     "id" : 1,
-                    "name": "saude"
+                    "name": "Saude",
+                    "active" : false
                 },   
                 {
                     "id" : 2,
-                    "name": "educação"
+                    "name": "Educação",
+                    "active" : false
                 },   
                 {
                     "id" : 3,
-                    "name": "energia"
+                    "name": "Energia",
+                    "active" : true
                 },   
                 {
                     "id" : 4,
-                    "name": "economia"
+                    "name": "Economia",
+                    "active" : true
                 },   
                 {
                     "id" : 5,
-                    "name": "alimentação"
+                    "name": "Alimentação",
+                    "active" : false
                 },   
                 {
                     "id" : 6,
-                    "name": "desenvolvimento pessoal"
+                    "name": "Desenvolvimento Pessoal",
+                    "active" : false
                 },   
                 {
                     "id" : 7,
-                    "name": "organização social"
+                    "name": "Organização Social",
+                    "active" : true
                 }
                 ]
 }

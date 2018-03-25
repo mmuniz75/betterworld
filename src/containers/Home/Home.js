@@ -9,6 +9,9 @@ import './Home.css';
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 
+const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
+//const categoriesURL = '/categories.json';
+
 class Home extends Component {
         
     state = {
@@ -20,9 +23,15 @@ class Home extends Component {
 
     componentDidMount= () => {
         if(!this.state.categories) {
-            axios.get('/categories.json')
+            axios.get(categoriesURL)
             .then(response => {
-                this.setState({categories:response.data})
+                const categoriesLoaded = [];
+                Object.keys(response.data).map(key => {
+                    categoriesLoaded.push(response.data[key])
+                }
+
+                );
+                this.setState({categories:categoriesLoaded})
             })
         }
 
