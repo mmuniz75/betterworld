@@ -1,4 +1,4 @@
-div { 
+.SelectCategory { 
     width: 100%;
     align-content: center;
     list-style:none;
@@ -7,7 +7,7 @@ div {
     margin-bottom: 50px;
  }
 
- h1 { color: #fff; 
+ .SelectCategory h1 { color: #fff; 
       font-family: 'Righteous', cursive; 
       font-size: 35px; 
       font-weight: normal; 
@@ -17,7 +17,7 @@ div {
       text-shadow: 2px 2px 0 #000; 
       text-align: center; }
 
-#mainselection select {
+.MainSelection select {
    border: 0;
    color:slateblue;
    background: transparent;
@@ -30,7 +30,7 @@ div {
    -webkit-appearance: none;
 }
 
-#mainselection {
+.MainSelection {
    overflow:hidden;
    width:350px;
    -moz-border-radius: 9px 9px 9px 9px;

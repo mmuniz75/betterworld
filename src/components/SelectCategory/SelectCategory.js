@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './SelectCategory.css';
+import classes from './SelectCategory.css';
 
 const SelectCategory = (props) => (
-    <div>
+    <div className={classes.SelectCategory}>
         <h1>Vejam inicativas que ajudam a tornar o mundo melhor</h1>
         
-        <div id="mainselection">
+        <div className={classes.MainSelection}>
             <select  onChange={props.changed}>
                 <option defaultValue value="0">Escolha uma Categoria</option>
                 {
