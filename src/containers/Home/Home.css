@@ -1,0 +1,19 @@
+.Home { 
+    width: 100%;
+    align-content: center;
+    list-style:none;
+    max-width: 600px;
+    margin: 10px auto;
+    margin-bottom: 50px;
+ }
+
+ 
+ .Home h1 { color: #fff; 
+      font-family: 'Righteous', cursive; 
+      font-size: 35px; 
+      font-weight: normal; 
+      line-height: 60px; 
+      margin: 10px 0 20px; 
+      text-transform: uppercase; 
+      text-shadow: 2px 2px 0 #000; 
+      text-align: center; }
