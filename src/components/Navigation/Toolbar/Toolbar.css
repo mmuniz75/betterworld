@@ -4,10 +4,11 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #703B09;
+    
+    background: linear-gradient(#093d07, #91ce50);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 90;

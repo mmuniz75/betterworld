@@ -21,17 +21,18 @@ class Layout extends Component {
         } );
     }
 
-    render () {
+    render () { 
         return (
             <Auxiliary>
-                <Toolbar
-                    isAuth={this.props.isAuthenticated}
-                    drawerToggleClicked={this.sideDrawerToggleHandler} />
-                <SideDrawer
-                    isAuth={this.props.isAuthenticated}
-                    open={this.state.showSideDrawer}
-                    closed={this.sideDrawerClosedHandler} />
-                <main className={classes.Content}>
+                    <Toolbar
+                        isAuth={this.props.isAuthenticated}
+                        drawerToggleClicked={this.sideDrawerToggleHandler} />
+                    <SideDrawer
+                        isAuth={this.props.isAuthenticated}
+                        open={this.state.showSideDrawer}
+                        closed={this.sideDrawerClosedHandler} />
+                <main className={classes.Layout}>
+                    <h1>Vejam inicativas que ajudam a tornar o mundo melhor</h1>
                     {this.props.children}
                 </main>
             </Auxiliary>
@@ -41,7 +42,8 @@ class Layout extends Component {
 
 const mapStateToProps = state => {
     return {
-        isAuthenticated: state.auth.token !== null
+        //isAuthenticated: state.auth.token !== null
+        isAuthenticated: true
     };
 };
 

@@ -8,6 +8,8 @@ import { createStore, compose, combineReducers } from 'redux';
 import categoryReducer from './store/reducers/category';
 //import authReducer from './store/reducers/auth';
 
+import './index.css';
+
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 

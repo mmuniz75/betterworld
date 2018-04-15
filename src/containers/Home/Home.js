@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
-
 import SelectCategory from '../../components/SelectCategory/SelectCategory';
 import Sites from '../../components/Sites/Sites';
 import * as actionTypes from '../../store/reducers/category';
@@ -83,8 +82,9 @@ class Home extends Component {
         }    
     }
 
-    editSite(id){
+    editSite = (id) => {
         console.log(id);
+        this.props.history.push('/siteData');
     }
 
     render(){
@@ -104,7 +104,6 @@ class Home extends Component {
         }    
         return (
             <div className={classes.Home}>
-                <h1>Vejam inicativas que ajudam a tornar o mundo melhor</h1>
                 {categories}
                 <br/>
                 {sites}

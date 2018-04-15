@@ -6,7 +6,7 @@ const Sites = (props) => (
         <ul style={!props.show?{display:'none'}:null} className={classes.Sites}>
                     {props.sites?props.sites.map(site => {
                         return (
-                            <li key={site.nome}>
+                            <li key={site.id}>
                                 <div className={classes.ProductDetails}>
                                     <h2>{site.name}</h2>
                                     <p className={classes.ProductDescription}>{site.description}</p>
