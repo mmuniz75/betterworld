@@ -8,9 +8,11 @@ const Sites = (props) => (
                         return (
                             <li key={site.nome}>
                                 <div className={classes.ProductDetails}>
-                                    <h2>{site.nome}</h2>
-                                    <p className={classes.ProductDescription}>{site.descrição}</p>
+                                    <h2>{site.name}</h2>
+                                    <p className={classes.ProductDescription}>{site.description}</p>
                                     <button onClick={() => window.open(site.site)}>Veja mais</button>
+                                    &nbsp;
+                                    <button onClick={() => props.edit(site.id)}>Editar</button>
                                 </div>
                             </li>
                         )

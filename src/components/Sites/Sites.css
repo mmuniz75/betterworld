@@ -26,6 +26,7 @@
 .ProductDetails{
     max-width: 100%;
     float: center;
+    margin: 10px;
 }
 
 /* Product title */

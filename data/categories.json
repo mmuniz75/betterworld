@@ -34,6 +34,11 @@
                     "id" : 7,
                     "name": "Organização Social",
                     "active" : true
+                },
+                {
+                    "id" : 8,
+                    "name": "Ecologia",
+                    "active" : true
                 }
                 ]
 }

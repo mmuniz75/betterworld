@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import SelectCategory from '../../components/SelectCategory/SelectCategory';
 import Sites from '../../components/Sites/Sites';
 import * as actionTypes from '../../store/reducers/category';
-import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
 import axios from '../../axios';
@@ -16,16 +15,31 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 
 const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
+const sitesURL = '/sites.json?orderBy="category"&equalTo=';
 
 class Home extends Component {
         
     state = {
         sites : null,
         showSites : false,
-        sitesFromCategory : null
+        sitesFromCategory : null,
+        loading : false
     }
 
     componentDidMount= () => {
+        this.loadCategories();
+        //this.loadSitesFromSpreedSheet();
+    }
+
+    loadSitesFromSpreedSheet(){
+        if(!this.state.sites) {
+            window.Tabletop.init( { key: publicSpreadsheetUrl,
+                            callback: this.getData,
+                            simpleSheet: true } )
+        }  
+    }
+
+    loadCategories(){
         if(this.props.categories.length===0) {
             this.props.onFetchCategoriesStart();
             axios.get(categoriesURL)
@@ -42,12 +56,6 @@ class Home extends Component {
                 this.props.onFetchCategoriesFail(error);
             } );
         }
-
-        if(!this.state.sites) {
-            window.Tabletop.init( { key: publicSpreadsheetUrl,
-                            callback: this.getData,
-                            simpleSheet: true } )
-        }                 
     }
 
     getData = (data, tabletop) => {
@@ -60,13 +68,23 @@ class Home extends Component {
         if (category==='0'){
             this.setState({showSites:false});
         }else { 
-            
-            const sitesByCategory = this.state.sites.filter(site => {
-                return site.categoria===category;
+            this.setState({loading:true});
+            axios.get(sitesURL + '"' + category + '"')
+            .then(response => {
+                const sitesLoaded = [];
+                Object.keys(response.data).map(key => {
+                    return sitesLoaded.push(response.data[key])
+                });
+                this.setState({sitesFromCategory:sitesLoaded ,showSites:true,loading:false}); 
             })
-            
-            this.setState({sitesFromCategory:sitesByCategory ,showSites:true}); 
+            .catch( error => {
+                console.log(error);
+            })
         }    
+    }
+
+    editSite(id){
+        console.log(id);
     }
 
     render(){
@@ -76,15 +94,20 @@ class Home extends Component {
                             categories={this.props.categories}
                             changed={(event) => this.showSitesHandler(event)}
                           />
+        }
+        
+        let sites = <Spinner />;
+        if ( !this.state.loading ) {
+            sites = <Sites show={this.state.showSites} 
+                            sites={this.state.sitesFromCategory}
+                            edit={this.editSite}/>
         }    
         return (
             <div className={classes.Home}>
                 <h1>Vejam inicativas que ajudam a tornar o mundo melhor</h1>
                 {categories}
                 <br/>
-                <div>
-                    <Sites show={this.state.showSites} sites={this.state.sitesFromCategory}/>
-                </div>
+                {sites}
             </div>
             
         )
