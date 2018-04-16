@@ -2,12 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
+import axios from 'axios';
+
 import Input from '../../components/UI/Input/Input';
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import Modal from '../../components/UI/Modal/Modal';
+
+import {checkAuthTimeout} from '../../shared/auth';
+
 import classes from './Auth.css';
-import * as actions from '../../store/actions/index';
+import * as actionTypes from '../../store/reducers/auth';
 import { updateObject, checkValidity } from '../../shared/utility';
+
+const AUTH_URL = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCEZ0Vr-6LjTQkji4xZuA79_LI_d6tNmUc';
 
 class Auth extends Component {
     state = {
@@ -16,7 +24,7 @@ class Auth extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'email',
-                    placeholder: 'Mail Address'
+                    placeholder: 'Email'
                 },
                 value: '',
                 validation: {
@@ -30,7 +38,7 @@ class Auth extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'password',
-                    placeholder: 'Password'
+                    placeholder: 'Senha'
                 },
                 value: '',
                 validation: {
@@ -41,15 +49,12 @@ class Auth extends Component {
                 touched: false
             }
         },
-        isSignup: true
+        isSignup: true,
+        loading : false,
+        error: null
     }
 
-    componentDidMount () {
-        if ( !this.props.buildingBurger && this.props.authRedirectPath !== '/' ) {
-            this.props.onSetAuthRedirectPath();
-        }
-    }
-
+    
     inputChangedHandler = ( event, controlName ) => {
         const updatedControls = updateObject( this.state.controls, {
             [controlName]: updateObject( this.state.controls[controlName], {
@@ -63,15 +68,39 @@ class Auth extends Component {
 
     submitHandler = ( event ) => {
         event.preventDefault();
-        this.props.onAuth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
+        this.auth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
     }
 
-    switchAuthModeHandler = () => {
-        this.setState( prevState => {
-            return { isSignup: !prevState.isSignup };
-        } );
-    }
+    auth = (email, password) => {
+        this.setState({loading:true});
+        const authData = {
+            email: email,
+            password: password,
+            returnSecureToken: true
+        };
+        //let new_user_url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDBu0iJZdxv9QYssqaADenC747Bwg4J2bA';
+            
+        axios.post(AUTH_URL, authData)
+            .then(response => {
+                const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
+                localStorage.setItem('token', response.data.idToken);
+                localStorage.setItem('expirationDate', expirationDate);
+                localStorage.setItem('userId', response.data.localId);
+                this.props.onAuth(response.data.idToken, response.data.localId);
+                checkAuthTimeout(this.props,response.data.expiresIn);
+                this.setState({loading:false});
+            })
+            .catch(err => {
+                this.setState({loading:false,error:err.response.data.error});
+            });
+      
+    };
 
+    cancelLogin = (event) => {
+        event.preventDefault();
+        this.props.history.goBack();
+    }
+    
     render () {
         const formElementsArray = [];
         for ( let key in this.state.controls ) {
@@ -93,53 +122,59 @@ class Auth extends Component {
                 changed={( event ) => this.inputChangedHandler( event, formElement.id )} />
         ) );
 
-        if ( this.props.loading ) {
+        if ( this.state.loading ) {
             form = <Spinner />
         }
 
         let errorMessage = null;
 
-        if ( this.props.error ) {
+        if ( this.state.error ) {
             errorMessage = (
-                <p>{this.props.error.message}</p>
+                <p>{this.state.error.message}</p>
             );
         }
 
         let authRedirect = null;
         if ( this.props.isAuthenticated ) {
-            authRedirect = <Redirect to={this.props.authRedirectPath} />
+            authRedirect = <Redirect to='/' />
         }
 
         return (
-            <div className={classes.Auth}>
-                {authRedirect}
-                {errorMessage}
-                <form onSubmit={this.submitHandler}>
-                    {form}
-                    <Button btnType="Success">SUBMIT</Button>
-                </form>
-                <Button
-                    clicked={this.switchAuthModeHandler}
-                    btnType="Danger">SWITCH TO {this.state.isSignup ? 'SIGNIN' : 'SIGNUP'}</Button>
-            </div>
+                <Modal show>
+                <div className={classes.Auth}>
+                    <h3>Login</h3>
+                    {authRedirect}
+                    {errorMessage}
+                    <form onSubmit={this.submitHandler}>
+                        {form}
+                        <Button btnType="Success">Logar</Button>
+                        <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
+                    </form>
+                </div>
+                </Modal>
+            
         );
     }
 }
 
+
+
 const mapStateToProps = state => {
     return {
-        loading: state.auth.loading,
-        error: state.auth.error,
         isAuthenticated: state.auth.token !== null,
-        buildingBurger: state.burgerBuilder.building,
-        authRedirectPath: state.auth.authRedirectPath
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAuth: ( email, password, isSignup ) => dispatch( actions.auth( email, password, isSignup ) ),
-        onSetAuthRedirectPath: () => dispatch( actions.setAuthRedirectPath( '/' ) )
+        onAuth: ( token, userId ) => dispatch( {
+                                             type: actionTypes.AUTH_SUCCESS,
+                                             idToken: token,
+                                             userId: userId
+                                            }),
+        onLogout: () => dispatch( {
+                                    type: actionTypes.AUTH_LOGOUT
+                                  } ),
     };
 };
 

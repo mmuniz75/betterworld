@@ -1,21 +1,41 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import Home from './containers/Home/Home';
 import Layout from './hoc/Layout/Layout';
 
 import asyncComponent from './hoc/asyncComponent/asyncComponent';
 
+import {authCheckState} from './shared/auth'
+
+import * as actionTypes from './store/reducers/auth';
+
 const asyncSiteData = asyncComponent(() => {
   return import('./containers/SiteData/SiteData');
 });
 
+const asyncLogin = asyncComponent(() => {
+  return import('./containers/Auth/Auth');
+});
+
+const asyncLogout = asyncComponent(() => {
+  return import('./containers/Auth/Logout/Logout');
+});
+
 class App extends Component {
+
+  componentDidMount () {
+    authCheckState(this.props);
+  }
+
   render() {
     let routes = (
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
+        <Route path="/login" exact component={asyncLogin} />
+        <Route path="/logout" exact component={asyncLogout} />
         <Redirect to="/" />
       </Switch>
     );
@@ -28,4 +48,26 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.auth.token !== null
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+      onAuth: ( token, userId ) => dispatch( {
+                                           type: actionTypes.AUTH_SUCCESS,
+                                           idToken: token,
+                                           userId: userId
+                                          }),
+      onLogout: () => dispatch( {
+                                  type: actionTypes.AUTH_LOGOUT
+                                } ),
+  };
+};
+
+
+
+export default withRouter(connect( mapStateToProps,mapDispatchToProps )(App)) ;
+

@@ -168,7 +168,7 @@ class SiteData extends Component {
         return (
             <Modal show>
                 <div className={classes.SiteData}>
-                    <h4>Cadastre um Site que pode ajudar a tornar o mundo melhor</h4>
+                    <h3>Cadastre um Site que pode ajudar a tornar o mundo melhor</h3>
                     <div>
                     {form}
                     </div>
