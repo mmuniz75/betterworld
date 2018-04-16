@@ -18,7 +18,7 @@ class SiteData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Site Name'
+                    placeholder: 'Nome do Site'
                 },
                 value: '',
                 validation: {
@@ -28,10 +28,11 @@ class SiteData extends Component {
                 touched: false
             },
             description: {
-                elementType: 'input',
+                elementType: 'textarea',
                 elementConfig: {
-                    type: 'text',
-                    placeholder: 'Description'
+                    type: 'text-area',
+                    placeholder: 'Descrição',
+                    rows:6 
                 },
                 value: '',
                 validation: {
@@ -40,7 +41,7 @@ class SiteData extends Component {
                 valid: false,
                 touched: false
             },
-            url: {
+            site: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
@@ -53,15 +54,12 @@ class SiteData extends Component {
                 valid: false,
                 touched: false
             },
-            categoryMethod: {
+            category: {
                 elementType: 'select',
                 elementConfig: {
-                    options: [
-                        {value: 'Economia', displayValue: 'Economia'},
-                        {value: 'Ecologia', displayValue: 'Ecologia'}
-                    ]
+                    options: []
                 },
-                value: '',
+                value: 'Saude',
                 validation: {
                     required: true,
                 },
@@ -69,6 +67,32 @@ class SiteData extends Component {
             }
         },
         formIsValid: false
+    }
+
+    componentDidMount = () => {
+
+        const categoryOptions = this.props.categories.map(category => {
+            return {
+                value:category.name,
+                displayValue:category.name,
+            }
+        }
+        );
+
+        const updatedElementConfig = updateObject(this.state.siteForm.category.elementConfig, {
+            options: categoryOptions
+        });
+
+        const updatedFormElement = updateObject(this.state.siteForm.category, {
+            elementConfig: updatedElementConfig
+        });
+
+        const updatedSiteForm = updateObject(this.state.siteForm, {
+            category: updatedFormElement
+        });
+
+        this.setState({ siteForm : updatedSiteForm});
+       
     }
 
     submitHandler = ( event ) => {
@@ -89,7 +113,8 @@ class SiteData extends Component {
         
     }
 
-    cancelHandler = () => {
+    cancelHandler = (event) => {
+        event.preventDefault();
         this.props.history.goBack();
     }
 
@@ -132,9 +157,9 @@ class SiteData extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button btnType="Success" disabled={!this.state.formIsValid}>Save</Button>
+                <Button btnType="Success" disabled={!this.state.formIsValid}>Adicionar</Button>
                 &nbsp;
-                <Button btnType="Danger" clicked={this.cancelHandler}>Cancel</Button>
+                <Button btnType="Danger" clicked={this.cancelHandler}>Cancelar</Button>
             </form>
         );
         if ( this.props.loading ) {
@@ -143,8 +168,10 @@ class SiteData extends Component {
         return (
             <Modal show>
                 <div className={classes.SiteData}>
-                    <h4>Enter your Site Data</h4>
+                    <h4>Cadastre um Site que pode ajudar a tornar o mundo melhor</h4>
+                    <div>
                     {form}
+                    </div>
                 </div>
             </Modal>
         );

@@ -11,8 +11,10 @@ const Sites = (props) => (
                                     <h2>{site.name}</h2>
                                     <p className={classes.ProductDescription}>{site.description}</p>
                                     <button onClick={() => window.open(site.site)}>Veja mais</button>
+                                    {/*
                                     &nbsp;
                                     <button onClick={() => props.edit(site.id)}>Editar</button>
+                                    */}
                                 </div>
                             </li>
                         )
