@@ -33,7 +33,7 @@ class Home extends Component {
     loadSitesFromSpreedSheet(){
         if(!this.state.sites) {
             window.Tabletop.init( { key: publicSpreadsheetUrl,
-                            callback: this.getData,
+                            callback: this.importData,
                             simpleSheet: true } )
         }  
     }
@@ -57,8 +57,9 @@ class Home extends Component {
         }
     }
 
-    getData = (data, tabletop) => {
-        this.setState({sites:data})
+    importData = (data, tabletop) => {
+        //this.setState({sites:data})
+        //axios.post('/sites.json?auth=' + this.props.token,data);
     }
 
     showSitesHandler = (event) => {
@@ -116,7 +117,8 @@ class Home extends Component {
 const mapStateToProps = state => {
     return {
         categories: state.category.categories,
-        categoryLoading: state.category.loading
+        categoryLoading: state.category.loading,
+        token : state.auth.token
     };
 };
 

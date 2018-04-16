@@ -98,12 +98,18 @@ class SiteData extends Component {
     submitHandler = ( event ) => {
         event.preventDefault();
   
-        const formData = {};
+        const formData = {
+            userId : this.props.userId,
+            logo : '',
+            id : (Date.now() + Math.random()).toFixed(0),
+            active : true
+        };
+
         for (let formElementIdentifier in this.state.siteForm) {
             formData[formElementIdentifier] = this.state.siteForm[formElementIdentifier].value;
         }
         
-        axios.post('/sites.json',formData)
+        axios.post('/sites.json?auth=' + this.props.token,formData)
         .then( response => {
             this.props.history.replace( '/' );
         } )
@@ -181,6 +187,8 @@ class SiteData extends Component {
 const mapStateToProps = state => {
     return {
         categories: state.category.categories,
+        userId : state.auth.userId,
+        token : state.auth.token
     }
 };
 
