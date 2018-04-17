@@ -10,11 +10,12 @@ import axios from '../../axios';
 import classes from './Home.css';
 
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+import {SITES_URL} from '../../shared/consts';
+
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
-
 const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
-const sitesURL = '/sites.json?orderBy="category"&equalTo=';
+const sitesURL = SITES_URL + '?orderBy="category"&equalTo=';
 
 class Home extends Component {
         

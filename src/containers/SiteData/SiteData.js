@@ -11,6 +11,8 @@ import Input from '../../components/UI/Input/Input';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'
 import { updateObject, checkValidity } from '../../shared/utility';
 
+import {SITES_URL} from '../../shared/consts';
+
 class SiteData extends Component {
     state = {
         siteForm: {
@@ -52,6 +54,18 @@ class SiteData extends Component {
                     required: true,
                 },
                 valid: false,
+                touched: false
+            },
+            logo: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Logo URL'
+                },
+                value: '',
+                validation: {
+                },
+                valid: true,
                 touched: false
             },
             category: {
@@ -109,7 +123,7 @@ class SiteData extends Component {
             formData[formElementIdentifier] = this.state.siteForm[formElementIdentifier].value;
         }
         
-        axios.post('/sites.json?auth=' + this.props.token,formData)
+        axios.post(SITES_URL + '?auth=' + this.props.token,formData)
         .then( response => {
             this.props.history.replace( '/' );
         } )

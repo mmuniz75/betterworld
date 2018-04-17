@@ -1,0 +1,1 @@
+export const SITES_URL = process.env.NODE_ENV === 'development' ? '/sites_dev.json' : '/sites.json';
