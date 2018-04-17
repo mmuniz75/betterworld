@@ -32,7 +32,7 @@ class Layout extends Component {
                         open={this.state.showSideDrawer}
                         closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Layout}>
-                    <h1>Vejam inicativas que ajudam a tornar o mundo melhor</h1>
+                    <h1>Vejam iniciativas que ajudam a tornar o mundo melhor</h1>
                     {this.props.children}
                 </main>
             </Auxiliary>
