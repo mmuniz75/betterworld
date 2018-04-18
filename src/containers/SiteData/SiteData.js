@@ -126,7 +126,7 @@ class SiteData extends Component {
         
         const url = this.props.isAuthenticated
                      ?SITES_URL+ '?auth=' + this.props.token
-                     :SITES_SUGEST_URL;
+                     :SITES_SUGEST_URL + '.json';
 
         axios.post(url ,formData)
         .then( response => {
@@ -190,7 +190,7 @@ class SiteData extends Component {
                 <Button btnType="Danger" clicked={this.cancelHandler}>Cancelar</Button>
             </form>
         );
-        if ( this.props.loading ) {
+        if ( this.state.loading ) {
             form = <Spinner />;
         }
 

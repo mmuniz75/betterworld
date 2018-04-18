@@ -47,7 +47,7 @@
 
 /* Product button and price */
 
-.ProductDetails button{
+.RegularButton{
     border-radius: 2px;
     background-color:  #87bae1;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
@@ -61,6 +61,33 @@
     height: 32px;
 }
 
+.ButtonReject{
+    border-radius: 2px;
+    background-color:  #87bae1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    border: 0;
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+
+    width: 95px;
+    height: 32px;
+}
+
+.ButtonApprove{
+    border-radius: 2px;
+    background-color:  #87bae1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    border: 0;
+    color: green;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+
+    width: 95px;
+    height: 32px;
+}
 /* Making the product list responsive */
 
 @media (max-width: 600px){
