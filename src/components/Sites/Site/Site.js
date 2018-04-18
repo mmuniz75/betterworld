@@ -31,11 +31,12 @@ const Site = (props) => {
         <Auxliary>
             {image}
             <div className={classes.ProductDetails}>
-                <h2>{props.name}&nbsp;{categoryLabel}</h2>
+                <h2>{props.name}</h2>
+                <h3>{categoryLabel}</h3>
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <button className={classes.RegularButton} 
                           onClick={() => window.open(props.site)}>Veja mais</button>   
-                &nbsp;
+                <br/><br/>
                 {buttons}
                 
                 {/*
