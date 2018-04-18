@@ -1,0 +1,8 @@
+.SiteSugest { 
+    width: 100%;
+    align-content: center;
+    list-style:none;
+    max-width: 600px;
+    margin: 10px auto;
+    margin-bottom: 50px;
+ }

@@ -5,10 +5,16 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 const navigationItems = ( props ) => (
     <ul className={classes.NavigationItems}>
-        <NavigationItem emailLink >Fale Conosco</NavigationItem>
         {props.isAuthenticated 
-            ? <NavigationItem link="/SiteData">Adicione um Site</NavigationItem> 
-            : <NavigationItem link="/SiteData">Sugira um Site</NavigationItem> }
+            ? <NavigationItem link="/sites">Sites</NavigationItem> 
+            : null}    
+        {props.isAuthenticated 
+            ? <NavigationItem link="/siteData">Adicione um Site</NavigationItem> 
+            : <NavigationItem link="/siteData">Sugira um Site</NavigationItem> }
+        {props.isAuthenticated 
+            ? <NavigationItem link="/sugest">Sugestões de Site</NavigationItem> 
+            : null}    
+        <NavigationItem emailLink >Fale Conosco</NavigationItem>
         {!props.isAuthenticated
             ? <NavigationItem link="/login">Login</NavigationItem>
             : <NavigationItem link="/logout">Logout</NavigationItem>}

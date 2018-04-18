@@ -23,6 +23,10 @@ const asyncLogout = asyncComponent(() => {
   return import('./containers/Auth/Logout/Logout');
 });
 
+const asyncSugest = asyncComponent(() => {
+  return import('./containers/SiteSugest/SiteSugest');
+});
+
 class App extends Component {
 
   componentDidMount () {
@@ -32,11 +36,13 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
+        <Route path="/sites" exact component={Home} />
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />
         <Route path="/logout" exact component={asyncLogout} />
-        <Redirect to="/" />
+        <Route path="/sugest" exact component={asyncSugest} />
+        <Redirect to="/sites" />
       </Switch>
     );
 

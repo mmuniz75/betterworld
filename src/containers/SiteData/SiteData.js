@@ -110,6 +110,7 @@ class SiteData extends Component {
     }
 
     submitHandler = ( event ) => {
+        this.setState({loading:true});
         event.preventDefault();
 
         const formData = {
@@ -129,6 +130,7 @@ class SiteData extends Component {
 
         axios.post(url ,formData)
         .then( response => {
+            this.setState({loading:false});
             if (response) {
                 this.props.history.replace( '/' );
             }    
