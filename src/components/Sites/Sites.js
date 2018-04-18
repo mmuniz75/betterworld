@@ -6,7 +6,7 @@ const Sites = (props) => (
         <ul style={!props.show?{display:'none'}:null} className={classes.Sites}>
                     {props.sites?props.sites.map(site => {
                         const image = site.logo? <a className={classes.ProductPhoto}>
-                                                    <img src={site.logo} height="160" width="160" />
+                                                    <img src={site.logo} height="160" width="160" alt={site.site}/>
                                                 </a>
                                       :null          
 

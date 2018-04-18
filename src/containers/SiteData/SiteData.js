@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import Modal from '../../components/UI/Modal/Modal';
 
 import classes from './SiteData.css';
 import axios from '../../axios'
@@ -12,6 +11,7 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'
 import { updateObject, checkValidity } from '../../shared/utility';
 
 import {SITES_URL} from '../../shared/consts';
+import {SITES_SUGEST_URL} from '../../shared/consts';
 
 class SiteData extends Component {
     state = {
@@ -111,7 +111,7 @@ class SiteData extends Component {
 
     submitHandler = ( event ) => {
         event.preventDefault();
-  
+
         const formData = {
             userId : this.props.userId,
             logo : '',
@@ -123,14 +123,17 @@ class SiteData extends Component {
             formData[formElementIdentifier] = this.state.siteForm[formElementIdentifier].value;
         }
         
-        axios.post(SITES_URL + '?auth=' + this.props.token,formData)
+        const url = this.props.isAuthenticated
+                     ?SITES_URL+ '?auth=' + this.props.token
+                     :SITES_SUGEST_URL;
+
+        axios.post(url ,formData)
         .then( response => {
-            this.props.history.replace( '/' );
+            if (response) {
+                this.props.history.replace( '/' );
+            }    
         } )
-        .catch( error => {
-            console.log(error);
-        } );
-        
+                
     }
 
     cancelHandler = (event) => {
@@ -164,6 +167,9 @@ class SiteData extends Component {
                 config: this.state.siteForm[key]
             });
         }
+
+        const saveButtonLabel = this.props.isAuthenticated?'Adicionar':'Sugerir';
+
         let form = (
             <form onSubmit={this.submitHandler}>
                 {formElementsArray.map(formElement => (
@@ -177,7 +183,7 @@ class SiteData extends Component {
                         touched={formElement.config.touched}
                         changed={(event) => this.inputChangedHandler(event, formElement.id)} />
                 ))}
-                <Button btnType="Success" disabled={!this.state.formIsValid}>Adicionar</Button>
+                <Button btnType="Success" disabled={!this.state.formIsValid}>{saveButtonLabel}</Button>
                 &nbsp;
                 <Button btnType="Danger" clicked={this.cancelHandler}>Cancelar</Button>
             </form>
@@ -185,15 +191,17 @@ class SiteData extends Component {
         if ( this.props.loading ) {
             form = <Spinner />;
         }
+
+        const beginTitle = this.props.isAuthenticated?'Cadastre':'Sugira';
         return (
-            <Modal show>
+            
                 <div className={classes.SiteData}>
-                    <h3>Cadastre um Site que pode ajudar a tornar o mundo melhor</h3>
+                    <h3>{beginTitle} um Site que pode ajudar a tornar o mundo melhor</h3>
                     <div>
                     {form}
                     </div>
                 </div>
-            </Modal>
+            
         );
     }
 }
@@ -202,7 +210,8 @@ const mapStateToProps = state => {
     return {
         categories: state.category.categories,
         userId : state.auth.userId,
-        token : state.auth.token
+        token : state.auth.token,
+        isAuthenticated: state.auth.token !== null
     }
 };
 
