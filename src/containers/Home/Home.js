@@ -23,16 +23,17 @@ class Home extends Component {
         
     state = {
         sites : null,
-        showSites : false,
-        sitesFromCategory : null,
         loading : false,
         categoryLoading: false,
+        showSites : false
     }
 
     componentDidMount= () => {
         this.loadCategories();
         //this.loadSitesFromSpreedSheet();
+        this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
     }
+    
 
     loadSitesFromSpreedSheet(){
         if(!this.state.sites) {
@@ -66,15 +67,13 @@ class Home extends Component {
 
     showSitesHandler = (event) => {
         const category = event.target.value;
-
         if (category==='0'){
             this.setState({showSites:false});
         }else { 
-           if(category===this.props.lastCategory){
-                this.setState({sitesFromCategory:this.props.lastSitesLoaded ,showSites:true}); 
-           }else{
+           if(category!==this.props.lastCategory){
                this.loadSites(category);
            }
+           this.setState({showSites:true}); 
         }    
     }
 
@@ -87,7 +86,7 @@ class Home extends Component {
                 return sitesLoaded.push(response.data[key])
             });
             this.props.onFetchSites(sitesLoaded,category);
-            this.setState({sitesFromCategory:sitesLoaded ,showSites:true,loading:false}); 
+            this.setState({loading:false}); 
         })
     }
 
@@ -102,13 +101,14 @@ class Home extends Component {
             categories = <SelectCategory 
                             categories={this.props.categories}
                             changed={(event) => this.showSitesHandler(event)}
+                            selected={this.props.lastCategory}
                           />
         }
         
         let sites = <Spinner />;
         if ( !this.state.loading ) {
             sites = <Sites show={this.state.showSites} 
-                            sites={this.state.sitesFromCategory}
+                            sites={this.props.lastSitesLoaded}
                             edit={this.editSite}/>
         }    
         return (

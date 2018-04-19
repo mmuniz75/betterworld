@@ -5,12 +5,17 @@ import classes from './SelectCategory.css';
 const SelectCategory = (props) => (
         <div className={classes.MainSelection}>
             <select  onChange={props.changed}>
-                <option defaultValue value="0">Escolha uma Categoria</option>
+                <option value="0">Escolha uma Categoria</option>
                 {
                 props.categories?     
                     props.categories.map(category => {
+                        const selected = category.name===props.selected?true:false;
                         return (
-                            <option key={category.id} value={category.name}>{category.name}</option>
+                            <option selected={selected} 
+                                key={category.id} 
+                                value={category.name}>
+                                {category.name}
+                            </option>
                         )    
                     })
                     :null        }
