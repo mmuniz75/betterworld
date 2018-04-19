@@ -35,8 +35,11 @@ class SiteSugest extends Component {
             if(response.data) {
                 Object.keys(response.data).map(key => {
                     const site = response.data[key];
-                    site.id = key;
-                    return sitesLoaded.push(site)
+                    if(site) {
+                        site.id = key;
+                        return sitesLoaded.push(site)
+                    }else
+                        return null;    
                 });
             }    
             this.props.onFetchSuggestions(sitesLoaded);
