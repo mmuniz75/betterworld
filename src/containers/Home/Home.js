@@ -2,7 +2,9 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import SelectCategory from '../../components/SelectCategory/SelectCategory';
 import Sites from '../../components/Sites/Sites';
-import * as actionTypes from '../../store/reducers/category';
+import * as categoryActionTypes from '../../store/reducers/category';
+import * as siteActionTypes from '../../store/reducers/site';
+
 import Spinner from '../../components/UI/Spinner/Spinner';
 
 import axios from '../../axios';
@@ -23,7 +25,8 @@ class Home extends Component {
         sites : null,
         showSites : false,
         sitesFromCategory : null,
-        loading : false
+        loading : false,
+        categoryLoading: false,
     }
 
     componentDidMount= () => {
@@ -41,7 +44,7 @@ class Home extends Component {
 
     loadCategories(){
         if(this.props.categories.length===0) {
-            this.props.onFetchCategoriesStart();
+            this.setState({categoryLoading:true}); 
             axios.get(categoriesURL)
             .then(response => {
                 const categoriesLoaded = [];
@@ -51,10 +54,8 @@ class Home extends Component {
 
                 );
                 this.props.onFetchCategories(categoriesLoaded);
+                this.setState({categoryLoading:false}); 
             })
-            .catch( error => {
-                this.props.onFetchCategoriesFail(error);
-            } );
         }
     }
 
@@ -69,19 +70,25 @@ class Home extends Component {
         if (category==='0'){
             this.setState({showSites:false});
         }else { 
-            this.setState({loading:true});
-            axios.get(sitesURL + '"' + category + '"')
-            .then(response => {
-                const sitesLoaded = [];
-                Object.keys(response.data).map(key => {
-                    return sitesLoaded.push(response.data[key])
-                });
-                this.setState({sitesFromCategory:sitesLoaded ,showSites:true,loading:false}); 
-            })
-            .catch( error => {
-                console.log(error);
-            })
+           if(category===this.props.lastCategory){
+                this.setState({sitesFromCategory:this.props.lastSitesLoaded ,showSites:true}); 
+           }else{
+               this.loadSites(category);
+           }
         }    
+    }
+
+    loadSites = (category) => {
+        this.setState({loading:true});
+        axios.get(sitesURL + '"' + category + '"')
+        .then(response => {
+            const sitesLoaded = [];
+            Object.keys(response.data).map(key => {
+                return sitesLoaded.push(response.data[key])
+            });
+            this.props.onFetchSites(sitesLoaded,category);
+            this.setState({sitesFromCategory:sitesLoaded ,showSites:true,loading:false}); 
+        })
     }
 
     editSite = (id) => {
@@ -91,7 +98,7 @@ class Home extends Component {
 
     render(){
         let categories = <Spinner />;
-        if ( !this.props.categoryLoading ) {
+        if ( !this.state.categoryLoading ) {
             categories = <SelectCategory 
                             categories={this.props.categories}
                             changed={(event) => this.showSitesHandler(event)}
@@ -118,24 +125,23 @@ class Home extends Component {
 const mapStateToProps = state => {
     return {
         categories: state.category.categories,
-        categoryLoading: state.category.loading,
-        token : state.auth.token
+        token : state.auth.token,
+        lastSitesLoaded : state.site.lastSitesLoaded,
+        lastCategory : state.site.category
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchCategoriesStart: () => dispatch({
-            type: actionTypes.FETCH_CATEGORIES_START,
-        }),
         onFetchCategories: (categories) => dispatch({
-            type: actionTypes.FETCH_CATEGORIES_SUCCESS,
+            type: categoryActionTypes.FETCH_CATEGORIES,
             categories: categories
         }),
-        onFetchCategoriesFail: (error) => dispatch({
-            type: actionTypes.FETCH_CATEGORIES_FAIL,
-            error: error
-        })
+        onFetchSites: (sitesLoaded,selectedCategory) => dispatch({
+            type: siteActionTypes.FETCH_SITES,
+            sites: sitesLoaded,
+            category : selectedCategory
+        }),
     };
 };
 

@@ -1,0 +1,34 @@
+//import * as actionTypes from '../actions/actionTypes';
+import { updateObject } from '../../shared/utility';
+
+export const FETCH_SITES = 'FETCH_SITES';
+export const SITE_EDIT = 'SITE_EDIT';
+
+const initialState = {
+    lastSitesLoaded: [],
+    siteToEdit :null,
+    category : null
+};
+
+const siteEdit = ( state, action ) => {
+    return updateObject( state, {
+        siteToEdit: action.site
+    } );
+};
+
+const fetchSites = ( state, action ) => {
+    return updateObject( state, {
+        lastSitesLoaded: action.sites,
+        category : action.category
+    } );
+};
+
+const reducer = ( state = initialState, action ) => {
+    switch ( action.type ) {
+        case SITE_EDIT: return siteEdit( state, action );
+        case FETCH_SITES: return fetchSites( state, action );
+        default: return state;
+    }
+};
+
+export default reducer;
