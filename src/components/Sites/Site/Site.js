@@ -32,6 +32,10 @@ const Site = (props) => {
             {image}
             <div className={classes.ProductDetails}>
                 <h2>{props.name}</h2>
+                <br/>
+                <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}}>
+                    <i class="fas fa-edit fa-lg" />
+                </a>
                 <h3>{categoryLabel}</h3>
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <button className={classes.RegularButton} 

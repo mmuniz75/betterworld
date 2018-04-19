@@ -18,7 +18,10 @@ const Sites = (props) => (
                                     buttonsType={props.buttonsType} 
                                     approveClicked={props.approveClicked}
                                     rejectClicked={props.rejectClicked}
-                                    category={site.category}/>
+                                    category={site.category}
+                                    edit={props.edit}
+                                    />
+                                    
                                 </li>
                                 )
                         })

@@ -13,6 +13,8 @@ import { updateObject, checkValidity } from '../../shared/utility';
 import {SITES_URL} from '../../shared/consts';
 import {SITES_SUGEST_URL} from '../../shared/consts';
 
+import siteActionTypes from '../../store/reducers/site';
+
 class SiteData extends Component {
     state = {
         siteForm: {
@@ -84,7 +86,6 @@ class SiteData extends Component {
     }
 
     componentDidMount = () => {
-
         const categoryOptions = this.props.categories.map(category => {
             return {
                 value:category.name,
@@ -97,16 +98,44 @@ class SiteData extends Component {
             options: categoryOptions
         });
 
+        const categoryName = this.props.editSite?this.props.editSite.category:'Saude'; 
         const updatedFormElement = updateObject(this.state.siteForm.category, {
-            elementConfig: updatedElementConfig
+            elementConfig: updatedElementConfig,
+            value : categoryName
         });
 
         const updatedSiteForm = updateObject(this.state.siteForm, {
             category: updatedFormElement
         });
-
         this.setState({ siteForm : updatedSiteForm});
        
+    }
+
+    componentWillMount = () => {
+        if(this.props.editSite){
+            const editSite = {...this.props.editSite};
+            const name = updateObject(this.state.siteForm.name, {
+                value : editSite.name
+            });
+            const description = updateObject(this.state.siteForm.description, {
+                value : editSite.description
+            });
+            const logo = updateObject(this.state.siteForm.logo, {
+                value : editSite.logo
+            });
+            const site = updateObject(this.state.siteForm.site, {
+                value : editSite.site
+            });
+
+            const updatedSiteForm = updateObject(this.state.siteForm, {
+                name: name,
+                description: description,
+                logo : logo,
+                site : site
+            });
+
+            this.setState({ siteForm : updatedSiteForm});
+        }
     }
 
     submitHandler = ( event ) => {
@@ -213,8 +242,19 @@ const mapStateToProps = state => {
         categories: state.category.categories,
         userId : state.auth.userId,
         token : state.auth.token,
-        isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.auth.token !== null,
+        editSite : state.site.siteToEdit
     }
 };
 
-export default connect(mapStateToProps)(withErrorHandler(SiteData, axios));
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onSiteEdit: (siteToEdit) => dispatch({
+            type: siteActionTypes.SITE_EDIT,
+            site:siteToEdit
+        })
+    };
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(SiteData, axios));

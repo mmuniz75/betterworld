@@ -83,15 +83,19 @@ class Home extends Component {
         .then(response => {
             const sitesLoaded = [];
             Object.keys(response.data).map(key => {
-                return sitesLoaded.push(response.data[key])
+                const site = response.data[key];
+                site.id = key;
+                return sitesLoaded.push(site)
             });
             this.props.onFetchSites(sitesLoaded,category);
             this.setState({loading:false}); 
         })
     }
 
-    editSite = (id) => {
-        console.log(id);
+    editSite = (index) => {
+        const sitesLoaded = [...this.props.lastSitesLoaded];
+        const site = sitesLoaded[index];
+        this.props.onSiteEdit(site);
         this.props.history.push('/siteData');
     }
 
@@ -142,6 +146,10 @@ const mapDispatchToProps = dispatch => {
             sites: sitesLoaded,
             category : selectedCategory
         }),
+        onSiteEdit: (siteToEdit) => dispatch({
+            type: siteActionTypes.SITE_EDIT,
+            site:siteToEdit
+        })
     };
 };
 
