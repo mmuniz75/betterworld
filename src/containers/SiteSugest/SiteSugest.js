@@ -61,20 +61,9 @@ class SiteSugest extends Component {
         this.setState({loading:true}); 
         const sitesLoaded = [...this.props.suggestions];
         const site = sitesLoaded[index];
-        
+        site.index=index;
         this.props.onSiteApprove(site);
         this.props.history.replace('/siteData');
-        /*
-        axios.post(SITES_URL + '?auth=' + this.props.token,site)
-        .then(response => {
-            axios.delete(SITES_SUGEST_URL+'/' + site.id + '.json')
-            .then(response => {
-                sitesLoaded.splice(index,1);
-                this.setState({loading:false,sites:sitesLoaded}); 
-            })
-
-        } )
-        */
     }
 
     messageConfirmedHandler = () => {

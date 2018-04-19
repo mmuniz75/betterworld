@@ -5,6 +5,7 @@ export const FETCH_SITES = 'FETCH_SITES';
 export const FETCH_SUGGESTIONS = 'FETCH_SUGGESTIONS';
 export const SITE_EDIT = 'SITE_EDIT';
 export const SITE_APPROVE = 'SITE_APPROVE';
+export const SET_CATEGORY = 'SET_CATEGORY';
 
 const initialState = {
     lastSitesLoaded: [],
@@ -36,6 +37,12 @@ const fetchSites = ( state, action ) => {
     } );
 };
 
+const setCategory = ( state, action ) => {
+    return updateObject( state, {
+        category : action.category
+    } );
+};
+
 const fetchSuggestion = ( state, action ) => {
     return updateObject( state, {
         suggestionsLoaded: action.suggestions,
@@ -48,6 +55,7 @@ const reducer = ( state = initialState, action ) => {
         case SITE_APPROVE: return siteApprove( state, action );
         case FETCH_SITES: return fetchSites( state, action );
         case FETCH_SUGGESTIONS: return fetchSuggestion( state, action );
+        case SET_CATEGORY: return setCategory( state, action );
         default: return state;
     }
 };

@@ -69,6 +69,7 @@ class Home extends Component {
         const category = event.target.value;
         if (category==='0'){
             this.setState({showSites:false});
+            this.props.onSetCategory(0);
         }else { 
            if(category!==this.props.lastCategory){
                this.loadSites(category);
@@ -100,6 +101,19 @@ class Home extends Component {
         this.props.history.push('/siteData');
     }
 
+    removeSite = (index) => {
+        this.setState({loading:true});
+        const sitesLoaded = [...this.props.lastSitesLoaded];
+        const site = sitesLoaded[index];
+
+        axios.delete(SITES_URL+'/' + site.id + '.json?auth=' + this.props.token)
+        .then(response => {
+            sitesLoaded.splice(index,1);
+            this.props.onFetchSites(sitesLoaded);
+            this.setState({loading:false});
+        })
+    }
+
     render(){
         let categories = <Spinner />;
         if ( !this.state.categoryLoading ) {
@@ -115,6 +129,7 @@ class Home extends Component {
             sites = <Sites show={this.state.showSites} 
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
+                            delete={this.removeSite}
                             auth={this.props.isAuthenticated}/>
         }    
         return (
@@ -152,6 +167,10 @@ const mapDispatchToProps = dispatch => {
         onSiteEdit: (siteToEdit) => dispatch({
             type: siteActionTypes.SITE_EDIT,
             site:siteToEdit
+        }),
+        onSetCategory: (category) => dispatch({
+            type: siteActionTypes.SET_CATEGORY,
+            category:category
         })
     };
 };

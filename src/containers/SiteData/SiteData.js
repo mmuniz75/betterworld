@@ -195,13 +195,34 @@ class SiteData extends Component {
 
         axios.post(url ,site)
                 .then( response => {
-                    this.setState({loading:false});
                     if (response) {
-                        this.addSiteCash(site);
-                        this.props.history.replace( '/' 
-                    );
-                }    
+                        site.id = response.data.name;
+                        if (this.props.isAuthenticated) {
+                            this.addSiteCash(site);
+                        }    
+                        if(this.props.approveSite) {
+                            this.approvePostSteps();
+                        }else{
+                            
+                            this.setState({loading:false});
+                            this.props.history.replace( '/');
+                        }    
+                    }    
         } )
+    }
+
+    approvePostSteps = () =>{
+        axios.delete(SITES_SUGEST_URL+'/' + this.props.approveSite.id + '.json')
+        .then(response => {
+            const suggestionLoaded = [...this.props.suggestions];
+            const index = this.props.approveSite.index;
+            suggestionLoaded.splice(index,1);
+            this.props.onFetchSuggestions(suggestionLoaded);
+
+            this.props.onSiteApprove(null);
+            this.setState({loading:false});
+            this.props.history.replace('/sugest');
+        })
     }
 
     addSiteCash = (site) => {
@@ -209,6 +230,8 @@ class SiteData extends Component {
         sites.push(site);
         this.props.onFetchSites(sites);
     }
+
+
 
     cancelHandler = (event) => {
         event.preventDefault();
@@ -302,6 +325,7 @@ const mapStateToProps = state => {
         editSite : state.site.siteToEdit,
         approveSite : state.site.siteToApprove,
         lastSitesLoaded : state.site.lastSitesLoaded,
+        suggestions : state.site.suggestionsLoaded
     }
 };
 
@@ -319,6 +343,10 @@ const mapDispatchToProps = dispatch => {
         onFetchSites: (sitesLoaded) => dispatch({
             type: siteActionTypes.FETCH_SITES,
             sites: sitesLoaded
+        }),
+        onFetchSuggestions: (suggestionsLoaded) => dispatch({
+            type: siteActionTypes.FETCH_SUGGESTIONS,
+            suggestions: suggestionsLoaded,
         }),
     };
 };
