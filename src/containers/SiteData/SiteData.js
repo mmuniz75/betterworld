@@ -86,6 +86,8 @@ class SiteData extends Component {
     }
 
     componentDidMount = () => {
+        const fillSite = this.props.editSite?this.props.editSite:this.props.approveSite;
+
         const categoryOptions = this.props.categories.map(category => {
             return {
                 value:category.name,
@@ -98,7 +100,7 @@ class SiteData extends Component {
             options: categoryOptions
         });
 
-        const categoryName = this.props.editSite?this.props.editSite.category:'Saude'; 
+        const categoryName = fillSite?fillSite.category:'Saude'; 
         const updatedFormElement = updateObject(this.state.siteForm.category, {
             elementConfig: updatedElementConfig,
             value : categoryName,
@@ -112,8 +114,10 @@ class SiteData extends Component {
     }
 
     componentWillMount = () => {
-        if(this.props.editSite){
-            const editSite = {...this.props.editSite};
+        const fillSite = this.props.editSite?this.props.editSite:this.props.approveSite;
+
+        if(fillSite){
+            const editSite = {...fillSite};
             const name = updateObject(this.state.siteForm.name, {
                 value : editSite.name,
                 valid: true
@@ -208,7 +212,17 @@ class SiteData extends Component {
 
     cancelHandler = (event) => {
         event.preventDefault();
-        this.props.onSiteEdit(null);
+        
+        if(this.props.editSite) {
+            this.props.onSiteEdit(null);
+            this.props.history.replace('/sites');
+        }    
+
+        if(this.props.approveSite) {
+            this.props.onSiteApprove(null);
+            this.props.history.replace('/sugest');
+        }    
+       
         this.props.history.goBack();
     }
 
@@ -286,6 +300,7 @@ const mapStateToProps = state => {
         token : state.auth.token,
         isAuthenticated: state.auth.token !== null,
         editSite : state.site.siteToEdit,
+        approveSite : state.site.siteToApprove,
         lastSitesLoaded : state.site.lastSitesLoaded,
     }
 };
@@ -296,6 +311,10 @@ const mapDispatchToProps = dispatch => {
         onSiteEdit: (siteToEdit) => dispatch({
             type: siteActionTypes.SITE_EDIT,
             site: siteToEdit
+        }),
+        onSiteApprove: (siteToApprove) => dispatch({
+            type: siteActionTypes.SITE_APPROVE,
+            site: siteToApprove
         }),
         onFetchSites: (sitesLoaded) => dispatch({
             type: siteActionTypes.FETCH_SITES,

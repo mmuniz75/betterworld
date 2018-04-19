@@ -25,10 +25,14 @@ const Site = (props) => {
                     </Auxliary>
                     :null;
 
-    const categoryLabel = approvation?'(' + props.category + ')':null;                
+    const categoryLabel = approvation
+                            ?<Auxliary>
+                                   (<b>Categoria:&nbsp;</b>{props.category})
+                            </Auxliary>
+                            :null;                
     const editLinks = props.auth
                       ?<a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
-                        <i class="fas fa-edit fa-lg" alt='Editar' />
+                        <i className="fas fa-edit fa-lg" alt='Editar' />
                        </a>
                       :null
                    
@@ -39,7 +43,7 @@ const Site = (props) => {
                 <h2>{props.name}</h2>
                 <br/>
                 {editLinks}
-                <h3>{categoryLabel}</h3>
+                {categoryLabel}
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <button className={classes.RegularButton} 
                           onClick={() => window.open(props.site)}>Veja mais</button>   
