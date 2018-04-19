@@ -26,6 +26,11 @@ const Site = (props) => {
                     :null;
 
     const categoryLabel = approvation?'(' + props.category + ')':null;                
+    const editLinks = props.auth
+                      ?<a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
+                        <i class="fas fa-edit fa-lg" alt='Editar' />
+                       </a>
+                      :null
                    
     return (
         <Auxliary>
@@ -33,9 +38,7 @@ const Site = (props) => {
             <div className={classes.ProductDetails}>
                 <h2>{props.name}</h2>
                 <br/>
-                <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}}>
-                    <i class="fas fa-edit fa-lg" />
-                </a>
+                {editLinks}
                 <h3>{categoryLabel}</h3>
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <button className={classes.RegularButton} 

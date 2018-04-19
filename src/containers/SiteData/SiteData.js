@@ -13,7 +13,7 @@ import { updateObject, checkValidity } from '../../shared/utility';
 import {SITES_URL} from '../../shared/consts';
 import {SITES_SUGEST_URL} from '../../shared/consts';
 
-import siteActionTypes from '../../store/reducers/site';
+import * as siteActionTypes from '../../store/reducers/site';
 
 class SiteData extends Component {
     state = {
@@ -101,7 +101,7 @@ class SiteData extends Component {
         const categoryName = this.props.editSite?this.props.editSite.category:'Saude'; 
         const updatedFormElement = updateObject(this.state.siteForm.category, {
             elementConfig: updatedElementConfig,
-            value : categoryName
+            value : categoryName,
         });
 
         const updatedSiteForm = updateObject(this.state.siteForm, {
@@ -115,16 +115,19 @@ class SiteData extends Component {
         if(this.props.editSite){
             const editSite = {...this.props.editSite};
             const name = updateObject(this.state.siteForm.name, {
-                value : editSite.name
+                value : editSite.name,
+                valid: true
             });
             const description = updateObject(this.state.siteForm.description, {
-                value : editSite.description
+                value : editSite.description,
+                valid: true
             });
             const logo = updateObject(this.state.siteForm.logo, {
                 value : editSite.logo
             });
             const site = updateObject(this.state.siteForm.site, {
-                value : editSite.site
+                value : editSite.site,
+                valid: true
             });
 
             const updatedSiteForm = updateObject(this.state.siteForm, {
@@ -134,7 +137,7 @@ class SiteData extends Component {
                 site : site
             });
 
-            this.setState({ siteForm : updatedSiteForm});
+            this.setState({ siteForm : updatedSiteForm,formIsValid:true});
         }
     }
 
@@ -144,7 +147,6 @@ class SiteData extends Component {
 
         const formData = {
             userId : this.props.userId,
-            logo : '',
             id : (Date.now() + Math.random()).toFixed(0),
             active : true
         };
@@ -153,22 +155,60 @@ class SiteData extends Component {
             formData[formElementIdentifier] = this.state.siteForm[formElementIdentifier].value;
         }
         
-        const url = this.props.isAuthenticated
-                     ?SITES_URL+ '?auth=' + this.props.token
-                     :SITES_SUGEST_URL + '.json';
-
-        axios.post(url ,formData)
-        .then( response => {
-            this.setState({loading:false});
-            if (response) {
-                this.props.history.replace( '/' );
-            }    
-        } )
+        if(!this.props.editSite){
+            this.addSite(formData);
+        }else{
+            this.updateSite(formData);
+        }    
                 
+    }
+
+    updateSite = (site) => {
+        const url = SITES_URL+ '/' +this.props.editSite.id + '.json?auth=' + this.props.token ;
+        
+        axios.put(url ,site)
+                .then( response => {
+                    this.setState({loading:false});
+                    if (response) {
+                       this.updateCash(site);
+                       this.props.onSiteEdit(null);
+                       this.props.history.replace( '/' );
+                    }    
+        } )
+    }
+
+    updateCash = (site) => {
+        const sites = [...this.props.lastSitesLoaded];
+        const index = this.props.editSite.index;
+        sites.splice(index,1,site);
+        this.props.onFetchSites(sites);
+    }
+
+    addSite = (site) => {
+        const url = this.props.isAuthenticated
+        ?SITES_URL+ '.json?auth=' + this.props.token
+        :SITES_SUGEST_URL + '.json';
+
+        axios.post(url ,site)
+                .then( response => {
+                    this.setState({loading:false});
+                    if (response) {
+                        this.addSiteCash(site);
+                        this.props.history.replace( '/' 
+                    );
+                }    
+        } )
+    }
+
+    addSiteCash = (site) => {
+        const sites = [...this.props.lastSitesLoaded];
+        sites.push(site);
+        this.props.onFetchSites(sites);
     }
 
     cancelHandler = (event) => {
         event.preventDefault();
+        this.props.onSiteEdit(null);
         this.props.history.goBack();
     }
 
@@ -199,7 +239,9 @@ class SiteData extends Component {
             });
         }
 
-        const saveButtonLabel = this.props.isAuthenticated?'Adicionar':'Sugerir';
+        const saveButtonLabel = this.props.isAuthenticated?
+                                this.props.editSite?'Alterar':'Adicionar'
+                                :'Sugerir';
 
         let form = (
             <form onSubmit={this.submitHandler}>
@@ -243,7 +285,8 @@ const mapStateToProps = state => {
         userId : state.auth.userId,
         token : state.auth.token,
         isAuthenticated: state.auth.token !== null,
-        editSite : state.site.siteToEdit
+        editSite : state.site.siteToEdit,
+        lastSitesLoaded : state.site.lastSitesLoaded,
     }
 };
 
@@ -252,8 +295,12 @@ const mapDispatchToProps = dispatch => {
     return {
         onSiteEdit: (siteToEdit) => dispatch({
             type: siteActionTypes.SITE_EDIT,
-            site:siteToEdit
-        })
+            site: siteToEdit
+        }),
+        onFetchSites: (sitesLoaded) => dispatch({
+            type: siteActionTypes.FETCH_SITES,
+            sites: sitesLoaded
+        }),
     };
 };
 

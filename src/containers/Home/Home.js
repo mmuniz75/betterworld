@@ -17,7 +17,7 @@ import {SITES_URL} from '../../shared/consts';
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
-const sitesURL = SITES_URL + '?orderBy="category"&equalTo=';
+const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Home extends Component {
         
@@ -95,6 +95,7 @@ class Home extends Component {
     editSite = (index) => {
         const sitesLoaded = [...this.props.lastSitesLoaded];
         const site = sitesLoaded[index];
+        site.index = index;
         this.props.onSiteEdit(site);
         this.props.history.push('/siteData');
     }
@@ -113,7 +114,8 @@ class Home extends Component {
         if ( !this.state.loading ) {
             sites = <Sites show={this.state.showSites} 
                             sites={this.props.lastSitesLoaded}
-                            edit={this.editSite}/>
+                            edit={this.editSite}
+                            auth={this.props.isAuthenticated}/>
         }    
         return (
             <div className={classes.Home}>
@@ -131,7 +133,8 @@ const mapStateToProps = state => {
         categories: state.category.categories,
         token : state.auth.token,
         lastSitesLoaded : state.site.lastSitesLoaded,
-        lastCategory : state.site.category
+        lastCategory : state.site.category,
+        isAuthenticated: state.auth.token !== null,
     };
 };
 

@@ -17,9 +17,11 @@ const siteEdit = ( state, action ) => {
 };
 
 const fetchSites = ( state, action ) => {
+    const localState = {...state};
+    const newCategory = action.category?action.category:localState.category;
     return updateObject( state, {
         lastSitesLoaded: action.sites,
-        category : action.category
+        category : newCategory
     } );
 };
 

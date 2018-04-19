@@ -20,6 +20,7 @@ const Sites = (props) => (
                                     rejectClicked={props.rejectClicked}
                                     category={site.category}
                                     edit={props.edit}
+                                    auth={props.auth}
                                     />
                                     
                                 </li>
