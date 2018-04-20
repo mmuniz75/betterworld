@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Sites from '../../components/Sites/Sites';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
+import Button from '../../components/UI/Button/Button';
 
 import axios from '../../axios';
 
@@ -18,7 +19,8 @@ class SiteSugest extends Component {
         
     state = {
         loading : false,
-        noResults : true
+        noResults : true,
+        rejectSiteIndex : null
     }
 
     componentWillMount= () => {
@@ -47,8 +49,9 @@ class SiteSugest extends Component {
         })
     }
 
-    reject = (index) => {
-        this.setState({loading:true}); 
+    reject = () => {
+        const index = this.state.rejectSiteIndex;
+        this.setState({loading:true,rejectSiteIndex:null}); 
         const sitesLoaded = [...this.props.suggestions];
         const site = sitesLoaded[index];
         axios.delete(SITES_SUGEST_URL+'/' + site.id + '.json')
@@ -74,6 +77,14 @@ class SiteSugest extends Component {
         this.props.history.replace('/sites');
     }
 
+    cancelReject = () =>{
+        this.setState({rejectSiteIndex:null});
+    }    
+
+    confirmReject = (index) => {
+        this.setState({rejectSiteIndex:index});
+    }
+
     render(){
 
         let sites = <Spinner />;
@@ -88,7 +99,7 @@ class SiteSugest extends Component {
             }else {
                 sites = <Sites show 
                             sites={this.props.suggestions} 
-                            rejectClicked={this.reject}
+                            rejectClicked={this.confirmReject}
                             approveClicked={this.approve}
                              />
             }                
@@ -99,6 +110,13 @@ class SiteSugest extends Component {
         return (
             <div className={classes.Home}>
                 {sites}
+                <Modal show={this.state.rejectSiteIndex!==null}>
+                    <h3>Confirma reprovação da sugestão ?</h3>
+                    <b>A Sugestão será definidamente apagada.</b>
+                    <br/>
+                    <Button btnType="Success" clicked={this.reject}>SIM</Button>
+                    <Button btnType="Danger" clicked={this.cancelReject}>NÃO</Button>
+                </Modal>
             </div>
             
         )
