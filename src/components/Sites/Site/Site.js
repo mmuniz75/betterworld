@@ -33,11 +33,11 @@ const Site = (props) => {
     const editLinks = props.auth
                       ?<Auxliary>
                         <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
-                            <i className="fas fa-edit fa-lg" alt='Editar' />
+                            <i className="fas fa-edit fa-lg" title='Editar Site' />
                         </a>
                         &nbsp;&nbsp;&nbsp;
                         <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
-                            <i className="fas fa-trash fa-lg" alt='Remover' />
+                            <i className="fas fa-trash fa-lg" title='Remover Site' />
                         </a>
                        </Auxliary> 
                       :null
