@@ -19,9 +19,6 @@ import classes from './Home.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {SITES_URL} from '../../shared/consts';
 
-import {like} from '../../shared/utility';
-
-
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
@@ -74,7 +71,6 @@ class Home extends Component {
     }
 
     showSitesHandler = (event) => {
-        this.props.onSetSitesFilter(null,null);
         const category = event.target.value;
         if (category==='0'){
             this.setState({showSites:false});
@@ -98,7 +94,6 @@ class Home extends Component {
                 return sitesLoaded.push(site)
             });
             this.props.onFetchSites(sitesLoaded,category);
-            this.props.onSetSitesCashed(sitesLoaded);
             this.setState({loading:false}); 
         })
     }
@@ -121,8 +116,7 @@ class Home extends Component {
         .then(response => {
             axios.delete(SITES_URL+'/' + site.key + '.json?auth=' + this.props.token)
             .then(response => {
-                sitesLoaded.splice(index,1);
-                this.props.onFetchSites(sitesLoaded);
+                this.props.onDeleteSite(site.key);
                 this.setState({loading:false});
             })    
         })
@@ -137,21 +131,7 @@ class Home extends Component {
     }
 
     filter = (event) => {
-        const search = event.target.value;
-        const sites = [...this.props.sitesCashed];
-
-        if(search.length===0){
-            this.props.onSetSitesFilter(null);
-            this.props.onFetchSites(sites);
-        }else {
-            const criteria = '%' + search + '%';
-            const sitesFiltered = sites.filter(site => {
-                                    return like(criteria,site.description) || 
-                                        like(criteria,site.name)
-                                })
-            this.props.onSetSitesFilter(search);
-            this.props.onFetchSites(sitesFiltered);
-        }    
+        this.props.onFilterSites(event.target.value);
     }
 
     render(){
@@ -226,13 +206,13 @@ const mapDispatchToProps = dispatch => {
             type: siteActionTypes.SET_CATEGORY,
             category:category
         }),
-        onSetSitesCashed: (sitesCashed) => dispatch({
-            type: siteActionTypes.SET_SITES_CASH,
-            sitesCashed:sitesCashed
+        onDeleteSite: (siteKey) => dispatch({
+            type: siteActionTypes.DELETE_SITE,
+            key: siteKey
         }),
-        onSetSitesFilter: (filterCriteria) => dispatch({
-            type: siteActionTypes.SET_FILTER,
-            filterCriteria:filterCriteria,
+        onFilterSites: (filterCriteria) => dispatch({
+            type: siteActionTypes.FILTER_SITES,
+            search:filterCriteria,
         })
     };
 };

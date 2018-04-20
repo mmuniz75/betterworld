@@ -190,20 +190,13 @@ class SiteData extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
-                       site.key = this.props.editSite.key;
-                       this.updateCash(site);
-                       this.props.onSiteEdit(null);
+                       this.props.onUpdateSite(site);
                        this.props.history.replace( '/' );
                     }    
         } )
     }
 
-    updateCash = (site) => {
-        const sites = [...this.props.lastSitesLoaded];
-        const index = this.props.editSite.index;
-        sites.splice(index,1,site);
-        this.props.onFetchSites(sites);
-    }
+   
 
     addSite = (site) => {
         const url = this.props.isAuthenticated
@@ -215,12 +208,11 @@ class SiteData extends Component {
                     if (response) {
                         site.key = response.data.name;
                         if (this.props.isAuthenticated) {
-                            this.addSiteCash(site);
+                            this.props.onAddSite(site);
                         }    
                         if(this.props.approveSite) {
                             this.approvePostSteps();
                         }else{
-                            
                             this.setState({loading:false});
                             this.props.history.replace( '/');
                         }    
@@ -241,14 +233,6 @@ class SiteData extends Component {
             this.props.history.replace('/sugest');
         })
     }
-
-    addSiteCash = (site) => {
-        const sites = [...this.props.lastSitesLoaded];
-        sites.push(site);
-        this.props.onFetchSites(sites);
-    }
-
-
 
     cancelHandler = (event) => {
         event.preventDefault();
@@ -364,6 +348,14 @@ const mapDispatchToProps = dispatch => {
         onFetchSuggestions: (suggestionsLoaded) => dispatch({
             type: siteActionTypes.FETCH_SUGGESTIONS,
             suggestions: suggestionsLoaded,
+        }),
+        onUpdateSite: (site) => dispatch({
+            type: siteActionTypes.UPDATE_SITE,
+            site: site
+        }),
+        onAddSite: (site) => dispatch({
+            type: siteActionTypes.ADD_SITE,
+            site: site
         }),
     };
 };
