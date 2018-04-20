@@ -151,7 +151,7 @@ class Home extends Component {
                 {categories}
                 <br/>
                 {sites}
-                <Modal show={this.state.deleteSiteIndex}>
+                <Modal show={this.state.deleteSiteIndex!==null}>
                     <h3>Confirma remoção do site ?</h3>
                     <Button btnType="Success" clicked={this.removeSite}>SIM</Button>
                     <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
