@@ -9,6 +9,7 @@ export const DELETE_SITE = 'DELETE_SITE';
 export const FILTER_SITES = 'FILTER_SITES';
 
 export const FETCH_SUGGESTIONS = 'FETCH_SUGGESTIONS';
+export const DELETE_SUGGESTION = 'DELETE_SUGGESTION';
 
 export const SITE_EDIT = 'SITE_EDIT';
 export const SITE_APPROVE = 'SITE_APPROVE';
@@ -121,6 +122,13 @@ const deleteSite = ( state, action ) => {
     } );
 };
 
+const deleteSuggestion = ( state, action ) => {
+    const suggestionRemoved = deleteSiteByID(action.key,state.suggestionsLoaded);
+    return updateObject( state, {
+        suggestionsLoaded : suggestionRemoved,
+        siteToApprove : null
+    } );
+};
 
 const setCategory = ( state, action ) => {
     return updateObject( state, {
@@ -144,6 +152,7 @@ const reducer = ( state = initialState, action ) => {
         case UPDATE_SITE: return updateSite( state, action );
         case DELETE_SITE: return deleteSite( state, action );
         case FETCH_SUGGESTIONS: return fetchSuggestion( state, action );
+        case DELETE_SUGGESTION: return deleteSuggestion( state, action );
         case SET_CATEGORY: return setCategory( state, action );
         default: return state;
     }

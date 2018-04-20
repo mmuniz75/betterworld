@@ -207,7 +207,7 @@ class SiteData extends Component {
                 .then( response => {
                     if (response) {
                         site.key = response.data.name;
-                        if (this.props.isAuthenticated) {
+                        if (this.props.isAuthenticated && !this.props.approveSite) {
                             this.props.onAddSite(site);
                         }    
                         if(this.props.approveSite) {
@@ -223,12 +223,7 @@ class SiteData extends Component {
     approvePostSteps = () =>{
         axios.delete(SITES_SUGEST_URL+'/' + this.props.approveSite.key + '.json')
         .then(response => {
-            const suggestionLoaded = [...this.props.suggestions];
-            const index = this.props.approveSite.index;
-            suggestionLoaded.splice(index,1);
-            this.props.onFetchSuggestions(suggestionLoaded);
-
-            this.props.onSiteApprove(null);
+            this.props.onSuggestionDelete(this.props.approveSite.key);
             this.setState({loading:false});
             this.props.history.replace('/sugest');
         })
@@ -340,6 +335,10 @@ const mapDispatchToProps = dispatch => {
         onSiteApprove: (siteToApprove) => dispatch({
             type: siteActionTypes.SITE_APPROVE,
             site: siteToApprove
+        }),
+        onSuggestionDelete: (suggestionKey) => dispatch({
+            type: siteActionTypes.DELETE_SUGGESTION,
+            key: suggestionKey
         }),
         onFetchSites: (sitesLoaded) => dispatch({
             type: siteActionTypes.FETCH_SITES,
