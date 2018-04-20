@@ -105,15 +105,16 @@ class Home extends Component {
     }
 
     removeSite = () => {
+        const index = this.state.deleteSiteIndex;
         this.setState({loading:true,deleteSiteIndex:null});
         const sitesLoaded = [...this.props.lastSitesLoaded];
-        const site = sitesLoaded[this.state.deleteSiteIndex];
+        const site = sitesLoaded[index];
 
         axios.post(SITES_URL+ '_trash.json?auth=' + this.props.token ,site)
         .then(response => {
             axios.delete(SITES_URL+'/' + site.id + '.json?auth=' + this.props.token)
             .then(response => {
-                sitesLoaded.splice(this.state.deleteSiteIndex,1);
+                sitesLoaded.splice(index,1);
                 this.props.onFetchSites(sitesLoaded);
                 this.setState({loading:false});
             })    
