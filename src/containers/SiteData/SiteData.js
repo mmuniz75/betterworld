@@ -36,7 +36,7 @@ class SiteData extends Component {
                 elementConfig: {
                     type: 'text-area',
                     placeholder: 'Descrição',
-                    rows:6 
+                    rows:4 
                 },
                 value: '',
                 validation: {
@@ -63,6 +63,18 @@ class SiteData extends Component {
                 elementConfig: {
                     type: 'text',
                     placeholder: 'Logo URL'
+                },
+                value: '',
+                validation: {
+                },
+                valid: true,
+                touched: false
+            },
+            location: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Localidade'
                 },
                 value: '',
                 validation: {
@@ -133,12 +145,16 @@ class SiteData extends Component {
                 value : editSite.site,
                 valid: true
             });
-
+            const location = updateObject(this.state.siteForm.location, {
+                value : editSite.location,
+                valid: true
+            });
             const updatedSiteForm = updateObject(this.state.siteForm, {
                 name: name,
                 description: description,
                 logo : logo,
-                site : site
+                site : site,
+                location : location
             });
 
             this.setState({ siteForm : updatedSiteForm,formIsValid:true});
@@ -168,7 +184,7 @@ class SiteData extends Component {
     }
 
     updateSite = (site) => {
-        const url = SITES_URL+ '/' +this.props.editSite.id + '.json?auth=' + this.props.token ;
+        const url = SITES_URL+ '/' +this.props.editSite.key + '.json?auth=' + this.props.token ;
         
         axios.put(url ,site)
                 .then( response => {
@@ -196,7 +212,7 @@ class SiteData extends Component {
         axios.post(url ,site)
                 .then( response => {
                     if (response) {
-                        site.id = response.data.name;
+                        site.key = response.data.name;
                         if (this.props.isAuthenticated) {
                             this.addSiteCash(site);
                         }    
@@ -212,7 +228,7 @@ class SiteData extends Component {
     }
 
     approvePostSteps = () =>{
-        axios.delete(SITES_SUGEST_URL+'/' + this.props.approveSite.id + '.json')
+        axios.delete(SITES_SUGEST_URL+'/' + this.props.approveSite.key + '.json')
         .then(response => {
             const suggestionLoaded = [...this.props.suggestions];
             const index = this.props.approveSite.index;

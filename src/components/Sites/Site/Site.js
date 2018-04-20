@@ -41,7 +41,10 @@ const Site = (props) => {
                         </a>
                        </Auxliary> 
                       :null
-                   
+
+    const location = props.location                  
+                     ?<i>({props.location})</i>
+                     :null
     return (
         <Auxliary>
             {image}
@@ -51,6 +54,8 @@ const Site = (props) => {
                 {editLinks}
                 {categoryLabel}
                 <p className={classes.ProductDescription}>{props.description}</p>
+                <p className={classes.Location}>{location}</p>
+                <br/>
                 <button className={classes.RegularButton} 
                           onClick={() => window.open(props.site)}>Veja mais</button>   
                 <br/><br/>

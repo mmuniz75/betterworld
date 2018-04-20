@@ -14,6 +14,7 @@ const Sites = (props) => (
                                     name={site.name} 
                                     description={site.description} 
                                     site={site.site}
+                                    location={site.location}
                                     index={index}
                                     buttonsType={props.buttonsType} 
                                     approveClicked={props.approveClicked}

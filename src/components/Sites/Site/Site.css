@@ -41,9 +41,18 @@
     font-size: 14px;
     line-height: 20px;
     white-space: normal;
-
     margin: 20px 0;
 }
+
+.Location{
+    color: #5d5d5d;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: normal;
+    margin: 20px 0;
+    text-align: right
+}
+
 
 /* Product button and price */
 

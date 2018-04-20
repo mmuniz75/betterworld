@@ -88,7 +88,7 @@ class Home extends Component {
             const sitesLoaded = [];
             Object.keys(response.data).map(key => {
                 const site = response.data[key];
-                site.id = key;
+                site.key = key;
                 return sitesLoaded.push(site)
             });
             this.props.onFetchSites(sitesLoaded,category);
@@ -112,7 +112,7 @@ class Home extends Component {
 
         axios.post(SITES_URL+ '_trash.json?auth=' + this.props.token ,site)
         .then(response => {
-            axios.delete(SITES_URL+'/' + site.id + '.json?auth=' + this.props.token)
+            axios.delete(SITES_URL+'/' + site.key + '.json?auth=' + this.props.token)
             .then(response => {
                 sitesLoaded.splice(index,1);
                 this.props.onFetchSites(sitesLoaded);

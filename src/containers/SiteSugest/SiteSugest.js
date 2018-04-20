@@ -38,7 +38,7 @@ class SiteSugest extends Component {
                 Object.keys(response.data).map(key => {
                     const site = response.data[key];
                     if(site) {
-                        site.id = key;
+                        site.key = key;
                         return sitesLoaded.push(site)
                     }else
                         return null;    
@@ -54,7 +54,7 @@ class SiteSugest extends Component {
         this.setState({loading:true,rejectSiteIndex:null}); 
         const sitesLoaded = [...this.props.suggestions];
         const site = sitesLoaded[index];
-        axios.delete(SITES_SUGEST_URL+'/' + site.id + '.json')
+        axios.delete(SITES_SUGEST_URL+'/' + site.key + '.json')
         .then(response => {
             sitesLoaded.splice(index,1);
             this.props.onFetchSuggestions(sitesLoaded);
