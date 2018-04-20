@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import SelectCategory from '../../components/SelectCategory/SelectCategory';
+import SearchText from '../../components/SearchText/SearchText'
 import Sites from '../../components/Sites/Sites';
 import * as categoryActionTypes from '../../store/reducers/category';
 import * as siteActionTypes from '../../store/reducers/site';
@@ -8,6 +9,8 @@ import * as siteActionTypes from '../../store/reducers/site';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
+
+import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 
 import axios from '../../axios';
 
@@ -141,11 +144,15 @@ class Home extends Component {
         
         let sites = <Spinner />;
         if ( !this.state.loading ) {
-            sites = <Sites show={this.state.showSites} 
+            sites = <Auxiliary>
+                        <SearchText show={this.props.lastSitesLoaded.length>0}
+                                    placeholder="filtre os sites encontrados" />
+                        <Sites show={this.state.showSites} 
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
                             delete={this.confirmDelete}
                             auth={this.props.isAuthenticated}/>
+                    </Auxiliary>        
         }    
         return (
             <div className={classes.Home}>
