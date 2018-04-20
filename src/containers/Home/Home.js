@@ -6,6 +6,8 @@ import * as categoryActionTypes from '../../store/reducers/category';
 import * as siteActionTypes from '../../store/reducers/site';
 
 import Spinner from '../../components/UI/Spinner/Spinner';
+import Modal from '../../components/UI/Modal/Modal';
+import Button from '../../components/UI/Button/Button';
 
 import axios from '../../axios';
 
@@ -25,7 +27,8 @@ class Home extends Component {
         sites : null,
         loading : false,
         categoryLoading: false,
-        showSites : false
+        showSites : false,
+        deleteSiteIndex : null
     }
 
     componentDidMount= () => {
@@ -101,20 +104,28 @@ class Home extends Component {
         this.props.history.push('/siteData');
     }
 
-    removeSite = (index) => {
-        this.setState({loading:true});
+    removeSite = () => {
+        this.setState({loading:true,deleteSiteIndex:null});
         const sitesLoaded = [...this.props.lastSitesLoaded];
-        const site = sitesLoaded[index];
+        const site = sitesLoaded[this.state.deleteSiteIndex];
 
         axios.post(SITES_URL+ '_trash.json?auth=' + this.props.token ,site)
         .then(response => {
             axios.delete(SITES_URL+'/' + site.id + '.json?auth=' + this.props.token)
             .then(response => {
-                sitesLoaded.splice(index,1);
+                sitesLoaded.splice(this.state.deleteSiteIndex,1);
                 this.props.onFetchSites(sitesLoaded);
                 this.setState({loading:false});
             })    
         })
+    }
+
+    cancelDelete = () =>{
+        this.setState({deleteSiteIndex:null});
+    }    
+
+    confirmDelete = (index) => {
+        this.setState({deleteSiteIndex:index});
     }
 
     render(){
@@ -132,7 +143,7 @@ class Home extends Component {
             sites = <Sites show={this.state.showSites} 
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
-                            delete={this.removeSite}
+                            delete={this.confirmDelete}
                             auth={this.props.isAuthenticated}/>
         }    
         return (
@@ -140,6 +151,11 @@ class Home extends Component {
                 {categories}
                 <br/>
                 {sites}
+                <Modal show={this.state.deleteSiteIndex}>
+                    <h3>Confirma remoção do site ?</h3>
+                    <Button btnType="Success" clicked={this.removeSite}>SIM</Button>
+                    <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                </Modal>    
             </div>
             
         )
