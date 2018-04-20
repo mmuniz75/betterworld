@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import Modal from '../../components/UI/Modal/Modal';
 
 import classes from './SiteData.css';
 import axios from '../../axios'
@@ -17,6 +18,7 @@ import * as siteActionTypes from '../../store/reducers/site';
 
 class SiteData extends Component {
     state = {
+        thanks : null,
         siteForm: {
             name: {
                 elementType: 'input',
@@ -214,10 +216,19 @@ class SiteData extends Component {
                             this.approvePostSteps();
                         }else{
                             this.setState({loading:false});
-                            this.props.history.replace( '/');
+                            if(this.props.isAuthenticated) {
+                                this.props.history.replace( '/');
+                            }else{
+                                this.setState({thanks:true});
+                            }
                         }    
                     }    
         } )
+    }
+
+    ok = () => {
+        this.setState({thanks:null});
+        this.props.history.replace( '/');
     }
 
     approvePostSteps = () =>{
@@ -304,8 +315,12 @@ class SiteData extends Component {
                 <div className={classes.SiteData}>
                     <h3>{beginTitle} um Site que pode ajudar a tornar o mundo melhor</h3>
                     <div>
-                    {form}
+                        {form}
                     </div>
+                    <Modal show={this.state.thanks}>
+                        <h3>Obrigado pela sugestão, estaremos avaliando as informações.</h3>    
+                        <Button btnType="Success" clicked={this.ok}>OK</Button>
+                    </Modal>    
                 </div>
             
         );
