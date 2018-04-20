@@ -19,6 +19,8 @@ import classes from './Home.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {SITES_URL} from '../../shared/consts';
 
+import {like} from '../../shared/utility';
+
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 const categoriesURL = '/categories.json?orderBy="active"&equalTo=true';
@@ -72,6 +74,7 @@ class Home extends Component {
     }
 
     showSitesHandler = (event) => {
+        this.props.onSetSitesFilter(null,null);
         const category = event.target.value;
         if (category==='0'){
             this.setState({showSites:false});
@@ -95,6 +98,7 @@ class Home extends Component {
                 return sitesLoaded.push(site)
             });
             this.props.onFetchSites(sitesLoaded,category);
+            this.props.onSetSitesCashed(sitesLoaded);
             this.setState({loading:false}); 
         })
     }
@@ -132,6 +136,24 @@ class Home extends Component {
         this.setState({deleteSiteIndex:index});
     }
 
+    filter = (event) => {
+        const search = event.target.value;
+        const sites = [...this.props.sitesCashed];
+
+        if(search.length===0){
+            this.props.onSetSitesFilter(null);
+            this.props.onFetchSites(sites);
+        }else {
+            const criteria = '%' + search + '%';
+            const sitesFiltered = sites.filter(site => {
+                                    return like(criteria,site.description) || 
+                                        like(criteria,site.name)
+                                })
+            this.props.onSetSitesFilter(search);
+            this.props.onFetchSites(sitesFiltered);
+        }    
+    }
+
     render(){
         let categories = <Spinner />;
         if ( !this.state.categoryLoading ) {
@@ -143,10 +165,13 @@ class Home extends Component {
         }
         
         let sites = <Spinner />;
+
         if ( !this.state.loading ) {
             sites = <Auxiliary>
-                        <SearchText show={this.props.lastSitesLoaded.length>0}
-                                    placeholder="filtre os sites encontrados" />
+                        <SearchText show={this.props.sitesCashed.length>0}
+                                    placeholder="filtre os sites encontrados"
+                                    changed={this.filter} 
+                                    value={this.props.lastFilter} />
                         <Sites show={this.state.showSites} 
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
@@ -177,6 +202,8 @@ const mapStateToProps = state => {
         lastSitesLoaded : state.site.lastSitesLoaded,
         lastCategory : state.site.category,
         isAuthenticated: state.auth.token !== null,
+        lastFilter : state.site.filterCriteria,
+        sitesCashed : state.site.sitesCashed
     };
 };
 
@@ -198,6 +225,14 @@ const mapDispatchToProps = dispatch => {
         onSetCategory: (category) => dispatch({
             type: siteActionTypes.SET_CATEGORY,
             category:category
+        }),
+        onSetSitesCashed: (sitesCashed) => dispatch({
+            type: siteActionTypes.SET_SITES_CASH,
+            sitesCashed:sitesCashed
+        }),
+        onSetSitesFilter: (filterCriteria) => dispatch({
+            type: siteActionTypes.SET_FILTER,
+            filterCriteria:filterCriteria,
         })
     };
 };

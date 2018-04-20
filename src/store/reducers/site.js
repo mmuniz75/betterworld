@@ -6,9 +6,13 @@ export const FETCH_SUGGESTIONS = 'FETCH_SUGGESTIONS';
 export const SITE_EDIT = 'SITE_EDIT';
 export const SITE_APPROVE = 'SITE_APPROVE';
 export const SET_CATEGORY = 'SET_CATEGORY';
+export const SET_SITES_CASH = 'SET_SITES_CASH';
+export const SET_FILTER = 'SET_FILTER';
 
 const initialState = {
     lastSitesLoaded: [],
+    sitesCashed: [],
+    filterCriteria: null,
     siteToEdit :null,
     siteToApprove : null,
     category : null,
@@ -37,6 +41,19 @@ const fetchSites = ( state, action ) => {
     } );
 };
 
+const setSitesCash = ( state, action ) => {
+    return updateObject( state, {
+        filterCriteria: action.filterCriteria,
+        sitesCashed : action.sitesCashed
+    } );
+};
+
+const setFilter = ( state, action ) => {
+    return updateObject( state, {
+        filterCriteria: action.filterCriteria
+    } );
+};
+
 const setCategory = ( state, action ) => {
     return updateObject( state, {
         category : action.category
@@ -56,6 +73,8 @@ const reducer = ( state = initialState, action ) => {
         case FETCH_SITES: return fetchSites( state, action );
         case FETCH_SUGGESTIONS: return fetchSuggestion( state, action );
         case SET_CATEGORY: return setCategory( state, action );
+        case SET_SITES_CASH: return setSitesCash( state, action );
+        case SET_FILTER: return setFilter( state, action );
         default: return state;
     }
 };

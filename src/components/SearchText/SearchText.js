@@ -5,6 +5,7 @@ import classes from './SearchText.css';
 const SelectCategory = (props) => {
 
         const inputStyle = props.show?classes.Display:classes.Hidden;
+        const value = props.value?props.value:'';
 
         return (
             <div className={classes.Border}>
@@ -12,7 +13,8 @@ const SelectCategory = (props) => {
                     <input type="text" 
                         className={inputStyle}
                         placeholder={props.placeholder} 
-                        onChange={props.changed}/>
+                        onChange={(event) => props.changed(event)}
+                        value={value}/>
                 </div>
             </div>
         )

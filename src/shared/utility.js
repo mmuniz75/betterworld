@@ -35,3 +35,14 @@ export const checkValidity = ( value, rules ) => {
 
     return isValid;
 }
+
+export const like = (search,value) => {
+    if (typeof search !== 'string' || value === null) {return false; }
+    // Remove special chars
+    search = search.replace(new RegExp("([\\.\\\\\\+\\*\\?\\[\\^\\]\\$\\(\\)\\{\\}\\=\\!\\<\\>\\|\\:\\-])", "g"), "\\$1");
+    // Replace % and _ with equivalent regex
+    search = search.replace(/%/g, '.*').replace(/_/g, '.');
+    // Check matches
+    return RegExp('^' + search + '$', 'gi').test(value);
+    
+}

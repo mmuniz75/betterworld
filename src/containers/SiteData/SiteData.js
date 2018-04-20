@@ -190,6 +190,7 @@ class SiteData extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
+                       site.key = this.props.editSite.key;
                        this.updateCash(site);
                        this.props.onSiteEdit(null);
                        this.props.history.replace( '/' );
