@@ -251,9 +251,9 @@ class SiteData extends Component {
         if(this.props.approveSite) {
             this.props.onSiteApprove(null);
             this.props.history.replace('/sugest');
+        }else {    
+            this.props.history.goBack();
         }    
-       
-        this.props.history.goBack();
     }
 
     inputChangedHandler = (event, inputIdentifier) => {
