@@ -15,6 +15,7 @@ const Sites = (props) => (
                                     description={site.description} 
                                     site={site.site}
                                     location={site.location}
+                                    active={site.active}
                                     index={index}
                                     buttonsType={props.buttonsType} 
                                     approveClicked={props.approveClicked}
@@ -23,6 +24,7 @@ const Sites = (props) => (
                                     edit={props.edit}
                                     delete={props.delete}
                                     auth={props.auth}
+                                    enable={props.enable}
                                     />
                                     
                                 </li>

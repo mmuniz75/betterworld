@@ -39,6 +39,8 @@ const Site = (props) => {
                         <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-trash fa-lg" title='Remover Site' />
                         </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onClick={() => props.enable(props.index)} />Site ativo?</p>
                        </Auxliary> 
                       :null
 

@@ -12,6 +12,7 @@ export const FETCH_SUGGESTIONS = 'FETCH_SUGGESTIONS';
 export const DELETE_SUGGESTION = 'DELETE_SUGGESTION';
 
 export const SITE_EDIT = 'SITE_EDIT';
+export const SITE_ENABLE = 'SITE_ENABLE';
 export const SITE_APPROVE = 'SITE_APPROVE';
 export const SET_CATEGORY = 'SET_CATEGORY';
 
@@ -93,7 +94,7 @@ const updateSiteByID = (site,sites) => {
 
 const updateSite = ( state, action ) => {
     const site = {...action.site};
-    site.key = state.siteToEdit.key;
+    site.key = state.siteToEdit?state.siteToEdit.key:site.key;
     const sitesLoaded = updateSiteByID(site,state.lastSitesLoaded)
     const sitesCashed = updateSiteByID(site,state.sitesCashed)
     

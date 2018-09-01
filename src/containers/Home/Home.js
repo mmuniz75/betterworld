@@ -90,8 +90,12 @@ class Home extends Component {
             const sitesLoaded = [];
             Object.keys(response.data).map(key => {
                 const site = response.data[key];
-                site.key = key;
-                return sitesLoaded.push(site)
+                if(!this.props.isAuthenticated && !site.active)
+                    return;
+                else {    
+                    site.key = key;
+                    return sitesLoaded.push(site)
+                }    
             });
             this.props.onFetchSites(sitesLoaded,category);
             this.setState({loading:false}); 
@@ -104,6 +108,14 @@ class Home extends Component {
         site.index = index;
         this.props.onSiteEdit(site);
         this.props.history.push('/siteData');
+    }
+
+    enableSite = (index) => {
+        const sitesLoaded = [...this.props.lastSitesLoaded];
+        const site = sitesLoaded[index];
+        site.index = index;
+        site.active = !site.active;
+        this.updateSite(site);
     }
 
     removeSite = () => {
@@ -134,6 +146,18 @@ class Home extends Component {
         this.props.onFilterSites(event.target.value);
     }
 
+    updateSite = (site) => {
+        const url = SITES_URL+ '/' + site.key + '.json?auth=' + this.props.token ;
+        
+        axios.put(url ,site)
+                .then( response => {
+                    this.setState({loading:false});
+                    if (response) {
+                       this.props.onUpdateSite(site);
+                    }    
+        } )
+    }
+
     render(){
         let categories = <Spinner />;
         if ( !this.state.categoryLoading ) {
@@ -156,7 +180,10 @@ class Home extends Component {
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
                             delete={this.confirmDelete}
-                            auth={this.props.isAuthenticated}/>
+                            auth={this.props.isAuthenticated}
+                            enable={this.enableSite}
+                            />
+                            
                     </Auxiliary>        
         }    
         return (
@@ -213,8 +240,16 @@ const mapDispatchToProps = dispatch => {
         onFilterSites: (filterCriteria) => dispatch({
             type: siteActionTypes.FILTER_SITES,
             search:filterCriteria,
+        }),
+        onUpdateSite: (site) => dispatch({
+            type: siteActionTypes.UPDATE_SITE,
+            site: site
         })
     };
 };
+
+
+
+
 
 export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(Home,axios));
