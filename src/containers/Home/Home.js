@@ -35,10 +35,9 @@ class Home extends Component {
 
     componentDidMount= () => {
         this.loadCategories();
-        //this.loadSitesFromSpreedSheet();
         this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
     }
-    
+       
 
     loadSitesFromSpreedSheet(){
         if(!this.state.sites) {

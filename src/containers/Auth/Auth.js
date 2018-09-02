@@ -13,6 +13,8 @@ import {checkAuthTimeout} from '../../shared/auth';
 
 import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
+import * as siteActionTypes from '../../store/reducers/site';
+
 import { updateObject, checkValidity } from '../../shared/utility';
 
 const AUTH_URL = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCEZ0Vr-6LjTQkji4xZuA79_LI_d6tNmUc';
@@ -136,6 +138,7 @@ class Auth extends Component {
 
         let authRedirect = null;
         if ( this.props.isAuthenticated ) {
+            this.props.onSetCategory(0);
             authRedirect = <Redirect to='/sites' />
         }
 
@@ -175,6 +178,11 @@ const mapDispatchToProps = dispatch => {
         onLogout: () => dispatch( {
                                     type: actionTypes.AUTH_LOGOUT
                                   } ),
+        
+        onSetCategory: (category) => dispatch({
+            type: siteActionTypes.SET_CATEGORY,
+            category:category
+        })                                  
     };
 };
 

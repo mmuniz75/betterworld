@@ -40,7 +40,7 @@ const Site = (props) => {
                             <i className="fas fa-trash fa-lg" title='Remover Site' />
                         </a>
                         &nbsp;&nbsp;&nbsp;
-                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onClick={() => props.enable(props.index)} />Site ativo?</p>
+                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />Site ativo?</p>
                        </Auxliary> 
                       :null
 

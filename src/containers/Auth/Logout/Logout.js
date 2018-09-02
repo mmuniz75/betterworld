@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import {logout} from '../../../shared/auth';
 
 import * as actionTypes from '../../../store/reducers/auth';
+import * as siteActionTypes from '../../../store/reducers/site';
 
 class Logout extends Component {
     componentDidMount () {
@@ -12,7 +13,8 @@ class Logout extends Component {
     }
 
     render () {
-        return <Redirect to="/"/>;
+        this.props.onSetCategory(0);
+        return <Redirect to="/sites"/>;
     }
 }
 
@@ -20,7 +22,11 @@ const mapDispatchToProps = dispatch => {
     return {
         onLogout: () => dispatch({
             type: actionTypes.AUTH_LOGOUT
-          })
+          }),
+        onSetCategory: (category) => dispatch({
+            type: siteActionTypes.SET_CATEGORY,
+            category:category
+        })
     };
 };
 
