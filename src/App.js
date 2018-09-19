@@ -36,6 +36,7 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
+        <Route path="/categories" exact component={Home} />
         <Route path="/sites" exact component={Home} />
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />

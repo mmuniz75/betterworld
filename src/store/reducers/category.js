@@ -1,20 +1,50 @@
-//import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from '../../shared/utility';
 
 export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
-export const CATEGORY_ADD = 'CATEGORY_ADD';
+export const ADD = 'CATEGORY_ADD';
+export const EDIT = 'CATEGORY_EDIT';
+export const DELETE = 'CATEGORY_EDIT';
 
 const initialState = {
     categories: [],
+    categoryToEdit : null
 };
 
-const categoryAdd = ( state, action ) => {
-    const newCategory = updateObject( action.categoryData, { id: action.categoryId } );
+const categoryEdit = ( state, action ) => {
     return updateObject( state, {
-        loading: false,
-        categories: state.categories.concat( newCategory )
+        categoryToEdit: action.category
     } );
 };
+
+const addCategory = ( state, action ) => {
+    const newCategory = {...action.categoryData};
+    return updateObject( state, {
+        loading: false,
+        categories: state.categories.concat(newCategory)
+    } );
+};
+
+
+const updateCategory = ( state, action ) => {
+    const categoriesCopy = [...state.categories];
+    const categoryCopy = {...action.categoryData};
+    categoriesCopy.splice(categoryCopy.index,1,categoryCopy);
+    
+    return updateObject( state, {
+        categories: categoriesCopy,
+        categoryToEdit : null
+    } );
+};
+
+const deleteCategory = ( state, action ) => {
+    const categoriesCopy = {...state.categories};
+    categoriesCopy.splice(action.index,1);
+   
+    return updateObject( state, {
+        categories : categoriesCopy
+    } );
+};
+
 
 const fetchCategories = ( state, action ) => {
     return updateObject( state, {
@@ -24,7 +54,10 @@ const fetchCategories = ( state, action ) => {
 
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
-        case CATEGORY_ADD: return categoryAdd( state, action )
+        case EDIT: return categoryEdit( state, action )
+        case ADD: return addCategory( state, action )
+        case UPDATE: return updateCategory( state, action )
+        case DELETE: return deleteCategory( state, action )
         case FETCH_CATEGORIES: return fetchCategories( state, action );
         default: return state;
     }
