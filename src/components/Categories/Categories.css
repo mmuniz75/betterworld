@@ -1,0 +1,66 @@
+
+
+.Categories{
+    list-style:none;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0;
+}
+
+.Categories li{
+    box-sizing:border-box;
+    overflow: hidden;
+
+    text-align:left;
+    font:normal 12px sans-serif;
+
+    background-color:#ffffff;
+    border:1px solid #dbe3e7;
+    border-radius: 3px;
+    box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
+
+    max-width:570px;
+    margin-bottom: 25px;
+    padding: 25px;
+}
+
+
+.ProductDetails{
+    max-width: 100%;
+    float: center;
+}
+
+/* Product title */
+
+.ProductDetails h2{
+    display: block;
+    margin:0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+
+.ProductDetails button{
+    border-radius: 2px;
+    background-color:  #87bae1;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+
+    width: 95px;
+    height: 32px;
+}
+
+/* Making the product list responsive */
+
+@media (max-width: 600px){
+    .ProductDetails{
+        float: none;
+    }
+
+}

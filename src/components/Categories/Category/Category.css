@@ -1,0 +1,33 @@
+
+.ProductDetails{
+    max-width: 100%;
+    float: center;
+}
+
+/* Product title */
+
+.ProductDetails h2{
+    display: block;
+    margin:0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.ProductDetails h2 a{
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 600px){
+    
+    .ProductDetails{
+        float: none;
+    }
+
+
+}
+
