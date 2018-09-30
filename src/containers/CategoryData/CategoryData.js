@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import Button from '../../components/UI/Button/Button';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import Modal from '../../components/UI/Modal/Modal';
 
 import classes from './CategoryData.css';
 import axios from '../../axios'
@@ -97,7 +96,7 @@ class CategoryData extends Component {
     updateCategory = (category) => {
         const url = CATEGORIES_URL+ '/' +this.props.editCategory.key + '.json?auth=' + this.props.token ;
         
-        axios.put(url ,Category)
+        axios.put(url ,category)
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
@@ -206,15 +205,15 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onCategoryEdit: (categoryToEdit) => dispatch({
-            type: ationTypes.EDIT,
+            type: actionTypes.EDIT,
             category: categoryToEdit
         }),
         onUpdateCategory: (category) => dispatch({
-            type: ationTypes.UPDATE,
+            type: actionTypes.UPDATE,
             categoryData: category
         }),
         onAddCategory: (category) => dispatch({
-            type: ationTypes.ADD,
+            type: actionTypes.ADD,
             categoryData: category
         })
     };

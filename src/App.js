@@ -15,6 +15,10 @@ const asyncSiteData = asyncComponent(() => {
   return import('./containers/SiteData/SiteData');
 });
 
+const asyncCategory = asyncComponent(() => {
+  return import('./containers/Categories/Categories');
+});
+
 const asyncLogin = asyncComponent(() => {
   return import('./containers/Auth/Auth');
 });
@@ -36,7 +40,7 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/categories" exact component={Home} />
+        <Route path="/categories" exact component={asyncCategory} />
         <Route path="/sites" exact component={Home} />
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />

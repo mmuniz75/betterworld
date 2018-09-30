@@ -4,6 +4,7 @@ export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
 export const ADD = 'CATEGORY_ADD';
 export const EDIT = 'CATEGORY_EDIT';
 export const DELETE = 'CATEGORY_EDIT';
+export const UPDATE = 'CATEGORY_UPDATE';
 
 const initialState = {
     categories: [],

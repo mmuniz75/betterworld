@@ -69,4 +69,4 @@ const category = (props) => {
         </Auxliary>
     )
 }      
-export default Category;
+export default category;

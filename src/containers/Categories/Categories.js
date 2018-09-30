@@ -5,6 +5,7 @@ import * as actionTypes from '../../store/reducers/category';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
+import Category from '../../components/Categories/Category/Category';
 
 import axios from '../../axios';
 
@@ -52,7 +53,7 @@ class Categories extends Component {
         const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
         category.index = index;
-        this.props.onCategoryEdit(Category);
+        this.props.onCategoryEdit(category);
         this.props.history.push('/categoryData');
     }
 
@@ -60,7 +61,7 @@ class Categories extends Component {
         const index = this.state.deleteCategoryIndex;
         this.setState({loading:true,deleteCategoryIndex:null});
         const categoriesLoaded = [...this.props.categories];
-        const category = categories[index];
+        const category = categoriesLoaded[index];
 
         axios.delete(this.props.categories_URL+'/' + category.key + '.json?auth=' + this.props.token)
         .then(response => {
@@ -121,7 +122,7 @@ const mapDispatchToProps = dispatch => {
             categoryToEdit:categoryToEdit
         }),
         onDeleteCategory: (index) => dispatch({
-            type: CategoryActionTypes.DELETE,
+            type: actionTypes.DELETE,
             index: index
         }),
     };
