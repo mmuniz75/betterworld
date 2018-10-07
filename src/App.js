@@ -16,7 +16,7 @@ const asyncSiteData = asyncComponent(() => {
 });
 
 const asyncCategory = asyncComponent(() => {
-  return import('./containers/Categories/Categories');
+  return import('./containers/CategoriesAdmin/CategoriesAdmin');
 });
 
 const asyncLogin = asyncComponent(() => {

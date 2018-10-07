@@ -55,10 +55,6 @@ const category = (props) => {
                 {categoryLabel}
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <p className={classes.Location}>{location}</p>
-                <br/>
-                <button className={classes.RegularButton} 
-                          onClick={() => window.open(props.Category)}>Veja mais</button>   
-                <br/><br/>
                 {buttons}
                 
                 {/*

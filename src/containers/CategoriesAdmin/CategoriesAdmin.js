@@ -5,18 +5,18 @@ import * as actionTypes from '../../store/reducers/category';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
-import Category from '../../components/Categories/Category/Category';
+import Categories from '../../components/Categories/Categories';
 
 import axios from '../../axios';
 
-import classes from './Categories.css';
+import classes from './CategoriesAdmin.css';
 
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {CATEGORIES_URL} from '../../shared/consts';
 
 const categoriesURL = CATEGORIES_URL;
 
-class Categories extends Component {
+class CategoriesAdmin extends Component {
         
     state = {
         loading : false,
@@ -82,7 +82,7 @@ class Categories extends Component {
     render(){
         let categories = <Spinner />;
         if ( !this.state.loading ) {
-             categories =   <Category show={this.props.categories} 
+             categories =   <Categories show={this.props.categories} 
                                 categories={this.props.categories}
                                 edit={this.editCategory}
                                 delete={this.confirmDelete}
@@ -90,7 +90,7 @@ class Categories extends Component {
              
         }    
         return (
-            <div className={classes.Category}>
+            <div className={classes.Categories}>
                 {categories}
                 <Modal show={this.state.deleteCategoryIndex!==null}>
                     <h3>Confirma remoção da Categoria ?</h3>
@@ -128,4 +128,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(Categories,axios));
+export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(CategoriesAdmin,axios));

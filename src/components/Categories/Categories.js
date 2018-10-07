@@ -1,7 +1,7 @@
 import React from 'react';
 
 import classes from './Categories.css';
-import Category from './category/Category';
+import Category from './Category/Category';
 
 const categories = (props) => (
         <ul style={!props.show?{display:'none'}:null} className={classes.Categories}>
