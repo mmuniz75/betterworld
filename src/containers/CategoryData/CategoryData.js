@@ -59,7 +59,6 @@ class CategoryData extends Component {
                 valid: true
             });
             const active = updateObject(this.state.categoryForm.active, {
-                elementConfig: {...this.state.categoryForm.active.elementConfig, checked: editCategory.active},
                 value: editCategory.active,
                 valid: true
             });
@@ -132,7 +131,7 @@ class CategoryData extends Component {
     inputChangedHandler = (event, inputIdentifier) => {
         
         const updatedFormElement = updateObject(this.state.categoryForm[inputIdentifier], {
-            value: event.target.value,
+            value: this.state.categoryForm[inputIdentifier].elementConfig.type!=='checkbox'?event.target.value:event.target.checked,
             valid: checkValidity(event.target.value, this.state.categoryForm[inputIdentifier].validation),
             touched: true
         });
