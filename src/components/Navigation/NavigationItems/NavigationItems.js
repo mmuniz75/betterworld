@@ -16,8 +16,13 @@ const navigationItems = ( props ) => (
             : null} 
         {props.isAuthenticated 
             ? <NavigationItem link="/categories">Categorias</NavigationItem> 
+            : null} 
+        {props.isAuthenticated 
+            ? <NavigationItem link="/categoryData">Adicione uma Categoria</NavigationItem> 
             : null}       
-        <NavigationItem emailLink >Fale Conosco</NavigationItem>
+        {!props.isAuthenticated
+            ? <NavigationItem emailLink >Fale Conosco</NavigationItem>
+            : null }
         {!props.isAuthenticated
             ? <NavigationItem link="/login">Login</NavigationItem>
             : <NavigationItem link="/logout">Logout</NavigationItem>}

@@ -37,9 +37,8 @@ class CategoryData extends Component {
                 },
                 value: '',
                 validation: {
-                    required: true,
                 },
-                valid: false,
+                valid: true,
                 touched: false,
                 label: 'Ativo'
             }
