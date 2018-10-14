@@ -20,7 +20,7 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {SITES_URL,CATEGORIES_URL} from '../../shared/consts';
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
-const categoriesURL = CATEGORIES_URL + '?orderBy="active"&equalTo=true';
+const categoriesURL = CATEGORIES_URL + '.json?orderBy="active"&equalTo=true';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Home extends Component {

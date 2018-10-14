@@ -19,6 +19,10 @@ const asyncCategory = asyncComponent(() => {
   return import('./containers/CategoriesAdmin/CategoriesAdmin');
 });
 
+const asyncCategoryData = asyncComponent(() => {
+  return import('./containers/CategoryData/CategoryData');
+});
+
 const asyncLogin = asyncComponent(() => {
   return import('./containers/Auth/Auth');
 });
@@ -41,6 +45,7 @@ class App extends Component {
     let routes = (
       <Switch>
         <Route path="/categories" exact component={asyncCategory} />
+        <Route path="/categoryData" exact component={asyncCategoryData} />
         <Route path="/sites" exact component={Home} />
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />

@@ -50,6 +50,8 @@ const category = (props) => {
             {image}
             <div className={classes.ProductDetails}>
                 <h2>{props.name}</h2>
+                ({props.active?"Ativa":"Não Ativa"})
+                <br/>
                 <br/>
                 {editLinks}
                 {categoryLabel}

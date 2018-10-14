@@ -33,15 +33,15 @@ class CategoryData extends Component {
             active: {
                 elementType: 'input',
                 elementConfig: {
-                    type: 'checkbox',
-                    placeholder: 'Ativo'
+                    type: 'checkbox'
                 },
                 value: '',
                 validation: {
                     required: true,
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                label: 'Ativo'
             }
         },
         formIsValid: false,
@@ -59,7 +59,8 @@ class CategoryData extends Component {
                 valid: true
             });
             const active = updateObject(this.state.categoryForm.active, {
-                value : editCategory.active,
+                elementConfig: {...this.state.categoryForm.active.elementConfig, checked: editCategory.active},
+                value: editCategory.active,
                 valid: true
             });
             const updatedCategoryForm = updateObject(this.state.CategoryForm, {
@@ -100,13 +101,11 @@ class CategoryData extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
-                       this.props.onUpdateCategory(category);
+                       this.props.onFetchCategories([]);
                        this.props.history.replace( '/categories' );
                     }    
         } )
     }
-
-   
 
     addCategory = (category) => {
         const url = CATEGORIES_URL + '.json?auth=' + this.props.token;
@@ -163,6 +162,7 @@ class CategoryData extends Component {
             <form onSubmit={this.submitHandler}>
                 {formElementsArray.map(formElement => (
                     <Input 
+                        label={formElement.config.label}
                         key={formElement.id}
                         elementType={formElement.config.elementType}
                         elementConfig={formElement.config.elementConfig}
@@ -208,9 +208,9 @@ const mapDispatchToProps = dispatch => {
             type: actionTypes.EDIT,
             category: categoryToEdit
         }),
-        onUpdateCategory: (category) => dispatch({
-            type: actionTypes.UPDATE,
-            categoryData: category
+        onFetchCategories: (categories) => dispatch({
+            type: actionTypes.FETCH_CATEGORIES,
+            categories: categories
         }),
         onAddCategory: (category) => dispatch({
             type: actionTypes.ADD,

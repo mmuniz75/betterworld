@@ -14,43 +14,44 @@ import classes from './CategoriesAdmin.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {CATEGORIES_URL} from '../../shared/consts';
 
-const categoriesURL = CATEGORIES_URL;
+const categoriesURL = CATEGORIES_URL ;
 
 class CategoriesAdmin extends Component {
         
     state = {
         loading : false,
-        loading: false,
-        deleteCategoryIndex : null
+        deleteCategoryIndex : null,
+        categories: []
     }
 
     componentDidMount= () => {
         this.loadCategories();
     }
-    
 
     loadCategories(){
-        if(this.props.categories.length===0) {
+        if(this.state.categories.length===0) {
             this.setState({loading:true}); 
-            axios.get(categoriesURL)
+            axios.get(categoriesURL + ".json")
             .then(response => {
                 const categoriesLoaded = [];
                 Object.keys(response.data).map(key => {
                     const category = response.data[key];
-                    category.key = key;
-                    return categoriesLoaded.push(category)
+                    if(category){
+                        category.key = key;
+                        return categoriesLoaded.push(category)
+                    }    
                 }
 
                 );
-                this.props.onFetchCategories(categoriesLoaded);
-                this.setState({loading:false}); 
+         
+                this.setState({loading:false,categories: categoriesLoaded}); 
             })
-        }
+        }    
     }
    
 
     editCategory = (index) => {
-        const categoriesLoaded = [...this.props.categories];
+        const categoriesLoaded = [...this.state.categories];
         const category = categoriesLoaded[index];
         category.index = index;
         this.props.onCategoryEdit(category);
@@ -60,12 +61,13 @@ class CategoriesAdmin extends Component {
     removeCategory = () => {
         const index = this.state.deleteCategoryIndex;
         this.setState({loading:true,deleteCategoryIndex:null});
-        const categoriesLoaded = [...this.props.categories];
+        const categoriesLoaded = [...this.state.categories];
         const category = categoriesLoaded[index];
 
-        axios.delete(this.props.categories_URL+'/' + category.key + '.json?auth=' + this.props.token)
+        axios.delete(categoriesURL+'/' + category.key + '.json?auth=' + this.props.token)
         .then(response => {
-            this.props.onDeleteCategory(index);
+            this.state.categories.splice(index,1);
+            this.props.onFetchCategories([]);
             this.setState({loading:false});
         })    
        
@@ -82,8 +84,8 @@ class CategoriesAdmin extends Component {
     render(){
         let categories = <Spinner />;
         if ( !this.state.loading ) {
-             categories =   <Categories show={this.props.categories} 
-                                categories={this.props.categories}
+             categories =   <Categories show={this.state.categories} 
+                                categories={this.state.categories}
                                 edit={this.editCategory}
                                 delete={this.confirmDelete}
                                 auth={this.props.isAuthenticated}/>
@@ -105,9 +107,8 @@ class CategoriesAdmin extends Component {
 
 const mapStateToProps = state => {
     return {
-        categories: state.category.categories,
         token : state.auth.token,
-        isAuthenticated: state.auth.token !== null,
+        isAuthenticated: state.auth.token !== null
     };
 };
 
@@ -120,11 +121,7 @@ const mapDispatchToProps = dispatch => {
         onCategoryEdit: (categoryToEdit) => dispatch({
             type: actionTypes.EDIT,
             categoryToEdit:categoryToEdit
-        }),
-        onDeleteCategory: (index) => dispatch({
-            type: actionTypes.DELETE,
-            index: index
-        }),
+        })
     };
 };
 
