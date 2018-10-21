@@ -14,8 +14,10 @@ const categories = (props) => (
                                         active={category.active}
                                         index={index}
                                         edit={props.edit}
+                                        change={props.change}
                                         delete={props.delete}
                                         auth={props.auth}
+                                        enable={props.enable}
                                     />
                                     
                                 </li>

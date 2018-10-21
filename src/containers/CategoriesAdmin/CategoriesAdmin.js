@@ -50,12 +50,17 @@ class CategoriesAdmin extends Component {
     }
    
 
-    editCategory = (index) => {
+    changeCategory = (index,value) => {
         const categoriesLoaded = [...this.state.categories];
         const category = categoriesLoaded[index];
-        category.index = index;
-        this.props.onCategoryEdit(category);
-        this.props.history.push('/categoryData');
+        category.name=value;
+        this.setState({categories:categoriesLoaded});
+    }
+
+    editCategory = (index,value) => {
+        const categoriesLoaded = [...this.state.categories];
+        const category = categoriesLoaded[index];
+        this.updateCategory(category);
     }
 
     removeCategory = () => {
@@ -81,13 +86,34 @@ class CategoriesAdmin extends Component {
         this.setState({deleteCategoryIndex:index});
     }
 
+    enableCategory = (index) => {
+        const categoriesLoaded = [...this.state.categories];
+        const category = categoriesLoaded[index];
+        category.index = index;
+        category.active = !category.active;
+        this.updateCategory(category);
+    }
+
+    updateCategory = (category) => {
+        const url = categoriesURL+ '/' + category.key + '.json?auth=' + this.props.token ;
+        
+        axios.put(url ,category)
+                .then( response => {
+                    if (response) {
+                        this.props.onFetchCategories([]);
+                    }    
+        } )
+    }
+
     render(){
         let categories = <Spinner />;
         if ( !this.state.loading ) {
              categories =   <Categories show={this.state.categories} 
                                 categories={this.state.categories}
                                 edit={this.editCategory}
+                                change={this.changeCategory}
                                 delete={this.confirmDelete}
+                                enable={this.enableCategory}
                                 auth={this.props.isAuthenticated}/>
              
         }    

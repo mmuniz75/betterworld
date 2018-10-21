@@ -1,4 +1,5 @@
 
+
 .ProductDetails{
     max-width: 100%;
     float: center;
@@ -20,6 +21,33 @@
     text-decoration: none;
 }
 
+
+.Input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 6px 10px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+}
 
 
 @media (max-width: 600px){

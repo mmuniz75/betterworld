@@ -4,65 +4,27 @@ import classes from './Category.css';
 
 import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 
+import Input from '../../UI/Input/Input';
+
 const category = (props) => {
     
-    const approvation = props.approveClicked && props.rejectClicked;
-
-    const image = props.logo? <a className={classes.ProductPhoto}>
-                                <img src={props.logo} height="160" width="160" alt={props.Category}/>
-                            </a>
-                    :null          
-    
-    const buttons = approvation
-                    ?<Auxliary>
-                        <button className={classes.ButtonApprove}
-                                onClick={() => props.approveClicked(props.index)}
-                                >Approve</button>
-                        &nbsp;
-                        <button className={classes.ButtonReject}
-                                onClick={() => props.rejectClicked(props.index)}
-                                >Reject</button>
-                    </Auxliary>
-                    :null;
-
-    const categoryLabel = approvation
-                            ?<Auxliary>
-                                   (<b>Categoria:&nbsp;</b>{props.category})
-                            </Auxliary>
-                            :null;                
-    const editLinks = props.auth
+    const deleteLink = props.auth
                       ?<Auxliary>
-                        <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
-                            <i className="fas fa-edit fa-lg" title='Editar Category' />
-                        </a>
-                        &nbsp;&nbsp;&nbsp;
                         <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
-                            <i className="fas fa-trash fa-lg" title='Remover Category' />
+                            <i className="fas fa-trash fa-lg" title='Remover Categoria' />
                         </a>
                        </Auxliary> 
                       :null
-
-    const location = props.location                  
-                     ?<i>({props.location})</i>
-                     :null
     return (
         <Auxliary>
-            {image}
             <div className={classes.ProductDetails}>
-                <h2>{props.name}</h2>
-                ({props.active?"Ativa":"Não Ativa"})
-                <br/>
-                <br/>
-                {editLinks}
-                {categoryLabel}
+                <input type='text' placeholder='Categoria' value={props.name} className={classes.InputElement} 
+                onBlur={(event) => props.edit(props.index,event.target.value)} 
+                onChange={(event) => props.change(props.index,event.target.value)}/>
+                &nbsp;&nbsp;
+                <span  className={classes.Label}>Ativa?</span><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />
+                &nbsp;&nbsp;{deleteLink}
                 <p className={classes.ProductDescription}>{props.description}</p>
-                <p className={classes.Location}>{location}</p>
-                {buttons}
-                
-                {/*
-                &nbsp;
-                <button onClick={() => props.edit(Category.id)}>Editar</button>
-                */}
             </div>
         </Auxliary>
     )
