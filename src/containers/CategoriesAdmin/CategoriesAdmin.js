@@ -14,6 +14,8 @@ import classes from './CategoriesAdmin.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {CATEGORIES_URL} from '../../shared/consts';
 
+import Auxliary from '../../hoc/Auxiliary/Auxiliary';
+
 const categoriesURL = CATEGORIES_URL ;
 
 class CategoriesAdmin extends Component {
@@ -21,7 +23,8 @@ class CategoriesAdmin extends Component {
     state = {
         loading : false,
         deleteCategoryIndex : null,
-        categories: []
+        categories: [],
+        salved: false
     }
 
     componentDidMount= () => {
@@ -97,13 +100,21 @@ class CategoriesAdmin extends Component {
     updateCategory = (category) => {
         const url = categoriesURL+ '/' + category.key + '.json?auth=' + this.props.token ;
         
+        document.body.style.cursor = 'progress';
         axios.put(url ,category)
                 .then( response => {
                     if (response) {
+                        this.showSalveMessage();
+                        document.body.style.cursor = 'default';
                         this.props.onFetchCategories([]);
                     }    
         } )
     }
+
+    showSalveMessage(){
+        this.setState({salved: true});
+        setTimeout(()=>this.setState({salved: false}), 1000);
+      }
 
     render(){
         let categories = <Spinner />;
@@ -118,15 +129,17 @@ class CategoriesAdmin extends Component {
              
         }    
         return (
-            <div className={classes.Categories}>
-                {categories}
-                <Modal show={this.state.deleteCategoryIndex!==null}>
-                    <h3>Confirma remoção da Categoria ?</h3>
-                    <Button btnType="Success" clicked={this.removeCategory}>SIM</Button>
-                    <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
-                </Modal>    
-            </div>
-            
+                <div className={classes.Categories}>
+                    {categories}
+                    <Modal show={this.state.deleteCategoryIndex!==null}>
+                        <h3>Confirma remoção da Categoria ?</h3>
+                        <Button btnType="Success" clicked={this.removeCategory}>SIM</Button>
+                        <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                    </Modal> 
+                    <Modal show={this.state.salved}>
+                        <h3>Categoria Alterada</h3>
+                    </Modal>     
+                </div>
         )
     }
 }
