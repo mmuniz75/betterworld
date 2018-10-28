@@ -1,18 +1,18 @@
 {
   "0" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "O Projeto Venus propõe uma visão alternativa do que o futuro pode ser se aplicarmos o que já sabemos para alcançar uma civilização do mundo sustentável. Exige um redesenho direto de nossa cultura em que as antiquíssimas falhas de guerra, pobreza, fome, dívidas e sofrimento humano desnecessário são vistas não apenas como evitáveis, mas como totalmente inaceitáveis. Qualquer coisa menos resultará na continuação do mesmo catálogo de problemas inerentes ao mundo de hoje.",
-    "id" : "1524228810532",
+    "id" : "1524646635210",
     "location" : "Florida-US",
-    "logo" : "https://www.thevenusproject.com/wp-content/uploads/2015/11/tvp_header_logo_mirror.jpg",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/venus.png",
     "name" : "Projeto Venus",
     "site" : "https://www.thevenusproject.com/",
-    "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "1" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "UBUNTU propoem que todos os nossos recursos e materiais são usados ​​para apoiar as pessoas, que, por sua vez, apoiam suas próprias cidades e comunidades criando materiais, produtos e serviços, que enriquecem a vida de todos. Dentro da UBUNTU, todos são parte integrante da sua comunidade. Todos contribuem com algo, e todos se sentem necessários. Em vez de prateleiras abastecidas com alimentos enquanto as pessoas morrem de fome, em vez de armazéns repletos de produtos brilhantes que poucos podem pagar, criamos supermercados e armazéns cheios de produtos sem rótulo de preços, e todos os que precisam fazer para acessar esta recompensa é ter feito sua semana contribuição para suas próprias comunidades .",
     "id" : "1524168227114",
     "logo" : "https://www.ubuntuplanet.org/static/assets/img/logo-default.png",
@@ -22,27 +22,29 @@
   },
   "2" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Atados é uma plataforma social que conecta pessoas e organizações, facilitando o engajamento nas mais diversas possibilidades de voluntariado. O fortalecimento dessa rede e a mobilização de voluntários ampliam o impacto das organizações e transformam pessoas e comunidades.",
-    "id" : "3",
-    "logo" : "",
+    "id" : "1524649199705",
+    "location" : "São Paulo ",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/atados.png",
     "name" : "Atados",
     "site" : "https://www.atados.com.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz05"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "3" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "A Repórter Brasil foi fundada em 2001 por jornalistas, cientistas sociais e educadores com o objetivo de fomentar a reflexão e ação sobre a violação aos direitos fundamentais dos povos e trabalhadores no Brasil. Devido ao seu trabalho, tornou-se uma das mais importantes fontes de informação sobre trabalho escravo no país. Suas reportagens, investigações jornalísticas, pesquisas e metodologias educacionais têm sido usadas por lideranças do poder público, do setor empresarial e da sociedade civil como instrumentos para combater a escravidão contemporânea, um problema que afeta milhares de pessoas",
-    "id" : "4",
-    "logo" : "",
+    "id" : "1524649339852",
+    "location" : "Brasil",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/reporter.png",
     "name" : "Reporter Brasil",
     "site" : "http://reporterbrasil.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz06"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "4" : {
     "active" : true,
-    "category" : "Energia",
+    "category" : "3",
     "description" : "A Resonance Science Foundation é dedicada ao avanço da pesquisa e educação da Física Unificada e da unificação de todas as ciências em alinhamento com uma visão de mundo da interconexão e da totalidade.",
     "id" : "1524472064781",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/resonance.png",
@@ -52,7 +54,7 @@
   },
   "5" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "É o centro de coordenação para a auto-organização da nova nação da terra por você, seus membros. oferecemos uma plataforma central de redes para todas as pessoas para apoiar a criação e o desenvolvimento de comunidades sustentáveis ​​e conscientes e iniciativas comunitárias e convidar as pessoas a se juntarem a nossa família global de homens, mulheres, comunidades e nações soberanas.",
     "id" : "1524168294255",
     "logo" : "https://newearthnation.org/wp-content/assets/images/logos/NEW_EARTH_LOGO_DARKBLUE_FINAL_90PX.png",
@@ -62,7 +64,7 @@
   },
   "6" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "É uma proposta de organização científica do espaço social e econômico visando a emancipação social por meio do uso de conhecimento e tecnologias de permanência de forma sustentável e transgeracional.",
     "id" : "1524168328819",
     "logo" : "http://equilibrium.org.br/portal/wp-content/uploads/2014/06/Equilibrium.png",
@@ -72,7 +74,7 @@
   },
   "7" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "É um grupo explicitamente não-violento em defesa da sustentabilidade global, atualmente presente em mais de 1000 regionais - espalhadas por cerca de 70 países, ao redor do mundo.",
     "id" : "1524168393621",
     "logo" : "https://img.fstatic.com/TpI_tnfUp0LhCVROqxj1soJCisQ=/fit-in/290x478/smart/https://cdn.fstatic.com/media/movies/covers/2012/03/e87b8edd15cf6c984775423e6203cf2b.jpg",
@@ -82,7 +84,7 @@
   },
   "8" : {
     "active" : true,
-    "category" : "Energia",
+    "category" : "3",
     "description" : "Somos uma organização não-governamental internacional operando em mais de 20 países.Levamos luz até moradores de comunidades locais que não possuem acesso à energia elétrica ou que vivem sem luz em suas casas. Utilizamos uma tecnologia simples, econômica e ecologicamente sustentável, composta por garrafas plásticas, painéis solares e lâmpadas LED.",
     "id" : "1524472054181",
     "location" : "São Paulo, Rio de Janeiro, Brasília, Manaus, Florianópolis e Campina Grande.",
@@ -93,17 +95,18 @@
   },
   "9" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Fast Food da Política, tem o objetivo de promover a compreensão do Estado e da Política Brasileira de maneira dinâmica e criativa. A organização desenvolve e aplica processos de educação compostos por metodologias, jogos, técnicas de gamificação – uso de elementos e estruturas de jogos para desenvolver habilidades e compreender conceitos – e dinâmicas como ferramentas para disseminar o aprendizado de conteúdos complexos. Os processos de experimentação, tentativa e erro utilizados pela gamificação são excelentes para o desenvolvimento de senso crítico e análise.",
-    "id" : "10",
-    "logo" : "",
+    "id" : "1524649425905",
+    "location" : "São Paulo",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/politica.png",
     "name" : "A Fast Food da Política",
     "site" : "http://fastfooddapolitica.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz12"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "10" : {
     "active" : true,
-    "category" : "Energia",
+    "category" : "3",
     "description" : "O dessalinizador solar é uma tecnologia social de que tem proporcionado inúmeros benefícios socioeconômicos e ambientais: é uma tecnologia de baixo custo de implantação e manutenção; possibilita segurança hídrica através do fornecimento de água potável; promove a transformação social frente a gestão dos recursos hídricos locais; utiliza a energia solar (limpa e renovável) para a promoção de água potável; além de possibilitar a convivência com o semiárido. Resumidamente, o dessalinizador solar é uma tecnologia de fácil construção, o que favorece sua disseminação social; é de baixo custo, o que possibilita seu uso individual ou coletivo; e não causa impactos ambientais.",
     "id" : "1524472234209",
     "location" : "Campina Grande/PB",
@@ -114,37 +117,39 @@
   },
   "11" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "A Rede Bodega é uma Tecnologia Social constituída pontos fixos de comercialização coletiva e autogestionária denominados BODEGAS, presente em quatro territórios do Ceará, Vale do Jaguaribe - Bodega Nordeste Vivo e Solidário; Ibiapaba - Budega do Povo; Região Norte - Bodega Arcos; Fortaleza e Região metropolitana: Budegama e Bodega da Vila Mundo. A Rede Bodega trabalha com 200 famílias diretamente, estimulando processos de organização, a produção agroecológica, o consumo responsável e a comercialização solidária, gerando trabalho e crescimento econômico",
-    "id" : "12",
-    "logo" : "",
+    "id" : "1524649667446",
+    "location" : "Fortaleza",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/bodega.png",
     "name" : "REDE BODEGA DE COMERCIALIZAÇÃO SOLIDÁRIA",
     "site" : "http://tecnologiasocial.fbb.org.br/tecnologiasocial/banco-de-tecnologias-sociais/pesquisar-tecnologias/detalhar-tecnologia-720.htm",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz14"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "12" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "Uma Sinfonia Diferente- musical para pessoas com autismo é uma metodologia inovadora na assistência e desenvolvimento das pessoas com autismo promovendo saúde, bem estar e proporcionando empoderamento e protagonismo para pessoas com autismo e suas famílias, mostrando seus potenciais para a comunidade. ",
-    "id" : "13",
-    "logo" : "",
+    "id" : "1524646943619",
+    "location" : "Fortaleza, Timóteo (MG), Goiânia, Brasília ",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/sinfonia.png",
     "name" : "Uma Sinfonia Diferente",
     "site" : "http://tecnologiasocial.fbb.org.br/tecnologiasocial/banco-de-tecnologias-sociais/pesquisar-tecnologias/detalhar-tecnologia-737.htm",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz15"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "13" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "A Caminos de la Villa (ou \"caminhos da favela\") é uma plataforma online que exibe um diagnóstico dos serviços e obras públicas dentro de 20 favelas e assentamentos em Buenos Aires, na Argentina. Há ainda um espaço na ferramenta para os moradores realizarem pedidos às autoridades sobre o andamentos de obras, além de publicar comentários e imagens.",
-    "id" : "14",
-    "logo" : "",
+    "id" : "1524649912664",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/caminhos.png",
     "name" : "Caminos de la Villa",
     "site" : "https://www.caminosdelavilla.org/about",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz16"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "14" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "O Draft é um projeto editorial dedicado a cobrir a expansão da inovação disruptiva no Brasil. Uma plataforma de conteúdo, serviços e eventos montada para fazer a crônica da Nova Economia, da Cultura Maker, dos novos empreendedores brasileiros.O Draft nasce para acompanhar e registrar o impacto do empreendedorismo criativo entre nós, para reverberar as histórias do empreendedorismo social no país, para narrar a efervescência das startups – as aceleradoras, incubadoras e fundos de venture capital se multiplicam entre nós de modo jamais visto.",
     "id" : "1524556274947",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/draft.png",
@@ -154,17 +159,18 @@
   },
   "15" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Projeto RUAS trabalha para promover o bem estar e a cidadania da população em situação de rua com informação e estímulo por meio dos residentes dos bairros ao seu entorno.",
-    "id" : "16",
-    "logo" : "",
+    "id" : "1524649967619",
+    "location" : "São Paulo",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/ruas.png",
     "name" : "Projeto ruas",
     "site" : "http://www.projetoruas.org.br/#inicio",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz18"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "16" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "O objetivo do Portal Mulheres em Rede Compartilhando Saberes é facilitar o acesso às informações e conhecimento para mulheres empreendedoras de favelas e periferias da região metropolitana de Rio de Janeiro. O portal ajudará no desenvolvimento das mulheres da Rede (Programa ASPLANDE Rede Cooperativa de Mulheres Empreendedoras da Região Metropolitana RJ) e seus negócios, e de outras mulheres empreendedoras no Brasil.",
     "id" : "1524556338103",
     "location" : "Rio de Janeiro",
@@ -175,27 +181,29 @@
   },
   "17" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Há 10 anos no Brasil, o TETO é uma organização internacional presente na América Latina e Caribe, que trabalha pela defesa dos direitos de pessoas que vivem nas favelas mais precárias e invisíveis, diminuindo sua vulnerabilidade por meio do engajamento comunitário e da mobilização de jovens voluntários.Com a implementação de um modelo de intervenção focado no trabalho lado a lado com moradores de comunidades, o TETO busca construir moradias mais dignas, promover a educação de crianças por meio de oficinas de leitura, formar lideranças comunitárias e envolver toda comunidade em projetos de melhoria para seus bairros",
-    "id" : "18",
-    "logo" : "",
+    "id" : "1524650075064",
+    "location" : "4 sedes no Brasil (SP, RJ, PR e BA)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/teto.png",
     "name" : "Teto techo",
     "site" : "http://www.techo.org/paises/brasil/teto/o-que-e-teto/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz20"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "18" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Cooperárvore, cooperativa de moda sustentável que faz parte da plataforma social Árvore da Vida. Com sede na comunidade Jardim Teresópolis, nos arredores do Polo Automotivo Fiat, em Betim, MG, e formada por um grupo de moradores, a maioria mulheres, a cooperativa recebe sobras de cintos de segurança e aparas de tecido automotivo para produzir acessórios, como bolsas, mochilas, chaveiros e outros itens com qualidade reconhecida internacionalmente.",
-    "id" : "19",
-    "logo" : "",
+    "id" : "1524650167020",
+    "location" : "Betim (MG)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/coop.png",
     "name" : "Cooperárvore",
     "site" : "http://www.cooperarvore.com.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz21"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "19" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A TAMOIOS INDÚSTRIA nasceu com a proposta de substituir materiais não – sustentáveis do mercado a partir do desenvolvimento da tecnologia de biorefinaria por meio da operacionalização de uma rede de processos inovadores capazes de tratar, beneficiar e  moldar resíduos agrícolas e urbanos para fabricação de um leque variado de produtos.",
     "id" : "1524556515285",
     "location" : "Itariri SP",
@@ -206,7 +214,7 @@
   },
   "20" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A Juntos.com.vc já nasceu de pessoas se encontrando, se juntando para mudar a realidade com a qual conviviam. Nossos fundadores são pessoas que sempre foram voluntárias em instituições e sentiam a necessidade de ter algum outro meio para conseguir captar dinheiro para os projetos que queriam ver realizados acontecerem, sem ser pelos às vezes tão árduos patrocínios e editais. Essas pessoas se encontraram com essas ideias já na cabeça, e acharam que a melhor forma para colocar isso em prática era por meio do crowdfunding, que nada mais é do que uma vaquinha digital, várias pessoas doando pequenos valores para ver o projeto acontecer!\r\n\r\n",
     "id" : "1524594200277",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/juntoscomvc.png",
@@ -216,7 +224,7 @@
   },
   "21" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A Lamiecco é uma empresa focada na produção de Revestimentos Ecológicos, voltados aos setores Moveleiro e de Construção Civil.São produtos confeccionados a partir da reciclagem de garrafas PET (poliéster), onde inovação, tecnologia e sustentabilidade foram pensados em todas as etapas do processo.",
     "id" : "1524556214993",
     "location" : "Porto Alegre",
@@ -227,7 +235,7 @@
   },
   "22" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A construção do futuro começa hoje. E com inovação, tecnologia e sustentabilidade, a Ampla se prepara para superar desafios e construir um mundo melhor. Búzios é um balneário reconhecido internacionalmente e foi escolhido para abrigar um novo modelo de gestão energética. Está sendo instalada uma rede inteligente, que integrará tecnologias tradicionais com modernas soluções digitais para melhorar a flexibilidade do sistema elétrico e a gestão das informações. Netsa Cidade Inteligente, o cidadão está no centro da transformação. Conheça o projeto e descubra como a sua atitude faz toda a diferença.",
     "id" : "1524556694124",
     "location" : "Buzios RJ",
@@ -238,7 +246,7 @@
   },
   "23" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "O Edukatu é uma rede de aprendizagem que visa incentivar a troca de conhecimentos e práticas sobre consumo consciente entre professores e alunos do Ensino Fundamental de escolas em todo o Brasil.",
     "id" : "1524558447488",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/educaku.png",
@@ -248,7 +256,7 @@
   },
   "24" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "Embora a Ecosynth tenha sido fundada em 2011, sua história remonta a anos anteriores, quando seu fundador, Eduardo Conchon, começou a estudar o controle de bactérias filamentosas e da geração de lodo.",
     "id" : "1524556862918",
     "location" : "Valinhos SP",
@@ -259,7 +267,7 @@
   },
   "25" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "É uma iniciativa de comunicação e mobilização social que mapeia, produz, difunde e compartilha referências sobre inovações educacionais para inspirar melhorias na qualidade da educação brasileira e incentivar a mídia e a sociedade a compreender e demandar inovações educacionais.",
     "id" : "1524558236194",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/iniciativa.png",
@@ -269,7 +277,7 @@
   },
   "26" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O Colégio Estadual Erich Walter Heine, em Santa Cruz, acaba de receber a certificação de primeira escola totalmente sustentável do Brasil e de toda a América Latina. A certificação LEED (Leadership in Energy and Environmental Design) é concedida pela entidade internacional Green Building Council.",
     "id" : "1524474152651",
     "location" : "Rio de Janeiro",
@@ -280,7 +288,7 @@
   },
   "27" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "A Base Administrativa da Reserva Biológica do Lago Piratuba, no Amapá, foi construída com tecnologias que utilizam a terra como principal matéria prima. Os motivos? Sua abundância, baixo impacto ambiental e a potencialidade de gerar autonomia para as pessoas.",
     "id" : "1524474262393",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/biobrasil.png",
@@ -290,7 +298,7 @@
   },
   "28" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Há 30 anos em defesa da educação. O Cenpec – Centro de Estudos e Pesquisas em Educação, Cultura e Ação Comunitária é uma organização da sociedade civil, sem fins lucrativos, criada em 1987.Tem como objetivos o desenvolvimento de projetos, pesquisas e metodologias voltadas à melhoria da qualidade da educação pública e a incidência no debate público.O Cenpec atua em parceria com a escola pública, espaços educativos de caráter público e iniciativas destinadas ao enfrentamento das desigualdades.",
     "id" : "29",
     "logo" : "http://www.cenpec.org.br/especiais/comunicacao/logo_cenpec/logos/11logos-30-anos-CMYK.png",
@@ -300,27 +308,29 @@
   },
   "29" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "Temos nossa energia focada em ações que levem a conscientização humanitária para o respeito a todas as formas de vida. A nossa força motriz é a consciência de que esses três pilares se relacionam profundamente, criando uma coexistência harmônica",
-    "id" : "30",
+    "id" : "1524651302648",
+    "location" : "São Paulo (SP)",
     "logo" : "https://static.wixstatic.com/media/139e2c_dd22313e992943f992006c6daec78556~mv2.png/v1/fill/w_211,h_190,al_c/139e2c_dd22313e992943f992006c6daec78556~mv2.png",
     "name" : "instituto surya solidaria",
     "site" : "http://www.institutosuryasolidaria.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz32"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "30" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Primeiro empreendimento da ENEVA a entrar em operação, a usina termelétrica Itaqui está localizada no Distrito Industrial de São Luís, Maranhão. O licenciamento ambiental da UTE Itaqui é conduzido, desde 2008, pelo Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA), que emitiu as licenças ambientais prévias e de instalação aprovando, respectivamente, a viabilidade ambiental e locacional da usina e autorizando a execução das obras de instalação do empreendimento.A área escolhida para implantação da unidade, apesar de localizada em local de vocação industrial, era, à época, ocupada parcialmente por famílias que integravam a denominada Vila Madureira. Vivendo em condições de extrema pobreza e convivendo com um depósito de lixo clandestino, a realização de um programa de realocação foi concebido como uma oportunidade de conciliar a implantação de um empreendimento de utilidade pública com a realização de um projeto-modelo de reassentamento, capaz de promover a inclusão social e econômica das famílias beneficiadas.",
-    "id" : "31",
-    "logo" : "",
+    "id" : "1524650252017",
+    "location" : "São Luiz (MA)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/realocacao.png",
     "name" : "Projeto: Projeto de Realocação Vila Canaã: Modelo de produção agroecológica",
     "site" : "http://premiobrasilambiental.com/2017/banco-de-boas-praticas/projeto-de-realocacao-vila-canaa-modelo-de-producao-agroecologica/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz33"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "31" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "Nesse sentido, a Energia Sustentável do Brasil S.A. desenvolveu biomarcadores metalômicos da toxicidade do mercúrio aplicáveis a programas robustos de monitoramento em reservatórios na região Amazônica, utilizando esta ferramenta inovadora para uma avaliação mais fidedigna tanto na vigilância ambiental como na saúde da população sob a área de influência dos empreendimentos do setor hidrelétrico.",
     "id" : "1524474467254",
     "location" : "Amazônia",
@@ -331,7 +341,7 @@
   },
   "32" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A ECO PANPLAS trabalha na descontaminação de embalagens plásticas de óleo lubrificante pós-consumo, de uma forma ambientalmente correta e segura. Através de uma tecnologia inovadora e limpa, garante-se que o plástico será devidamente reciclado, sem riscos e passivos ambientais e recupera-se todo óleo residual das embalagens, sem a geração de efluentes e resíduos. Entre os benefícios desse projeto estão a não utilização de água na descontaminação, a não geração de efluentes líquidos e resíduos, recuperação e reutilização contínua do produto ecológico no processo e no próprio sistema em circuito fechado e automatizado, tecnologia limpa, segura e sustentável e nenhum risco ambiental.",
     "id" : "33",
     "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2017/12/logo_eco_panplas.jpg",
@@ -341,7 +351,7 @@
   },
   "33" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A United Airlines compromete-se a ter uma operação sustentável e responsável, com iniciativas que minimizam os impactos ao meio-ambiente associados à sua operação e está sempre à procura por maneiras de reduzir sua “pegada de carbono”. Como parte destas iniciativas, o programa de lavagem dos motores de suas aeronaves visa a economia de combustível na operação das mesmas – com consequente redução de custos e, não menos importante, redução de emissões atmosféricas.",
     "id" : "34",
     "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2017/12/logo_united_airlines.jpg",
@@ -351,7 +361,7 @@
   },
   "34" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "A ENGIE Brasil Energia reconhece o impacto que a construção de hidrelétricas para a geração de energia elé­trica causa à fauna de peixes (ictiofauna) da região de implantação dos empreendimentos. Visando à melhoria do estado de conservação da biodiversidade brasileira, a Companhia desenvolve o projeto Tecnologia para Formação de Bancos de Germoplasma e Produção de Peixes Nativos para Estocagem (repovoamento) no Rio Iguaçu. A ENGIE Brasil Energia opera, na região, a Usina Hidrelétrica Salto Osório e a Usina Hidrelétrica Salto Santiago.O projeto contribuiu para a conservação de cinco espécies de peixe endêmicas do Rio Iguaçu: Rhamdia branneri, Rhamdia voulezi, Pimelodus britskii, Astyanax gymnodontus e Steindachneridion melanoderma­tum. Devido à constatação da diminuição das populações desses peixes, foram desenvolvidas tecnologias para reprodução em cativeiro, visando a conservação in vivo e in vitro. O uso dessas tecnologias possibilitou o repovoamento do rio, com a soltura de cerca de 240 mil peixes das espécies Rhamdia branneri, Rhamdia voulezi e Pimelodus britskii. Também foi criado um banco genético para preservação da variabilidade genética das espécies. Essa tecnologia viabiliza a piscicultura com peixes endêmicos, contribuindo dessa forma para a diminuição das ameaças à ictiofauna e para o desenvolvimento sustentável da comunidade local.",
     "id" : "35",
     "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2015/09/logo_bbp28.jpg",
@@ -361,7 +371,7 @@
   },
   "35" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "A ENGIE Brasil Energia desenvolve, em parceria com a Universidade Federal de Santa Catarina e outras 11 empresas do setor elétrico, um projeto de estudo da geração de energia solar fotovoltaica. Esse estudo incluiu a implantação, em Tubarão (SC), da Usina Solar Fotovoltaica Cidade Azul, a maior (em caráter experimental) do Brasil, além da instalação, operação e monitoramento de Módulos de Avaliação com sete tecnologias diferentes e estações solarimétricas situadas em oito localidades com diferentes climas no país",
     "id" : "36",
     "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2015/09/logo_bbp28.jpg",
@@ -371,7 +381,7 @@
   },
   "36" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "Entre as principais ações de relacionamento com as comunidades em que a ENGIE Brasil Energia está inserida estão os Centros de Cultura e Sustentabilidade. Implantados com apoio da Companhia desde 2011, esses espaços vêm contribuindo para o desenvolvimento sustentável de municípios de pequeno porte, por meio da valorização de tradições locais, da inclusão social e do convívio comunitário. Anfiteatro, museu, biblioteca, área para exposições, salas para inclusão digital e também para oficinas compõem a infraestrutura dos Centros de Cultura e Sustentabilidade. Além de oferecer à comunidade atividades recreativas e educativas – envolvendo música, dança, artes cênicas e plásticas, entre outras – os Centros promovem eventos culturais, criando alternativas de entretenimento na própria região.A iniciativa de implantação dos Centros está alinhada à Política de Gestão Sustentável da ENGIE Brasil Energia, que estabelece que a Companhia atue com responsabilidade social, contribuindo de forma efetiva para a melhoria da qualidade de vida das comunidades",
     "id" : "1524596022285",
     "location" : "Entre Rios do Sul (RS), Alto Bela Vista (SC), Capivari de Baixo (SC), Concórdia (SC) e Quedas do Iguaçu (PR).",
@@ -382,7 +392,7 @@
   },
   "37" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O programa “ÁGUA LIMPA, CRIANÇAS SAUDÁVEIS” é uma parceria entre a FUNDAÇÃO ENGIE, CESTE, a INMED BRASIL e a ENGIE GERAÇÃO DE ENERGIA, patrocinadoras, com apoio do governo local. Implementado nas áreas de influência da UHE Estreito, no município de Carolina, Maranhão, objetiva melhorar a saúde das crianças com acesso à água potável pela preservação de nascentes de água. Induz mudanças eficazes para o bem-estar da população pela educação ambiental e a reabilitação de áreas degradadas, preservando os recursos naturais com alternativas sustentáveis. São envolvidos 1.154 alunos de 6 a 14 anos das escolas municipais e cerca de 5.000 membros da comunidade.Carolina tem 23.902 habitantes, IDHM de 0,634 e é área predominantemente rural, onde apenas 65% das casas têm banheiro e saneamento básico. Vive crescente degradação ambiental, que afeta a qualidade da água consumida na cidade e áreas rurais.Iniciado em 2015, com equipe multidisciplinar de especialista, educadores e comunidade o “ÁGUA LIMPA, CRIANÇAS SAUDÁVEIS” já mapeou e recuperou 35 nascentes com ações de construção de abrigos e reflorestamento do entorno com mudas nativas.São realizadas formações e atividades educativas em Meio Ambiente para os alunos, professores e agentes comunitários abordando temas de saúde, educação sanitária, meio ambiente e preservação das nascentes. Os alunos visitam as nascentes e acompanham o plantio de mudas nativas.",
     "id" : "38",
     "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2015/09/logo_bbp28.jpg",
@@ -392,7 +402,7 @@
   },
   "38" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "Realizar a destinação ambientalmente correta das embalagens pós-consumo de defensivos agrícolas é a grande missão do Sistema Campo Limpo, que funciona há quinze anos e tornou-se um dos maiores programas de logística reversa de resíduos sólidos do Brasil. Iniciativa pioneira, o Sistema nasceu em 2002, com a entrada em vigor do Decreto 4.074/02, regulamentador das Leis Federais 9.974/00 e 7.802/89. Essa legislação determinou a divisão de responsabilidades entre todos os elos dessa cadeia quanto ao destino pós-consumo dessas embalagens.O Sistema envolve distribuidores e cooperativas, órgãos do governo e cerca de 1,4 milhão de agricultores (segundo dados do IBGE), além da indústria fabricante de defensivos agrícolas, representada pelo inpEV – Instituto Nacional de Processamento de Embalagens Vazias, em sua responsabilidade de destinar as embalagens pós-consumo de seus produtos. Como núcleo de inteligência do Sistema Campo Limpo, o inpEV – formado por mais de 100 empresas fabricantes e nove entidades representativas do setor agrícola – realiza a gestão operacional de toda a logística reversa das embalagens e promove ações de conscientização e educação, em conjunto com os demais agentes integrantes do Sistema.",
     "id" : "1524596092229",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/brasilambiental.png",
@@ -402,7 +412,7 @@
   },
   "39" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "Na condição de Parceira Oficial de Carbono do Rio 2016, a Dow assumiu o compromisso de mitigar 500 mil toneladas de CO2eq em emissões de gases do efeito estufa até 2026 para compensar a pegada de carbono da organização dos Jogos. A Dow ainda trabalha para gerar benefícios climáticos adicionais de 1,5 milhão de CO2eq para compensar outras emissões associadas ao evento, tais como as viagens dos espectadores.A Dow desenvolveu um programa personalizado para responder às necessidades ambientais e tecnológicas do Brasil e da América Latina por meio da introdução de soluções e práticas de baixo carbono em setores importantes da economia. Ao substituir combustíveis fósseis por fontes de energia renovável, otimizar recursos na agropecuária e difundir conhecimento para uma infraestrutura com maior eficiência energética, o portfólio de projetos da Dow permite que as empresas façam mais com menos, aumentem a produtividade e preservem energia por meio de mudanças no mercado em longo prazo. Mia informações:www.dow.com/carbonmitigation",
     "id" : "1524474832258",
     "location" : "Rio de Janeiro",
@@ -413,7 +423,7 @@
   },
   "40" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O reNature promove o uso de práticas agrícolas sustentáveis, chamadas sistemas agroflorestais. É caracterizada por misturar várias árvores, arbustos e culturas que se reforçam e se complementam, conseguindo assim uma maior variedade de rendimentos e o equilíbrio natural no nosso ecossistema. O objetivo é restaurar a natureza através da agricultura. O time conta com especialistas e agricultores agroflorestais em todo o mundo para restaurar a natureza através de uma abordagem agrícola inclusiva, restaurando a paisagem degradada a partir de um sistema agroflorestal específico para o local, a fim de trazer de volta um ecossistema e solo saudáveis que fornecerão abundância de alimentos para as gerações futuras.",
     "id" : "1524594251188",
     "location" : "Amsterdam",
@@ -434,13 +444,14 @@
   },
   "42" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Believe.Earth é uma plataforma que se expressa de várias maneiras. Lançada no dia 15 de setembro de 2017, no RockInRio, esse movimento é conteúdo, é ação, é virtual e presencial. Somos uma identidade que valoriza as pessoas e suas micro e macro revoluções que inventam e criam soluções para resolver seus problemas cotidianos e, também, os do próximo. Um portal com histórias inspiradoras. ",
-    "id" : "43",
-    "logo" : "",
+    "id" : "1524650451398",
+    "location" : "Brasil",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/believe.png",
     "name" : "Believe Earth",
     "site" : "http://believe.earth/pt-br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz45"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "43" : {
     "active" : true,
@@ -474,13 +485,14 @@
   },
   "46" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Instituto Ethos de Empresas e Responsabilidade Social é uma organização sem fins lucrativos, caracterizada como Oscip (organização da sociedade civil de interesse público). Sua missão é mobilizar, sensibilizar e ajudar as empresas a gerir seus negócios de forma socialmente responsável, tornando-as parceiras na construção de uma sociedade justa e sustentável.",
-    "id" : "47",
-    "logo" : "",
+    "id" : "1524650591397",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/ethos.png",
     "name" : "Instituto Ethos",
     "site" : "https://www3.ethos.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz49"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "47" : {
     "active" : true,
@@ -504,7 +516,7 @@
   },
   "49" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "O Quintessa é uma aceleradora de negócios de impacto, com foco em estruturar sua gestão e impulsionar seu crescimento. O objetivo é ressignificar o papel de empresas como negócios de fortalecimento socio-ambiental e estimular que tenham uma gestão consciente e humana.",
     "id" : "1524557363110",
     "location" : "São Paulo",
@@ -525,13 +537,14 @@
   },
   "51" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Em 2007, um grupo de empresários se reuniu com um sonho em comum: ajudar jovens com poucas oportunidades a conquistarem o primeiro emprego e a se tornarem donos de suas próprias vidas. Foi dessa união que nasceu o Instituto PROA, uma organização sem fins lucrativos, qualificada como OSCIP.",
-    "id" : "52",
-    "logo" : "",
+    "id" : "1524650713629",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/proa.png",
     "name" : "Proa",
     "site" : "http://www.proa.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz54"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "52" : {
     "active" : true,
@@ -555,17 +568,18 @@
   },
   "54" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Movimento Arredondar é assim: você arredonda o valor da sua conta nos locais que aceitam arredondar, R$ 22,70 vira 23,00. R$ 96,99 vira R$ 97,00. É como em alguns lugares, onde o troco vem em forma de balinha. Só que, no caso do Arredondar, vem em forma de uma sociedade melhor. Todo valor arrecadado vai diretamente para organizações sociais selecionadas que trabalham pelos 8 Objetivos do Milênio, da ONU.",
-    "id" : "55",
-    "logo" : "",
+    "id" : "1524650805275",
+    "location" : "Brasil",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/arredondar.png",
     "name" : "Movimento Arredondar",
     "site" : "http://www.arredondar.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz57"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "55" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O Serta – Serviço de Tecnologia Alternativa – é uma Organização da Sociedade Civil de Interesse Público (Oscip) que tem como missão formar jovens, educadores/as e produtores/as familiares, para atuarem na transformação das circunstâncias econômicas, sociais, ambientais, culturais e políticas, na promoção do desenvolvimento sustentável do campo. A organização foi fundada em 1989 a partir de um grupo de agricultores, técnicos e educadores que desenvolviam em comunidades rurais uma metodologia própria para a promoção do meio ambiente, a melhoria da propriedade e da renda e o uso de tecnologias apropriadas. Desde sua origem, teve como foco o desenvolvimento e reconhecimento da importância da agricultura familiar.",
     "id" : "1524475214907",
     "location" : " Ibimirim - PE",
@@ -576,7 +590,7 @@
   },
   "56" : {
     "active" : true,
-    "category" : "Alimentação",
+    "category" : "5",
     "description" : "A Gastromotiva é uma OSCIP que busca transformar a vida de pessoas em vulnerabilidade social através da comida. Uma das formas que fazemos isso, é com o Curso de Capacitação em Cozinha. Está em São Paulo, Rio de Janeiro e Salvador.",
     "id" : "1524473122998",
     "location" : "São Paulo, Rio de Janeiro, Curitiba, México",
@@ -587,7 +601,7 @@
   },
   "57" : {
     "active" : true,
-    "category" : "Saude",
+    "category" : "1",
     "description" : "A Cada do Cuidar é uma organização social sem fins lucrativos criada com o objetivo de trabalho na prática e no ensino de Cuidados Paliativos. O atendimento a pacientes é gratuito e realizado em consultório ou em domicílio.",
     "id" : "1524416988177",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/casa.png",
@@ -607,7 +621,7 @@
   },
   "59" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "O Educadores sem Fronteira oferece aulas de reforço, atividades culturais e material de apoio a crianças e adolescentes em risco social, proporcionando o desenvolvimento das potencialidades do cidadão, através da educação complementar e da democratização do conhecimento.",
     "id" : "1524558601451",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/educacao.png",
@@ -617,7 +631,7 @@
   },
   "60" : {
     "active" : true,
-    "category" : "Energia",
+    "category" : "3",
     "description" : "É um coletivo dedicado a dar visibilidade à energia solar como solução dos problemas energéticos por meio de oficinas e palestras",
     "id" : "1524472874302",
     "location" : "Bahia",
@@ -638,13 +652,14 @@
   },
   "62" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Mutirão do Bem atua na contribuição de cultura, bem-estar e da felicidade, bem como preocupa-se com a saúde emocional, física e psíquica estimulando crianças e adolescentes por meio de atividades, que envolvem o desenvolvimento do Ser em toda a sua potencialidade, sem limitações ou restrições.",
-    "id" : "63",
-    "logo" : "",
+    "id" : "1524647072035",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/mutirao.png",
     "name" : "Mutirão do Bem",
     "site" : "http://www.mutiraonobem.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz65"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "63" : {
     "active" : true,
@@ -658,7 +673,7 @@
   },
   "64" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "A AMAECO, Associação Amigos do Meio Ambiente e da Ecologia é uma Organização Não Governamental fundada dia 05 de junho de 2014 (Dia Mundial do Meio Ambiente) e nasceu da união dos alunos do curso TÉCNICO em CONTROLE AMBIENTAL da instituição Uniseb/Estácio de Ribeirão Preto SP. Esta associação foi criada para unir pessoas que tem um ideal em comum e boa vontade de poder colaborar positivamente através de ações concretas para transformação social. Promovendo a conscientização ecológica e desenvolvendo uma cultura de eco cidadania, a AMAECO tem o objetivo de realizar projetos socioambientais no município de Ribeirão Preto e Região.\r\n",
     "id" : "1524475358683",
     "location" : "Ribeirão Preto SP",
@@ -669,7 +684,7 @@
   },
   "65" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Com objetivo de contribuir com o desenvolvimento e a perspectiva de cidadania da população jovem do Barro Branco (BA), em outubro de 2016, foi criado o Projeto Tangará Mirim de Musicalização: um curso de iniciação musical e prática orquestral para crianças e jovens entre 9 e 18 anos. As aulas acontecem no contra turno escolar, às terças e quintas, com duração de 2 horas, sendo 20 minutos disponíveis para o lanche oferecido pelo Tangará. O transporte oficial do Espaço busca e leva os alunos e alunas.",
     "id" : "1524558682082",
     "location" : "Barro Branco BA",
@@ -680,17 +695,17 @@
   },
   "66" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Espalhe a Esperança é um projeto social sem fins lucrativos, que tem por objetivo compartilhar esperança na fase mais importante da vida: a infância. Tem a missão de propagar esperança para crianças e adolescentes em situações de vulnerabilidade social, através de eventos, doações culturais, parcerias com \"fadas madrinhas\" e conscientização social.",
-    "id" : "67",
-    "logo" : "",
+    "id" : "1524647280650",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/esperanca.png",
     "name" : "Espalhe Esperança",
     "site" : "https://www.espalheaesperanca.org",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz69"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "67" : {
     "active" : true,
-    "category" : "Alimentação",
+    "category" : "5",
     "description" : "A Associação Prato Cheio é uma Organização Não Governamental, certificada como OSCIP (Organização da Sociedade Civil de Interesse Público). Fundada em 2001 por um grupo de universitários que identificou um grande volume de alimentos desperdiçados no Mercado Municipal de São Paulo e passou a arrecadar e distribuí-los para entidades assistenciais. A atuação da Prato Cheio está baseada no Programa Colheita Urbana, conceito desenvolvido pela Food Chain, uma rede de ONGs norte-americana e canadense. Tem como base a coleta de alimentos frescos de forma segura e seu posterior repasse. Alinhados aos Objetivos do Milênio, os projetos da Prato Cheio contribuem para o combate da fome e da desnutrição, além de melhorar o aproveitamento de alimentos que normalmente seriam desperdiçados na cadeia produtiva.",
     "id" : "1524473334732",
     "location" : "São Paulo",
@@ -701,17 +716,18 @@
   },
   "68" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "A Rede Esporte pela Mudança Social reúne 104 instituições que acreditam no esporte como fator de desenvolvimento humano e, juntas, realizam mais de 200.000 atendimentos diretos por ano. A REMS busca trazer visibilidade ao trabalho das organizações, demonstrando o impacto social e o poder transformador do esporte, que inspira pessoas, instituições e governos para promoção de saúde, desenvolvimento humano, ética e cidadania.",
-    "id" : "69",
-    "logo" : "",
+    "id" : "1524647436205",
+    "location" : "Santo Amaro (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/rems.png",
     "name" : "Rede Esporte pela mudança social",
     "site" : "http://rems.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz71"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "69" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "A CARPE mais do que uma empresa é um movimento que tem como proposta transformar os espaços de maneira participativa construindo projetos personalizados. Alcançar as sustentabilidadeS e harmonia são o nosso foco. Um grupo interdisciplinar que busca uma relação de cooperação entre o ser humano e o meio, diante dos conflitos e das estruturas insustentáveis da sociedade atual, onde o amor incondicional é o sentimento que rege as nossas ações e relações.\r\n ",
     "id" : "1524475466042",
     "location" : "Rio de Janeiro",
@@ -732,23 +748,25 @@
   },
   "71" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Girls Rock Camp Brasil é uma organização da sociedade civil inpedendente, sem fins lucrativos, sem vínculo governamental, formada por mulheres envolvidas com música e movimentos sociais. O GIRLS ROCK CAMP BRASIL é um Acampamento musical de Férias, exclusivo para meninas! Onde durante uma semana, meninas com idades de 7 a 17 anos são convidadas a ter uma experiência empoderadora, muito divertida e completa no mundo da música! Em meio a atividades de fortalecimento de autoestima, desinibição, trabalho em grupo, elas aprendem a tocar um instrumento, formam uma banda, fazem uma composição inédita e uma apresentação ao vivo, aberta para os pais, familiares, amigos e  toda a comunidade! Desenvolvemos a atividade desde de 2013, e nesses anos já atendemos cerca de 330 meninas provenientes de diversas parte do país. A sede fica em Sorocaba. \r\n       ",
-    "id" : "72",
-    "logo" : "",
+    "id" : "1524647774694",
+    "location" : "Sorocaba (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/girls.png",
     "name" : "Girls Rock Camp Brasil",
     "site" : "https://www.girlsrockcampbrasil.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz74"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "72" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Casulo é uma organização da sociedade civil (OSC) que atua com crianças, adolescentes, jovens e famílias das comunidades do Real Parque e Jardim Panorama, na região do Morumbi-SP, oferecendo atividades socioeducativas, culturais, de educação para o trabalho e interação comunitária. Nasceu em 2002, como um projeto do ICE (Instituto de Cidadania Empresarial), que realizou um diagnóstico participativo com as comunidades em questão para identificar as potencialidades e necessidades da região. Cotidianamente, 120 crianças e adolescentes de 6 a 14 anos participam do CCA – Centro para Crianças e Adolescentes, além de cerca de 100 adolescentes e jovens no Programa de Educação para o Trabalho e centenas de pessoas nos projetos e eventos de Interação Comunitária.",
-    "id" : "73",
-    "logo" : "",
+    "id" : "1524647855722",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/casulo.png",
     "name" : "Casulo",
     "site" : "http://projetocasulo.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz75"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "73" : {
     "active" : true,
@@ -762,7 +780,7 @@
   },
   "74" : {
     "active" : true,
-    "category" : "Economia",
+    "category" : "4",
     "description" : "O Fashion Revolution Day é um movimento criado por um conselho global de líderes da indústria da moda sustentável que se uniram depois do desabamento do edifício Rana Plaza em Bangladesh no dia 24 de abril de 2013 que deixou 1.133 mortos e 2.500 feridos. A campanha surgiu com o objetivo de aumentar a conscientização sobre o verdadeiro custo da moda e seu impacto em todas as fases do processo de produção e consumo, mostrando ao mundo que a mudança é possível através da celebração dos envolvidos na criação de um futuro mais sustentável e criar conexões exigindo transparência. A moda é uma força a ser considerada. Ela inspira, provoca, conduz e cativa. O Fashion Revolution quer ajudar a tornar a moda uma força para o bem através de uma campanha global. Esperam que o Fashion Revolution Day inicie um processo de descoberta, aumentando a conscientização sobre o fato de que a compra é apenas o último passo de uma longa jornada que envolve centenas de pessoas, realçando a força de trabalho invisível por trás das roupas que vestimos.",
     "id" : "1524557697169",
     "location" : "",
@@ -813,7 +831,7 @@
   },
   "79" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Viração é uma organização da sociedade civil que atua com comunicação, educação e mobilização social entre adolescentes, jovens e educadores. O objetivo é mobilizar essa galera para a promoção e a defesa dos direitos de adolescentes e jovens, possibilitando a construção de uma sociedade justa, participativa e plural.  Fazem isso através da educomunicação e da educação entre pares. A educomunicação é o jeito de se comunicar educando e educar se comunicando, contribuindo para a construção de um verdadeiro diálogo e uma real participação. Conceitualmente, a educomunicação é o conjunto de ações que busca ampliar a capacidade de expressão em espaços educativos e desenvolver o espírito crítico dos usuários dos meios de comunicação. Tudo de forma bem democrática.",
     "id" : "1524558796099",
     "location" : "São Paulo",
@@ -834,13 +852,14 @@
   },
   "81" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "É uma associação civil de fins não econômicos, que contribui com o desenvolvimento humano de crianças, jovens e adultos, por meio de três programas: Brincarte, Cativarte e Centro Cultural Comunitário.\nCom esse espírito, já realizaram 137 mil atendimentos que fizemos desde 2007. Localizado em Embu das Artes-SP.",
-    "id" : "82",
-    "logo" : "",
+    "id" : "1524647905157",
+    "location" : "Embu das Artes (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/acorde.png",
     "name" : "Acorde - Desenvolvimento Humano",
     "site" : "http://www.acorde.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz84"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "82" : {
     "active" : true,
@@ -864,7 +883,7 @@
   },
   "84" : {
     "active" : true,
-    "category" : "Alimentação",
+    "category" : "5",
     "description" : "O Social Gourmet é um projeto de gastronomia solidária que tem como objetivo oferecer aulas de gastronomia e empreendedorismo para jovens de baixa renda com perfil empreendedor, colaborativo e que se preocupam em desenvolver sua comunidade. Busca com esse programa formar empreendedores e oferecer uma fonte de renda para estes jovens, criando um impacto positivo nas suas comunidades. Acreditam que a educação e a formação profissional são ingredientes fundamentais para o desenvolvimento humano e social. Pretendem com esse projeto dar a oportunidade para que mais pessoas tenham acesso a uma formação gratuita de qualidade, despertando talentos e o empreendedorismo como forma de empoderamento e inclusão social, colaborando assim para a formação de uma sociedade melhor, mais justa e igualitária. O projeto promoverá 1 turma de 14 jovens por mês, com a distribuição de 5 aulas semanais em uma imersão de 6 horas/aula, totalizando 30h/a, tudo isso dentro do modelo exclusivo de cursos Faça&Venda da Espaço Gourmet Escola de Gastronomia.",
     "id" : "1524473451982",
     "location" : "Curitiba",
@@ -875,17 +894,18 @@
   },
   "85" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O CEPRI – Casa Rui, inaugurado em 2017, é uma clínica jurídica criada no âmbito da Cátedra Sérgio Vieira de Mello (CSVM), com sede na Fundação Casa de Rui Barbosa (FCRB). Com uma equipe de Agentes de Proteção formada por profissionais do Direito, das Relações Internacionais e das Ciências Sociais e Política, o CEPRI- Casa Rui oferece atendimento gratuito para solicitantes de refúgio, refugiados e imigrantes, em questões relativas ao Direito dos Refugiados e Direito Migratório. O CEPRI-Casa Rui é especializado no atendimento de casos que envolvam violência de gênero, perseguição baseada em orientação sexual e/ou identidade de gênero e menores desacompanhados ou separados.",
-    "id" : "86",
-    "logo" : "",
+    "id" : "1524648064853",
+    "location" : "Rio de Janeiro (RJ)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/cepri.png",
     "name" : "CEPRI - Centro de Proteção a Refugiados e Imigrantes",
     "site" : "https://www.cepricasarui.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz88"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "86" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Desde 1940, atuamos sem fins lucrativos, políticos ou partidários, acolhendo integralmente jovens da região portuária do Rio. Acolher afetivamente e educar com excelência jovens da Região Portuária para uma sociedade mais justa, sustentável e colaborativa.",
     "id" : "1524558894977",
     "location" : "Rio de Janeiro",
@@ -896,7 +916,7 @@
   },
   "87" : {
     "active" : true,
-    "category" : "Alimentação",
+    "category" : "5",
     "description" : "O movimento Põe no Rótulo é resultado da colaboração e interação de diversos cidadãos e cidadãs que acreditam que precisamos de informações claras e legíveis nos rótulos. O Põe no Rótulo começou em 2014 enfocando a sua atuação na conscientização da sociedade sobre a alergia alimentar, como estratégia para conquistar rótulos com informações sobre alergênicos mais claras, acessíveis, legíveis e inteligíveis! om o tempo, percebeu que sua contribuição poderia (e deveria) ir além da rotulagem de alergênicos. Afinal, todos devem ter o seu direito à informação garantido, o que passa pela necessidade de rótulos que dialoguem com os consumidores de maneira clara, transparente e compreensível.",
     "id" : "1524473685215",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/rotulo.png",
@@ -916,7 +936,7 @@
   },
   "89" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Promover uma educação que preze pela formação humana e integral de jovens em situação de vulnerabilidade social, a fim de possibilitar que tenham uma vida mais autoconsciente, autônoma e guiada pelos seus propósitos.",
     "id" : "1524559054228",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/revoar.png",
@@ -926,33 +946,35 @@
   },
   "90" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Projeto RUAS trabalha para promover o bem estar e a cidadania da população em situação de rua com informação e estímulo por meio dos residentes dos bairros ao seu entorno.",
-    "id" : "91",
-    "logo" : "",
+    "id" : "1524648155308",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/ruas.png",
     "name" : "Projeto Ruas",
     "site" : "http://www.projetoruas.org.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz93"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "91" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Projeto Quixote é uma OSCIP sem fins lucrativos que atua na missão de transformar a história de crianças, jovens e famílias em complexas situações de risco, através do atendimento clínico, pedagógico e social integrados, gerando e disseminando conhecimento.",
-    "id" : "92",
-    "logo" : "",
+    "id" : "1524648370889",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/quixote.png",
     "name" : "Projeto Dom Quixote",
-    "site" : "",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz94"
+    "site" : "http://www.projetoquixote.org.br/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "92" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
+    "category" : "6",
     "description" : "O Instituoto Elos atua com um método que aproxima e atende as necessidades locais, reconhece de forma afetiva o potencial de cada pessoa, de cada comunidade, o que permite construir elos para criar espaços autênticos de conexão e ação. Isso pode ser aplicado em diferentes áreas, desde um projeto para o setor público e privado que procuram por projetos comunitários, quanto para pessoas que querem aprender de maneira prática novas formas de atuação, e queiram fazer parte de um movimento global de transformação. ",
-    "id" : "93",
-    "logo" : "",
+    "id" : "1524648478327",
+    "location" : "Santos (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/elos.png",
     "name" : "Instituo Elos",
     "site" : "www.institutoelos.org",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz95"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "93" : {
     "active" : true,
@@ -986,7 +1008,7 @@
   },
   "96" : {
     "active" : true,
-    "category" : "Saude",
+    "category" : "1",
     "description" : "A Rede Postinho de Saúde é uma ONG, sem fins lucrativos que promove a saúde através do atendimento ambulatorial e na orientação de medidas preventivas as mulheres moradoras das comunidades do Cantagalo, Pavão e Pavãozinho. O trabalho consiste em formar redes que irão atrair voluntários especiais e diferentes, gerir um modelo de processos de atendimentos da saúde e captar parcerias.",
     "id" : "1524417000211",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/postinho.png",
@@ -996,13 +1018,14 @@
   },
   "97" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Yoga de Rua é um projeto social autogerido e descentralizado que facilita aulas de yoga e alimentação vegetariana para a população em situação de rua no Rio e em São Paulo. Atua desde 2015 e é possível ajudar doando dinheiro, aulas ou ajudando na cozinha. ",
-    "id" : "98",
-    "logo" : "",
+    "id" : "1524650842334",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/yoga.png",
     "name" : "Yoga de Rua",
     "site" : "https://www.yogaderua.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz100"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "98" : {
     "active" : true,
@@ -1026,13 +1049,14 @@
   },
   "100" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "O Escola Sem Muros é um programa de imersão de 10 dias com estudantes das áreas de arquitetura, design e engenharia interessados em ter uma vivência prática e colocar seu conhecimento a serviço da sociedade e as pessoas e saberes da própria comunidade.  A jornada de aprendizagem propõe experienciar um saber que ultrapassa os muros da universidade, deixando um legado para a transformação da comunidade local.",
-    "id" : "101",
-    "logo" : "",
+    "id" : "1524651071041",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/semmuros.png",
     "name" : "Escola Sem Muros",
     "site" : "http://www.semmuros.com/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz103"
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "101" : {
     "active" : true,
@@ -1066,7 +1090,7 @@
   },
   "104" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Idealizada pela Fundação Itaú Social e sob a coordenação técnica do Centro de Estudos e Pesquisas em Educação, Cultura e Ação Comunitária (Cenpec), a plataforma Educação&Participação foi criada para ser um ambiente digital de mobilização, formação e produção colaborativa de conhecimento sobre a educação integral com base em ações, práticas e metodologias dos programas Prêmio Itaú-Unicef, Jovens Urbanos e Políticas de Educação Integral. Buscando colocar as temáticas referentes à educação integral no centro dos debates e das reflexões, a plataforma pretende ser uma referência para educadores, professores, gestores e demais profissionais que se dedicam a garantir o desenvolvimento integral de crianças, adolescentes e jovens, sob a perspectiva da educação. Na plataforma Educação&Participação você encontra textos, entrevistas, reportagens, vídeos, publicações, oficinas e temáticas – materiais multimidiáticos, que dão suporte formativo a ações e estudos sobre educação integral. ",
     "id" : "1524594051051",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/participacao.png",
@@ -1076,17 +1100,18 @@
   },
   "105" : {
     "active" : true,
-    "category" : "Desenvolvimento Pessoal",
-    "description" : "Consiste na qualificação de mulheres de baixa renda com o curso Design de Moda da Ideia a criação, onde o foco é o ensino sobre consumo consciente, corte, costura e modelagem do vestuário feminino",
-    "id" : "106",
-    "logo" : "",
-    "name" : "Projeto CosturelAs",
-    "site" : "",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz108"
+    "category" : "6",
+    "description" : "Nosso trabalho consiste em apoiar empresas, organizações sociais e governos a desenvolver modelos de negócios inclusivos e projetos de apoio a microempreendedores de baixa renda, ampliando o acesso a conhecimento, redes, mercados e crédito para que desenvolvam ou iniciem seus empreendimentos. Geramos novas oportunidades de negócios, trabalho e renda através do empreendedorismo, promovendo inclusão e desenvolvimento econômico e social.",
+    "id" : "1524648895346",
+    "location" : "Curitiba, São Paulo",
+    "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/alianca.png",
+    "name" : "Aliança empreendedora",
+    "site" : "http://aliancaempreendedora.org.br/nosso-trabalho/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
   "106" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Cursinho Popular Transformação, educação e cultura voltadas para pessoas trangêneras, travestis e não binárias em São Paulo.",
     "id" : "1524559858339",
     "location" : "São Paulo",
@@ -1097,7 +1122,7 @@
   },
   "107" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Fundada em 1994, a Ação Educativa é uma associação civil sem fins lucrativos que atua nos campos da educação, da cultura e da juventude, na perspectiva dos direitos humanos. Para tanto, realiza atividades de formação e apoio a grupos de educadores, jovens e agentes culturais. Integra campanhas e outras ações coletivas que visam à realização desses direitos. Desenvolve pesquisas e metodologias participativas com foco na construção de políticas públicas sintonizadas com a as necessidades e interesses da população. É sua missão a defesa de direitos educativos, culturais e da juventude, tendo em vista a promoção da democracia, da justiça social e da sustentabilidade socioambiental no Brasil.",
     "id" : "1524559989888",
     "location" : "São Paulo",
@@ -1118,7 +1143,7 @@
   },
   "109" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O PermaSampa, fundado em 2015, tem como missão desenvolver e multiplicar a Permacultura Urbana na cidade de São Paulo, pautando-se sempre nos três princípios éticos fundamentais dessa prática: cuidar das pessoas, cuidar do planeta e partilhar os excedentes. Desde a sua fundação, o coletivo PermaSampa promove o Curso de Design Permacultural Urbano em parceria com o Instituto Casa da Cidade e contando com um time de educadores com vasta experiência na área. As atividades práticas do curso se dão em parceria com coletivos atuantes na cidade, como foi o caso do Espaço Cultural Jardim Damasceno e do Ponto de Cultura Socioambiental Quebrada Sustentável. Dessa forma se busca uma prática de permacultura urbana voltada para demandas reais da cidade de São Paulo, assim como o fortalecimento da rede de permacultores locais.",
     "id" : "1524475615578",
     "location" : "São Paulo",
@@ -1139,7 +1164,7 @@
   },
   "111" : {
     "active" : true,
-    "category" : "Educação",
+    "category" : "2",
     "description" : "Com o objetivo de oferecer oportunidades de educação para jovens e adultos de comunidades carentes, a Cidadão Pró-Mundo promove a igualdade de oportunidades no Brasil por meio do ensino voluntário de inglês e da integração social. Em função de sua estrutura administrativa, operacional e de governança altamente organizadas, nos moldes dos modelos corporativos mais modernos, a Cidadão Pró-Mundo é hoje considerada a maior e mais bem estruturada ONG de ensino de inglês do Brasil. Após 20 anos de atuação e contando com uma metodologia inovadora de voluntariado e ensino, atualmente a CPM conta com cerca de 1.000 voluntários, entre professores e equipe administrativa, mobilizados para atender seus mais de 2 mil estudantes.",
     "id" : "1524594169730",
     "location" : "Sao Paulo, Campinas, Rio de Janeiro",
@@ -1150,7 +1175,7 @@
   },
   "112" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O movimento das Cidades em Transição (Transition Towns) foi criado pelo inglês Rob Hopkins com o objetivo de transformar as cidades em modelos sustentáveis, menos dependentes do petróleo, mais integradas à natureza e mais resistentes a crises externas, tanto econômicas como ecológicas. A Rede Transition Network foi fundada com uma missão simples - inspirar, encorajar, conectar, dar suporte e treinar comunidades adotando e adaptando o modelo de transição para reconstruir com urgência sua resiliência (capacidade de um sistema em resistir a choques externos) e reduzir drasticamente as emissões de CO2.",
     "id" : "1524475757470",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/transition.png",
@@ -1170,7 +1195,7 @@
   },
   "-LAI7fQ8VzPM44qvoIUC" : {
     "active" : true,
-    "category" : "Ecologia",
+    "category" : "8",
     "description" : "O plástico que ia para o aterro sanitário é transformado em ripas que são utilizadas para a construção de novos produtos.O que era lixo passa a ser insumo que reverte em benefícios para a comunidade.",
     "id" : "1524473927038",
     "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/nossomundo.png",
@@ -1180,7 +1205,7 @@
   },
   "-LAcSYSrRLZIU1DB2BDB" : {
     "active" : true,
-    "category" : "Organização Social",
+    "category" : "7",
     "description" : "Mostrar que em todos os lugares existem pessoas indo em buscas de soluções e não somente dos problemas. Mostrar que existem muito mais ações positivas do que ações negativas no mundo. Olhar o lado luminoso do ser humano. (Formando assim outros Caçadores de bons exemplos) Este site é uma plataforma virtual  e colaborativa para a difusão, visibilidade, encontro, conexão e ação coletiva de experiências que mudam o mundo para melhor. Um verdadeiro intercâmbio de ideias positivas, aonde todos podem indicar e compartilhar os bons exemplos de suas cidades",
     "id" : "1524417021447",
     "location" : "",
@@ -1189,15 +1214,114 @@
     "site" : "https://www.cacadoresdebonsexemplos.com.br/",
     "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
   },
-  "-LAt6qPHjD_w94VJSRdy" : {
+  "-LB1dksATTm7QAkCfDQq" : {
     "active" : true,
-    "category" : "Meio Ambiente",
-    "description" : "teste",
-    "id" : "1524598007083",
-    "location" : "",
+    "category" : "9",
+    "description" : "O Instituto Muda é uma empresa que atua desde 2007 com um objetivo: promover práticas sustentáveis nos condomínios residenciais da cidade de São Paulo através da Gestão de Resíduos.\n\n \n\nNós do Instituto Muda, acreditamos que o “lixo” é fonte potencial de matéria-prima para fabricação de outros produtos, trazendo assim benefícios sociais, ambientais e econômicos para toda a sociedade.\n\n \n\nÉ com essa ideologia que já implementamos e organizamos a coleta seletiva em mais de 150 condomínios da cidade de São Paulo, sensibilizando e conscientizando mais de 60.000 moradores e 60.650 funcionárias e funcionários dos condomínios.\n\n \n\nDesde 2017, somos uma empresa investida pela organização internacional, Yunus Negócios Sociais.\n\n \n\nAtualmente (2018) destinamos corretamente mais de 100 toneladas mensais de materiais recicláveis às cooperativas.",
+    "id" : "1524757934034",
+    "location" : "São Paulo SP",
+    "logo" : "http://institutomuda.com.br/wp/wp-content/themes/IM/imagens/logo.png",
+    "name" : "Instituto Muda",
+    "site" : "http://institutomuda.com.br",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1e_hUKgcSOFJz9c7d" : {
+    "active" : true,
+    "category" : "2",
+    "description" : "A Hand Talk promove a inclusão de pessoas com deficiência auditiva na sociedade por meio de uma tecnologia que traduz automaticamente o Português para a Libras (Língua Brasileira de Sinais). Oferecem um app gratuito e tornam mais inclusivos websites, eventos, museus, cursos, ambientes de atendimento ao usuário, entre outros.",
+    "id" : "1524758683788",
+    "location" : "Brasil",
+    "logo" : "https://www.handtalk.me/images/brand/whitebrand.svg",
+    "name" : "Hand Talk",
+    "site" : "https://www.handtalk.me/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1hNNuI2v-0kwhNSIH" : {
+    "active" : true,
+    "category" : "9",
+    "description" : "A Courrieros realiza entregas ecológicas na região centro-oeste da cidade de São Paulo e proximidades. São uma empresa de entrega de documentos e pequenos pacotes que utiliza apenas bicicletas",
+    "id" : "1524758889495",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://www.courrieros.com.br/courrieros/wp-content/uploads/2017/03/logocourrieros.png",
+    "name" : "Courrieros",
+    "site" : "http://www.courrieros.com.br/courrieros/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1l4SS6Vw5fLsaRWix" : {
+    "active" : true,
+    "category" : "1",
+    "description" : "Trabalham com hortas verticais e hortas urbanas coletivas.",
+    "id" : "1524759865670",
+    "location" : "São Paulo (SP)",
     "logo" : "",
-    "name" : "teste",
-    "site" : "www.teste",
+    "name" : "Pé de Feijão",
+    "site" : "http://pedefeijaosp.com/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1lPgHJMRkWiuMrHNB" : {
+    "active" : true,
+    "category" : "4",
+    "description" : "Site ensina como captar recursos para projetos do terceiro setor.",
+    "id" : "1524759953952",
+    "location" : "Brasil",
+    "logo" : "http://quintessa.org.br/wp-content/uploads/2017/03/captamos.jpg",
+    "name" : "Captamos",
+    "site" : "http://4etapas.com.br",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1msQIcxvFUsEneyFE" : {
+    "active" : true,
+    "category" : "4",
+    "description" : "Hoje a Doisélles tem uma unidade de produção dentro do pavilhão 1 da Penitenciária Professor Ariosvaldo De Campos Pires, onde 18 detentos condenados em regime fechado trabalham com excelência na produção de peças artesanais feitas com técnicas de tecelagem manual: tricô e crochê, que são inspecionadas por rígido controle de qualidade tipo exportação. A felicidade da parceria é legitimada pela certeza de que ambas as partes estão ganhando, crescendo e melhorando todos os aspectos que as envolve. Relembramos as lições do jurista italiano Francesco Carnelutti em sua clássica obra \"As Misérias do Processo Penal\":",
+    "id" : "1524760368666",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://www.doiselles.com.br/images/logo_holder.png",
+    "name" : "Dois Elles",
+    "site" : "http://www.doiselles.com.br/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1oFtj6o3xN3Vu7pEf" : {
+    "active" : true,
+    "category" : "7",
+    "description" : "CONSCIENTIZAR, ENGAJAR E MOBILIZAR\nAs causas têm o poder de unir pessoas e organizações para transformar a realidade.\nEm um mundo no qual organizações e marcas são cada vez mais questionadas sobre\nseu papel como agentes de transformação da sociedade, queremos contribuir para\ncolocar essa aspiração em prática.",
+    "id" : "1524760705553",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://www.cause.net.br/wp/wp-content/themes/cause-v2/images/logo-cause.svg",
+    "name" : "Cause",
+    "site" : "http://www.cause.net.br",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1skRXMvcWq2OI-4aS" : {
+    "active" : true,
+    "category" : "9",
+    "description" : "Acreditamos que é possível fazer diferente. Pensar diferente. Consumir diferente.\nAcreditamos que nada é lixo, tudo, até o inimaginável, pode ser transformado.\nEmpresa trabalha com reciclagem de resíduos e transforma em matéria prima para novos produtos.\nAtuamos para empresas e organizações de diversos tamanhos e de diferentes setores, sempre com foco em gerar valor a partir de uma nova lógica produtiva.",
+    "id" : "1524761885593",
+    "location" : "São Paulo (SP)",
+    "logo" : "http://quintessa.org.br/wp-content/uploads/2017/10/boomera.png",
+    "name" : "Boomera",
+    "site" : "http://boomera.com.br/",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LB1vYwQ5McfdpAuKYvS" : {
+    "active" : true,
+    "category" : "4",
+    "description" : "O Moradigna é um negócio social que está buscando mudar a vida de milhões de brasileiros que moram em situação de insalubridade. O nosso trabalho já transformou a vida de centenas de pessoas e deu a elas uma melhor qualidade de vida. Pois, o que oferecemos não é apenas a opção de ter uma casa bonita, também oferecemos um ambiente saudável e longe de doenças que o mofo, a umidade e outros fatores podem causar.",
+    "id" : "1524762621110",
+    "location" : "São Paulo – SP",
+    "logo" : "http://quintessa.org.br/wp-content/uploads/2017/02/Moradigna-2-copy.png",
+    "name" : "Moradigna",
+    "site" : "http://moradigna.com.br",
+    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+  },
+  "-LKaJsn3UlDOuu4lp4Ev" : {
+    "active" : true,
+    "category" : "9",
+    "description" : "É muito gratificante a certeza da Reciclal estar contribuindo positivamente para as questões ecológicas, reduzindo consideravelmente os impactos ambientais no reaproveitamento de parte do lixo dos grandes centros. O processo produtivo da Reciclal, esta isento de emissão de poluentes ou resíduos químicos, e evidência o respeito ao meio ambiente, contribui para a geração e distribuição da renda. \n\nO Biopote é uma ferramenta indispensável ao ecossistema, e não causa nenhuma forma negativa de impacto ambiental.",
+    "id" : "1535020075938",
+    "location" : "Bahia",
+    "logo" : "http://www.reciclalsa.com.br/images/logo.gif",
+    "name" : "Reciclal S.A",
+    "site" : "http://www.reciclalsa.com.br",
     "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
   }
 }

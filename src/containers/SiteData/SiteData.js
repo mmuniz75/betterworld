@@ -89,7 +89,7 @@ class SiteData extends Component {
                 elementConfig: {
                     options: []
                 },
-                value: 'Saude',
+                value: '0',
                 validation: {
                     required: true,
                 },
@@ -104,7 +104,7 @@ class SiteData extends Component {
 
         const categoryOptions = this.props.categories.map(category => {
             return {
-                value:category.name,
+                value:category.id,
                 displayValue:category.name,
             }
         }
@@ -114,10 +114,10 @@ class SiteData extends Component {
             options: categoryOptions
         });
 
-        const categoryName = fillSite?fillSite.category:'Saude'; 
+        const categoryId = fillSite?fillSite.category:categoryOptions[0].value; 
         const updatedFormElement = updateObject(this.state.siteForm.category, {
             elementConfig: updatedElementConfig,
-            value : categoryName,
+            value : categoryId,
         });
 
         const updatedSiteForm = updateObject(this.state.siteForm, {

@@ -1,44 +1,39 @@
-{
-    "categories" : [
-                {
-                    "id" : 1,
-                    "name": "Saude",
-                    "active" : false
-                },   
-                {
-                    "id" : 2,
-                    "name": "Educação",
-                    "active" : false
-                },   
-                {
-                    "id" : 3,
-                    "name": "Energia",
-                    "active" : true
-                },   
-                {
-                    "id" : 4,
-                    "name": "Economia",
-                    "active" : true
-                },   
-                {
-                    "id" : 5,
-                    "name": "Alimentação",
-                    "active" : false
-                },   
-                {
-                    "id" : 6,
-                    "name": "Desenvolvimento Pessoal",
-                    "active" : false
-                },   
-                {
-                    "id" : 7,
-                    "name": "Organização Social",
-                    "active" : true
-                },
-                {
-                    "id" : 8,
-                    "name": "Ecologia",
-                    "active" : true
-                }
-                ]
-}
+[ {
+  "active" : true,
+  "id" : "1",
+  "name" : "Saude"
+}, {
+  "active" : true,
+  "id" : "2",
+  "name" : "Educação"
+}, {
+  "active" : true,
+  "id" : "3",
+  "name" : "Energia"
+}, {
+  "active" : true,
+  "id" : "4",
+  "name" : "Economia"
+}, {
+  "active" : true,
+  "id" : "5",
+  "name" : "Alimentação"
+}, {
+  "active" : true,
+  "id" : "6",
+  "name" : "Desenvolvimento Pessoal"
+}, {
+  "active" : true,
+  "id" : "7",
+  "name" : "Organização Social"
+}, {
+  "active" : true,
+  "id" : "8",
+  "name" : "Ecologia"
+}, {
+  "active" : true,
+  "id" : "9",
+  "index" : 8,
+  "key" : "8",
+  "name" : "Meio Ambiente"
+} ]

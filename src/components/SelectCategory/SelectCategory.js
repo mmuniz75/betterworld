@@ -13,7 +13,7 @@ const SelectCategory = (props) => (
                         return (
                             <option
                                 key={category.id} 
-                                value={category.name}>
+                                value={category.id}>
                                 {category.name}
                             </option>
                         )    
