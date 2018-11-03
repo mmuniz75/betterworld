@@ -192,7 +192,12 @@ class SiteData extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
-                       this.props.onUpdateSite(site);
+                       if(site.category === this.props.category){
+                          this.props.onUpdateSite(site);
+                       }else{
+                           this.props.onDeleteSite(site.id);         
+                       }     
+
                        this.props.history.replace( '/' );
                     }    
         } )
@@ -372,6 +377,10 @@ const mapDispatchToProps = dispatch => {
         onAddSite: (site) => dispatch({
             type: siteActionTypes.ADD_SITE,
             site: site
+        }),
+        onDeleteSite: (siteKey) => dispatch({
+            type: siteActionTypes.DELETE_SITE,
+            key: siteKey
         }),
     };
 };
