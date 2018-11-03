@@ -210,7 +210,8 @@ class SiteData extends Component {
                     if (response) {
                         site.key = response.data.name;
                         if (this.props.isAuthenticated && !this.props.approveSite) {
-                            this.props.onAddSite(site);
+                            if(site.category === this.props.category)
+                                this.props.onAddSite(site);
                         }    
                         if(this.props.approveSite) {
                             this.approvePostSteps();
@@ -336,7 +337,8 @@ const mapStateToProps = state => {
         editSite : state.site.siteToEdit,
         approveSite : state.site.siteToApprove,
         lastSitesLoaded : state.site.lastSitesLoaded,
-        suggestions : state.site.suggestionsLoaded
+        suggestions : state.site.suggestionsLoaded,
+        category : state.site.category
     }
 };
 
