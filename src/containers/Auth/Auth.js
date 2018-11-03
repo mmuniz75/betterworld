@@ -14,6 +14,7 @@ import {checkAuthTimeout} from '../../shared/auth';
 import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
 import * as siteActionTypes from '../../store/reducers/site';
+import * as categoryActionTypes from '../../store/reducers/category';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
@@ -139,6 +140,7 @@ class Auth extends Component {
         let authRedirect = null;
         if ( this.props.isAuthenticated ) {
             this.props.onSetCategory(0);
+            this.props.onFetchCategories([]);
             authRedirect = <Redirect to='/sites' />
         }
 
@@ -182,7 +184,11 @@ const mapDispatchToProps = dispatch => {
         onSetCategory: (category) => dispatch({
             type: siteActionTypes.SET_CATEGORY,
             category:category
-        })                                  
+        }),
+        onFetchCategories: (categories) => dispatch({
+            type: categoryActionTypes.FETCH_CATEGORIES,
+            categories: categories
+        }),                                  
     };
 };
 

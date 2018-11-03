@@ -9,8 +9,7 @@ const SelectCategory = (props) => (
                 <option value="0">Escolha uma Categoria</option>
                 {
                 props.categories?     
-                    props.categories.filter(category => {return category.active})
-                    .map(category => {
+                    props.categories.map(category => {
                         return (
                             <option
                                 key={category.id} 
