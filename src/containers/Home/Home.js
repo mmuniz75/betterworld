@@ -20,7 +20,8 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {SITES_URL,CATEGORIES_URL} from '../../shared/consts';
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
-const categoriesURL = CATEGORIES_URL + '.json?orderBy="active"&equalTo=true';
+//const categoriesURL = CATEGORIES_URL + '.json?orderBy="active"&equalTo=true';
+const categoriesURL = CATEGORIES_URL + '.json';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Home extends Component {
@@ -54,7 +55,11 @@ class Home extends Component {
             .then(response => {
                 const categoriesLoaded = [];
                 Object.keys(response.data).map(key => {
-                    return categoriesLoaded.push(response.data[key])
+                    const category = response.data[key];
+                    if(category){
+                        category.key = key;
+                        return categoriesLoaded.push(category)
+                    }    
                 }
 
                 );

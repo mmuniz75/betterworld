@@ -23,7 +23,6 @@ class CategoriesAdmin extends Component {
     state = {
         loading : false,
         deleteCategoryIndex : null,
-        categories: [],
         salved: false
     }
 
@@ -32,7 +31,7 @@ class CategoriesAdmin extends Component {
     }
 
     loadCategories(){
-        if(this.state.categories.length===0) {
+        if(this.props.categories.length===0) {
             this.setState({loading:true}); 
             axios.get(categoriesURL + ".json")
             .then(response => {
@@ -54,31 +53,26 @@ class CategoriesAdmin extends Component {
    
 
     changeCategory = (index,value) => {
-        const categoriesLoaded = [...this.state.categories];
+        const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
         category.name=value;
         this.setState({categories:categoriesLoaded});
     }
 
     editCategory = (index,value) => {
-        const categoriesLoaded = [...this.state.categories];
+        const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
+        category.index = index;
         this.updateCategory(category);
     }
 
     removeCategory = () => {
         const index = this.state.deleteCategoryIndex;
-        this.setState({loading:true,deleteCategoryIndex:null});
-        const categoriesLoaded = [...this.state.categories];
+        this.setState({deleteCategoryIndex:null});
+        const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
-
+        this.props.onCategoryDelete(index);
         axios.delete(categoriesURL+'/' + category.key + '.json?auth=' + this.props.token)
-        .then(response => {
-            this.state.categories.splice(index,1);
-            this.props.onFetchCategories([]);
-            this.setState({loading:false});
-        })    
-       
     }
 
     cancelDelete = () =>{
@@ -90,7 +84,7 @@ class CategoriesAdmin extends Component {
     }
 
     enableCategory = (index) => {
-        const categoriesLoaded = [...this.state.categories];
+        const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
         category.index = index;
         category.active = !category.active;
@@ -99,14 +93,12 @@ class CategoriesAdmin extends Component {
 
     updateCategory = (category) => {
         const url = categoriesURL+ '/' + category.key + '.json?auth=' + this.props.token ;
-        
-        document.body.style.cursor = 'progress';
+        this.props.onCategoryUpdate(category);
+
         axios.put(url ,category)
                 .then( response => {
                     if (response) {
                         this.showSalveMessage();
-                        document.body.style.cursor = 'default';
-                        this.props.onFetchCategories([]);
                     }    
         } )
     }
@@ -119,8 +111,8 @@ class CategoriesAdmin extends Component {
     render(){
         let categories = <Spinner />;
         if ( !this.state.loading ) {
-             categories =   <Categories show={this.state.categories} 
-                                categories={this.state.categories}
+             categories =   <Categories show={this.props.categories} 
+                                categories={this.props.categories}
                                 edit={this.editCategory}
                                 change={this.changeCategory}
                                 delete={this.confirmDelete}
@@ -147,7 +139,8 @@ class CategoriesAdmin extends Component {
 const mapStateToProps = state => {
     return {
         token : state.auth.token,
-        isAuthenticated: state.auth.token !== null
+        isAuthenticated: state.auth.token !== null,
+        categories: state.category.categories,
     };
 };
 
@@ -160,6 +153,14 @@ const mapDispatchToProps = dispatch => {
         onCategoryEdit: (categoryToEdit) => dispatch({
             type: actionTypes.EDIT,
             categoryToEdit:categoryToEdit
+        }),
+        onCategoryDelete: (indexCategory) => dispatch({
+            type: actionTypes.DELETE,
+            index:indexCategory
+        }),
+        onCategoryUpdate: (categoryToUpdate) => dispatch({
+            type: actionTypes.UPDATE,
+            categoryData: categoryToUpdate
         })
     };
 };
