@@ -62,8 +62,13 @@ class CategoriesAdmin extends Component {
     editCategory = (index,value) => {
         const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
-        category.index = index;
-        this.updateCategory(category);
+        
+        if(category.key) {
+            category.index = index;
+            this.updateCategory(category);
+        }else {
+            this.addCategory(category);
+        }
     }
 
     removeCategory = () => {
@@ -88,19 +93,41 @@ class CategoriesAdmin extends Component {
         const category = categoriesLoaded[index];
         category.index = index;
         category.active = !category.active;
-        this.updateCategory(category);
+        this.props.onCategoryUpdate(category);
+        if(category.key) {
+            this.updateCategory(category);
+        }    
     }
 
     updateCategory = (category) => {
         const url = categoriesURL+ '/' + category.key + '.json?auth=' + this.props.token ;
-        this.props.onCategoryUpdate(category);
-
         axios.put(url ,category)
                 .then( response => {
                     if (response) {
                         this.showSalveMessage();
                     }    
         } )
+    }
+
+    addCategory = (category) => {
+        const url = categoriesURL + '.json?auth=' + this.props.token;
+
+        axios.post(url ,category)
+                .then( response => {
+                    if (response) {
+                        category.key = response.data.name;
+                        this.props.onCategoryUpdate(category);
+                    }    
+                        
+        } )
+    }
+
+    startCategory = () => {
+        const category = {userId : this.props.userId,
+                          id : (Date.now() + Math.random()).toFixed(0),
+                          name:"", 
+                          active: false};
+        this.props.onAddCategory(category);
     }
 
     showSalveMessage(){
@@ -119,9 +146,17 @@ class CategoriesAdmin extends Component {
                                 enable={this.enableCategory}
                                 auth={this.props.isAuthenticated}/>
              
-        }    
+        }
+        const addButton = this.props.categories && this.props.categories[0] && this.props.categories[0].key
+                                ?<a onClick={() => this.startCategory()} style={{cursor: 'pointer'}} >
+                                    <i className="fas fa-plus fa-lg" title='Adicionar Categoria' />
+                                </a>
+                                :null;
+        
         return (
                 <div className={classes.Categories}>
+                    {addButton}
+                    <br/><br/>
                     {categories}
                     <Modal show={this.state.deleteCategoryIndex!==null}>
                         <h3>Confirma remoção da Categoria ?</h3>
@@ -138,6 +173,7 @@ class CategoriesAdmin extends Component {
 
 const mapStateToProps = state => {
     return {
+        userId : state.auth.userId,
         token : state.auth.token,
         isAuthenticated: state.auth.token !== null,
         categories: state.category.categories,
@@ -161,6 +197,10 @@ const mapDispatchToProps = dispatch => {
         onCategoryUpdate: (categoryToUpdate) => dispatch({
             type: actionTypes.UPDATE,
             categoryData: categoryToUpdate
+        }),
+        onAddCategory: (category) => dispatch({
+            type: actionTypes.ADD,
+            categoryData: category
         })
     };
 };

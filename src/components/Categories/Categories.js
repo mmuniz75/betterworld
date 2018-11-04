@@ -8,7 +8,7 @@ const categories = (props) => (
                     {
                         props.categories?props.categories.map( (category,index) => {
                            return (    
-                                <li key={category.id}>
+                                <li key={index}>
                                     <Category 
                                         name={category.name} 
                                         active={category.active}

@@ -6,7 +6,7 @@ import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 
 const category = (props) => {
 
-    const saveLink = props.auth
+    const saveLink = props.auth && props.name
                       ?<Auxliary>
                         <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-save fa-lg" title='Salvar Categoria' />
@@ -14,7 +14,7 @@ const category = (props) => {
                        </Auxliary> 
                       :null
     
-    const deleteLink = props.auth
+    const deleteLink = props.auth 
                       ?<Auxliary>
                         <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-trash fa-lg" title='Remover Categoria' />

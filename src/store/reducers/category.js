@@ -18,10 +18,12 @@ const categoryEdit = ( state, action ) => {
 };
 
 const addCategory = ( state, action ) => {
+    const categoriesCopy = [...state.categories];
     const newCategory = {...action.categoryData};
+    categoriesCopy.unshift(newCategory);
     return updateObject( state, {
         loading: false,
-        categories: state.categories.concat(newCategory)
+        categories: categoriesCopy 
     } );
 };
 
