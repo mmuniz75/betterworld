@@ -26,6 +26,15 @@ class CategoriesAdmin extends Component {
         salved: false
     }
 
+    componentWillUnmount = () => {
+        const categoriesLoaded = [...this.props.categories];
+        const category = categoriesLoaded[0];
+        
+        if(category && !category.key && category.name) {
+            this.addCategory(category);
+        }
+    }
+
     componentDidMount= () => {
         this.loadCategories();
     }
@@ -59,7 +68,7 @@ class CategoriesAdmin extends Component {
         this.setState({categories:categoriesLoaded});
     }
 
-    editCategory = (index,value) => {
+    saveCategory = (index,value) => {
         const categoriesLoaded = [...this.props.categories];
         const category = categoriesLoaded[index];
         
@@ -140,7 +149,7 @@ class CategoriesAdmin extends Component {
         if ( !this.state.loading ) {
              categories =   <Categories show={this.props.categories} 
                                 categories={this.props.categories}
-                                edit={this.editCategory}
+                                save={this.saveCategory}
                                 change={this.changeCategory}
                                 delete={this.confirmDelete}
                                 enable={this.enableCategory}

@@ -8,7 +8,7 @@ const category = (props) => {
 
     const saveLink = props.auth && props.name
                       ?<Auxliary>
-                        <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
+                        <a onClick={() => props.save(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-save fa-lg" title='Salvar Categoria' />
                         </a>
                        </Auxliary> 

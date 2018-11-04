@@ -13,7 +13,7 @@ const categories = (props) => (
                                         name={category.name} 
                                         active={category.active}
                                         index={index}
-                                        edit={props.edit}
+                                        save={props.save}
                                         change={props.change}
                                         delete={props.delete}
                                         auth={props.auth}
