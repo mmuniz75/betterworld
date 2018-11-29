@@ -14,7 +14,6 @@ import classes from './CategoriesAdmin.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {CATEGORIES_URL} from '../../shared/consts';
 
-import Auxliary from '../../hoc/Auxiliary/Auxiliary';
 
 const categoriesURL = CATEGORIES_URL ;
 

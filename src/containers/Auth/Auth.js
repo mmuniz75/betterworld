@@ -18,7 +18,7 @@ import * as categoryActionTypes from '../../store/reducers/category';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
-const AUTH_URL = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCEZ0Vr-6LjTQkji4xZuA79_LI_d6tNmUc';
+const AUTH_URL = 'http://bestworld-security.herokuapp.com/login/';
 
 class Auth extends Component {
     state = {
@@ -77,19 +77,17 @@ class Auth extends Component {
     auth = (email, password) => {
         this.setState({loading:true});
         const authData = {
-            email: email,
-            password: password,
-            returnSecureToken: true
+            user: email,
+            password: password
         };
-        //let new_user_url = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDBu0iJZdxv9QYssqaADenC747Bwg4J2bA';
-            
+                    
         axios.post(AUTH_URL, authData)
             .then(response => {
                 const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
-                localStorage.setItem('token', response.data.idToken);
+                localStorage.setItem('token', response.data.token);
                 localStorage.setItem('expirationDate', expirationDate);
-                localStorage.setItem('userId', response.data.localId);
-                this.props.onAuth(response.data.idToken, response.data.localId);
+                localStorage.setItem('userId', response.data.id);
+                this.props.onAuth(response.data.token, response.data.id);
                 checkAuthTimeout(this.props,response.data.expiresIn);
                 this.setState({loading:false});
             })
