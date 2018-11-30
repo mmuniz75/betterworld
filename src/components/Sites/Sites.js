@@ -14,7 +14,7 @@ const Sites = (props) => (
                             const category = props.categories.filter(cat => cat.id === site.category);
                             categoryName = category[0].name; 
                            } 
-
+                           
                            return (    
                                 <li key={site.id}>
                                     <Site logo={site.logo} 
@@ -32,6 +32,7 @@ const Sites = (props) => (
                                     edit={props.edit}
                                     delete={props.delete}
                                     canDelete={props.canDelete}
+                                    canEdit={props.canEdit || props.userId===site.userId}
                                     auth={props.auth}
                                     enable={props.enable}
                                     />

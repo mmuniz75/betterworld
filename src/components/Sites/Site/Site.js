@@ -29,21 +29,21 @@ const Site = (props) => {
                             ?<Auxliary>
                                    (<b>Categoria:&nbsp;</b>{props.category})
                             </Auxliary>
-                            :null;                
-                            
-    const editButton = props.auth
+                            :null;          
+                                
+    const editButton = props.canEdit && !approvation
                       ?<a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-edit fa-lg" title='Editar Site' />
                         </a>
                       :null;
 
-    const deleteButton = props.canDelete
+    const deleteButton = props.canDelete && !approvation
                        ?<a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-trash fa-lg" title='Remover Site' />
                         </a>
                       :null
 
-    const enableCheck = props.auth
+    const enableCheck = props.canEdit && !approvation
                         ?
                         <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />Site ativo?</p>
                         :null
