@@ -72,10 +72,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-      onAuth: ( token, userId ) => dispatch( {
+      onAuth: ( token, userId, role ) => dispatch( {
                                            type: actionTypes.AUTH_SUCCESS,
                                            idToken: token,
-                                           userId: userId
+                                           userId: userId,
+                                           role: role
                                           }),
       onLogout: () => dispatch( {
                                   type: actionTypes.AUTH_LOGOUT

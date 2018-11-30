@@ -11,12 +11,13 @@ const initialState = {
 const authSuccess = (state, action) => {
     return updateObject( state, { 
         token: action.idToken,
-        userId: action.userId
+        userId: action.userId,
+        role: action.role
      } );
 };
 
 const authLogout = (state, action) => {
-    return updateObject(state, { token: null, userId: null });
+    return updateObject(state, { token: null, userId: null, role: null });
 };
 
 

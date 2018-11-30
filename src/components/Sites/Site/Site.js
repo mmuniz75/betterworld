@@ -30,19 +30,23 @@ const Site = (props) => {
                                    (<b>Categoria:&nbsp;</b>{props.category})
                             </Auxliary>
                             :null;                
-    const editLinks = props.auth
-                      ?<Auxliary>
-                        <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
+                            
+    const editButton = props.auth
+                      ?<a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-edit fa-lg" title='Editar Site' />
                         </a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
+                      :null;
+
+    const deleteButton = props.canDelete
+                       ?<a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-trash fa-lg" title='Remover Site' />
                         </a>
-                        &nbsp;&nbsp;&nbsp;
-                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />Site ativo?</p>
-                       </Auxliary> 
                       :null
+
+    const enableCheck = props.auth
+                        ?
+                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />Site ativo?</p>
+                        :null
 
     const location = props.location                  
                      ?<i>({props.location})</i>
@@ -53,7 +57,11 @@ const Site = (props) => {
             <div className={classes.ProductDetails}>
                 <h2>{props.name}</h2>
                 <br/>
-                {editLinks}
+                {editButton}
+                &nbsp;&nbsp;&nbsp;
+                {deleteButton}
+                &nbsp;&nbsp;&nbsp;
+                {enableCheck}
                 {categoryLabel}
                 <p className={classes.ProductDescription}>{props.description}</p>
                 <p className={classes.Location}>{location}</p>

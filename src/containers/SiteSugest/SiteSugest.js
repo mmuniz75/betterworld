@@ -99,6 +99,7 @@ class SiteSugest extends Component {
             }else {
                 sites = <Sites show 
                             sites={this.props.suggestions} 
+                            categories={this.props.categories} 
                             rejectClicked={this.confirmReject}
                             approveClicked={this.approve}
                              />
@@ -126,7 +127,8 @@ class SiteSugest extends Component {
 const mapStateToProps = state => {
     return {
         token : state.auth.token,
-        suggestions : state.site.suggestionsLoaded
+        suggestions : state.site.suggestionsLoaded,
+        categories: state.category.categories
     }
 };
 

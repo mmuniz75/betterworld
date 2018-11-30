@@ -87,7 +87,8 @@ class Auth extends Component {
                 localStorage.setItem('token', response.data.token);
                 localStorage.setItem('expirationDate', expirationDate);
                 localStorage.setItem('userId', response.data.id);
-                this.props.onAuth(response.data.token, response.data.id);
+                localStorage.setItem('role', response.data.role);
+                this.props.onAuth(response.data.token, response.data.id,response.data.role );
                 checkAuthTimeout(this.props,response.data.expiresIn);
                 this.setState({loading:false});
             })
@@ -170,10 +171,11 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAuth: ( token, userId ) => dispatch( {
+        onAuth: ( token, userId, role ) => dispatch( {
                                              type: actionTypes.AUTH_SUCCESS,
                                              idToken: token,
-                                             userId: userId
+                                             userId: userId,
+                                             role: role
                                             }),
         onLogout: () => dispatch( {
                                     type: actionTypes.AUTH_LOGOUT

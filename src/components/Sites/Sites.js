@@ -7,6 +7,14 @@ const Sites = (props) => (
         <ul style={!props.show?{display:'none'}:null} className={classes.Sites}>
                     {
                         props.sites?props.sites.map( (site,index) => {
+
+                           let categoryName = null; 
+                           
+                           if(props.categories) { 
+                            const category = props.categories.filter(cat => cat.id === site.category);
+                            categoryName = category[0].name; 
+                           } 
+
                            return (    
                                 <li key={site.id}>
                                     <Site logo={site.logo} 
@@ -20,9 +28,10 @@ const Sites = (props) => (
                                     buttonsType={props.buttonsType} 
                                     approveClicked={props.approveClicked}
                                     rejectClicked={props.rejectClicked}
-                                    category={site.category}
+                                    category={categoryName}
                                     edit={props.edit}
                                     delete={props.delete}
+                                    canDelete={props.canDelete}
                                     auth={props.auth}
                                     enable={props.enable}
                                     />

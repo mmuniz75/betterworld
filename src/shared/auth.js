@@ -2,6 +2,7 @@ export const logout = (props) => {
     localStorage.removeItem('token');
     localStorage.removeItem('expirationDate');
     localStorage.removeItem('userId');
+    localStorage.removeItem('token');
     props.onLogout();
 };
 
@@ -15,7 +16,8 @@ export const authCheckState = (props) => {
             logout(props);
         } else {
             const userId = localStorage.getItem('userId');
-            props.onAuth(token, userId);
+            const role = localStorage.getItem('role');
+            props.onAuth(token, userId, role);
             checkAuthTimeout(props,(expirationDate.getTime() - new Date().getTime()) / 1000 );
         }   
     }

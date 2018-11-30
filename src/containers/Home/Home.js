@@ -181,6 +181,7 @@ class Home extends Component {
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
                             delete={this.confirmDelete}
+                            canDelete={this.props.canDelete}
                             auth={this.props.isAuthenticated}
                             enable={this.enableSite}
                             />
@@ -207,6 +208,7 @@ const mapStateToProps = state => {
     return {
         categories: state.category.categories,
         token : state.auth.token,
+        canDelete : state.auth.role === 'admin',
         lastSitesLoaded : state.site.lastSitesLoaded,
         lastCategory : state.site.category,
         isAuthenticated: state.auth.token !== null,
