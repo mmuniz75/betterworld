@@ -100,6 +100,11 @@ class SiteData extends Component {
     }
 
     componentDidMount = () => {
+        if(!this.props.categories || this.props.categories.length === 0) {
+            this.props.history.replace('/sites');
+            return;
+        }
+
         const fillSite = this.props.editSite?this.props.editSite:this.props.approveSite;
 
         const categoryOptions = this.props.categories.map(category => {
