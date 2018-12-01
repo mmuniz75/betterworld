@@ -2,7 +2,6 @@ export const logout = (props) => {
     localStorage.removeItem('token');
     localStorage.removeItem('expirationDate');
     localStorage.removeItem('userId');
-    localStorage.removeItem('token');
     props.onLogout();
 };
 
