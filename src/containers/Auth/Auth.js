@@ -18,6 +18,8 @@ import * as categoryActionTypes from '../../store/reducers/category';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
+import {messages} from '../../shared/consts';
+
 const AUTH_URL = 'http://bestworld-security.herokuapp.com/login/';
 
 class Auth extends Component {
@@ -131,7 +133,8 @@ class Auth extends Component {
 
         if ( this.state.error ) {
             errorMessage = (
-                <p>{this.state.error.message}</p>
+                <p>{messages[this.state.error]}</p>
+                
             );
         }
 
