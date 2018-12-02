@@ -105,17 +105,15 @@ class Auth extends Component {
         }    
 
         const roleFormElement = {
-                               role: {
-                                    elementType: 'select',
-                                    elementConfig: {
-                                        options: roleOptions
-                                    },
-                                    value: 'default',
-                                    validation: {
-                                        required: true,
-                                    },
-                                    valid: true
-                                }
+                                elementType: 'select',
+                                elementConfig: {
+                                    options: roleOptions
+                                },
+                                value: 'default',
+                                validation: {
+                                    required: true,
+                                },
+                                valid: true
         };
 
         const updatedAuthForm = updateObject(this.state.controls, {
