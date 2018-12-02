@@ -59,6 +59,72 @@ class Auth extends Component {
         error: null
     }
 
+
+    getRoleElement = () => {
+        return {
+            role: {
+                elementType: 'select',
+                elementConfig: {
+                    options: []
+                },
+                value: '0',
+                validation: {
+                    required: true,
+                },
+                valid: true
+            }
+        }
+    }
+
+    isCreation = () => {
+        return this.props.location.pathname === '/createUser' && this.props.isAuthenticated && (this.props.isAdmin || this.props.isEditor);
+    }
+
+    componentDidMount = () => {
+
+        if(!this.isCreation()) {
+            return;
+        }
+
+        const roleOptions =  [
+              {
+                value:'default',
+                displayValue:'Colaborador',
+              },
+              {
+                value:'editor',
+                displayValue:'Editor',
+              }
+            ];
+        
+        if(this.props.isAdmin){
+            roleOptions.push({
+                value:'admin',
+                displayValue:'Admistrator',
+              });
+        }    
+
+        const roleFormElement = {
+                               role: {
+                                    elementType: 'select',
+                                    elementConfig: {
+                                        options: roleOptions
+                                    },
+                                    value: 'default',
+                                    validation: {
+                                        required: true,
+                                    },
+                                    valid: true
+                                }
+        };
+
+        const updatedAuthForm = updateObject(this.state.controls, {
+            role: roleFormElement
+        });
+        this.setState({ controls : updatedAuthForm});
+       
+    }
+
     
     inputChangedHandler = ( event, controlName ) => {
         const updatedControls = updateObject( this.state.controls, {
@@ -105,6 +171,8 @@ class Auth extends Component {
     }
     
     render () {
+        const isCreation = this.isCreation();
+        
         const formElementsArray = [];
         for ( let key in this.state.controls ) {
             formElementsArray.push( {
@@ -118,7 +186,7 @@ class Auth extends Component {
                 key={formElement.id}
                 elementType={formElement.config.elementType}
                 elementConfig={formElement.config.elementConfig}
-                value={formElement.config.value}
+                value={!isCreation?formElement.config.value:""}
                 invalid={!formElement.config.valid}
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
@@ -132,14 +200,16 @@ class Auth extends Component {
         let errorMessage = null;
 
         if ( this.state.error ) {
+            console.log(this.state.error);
+            const message = messages[this.state.error]?messages[this.state.error]:messages['GENERIC_ERROR']; 
             errorMessage = (
-                <p>{messages[this.state.error]}</p>
+                <p>{message}</p>
                 
             );
         }
 
         let authRedirect = null;
-        if ( this.props.isAuthenticated ) {
+        if ( this.props.isAuthenticated && !isCreation) {
             this.props.onSetCategory(0);
             this.props.onFetchCategories([]);
             authRedirect = <Redirect to='/sites' />
@@ -148,12 +218,12 @@ class Auth extends Component {
         return (
                 <Modal show>
                 <div className={classes.Auth}>
-                    <h3>Login</h3>
+                    <h3>{!isCreation?'Login':'Criar Usuário'}</h3>
                     {authRedirect}
                     {errorMessage}
                     <form onSubmit={this.submitHandler}>
                         {form}
-                        <Button btnType="Success">Logar</Button>
+                        <Button btnType="Success">{!isCreation?'Logar':'Salvar'}</Button>
                         <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
                     </form>
                 </div>
@@ -168,6 +238,8 @@ class Auth extends Component {
 const mapStateToProps = state => {
     return {
         isAuthenticated: state.auth.token !== null,
+        isAdmin: state.auth.role === 'admin',
+        isEditor: state.auth.role === 'editor'
     };
 };
 

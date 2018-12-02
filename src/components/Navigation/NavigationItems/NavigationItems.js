@@ -14,6 +14,9 @@ const navigationItems = ( props ) => (
         {props.isAuthenticated 
             ? <NavigationItem link="/sugest">Sugestões de Site</NavigationItem> 
             : null} 
+        {props.isAdmin || props.isEditor
+            ? <NavigationItem link="/createUser">Adicione um usuario</NavigationItem> 
+            : null} 
         {props.isAdmin
             ? <NavigationItem link="/categories">Categorias</NavigationItem> 
             : null} 

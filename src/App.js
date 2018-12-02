@@ -50,6 +50,7 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />
+        <Route path="/createUser" exact component={asyncLogin} />
         <Route path="/logout" exact component={asyncLogout} />
         <Route path="/sugest" exact component={asyncSugest} />
         <Redirect to="/sites" />
