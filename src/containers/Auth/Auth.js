@@ -18,9 +18,12 @@ import * as categoryActionTypes from '../../store/reducers/category';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
-import {messages} from '../../shared/consts';
+import {messages,API_SERVER} from '../../shared/consts';
 
-const AUTH_URL = 'http://bestworld-security.herokuapp.com/login/';
+const AUTH_URL = `${API_SERVER}/login/`;
+const USERS_URL = `${API_SERVER}/users/`;
+
+let HEADER = null;
 
 class Auth extends Component {
     state = {
@@ -54,26 +57,8 @@ class Auth extends Component {
                 touched: false
             }
         },
-        isSignup: true,
         loading : false,
         error: null
-    }
-
-
-    getRoleElement = () => {
-        return {
-            role: {
-                elementType: 'select',
-                elementConfig: {
-                    options: []
-                },
-                value: '0',
-                validation: {
-                    required: true,
-                },
-                valid: true
-            }
-        }
     }
 
     isCreation = () => {
@@ -81,6 +66,9 @@ class Auth extends Component {
     }
 
     componentDidMount = () => {
+        this.HEADER = {
+                headers: { "access-token" : this.props.token }  
+            }
 
         if(!this.isCreation()) {
             return;
@@ -100,7 +88,7 @@ class Auth extends Component {
         if(this.props.isAdmin){
             roleOptions.push({
                 value:'admin',
-                displayValue:'Admistrator',
+                displayValue:'Administrator',
               });
         }    
 
@@ -115,10 +103,12 @@ class Auth extends Component {
                                 },
                                 valid: true
         };
+     
 
         const updatedAuthForm = updateObject(this.state.controls, {
             role: roleFormElement
         });
+
         this.setState({ controls : updatedAuthForm});
        
     }
@@ -137,7 +127,11 @@ class Auth extends Component {
 
     submitHandler = ( event ) => {
         event.preventDefault();
-        this.auth( this.state.controls.email.value, this.state.controls.password.value, this.state.isSignup );
+
+        if(!this.isCreation())
+            this.auth( this.state.controls.email.value, this.state.controls.password.value);
+        else    
+            this.create( this.state.controls.email.value, this.state.controls.password.value,this.state.controls.role.value);
     }
 
     auth = (email, password) => {
@@ -147,7 +141,7 @@ class Auth extends Component {
             password: password
         };
                     
-        axios.post(AUTH_URL, authData)
+        axios.post(AUTH_URL, authData,)
             .then(response => {
                 const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
                 localStorage.setItem('token', response.data.token);
@@ -156,6 +150,25 @@ class Auth extends Component {
                 this.props.onAuth(response.data.token, response.data.id,response.data.role );
                 checkAuthTimeout(this.props,response.data.expiresIn);
                 this.setState({loading:false});
+            })
+            .catch(err => {
+                this.setState({loading:false,error:err.response.data.error});
+            });
+      
+    };
+
+    create = (email, password, role) => {
+        this.setState({loading:true});
+        const authData = {
+            user: email,
+            password: password,
+            role: role
+        };
+                    
+        axios.post(USERS_URL, authData,this.HEADER)
+            .then(response => {
+                this.setState({loading:false});
+                this.props.history.goBack();
             })
             .catch(err => {
                 this.setState({loading:false,error:err.response.data.error});
@@ -184,7 +197,7 @@ class Auth extends Component {
                 key={formElement.id}
                 elementType={formElement.config.elementType}
                 elementConfig={formElement.config.elementConfig}
-                value={!isCreation?formElement.config.value:""}
+                value={formElement.config.value}
                 invalid={!formElement.config.valid}
                 shouldValidate={formElement.config.validation}
                 touched={formElement.config.touched}
@@ -237,7 +250,8 @@ const mapStateToProps = state => {
     return {
         isAuthenticated: state.auth.token !== null,
         isAdmin: state.auth.role === 'admin',
-        isEditor: state.auth.role === 'editor'
+        isEditor: state.auth.role === 'editor',
+        token: state.auth.token
     };
 };
 
