@@ -170,6 +170,8 @@ class Auth extends Component {
         axios.post(USERS_URL, authData,this.HEADER)
             .then(response => {
                 this.setState({loading:false});
+                authData.key = response.data.id;
+                authData.email = email;
                 this.props.onAddUser(authData);
                 this.props.history.replace('/users');
             })
