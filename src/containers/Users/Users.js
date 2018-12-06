@@ -110,10 +110,6 @@ const mapDispatchToProps = dispatch => {
         onUserUpdate: (userToUpdate) => dispatch({
             type: actionTypes.UPDATE,
             userData: userToUpdate
-        }),
-        onAddUser: (user) => dispatch({
-            type: actionTypes.ADD,
-            userData: user
         })
     };
 };

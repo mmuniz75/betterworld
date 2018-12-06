@@ -15,6 +15,7 @@ import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
 import * as siteActionTypes from '../../store/reducers/site';
 import * as categoryActionTypes from '../../store/reducers/category';
+import * as userActionTypes from '../../store/reducers/user';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
@@ -169,6 +170,7 @@ class Auth extends Component {
         axios.post(USERS_URL, authData,this.HEADER)
             .then(response => {
                 this.setState({loading:false});
+                this.props.onAddUser(authData);
                 this.props.history.replace('/users');
             })
             .catch(err => {
@@ -281,7 +283,12 @@ const mapDispatchToProps = dispatch => {
         onFetchCategories: (categories) => dispatch({
             type: categoryActionTypes.FETCH_CATEGORIES,
             categories: categories
-        }),                                  
+        }),
+        onAddUser: (user) => dispatch({
+            type: userActionTypes.ADD,
+            userData: user
+        })                                  
+
     };
 };
 
