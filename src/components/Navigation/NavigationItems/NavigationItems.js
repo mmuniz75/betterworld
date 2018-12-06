@@ -17,6 +17,9 @@ const navigationItems = ( props ) => (
         {props.isAdmin || props.isEditor
             ? <NavigationItem link="/createUser">Adicione um usuario</NavigationItem> 
             : null} 
+        {props.isAdmin || props.isEditor
+            ? <NavigationItem link="/users">Usuarios</NavigationItem> 
+            : null} 
         {props.isAdmin
             ? <NavigationItem link="/categories">Categorias</NavigationItem> 
             : null} 

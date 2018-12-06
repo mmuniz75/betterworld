@@ -7,6 +7,7 @@ import {logout} from '../../../shared/auth';
 import * as actionTypes from '../../../store/reducers/auth';
 import * as siteActionTypes from '../../../store/reducers/site';
 import * as categoryActionTypes from '../../../store/reducers/category';
+import * as userActionTypes from '../../../store/reducers/user';
 
 class Logout extends Component {
     componentDidMount () {
@@ -16,6 +17,7 @@ class Logout extends Component {
     render () {
         this.props.onSetCategory(0);
         this.props.onFetchCategories([]);
+        this.props.onFetchUsers([]);
         return <Redirect to="/sites"/>;
     }
 }
@@ -33,6 +35,10 @@ const mapDispatchToProps = dispatch => {
             type: categoryActionTypes.FETCH_CATEGORIES,
             categories: categories
         }),  
+        onFetchUsers: (users) => dispatch({
+            type: userActionTypes.FETCH,
+            users: users
+        }),
     };
 };
 

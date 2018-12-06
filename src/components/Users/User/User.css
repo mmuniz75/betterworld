@@ -1,0 +1,62 @@
+
+
+.ProductDetails{
+    max-width: 100%;
+    float: center;
+}
+
+/* Product title */
+
+.ProductDetails h2{
+    display: block;
+    margin:0;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.ProductDetails h2 a{
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+
+.Input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.Label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.InputElement {
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+    padding: 6px 10px;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.InputElement:focus {
+    outline: none;
+    background-color: #ccc;
+}
+
+
+@media (max-width: 600px){
+    
+    .ProductDetails{
+        float: none;
+    }
+
+
+}
+

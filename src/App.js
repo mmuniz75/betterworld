@@ -27,6 +27,10 @@ const asyncLogin = asyncComponent(() => {
   return import('./containers/Auth/Auth');
 });
 
+const asyncUsers = asyncComponent(() => {
+  return import('./containers/Users/Users');
+});
+
 const asyncLogout = asyncComponent(() => {
   return import('./containers/Auth/Logout/Logout');
 });
@@ -50,6 +54,7 @@ class App extends Component {
         <Route path="/" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />
+        <Route path="/users" exact component={asyncUsers} />
         <Route path="/createUser" exact component={asyncLogin} />
         <Route path="/logout" exact component={asyncLogout} />
         <Route path="/sugest" exact component={asyncSugest} />

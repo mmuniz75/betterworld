@@ -8,6 +8,7 @@ import { createStore, compose, combineReducers } from 'redux';
 import categoryReducer from './store/reducers/category';
 import authReducer from './store/reducers/auth';
 import siteReducer from './store/reducers/site';
+import userReducer from './store/reducers/user';
 
 import './index.css';
 
@@ -19,7 +20,8 @@ const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX
 const rootReducer = combineReducers({
     category: categoryReducer,
     auth: authReducer,
-    site: siteReducer
+    site: siteReducer,
+    user: userReducer
 });
 
 const store = createStore(rootReducer, composeEnhancers());

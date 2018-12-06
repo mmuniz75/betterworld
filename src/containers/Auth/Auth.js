@@ -169,7 +169,7 @@ class Auth extends Component {
         axios.post(USERS_URL, authData,this.HEADER)
             .then(response => {
                 this.setState({loading:false});
-                this.props.history.goBack();
+                this.props.history.replace('/users');
             })
             .catch(err => {
                 this.setState({loading:false,error:err.response.data.error});
@@ -179,7 +179,10 @@ class Auth extends Component {
 
     cancelLogin = (event) => {
         event.preventDefault();
-        this.props.history.goBack();
+        if(this.isCreation())
+            this.props.history.replace('/users');
+        else    
+            this.props.history.goBack();
     }
     
     render () {
