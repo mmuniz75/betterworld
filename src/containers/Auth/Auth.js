@@ -67,7 +67,7 @@ class Auth extends Component {
 
     componentDidMount = () => {
         this.HEADER = {
-                headers: { "access-token" : this.props.token }  
+                headers: { 'access-token' : this.props.token }  
             }
 
         if(!this.isCreation()) {
@@ -127,6 +127,7 @@ class Auth extends Component {
 
     submitHandler = ( event ) => {
         event.preventDefault();
+        this.setState({error:null});
 
         if(!this.isCreation())
             this.auth( this.state.controls.email.value, this.state.controls.password.value);
@@ -212,9 +213,12 @@ class Auth extends Component {
 
         if ( this.state.error ) {
             console.log(this.state.error);
+            if(this.state.error.indexOf(":") > 0)
+                this.state.error = this.state.error.substring(0,this.state.error.indexOf(":")-1)
+
             const message = messages[this.state.error]?messages[this.state.error]:messages['GENERIC_ERROR']; 
             errorMessage = (
-                <p>{message}</p>
+                <p><font color="red">{message}</font></p>
                 
             );
         }
