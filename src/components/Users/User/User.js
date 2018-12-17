@@ -17,7 +17,7 @@ const user = (props) => {
     return (
         <Auxliary>
             <div className={classes.ProductDetails}>
-                <span  className={classes.Label}>{props.email}</span>
+                <span  className={classes.Label}>{props.email} </span>({props.role})
                 &nbsp;&nbsp;
                 &nbsp;&nbsp;{saveLink}
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -28,5 +28,5 @@ const user = (props) => {
         </Auxliary>
     )
 }      
-// <span  className={classes.Label}>Ativo?</span><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />  
+
 export default user;

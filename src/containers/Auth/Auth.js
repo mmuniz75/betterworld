@@ -154,7 +154,8 @@ class Auth extends Component {
                 this.setState({loading:false});
             })
             .catch(err => {
-                this.setState({loading:false,error:err.response.data.error});
+                const message = err.response && err.response.data && err.response.data.error?err.response.data.error:err.message;
+                this.setState({loading:false,error:message});
             });
       
     };

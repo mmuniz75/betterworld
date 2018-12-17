@@ -13,6 +13,7 @@ const Users = (props) => (
                                         email={user.email}
                                         index={index}
                                         auth={props.auth}
+                                        role={translateRole(user.role)}
                                         delete={props.delete}
                                     />
                                     
@@ -23,5 +24,17 @@ const Users = (props) => (
                     }
         </ul>
 )
+
+const translateRole = (role) => {
+
+    switch (role) {
+        case 'admin':
+            return 'Admistrador';
+        case 'editor':
+            return 'Editor';
+        default:
+            return 'Colaborador'        
+    }
+}
 
 export default Users;
