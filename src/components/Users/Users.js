@@ -11,10 +11,9 @@ const Users = (props) => (
                                 <li key={index}>
                                     <User
                                         email={user.email}
-                                        active={user.active}
                                         index={index}
                                         auth={props.auth}
-                                        enable={props.enable}
+                                        delete={props.delete}
                                     />
                                     
                                 </li>

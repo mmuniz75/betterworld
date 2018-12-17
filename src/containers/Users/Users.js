@@ -19,7 +19,8 @@ class UsersContainer extends Component {
         
     state = {
         loading : false,
-        salved: false
+        salved: false,
+        deleteUserIndex: null
     }
 
     componentDidMount= () => {
@@ -57,26 +58,34 @@ class UsersContainer extends Component {
         }
     }
     
-    enableUser = (index) => {
-        const usersLoaded = [...this.props.users];
-        const user = usersLoaded[index];
-        user.index = index;
-        user.active = !user.active;
-        this.props.onUserUpdate(user);
-        if(user.key) {
-            this.updateUser(user);
-        }    
-    }
-
+  
     addUser = () => {
         this.props.history.replace('/createUser');
     }
+
+    removeUser = () => {
+        const index = this.state.deleteUserIndex;
+        this.setState({deleteUserIndex:null});
+        const usersLoaded = [...this.props.users];
+        const user = usersLoaded[index];
+        this.props.onUserDelete(index);
+        axios.delete(`${USERS_URL}${user.email}`,{headers: {'access-token' : this.props.token}})
+    }
+
+    cancelDelete = () =>{
+        this.setState({deleteUserIndex:null});
+    }    
+
+    confirmDelete = (index) => {
+        this.setState({deleteUserIndex:index});
+    }
+    
     
     render(){
         let users = <Spinner />;                                        
         if ( !this.state.loading ) {
              users =   <Users   users={this.props.users}
-                                enable={this.enableUser}
+                                delete={this.confirmDelete}
                                 auth={this.props.isAuthenticated}/>
              
         }
@@ -88,6 +97,11 @@ class UsersContainer extends Component {
                                 </a>
                     <br/><br/>
                     {users}
+                    <Modal show={this.state.deleteUserIndex!==null}>
+                        <h3>Confirma remoção da Usuario ?</h3>
+                        <Button btnType="Success" clicked={this.removeUser}>SIM</Button>
+                        <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                    </Modal> 
                 </div>
         )
     }
@@ -110,7 +124,11 @@ const mapDispatchToProps = dispatch => {
         onUserUpdate: (userToUpdate) => dispatch({
             type: actionTypes.UPDATE,
             userData: userToUpdate
-        })
+        }),
+        onUserDelete: (indexUser) => dispatch({
+            type: actionTypes.DELETE,
+            index: indexUser
+        }),
     };
 };
 

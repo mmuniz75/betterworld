@@ -59,7 +59,7 @@ class Auth extends Component {
             }
         },
         loading : false,
-        error: null
+        error: null,
     }
 
     isCreation = () => {
@@ -188,7 +188,7 @@ class Auth extends Component {
         else    
             this.props.history.goBack();
     }
-    
+
     render () {
         const isCreation = this.isCreation();
         
@@ -233,7 +233,7 @@ class Auth extends Component {
         let authRedirect = null;
         if ( this.props.isAuthenticated && !isCreation) {
             this.props.onSetCategory(0);
-            this.props.onFetchCategories([]);
+            this.props.onFetchusers([]);
             authRedirect = <Redirect to='/sites' />
         }
 
@@ -282,9 +282,9 @@ const mapDispatchToProps = dispatch => {
             type: siteActionTypes.SET_CATEGORY,
             category:category
         }),
-        onFetchCategories: (categories) => dispatch({
-            type: categoryActionTypes.FETCH_CATEGORIES,
-            categories: categories
+        onFetchusers: (users) => dispatch({
+            type: userActionTypes.FETCH,
+            users: users
         }),
         onAddUser: (user) => dispatch({
             type: userActionTypes.ADD,

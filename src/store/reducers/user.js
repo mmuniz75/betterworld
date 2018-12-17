@@ -38,6 +38,15 @@ const updateUser = ( state, action ) => {
     } );
 };
 
+const deleteUser = ( state, action ) => {
+    const usersCopy = [...state.users];
+    usersCopy.splice(action.index,1);
+    
+    return updateObject( state, {
+        users : usersCopy
+    } );
+};
+
 
 const fetchUsers = ( state, action ) => {
     return updateObject( state, {
@@ -51,6 +60,7 @@ const reducer = ( state = initialState, action ) => {
         case ADD: return addUser( state, action )
         case UPDATE: return updateUser( state, action )
         case FETCH: return fetchUsers( state, action );
+        case DELETE: return deleteUser( state, action );
         default: return state;
     }
 };

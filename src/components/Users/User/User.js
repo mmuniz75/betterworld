@@ -20,6 +20,10 @@ const user = (props) => {
                 <span  className={classes.Label}>{props.email}</span>
                 &nbsp;&nbsp;
                 &nbsp;&nbsp;{saveLink}
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
+                    <i className="fas fa-trash fa-lg" title='Remover usuario' />
+                </a>
             </div>
         </Auxliary>
     )
