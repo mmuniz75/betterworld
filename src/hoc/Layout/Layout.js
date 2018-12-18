@@ -34,7 +34,23 @@ class Layout extends Component {
                         open={this.state.showSideDrawer}
                         closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Layout}>
-                    <h1>Vejam iniciativas que ajudam a tornar o mundo melhor</h1>
+                    <h1>Você sabia que tem muita coisa boa acontecendo no mundo ?</h1>
+                    <font color="">
+                    <p>
+                        Assitindo as noticias na TV parece que o mundo não vai vem, mas isso não é a realidade, é apenas
+                        uma pequena porcentagem, dos fatos que acontecem no mundo. 
+                    </p>        
+                    <p>
+                        Nosso instinto de alerta frente as ameças faz com que mantermos o foco nos aspecto negativos, e a TV usa esse
+                        nosso comportamento para criar seus programas. O efeito colateral disso é ter uma sociedade com medo e achar
+                        que nada de bom acontece.
+                    </p>                                
+                    <p>
+                        O objetivo desse site é dar um ponto de vista mais positivo para as pessoas vendo que temos muitas
+                        iniciativas em todas as areas onde as pessoas estão fazendo a diferença e melhorando o mundo em que 
+                        vivemos.
+                    </p>    
+                    </font>
                     {this.props.children}
                 </main>
             </Auxiliary>

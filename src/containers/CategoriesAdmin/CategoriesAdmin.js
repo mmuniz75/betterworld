@@ -53,7 +53,7 @@ class CategoriesAdmin extends Component {
                 }
 
                 );
-         
+                this.props.onFetchCategories(categoriesLoaded);
                 this.setState({loading:false,categories: categoriesLoaded}); 
             })
         }    
@@ -113,6 +113,7 @@ class CategoriesAdmin extends Component {
                 .then( response => {
                     if (response) {
                         this.showSalveMessage();
+                        this.props.onCategoryUpdate(category);
                     }    
         } )
     }
@@ -184,14 +185,14 @@ const mapStateToProps = state => {
         userId : state.auth.userId,
         token : state.auth.token,
         isAuthenticated: state.auth.token !== null,
-        categories: state.category.categories,
+        categories: state.category.categoriesAdmin,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         onFetchCategories: (categories) => dispatch({
-            type: actionTypes.FETCH_CATEGORIES,
+            type: actionTypes.FETCH_ADMIN,
             categories: categories
         }),
         onCategoryEdit: (categoryToEdit) => dispatch({

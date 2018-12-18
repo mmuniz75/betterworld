@@ -207,7 +207,7 @@ const mapDispatchToProps = dispatch => {
             category: categoryToEdit
         }),
         onFetchCategories: (categories) => dispatch({
-            type: actionTypes.FETCH_CATEGORIES,
+            type: actionTypes.FETCH_ADMIN,
             categories: categories
         }),
         onAddCategory: (category) => dispatch({

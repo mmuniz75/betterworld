@@ -16,8 +16,7 @@ class Logout extends Component {
 
     render () {
         this.props.onSetCategory(0);
-        this.props.onFetchCategories([]);
-        this.props.onFetchUsers([]);
+       // this.props.onFetchUsers([]);
         return <Redirect to="/sites"/>;
     }
 }
@@ -31,10 +30,6 @@ const mapDispatchToProps = dispatch => {
             type: siteActionTypes.SET_CATEGORY,
             category:category
         }),
-        onFetchCategories: (categories) => dispatch({
-            type: categoryActionTypes.FETCH_CATEGORIES,
-            categories: categories
-        }),  
         onFetchUsers: (users) => dispatch({
             type: userActionTypes.FETCH,
             users: users

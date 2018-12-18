@@ -21,7 +21,6 @@ import {SITES_URL,CATEGORIES_URL} from '../../shared/consts';
 
 const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
 const categoriesURL = CATEGORIES_URL + '.json?orderBy="active"&equalTo=true';
-const categoriesURLAdmin = CATEGORIES_URL + '.json';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Home extends Component {
@@ -51,7 +50,7 @@ class Home extends Component {
     loadCategories(){
         if(this.props.categories.length===0) {
             this.setState({categoryLoading:true}); 
-            axios.get(this.props.isAuthenticated?categoriesURLAdmin:categoriesURL)
+            axios.get(categoriesURL)
             .then(response => {
                 const categoriesLoaded = [];
                 Object.keys(response.data).map(key => {
@@ -224,7 +223,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         onFetchCategories: (categories) => dispatch({
-            type: categoryActionTypes.FETCH_CATEGORIES,
+            type: categoryActionTypes.FETCH,
             categories: categories
         }),
         onFetchSites: (sitesLoaded,selectedCategory) => dispatch({

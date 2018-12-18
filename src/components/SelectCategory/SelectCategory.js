@@ -6,7 +6,7 @@ const SelectCategory = (props) => (
 
         <div className={classes.MainSelection}>
             <select  onChange={props.changed} value={props.selected?props.selected:'0'}>
-                <option value="0">Escolha uma Categoria</option>
+                <option value="0">Qual o seu interesse ?</option>
                 {
                 props.categories?     
                     props.categories.map(category => {
