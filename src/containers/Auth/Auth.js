@@ -56,7 +56,8 @@ class Auth extends Component {
                 },
                 valid: false,
                 touched: false
-            }
+            },
+            hidden: {}
         },
         loading : false,
         error: null,

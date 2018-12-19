@@ -37,7 +37,7 @@ class Layout extends Component {
                     <h1>Você sabia que tem muita coisa boa acontecendo no mundo ?</h1>
                     <font color="">
                     <p>
-                        Assitindo as noticias na TV parece que o mundo não vai vem, mas isso não é a realidade, é apenas
+                        Assitindo as noticias na TV parece que o mundo não vai bem, mas isso não é a realidade, é apenas
                         uma pequena porcentagem, dos fatos que acontecem no mundo. 
                     </p>        
                     <p>

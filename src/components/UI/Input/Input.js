@@ -17,7 +17,8 @@ const input = ( props ) => {
                 {...props.elementConfig}
                 value={props.value}
                 checked={props.value}
-                onChange={props.changed} />;
+                onChange={props.changed}
+                autoComplete='off' />;
             break;
         case ( 'textarea' ):
             inputElement = <textarea 
@@ -42,10 +43,10 @@ const input = ( props ) => {
             break;
         default:
             inputElement = <input
-                className={inputClasses.join(' ')}
+                className={classes.Hidden}
                 {...props.elementConfig}
                 value={props.value}
-                onChange={props.changed} />;
+                onChange={props.changed} autoComplete='off'/>;
     }
 
     return (
