@@ -16,6 +16,7 @@ const Users = (props) => (
                                         role={user.role}
                                         delete={props.delete}
                                         change={props.change}
+                                        isAdmin={props.isAdmin}
                                     />
                                     
                                 </li>

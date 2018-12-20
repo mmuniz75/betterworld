@@ -93,7 +93,8 @@ class UsersContainer extends Component {
              users =   <Users   users={this.props.users}
                                 delete={this.confirmDelete}
                                 auth={this.props.isAuthenticated}
-                                change={this.updateRole}/>
+                                change={this.updateRole}
+                                isAdmin={this.props.isAdmin}/>
              
         }
         
@@ -117,6 +118,7 @@ class UsersContainer extends Component {
 const mapStateToProps = state => {
     return {
         token : state.auth.token,
+        isAdmin : state.auth.role === 'admin',
         isAuthenticated: state.auth.token !== null,
         users: state.user.users,
     };

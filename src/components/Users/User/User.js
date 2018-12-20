@@ -6,7 +6,10 @@ import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 
 const user = (props) => {
 
-  
+    const optionAdmin = props.isAdmin?
+        <option value="admin">{translateRole('admin')}</option>   
+        :null;
+
     
     return (
         <Auxliary>
@@ -16,10 +19,10 @@ const user = (props) => {
                 &nbsp;&nbsp;
                 <hr/>
                 <select defaultValue={props.role} className={classes.InputElement} onChange={(event) => props.change(props.index,event.target.value)}  >
-                     <option value="disable">{translateRole('disable')}</option>   
-                     <option value="default">{translateRole('default')}</option>   
-                     <option value="editor">{translateRole('editor')}</option> 
-                     <option value="admin">{translateRole('admin')}</option>   
+                    <option value="disable">{translateRole('disable')}</option>   
+                    <option value="default">{translateRole('default')}</option>   
+                    <option value="editor">{translateRole('editor')}</option> 
+                    {optionAdmin}
                 </select>    
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
