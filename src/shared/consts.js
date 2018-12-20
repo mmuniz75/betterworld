@@ -14,5 +14,5 @@ export const messages = {
     EMAIL_EXISTS: "Email já cadastrado",
     WEAK_PASSWORD: "Senha tem que ter no minimo 6 caracteres",
     USER_DISABLED: "Usuário desativado",
-    EMAIL_EMPTY: "Favor digitar o email valido"
+    EMAIL_EMPTY: "Favor digitar um email valido"
 }

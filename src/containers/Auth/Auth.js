@@ -21,6 +21,8 @@ import { updateObject, checkValidity } from '../../shared/utility';
 
 import {messages,API_SERVER} from '../../shared/consts';
 
+import Auxliary from '../../hoc/Auxiliary/Auxiliary';
+
 const AUTH_URL = `${API_SERVER}/login/`;
 const USERS_URL = `${API_SERVER}/users/`;
 
@@ -57,10 +59,14 @@ class Auth extends Component {
                 valid: false,
                 touched: false
             },
-            hidden: {}
+            hidden: {
+                valid: true
+            }
         },
         loading : false,
         error: null,
+        emailSent: null,
+        formIsValid: false
     }
 
     isCreation = () => {
@@ -124,7 +130,13 @@ class Auth extends Component {
                 touched: true
             } )
         } );
-        this.setState( { controls: updatedControls } );
+
+        let formIsValid = true;
+        for (let inputIdentifier in updatedControls) {
+            formIsValid = updatedControls[inputIdentifier].valid && formIsValid;
+        }
+
+        this.setState( { controls: updatedControls, formIsValid: formIsValid} );
     }
 
     submitHandler = ( event ) => {
@@ -203,12 +215,16 @@ class Auth extends Component {
         this.setState({loading:true});
         axios.post(`${USERS_URL}${email}/password/reset`)
             .then(response => {
-                this.setState({loading:false});
-                this.props.history.replace('/');
+                this.setState({loading:false,emailSent: true});
             })
             .catch(err => {
                 this.setState({loading:false,error:err.response.data.error});
             });
+    }
+
+    closeMessage = () => {
+        this.setState({emailSent: false});
+        this.props.history.replace('/');
     }
 
     render () {
@@ -260,21 +276,25 @@ class Auth extends Component {
         }
 
         return (
-                <Modal show>
+            <Auxliary>
+                <Modal show={!this.state.emailSent}>
                 <div className={classes.Auth}>
                     <h3>{!isCreation?'Login':'Criar Usuário'}</h3>
                     {authRedirect}
                     {errorMessage}
                     <form onSubmit={this.submitHandler}>
                         {form}
-                        <Button btnType="Success">{!isCreation?'Logar':'Criar'}</Button>
+                        <Button btnType="Success" disabled={!this.state.formIsValid} >{!isCreation?'Logar':'Criar'}</Button>
                         <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
 
                     </form>
                     <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue">Esqueci minha senha</font> </a>
                 </div>
                 </Modal>
-            
+                 <Modal show={this.state.emailSent} modalClosed={() => this.closeMessage()}>
+                 <h3>Um email será enviado com instruções para criar uma nova senha</h3>
+                </Modal>  
+            </Auxliary>
         );
     }
 }
