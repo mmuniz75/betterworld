@@ -18,7 +18,7 @@ const input = ( props ) => {
                 value={props.value}
                 checked={props.value}
                 onChange={props.changed}
-                autoComplete='off' />;
+                />;
             break;
         case ( 'textarea' ):
             inputElement = <textarea 

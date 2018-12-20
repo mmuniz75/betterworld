@@ -80,13 +80,20 @@ class UsersContainer extends Component {
         this.setState({deleteUserIndex:index});
     }
     
+    updateRole = (index,value) => {
+        this.props.onUserUpdate(index,value);
+        const usersLoaded = [...this.props.users];
+        const user = usersLoaded[index];
+        axios.patch(`${USERS_URL}${user.email}`,{role:value},{headers: {'access-token' : this.props.token}});
+    }
     
     render(){
         let users = <Spinner />;                                        
         if ( !this.state.loading ) {
              users =   <Users   users={this.props.users}
                                 delete={this.confirmDelete}
-                                auth={this.props.isAuthenticated}/>
+                                auth={this.props.isAuthenticated}
+                                change={this.updateRole}/>
              
         }
         
@@ -121,9 +128,10 @@ const mapDispatchToProps = dispatch => {
             type: actionTypes.FETCH,
             users: users
         }),
-        onUserUpdate: (userToUpdate) => dispatch({
+        onUserUpdate: (index,role) => dispatch({
             type: actionTypes.UPDATE,
-            userData: userToUpdate
+            index: index,
+            role: role
         }),
         onUserDelete: (indexUser) => dispatch({
             type: actionTypes.DELETE,

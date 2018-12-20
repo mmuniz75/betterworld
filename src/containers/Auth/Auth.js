@@ -64,7 +64,8 @@ class Auth extends Component {
     }
 
     isCreation = () => {
-        return this.props.location.pathname === '/createUser' && this.props.isAuthenticated && (this.props.isAdmin || this.props.isEditor);
+        //return this.props.location.pathname === '/createUser' && this.props.isAuthenticated && (this.props.isAdmin || this.props.isEditor);
+        return this.props.location.pathname === '/createUser' && this.props.isAuthenticated;
     }
 
     componentDidMount = () => {
@@ -247,7 +248,7 @@ class Auth extends Component {
                     {errorMessage}
                     <form onSubmit={this.submitHandler}>
                         {form}
-                        <Button btnType="Success">{!isCreation?'Logar':'Salvar'}</Button>
+                        <Button btnType="Success">{!isCreation?'Logar':'Criar'}</Button>
                         <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
                     </form>
                 </div>

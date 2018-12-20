@@ -6,20 +6,21 @@ import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 
 const user = (props) => {
 
-    const saveLink = props.auth && props.email && false
-                      ?<Auxliary>
-                        <a onClick={() => props.edit(props.index)} style={{cursor: 'pointer'}} >
-                            <i className="fas fa-edit fa-lg" title='Editar Usuario' />
-                        </a>
-                       </Auxliary> 
-                      :null
+  
     
     return (
         <Auxliary>
             <div className={classes.ProductDetails}>
-                <span  className={classes.Label}>{props.email} </span>({props.role})
+                <span  className={classes.Label}>{props.email} </span>
                 &nbsp;&nbsp;
-                &nbsp;&nbsp;{saveLink}
+                &nbsp;&nbsp;
+                <hr/>
+                <select defaultValue={props.role} className={classes.InputElement} onChange={(event) => props.change(props.index,event.target.value)}  >
+                     <option value="disable">{translateRole('disable')}</option>   
+                     <option value="default">{translateRole('default')}</option>   
+                     <option value="editor">{translateRole('editor')}</option> 
+                     <option value="admin">{translateRole('admin')}</option>   
+                </select>    
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                     <i className="fas fa-trash fa-lg" title='Remover usuario' />
@@ -28,5 +29,19 @@ const user = (props) => {
         </Auxliary>
     )
 }      
+
+const translateRole = (role) => {
+
+    switch (role) {
+        case 'admin':
+            return 'Admistrador';
+        case 'editor':
+            return 'Editor';
+        case 'disable':
+            return 'Desativado';    
+        default:
+            return 'Colaborador'        
+    }
+}
 
 export default user;

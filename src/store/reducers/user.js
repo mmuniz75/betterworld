@@ -7,8 +7,7 @@ export const DELETE = 'user_DELETE';
 export const UPDATE = 'user_UPDATE';
 
 const initialState = {
-    users: [],
-    userToEdit : null
+    users: []
 };
 
 const userEdit = ( state, action ) => {
@@ -29,12 +28,11 @@ const addUser = ( state, action ) => {
 
 const updateUser = ( state, action ) => {
     const usersCopy = [...state.users];
-    const userCopy = {...action.userData};
-    usersCopy.splice(userCopy.index,1,userCopy);
+    const userCopy = usersCopy[action.index];
+    userCopy.role = action.role;
     
     return updateObject( state, {
         users: usersCopy,
-        userToEdit : null
     } );
 };
 
