@@ -14,5 +14,6 @@ export const messages = {
     EMAIL_EXISTS: "Email já cadastrado",
     WEAK_PASSWORD: "Senha tem que ter no minimo 6 caracteres",
     USER_DISABLED: "Usuário desativado",
-    EMAIL_EMPTY: "Favor digitar um email valido"
+    EMAIL_EMPTY: "Favor digitar um email valido",
+    RESET_PASSWORD_EXCEED_LIMIT: "Tentativas maxima de reiniciar senha atingido.Tente mais tarde."
 }
