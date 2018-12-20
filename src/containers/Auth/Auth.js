@@ -64,8 +64,7 @@ class Auth extends Component {
     }
 
     isCreation = () => {
-        //return this.props.location.pathname === '/createUser' && this.props.isAuthenticated && (this.props.isAdmin || this.props.isEditor);
-        return this.props.location.pathname === '/createUser' && this.props.isAuthenticated;
+        return this.props.location.pathname === '/createUser' && this.props.isAuthenticated && (this.props.isAdmin || this.props.isEditor);
     }
 
     componentDidMount = () => {
@@ -192,6 +191,26 @@ class Auth extends Component {
             this.props.history.goBack();
     }
 
+
+    resetPassword = () =>{
+        this.setState({error:null});
+        const email = this.state.controls['email'].value;
+        if(!email || !this.state.controls['email'].valid) {
+            this.setState({error:'EMAIL_EMPTY'});
+            return;
+        }
+        
+        this.setState({loading:true});
+        axios.post(`${USERS_URL}${email}/password/reset`)
+            .then(response => {
+                this.setState({loading:false});
+                this.props.history.replace('/');
+            })
+            .catch(err => {
+                this.setState({loading:false,error:err.response.data.error});
+            });
+    }
+
     render () {
         const isCreation = this.isCreation();
         
@@ -250,7 +269,9 @@ class Auth extends Component {
                         {form}
                         <Button btnType="Success">{!isCreation?'Logar':'Criar'}</Button>
                         <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
+
                     </form>
+                    <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue">Esqueci minha senha</font> </a>
                 </div>
                 </Modal>
             

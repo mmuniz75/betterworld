@@ -7,10 +7,12 @@ export const API_SERVER = process.env.NODE_ENV === 'development' ? 'http://local
 export const messages = {
     GENERIC_ERROR : "Erro ao efetuar operação",
     INVALID_PASSWORD : "Senha invalida",
-    EMAIL_NOT_FOUND : "Login invalido",
+    EMAIL_NOT_FOUND : "Email invalido",
     ROLE_REQUIRED: "Regra não informada",
     MISSING_ID_TOKEN: "Token não enviado",
     USER_REQUIRED: "Usuário não informado",
     EMAIL_EXISTS: "Email já cadastrado",
-    WEAK_PASSWORD: "Senha tem que ter no minimo 6 caracteres"
+    WEAK_PASSWORD: "Senha tem que ter no minimo 6 caracteres",
+    USER_DISABLED: "Usuário desativado",
+    EMAIL_EMPTY: "Favor digitar o email valido"
 }
