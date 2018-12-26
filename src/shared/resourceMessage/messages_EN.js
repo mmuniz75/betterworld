@@ -1,6 +1,10 @@
 export const messagesEn = {
     CANCEL : "Cancel",
     CREATE: "Add",
+    ADD: "Add",
+    UPDATE: "Update",
+    SUGGEST: "Recommend",
+    OK: "OK",
     TITLE : "Did you know that there is a lot of good going on in the world?",
     PARAGRAPH1 : "Watching the news on TV seems like the world is not going well, but this is not the reality, it is only a small percentage, of the facts that happen in the world.",
     PARAGRAPH2 : "Our alert instinct against threats makes us focus on negatives, and TV uses our behavior to create its programs. The side effect of this is having a society in fear and thinking that nothing good happens.",
@@ -8,8 +12,8 @@ export const messagesEn = {
     CATEGORY_TITLE : "What is your interest ?",
     NAV_SITE: "Sites",
     NAV_ADD_SITE: "Add a new Site",
-    NAV_SITE_SUGGESTION: "Sugest a Site",
-    NAV_SITE_SUGGESTIONS: "Site's Sugestions",
+    NAV_SITE_SUGGESTION: "Recommend a Site",
+    NAV_SITE_SUGGESTIONS: "Site's Recomendations",
     NAV_USERS: "Users",
     NAV_CATEGORY: "Areas",
     NAV_CONTACT: "Contact us",
@@ -29,5 +33,15 @@ export const messagesEn = {
     AUTH_LOGIN: "Login",
     AUTH_FORGOT: "Password recovery",
     AUTH_PASS_MESSAGE: "An email with instructions will be send for you create a new password",
-    AUTH_CREATE: "Add User"
+    AUTH_CREATE: "Add User",
+    NEW_SITE_TITLE: "Add ",
+    SUGGEST_SITE_TITLE: "Recomend",
+    NEW_SITE_TITLE2: "a web site with a good initiative",
+    SUGGEST_SITE_MESSAGE: "Thanks for the recomendation, we are going to check your information.",
+    NEW_SITE_NAME : "Name",
+    NEW_SITE_DESC : "Description",
+    NEW_SITE : "Web Site URL",
+    NEW_SITE_LOGO : "Logo's Image URL",
+    NEW_SITE_LOC : "From"
+
 }

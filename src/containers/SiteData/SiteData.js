@@ -16,6 +16,9 @@ import {SITES_SUGEST_URL} from '../../shared/consts';
 
 import * as siteActionTypes from '../../store/reducers/site';
 
+import Bundle from '../../components/UI/Bundle/bundle';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
+
 class SiteData extends Component {
     state = {
         thanks : null,
@@ -24,7 +27,7 @@ class SiteData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Nome do Site'
+                    placeholder: resourceMessage('NEW_SITE_NAME')
                 },
                 value: '',
                 validation: {
@@ -37,7 +40,7 @@ class SiteData extends Component {
                 elementType: 'textarea',
                 elementConfig: {
                     type: 'text-area',
-                    placeholder: 'Descrição',
+                    placeholder: resourceMessage('NEW_SITE_DESC'),
                     rows:4 
                 },
                 value: '',
@@ -51,7 +54,7 @@ class SiteData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Site'
+                    placeholder: resourceMessage('NEW_SITE')
                 },
                 value: '',
                 validation: {
@@ -64,7 +67,7 @@ class SiteData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Logo URL'
+                    placeholder: resourceMessage('NEW_SITE_LOGO')
                 },
                 value: '',
                 validation: {
@@ -76,7 +79,7 @@ class SiteData extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Localidade'
+                    placeholder: resourceMessage('NEW_SITE_LOC')
                 },
                 value: '',
                 validation: {
@@ -295,8 +298,8 @@ class SiteData extends Component {
         }
 
         const saveButtonLabel = this.props.isAuthenticated?
-                                this.props.editSite?'Alterar':'Adicionar'
-                                :'Sugerir';
+                                this.props.editSite?resourceMessage('UPDATE'):resourceMessage('ADD')
+                                :resourceMessage('SUGGEST_SITE_TITLE');
 
         let form = (
             <form onSubmit={this.submitHandler}>
@@ -313,24 +316,24 @@ class SiteData extends Component {
                 ))}
                 <Button btnType="Success" disabled={!this.state.formIsValid}>{saveButtonLabel}</Button>
                 &nbsp;
-                <Button btnType="Danger" clicked={this.cancelHandler}>Cancelar</Button>
+                <Button btnType="Danger" clicked={this.cancelHandler}><Bundle message="CANCEL" /></Button>
             </form>
         );
         if ( this.state.loading ) {
             form = <Spinner />;
         }
 
-        const beginTitle = this.props.isAuthenticated?'Cadastre':'Sugira';
+        const beginTitle = this.props.isAuthenticated?resourceMessage('NEW_SITE_TITLE'):resourceMessage('SUGGEST_SITE_TITLE');
         return (
             
                 <div className={classes.SiteData}>
-                    <h3>{beginTitle} um Site que pode ajudar a tornar o mundo melhor</h3>
+                    <h3>{beginTitle} <Bundle message="NEW_SITE_TITLE2" /></h3>
                     <div>
                         {form}
                     </div>
                     <Modal show={this.state.thanks}>
-                        <h3>Obrigado pela sugestão, estaremos avaliando as informações.</h3>    
-                        <Button btnType="Success" clicked={this.ok}>OK</Button>
+                        <h3><Bundle message="SUGGEST_SITE_MESSAGE" /></h3>    
+                        <Button btnType="Success" clicked={this.ok}><Bundle message="OK" /></Button>
                     </Modal>    
                 </div>
             

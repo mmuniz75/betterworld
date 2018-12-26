@@ -280,6 +280,10 @@ class Auth extends Component {
             this.props.onFetchusers([]);
             authRedirect = <Redirect to='/sites' />
         }
+        let recoryPassword = null;
+        if ( !this.props.isAuthenticated) {
+            recoryPassword = <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue"><Bundle message="AUTH_FORGOT" /></font> </a>;
+        }    
 
         return (
             <Auxliary>
@@ -294,7 +298,7 @@ class Auth extends Component {
                         <Button btnType="Danger" clicked={this.cancelLogin}><Bundle message="CANCEL" /></Button>
 
                     </form>
-                    <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue"><Bundle message="AUTH_FORGOT" /></font> </a>
+                    {recoryPassword}
                 </div>
                 </Modal>
                  <Modal show={this.state.emailSent} modalClosed={() => this.closeMessage()}>
