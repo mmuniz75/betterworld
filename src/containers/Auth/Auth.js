@@ -14,7 +14,6 @@ import {checkAuthTimeout} from '../../shared/auth';
 import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
 import * as siteActionTypes from '../../store/reducers/site';
-import * as categoryActionTypes from '../../store/reducers/category';
 import * as userActionTypes from '../../store/reducers/user';
 
 import { updateObject, checkValidity } from '../../shared/utility';
@@ -25,8 +24,6 @@ import Auxliary from '../../hoc/Auxiliary/Auxiliary';
 
 const AUTH_URL = `${API_SERVER}/login/`;
 const USERS_URL = `${API_SERVER}/users/`;
-
-let HEADER = null;
 
 class Auth extends Component {
     state = {
@@ -117,8 +114,14 @@ class Auth extends Component {
             role: roleFormElement
         });
 
-        this.setState({ controls : updatedAuthForm});
-       
+        if(updatedAuthForm)
+            this.setState({ controls : updatedAuthForm});
+        
+        
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false
     }
 
     
@@ -164,7 +167,6 @@ class Auth extends Component {
                 localStorage.setItem('userId', response.data.id);
                 this.props.onAuth(response.data.token, response.data.id,response.data.role );
                 checkAuthTimeout(this.props,response.data.expiresIn);
-                this.setState({loading:false});
             })
             .catch(err => {
                 const message = err.response && err.response.data && err.response.data.error?err.response.data.error:err.message;
@@ -259,7 +261,7 @@ class Auth extends Component {
         if ( this.state.error ) {
             console.log(this.state.error);
             if(this.state.error.indexOf(":") > 0)
-                this.state.error = this.state.error.substring(0,this.state.error.indexOf(":")-1)
+                this.setState({error : this.state.error.substring(0,this.state.error.indexOf(":")-1)});
 
             const message = messages[this.state.error]?messages[this.state.error]:messages['GENERIC_ERROR']; 
             errorMessage = (

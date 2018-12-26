@@ -10,7 +10,7 @@ const Sites = (props) => (
 
                            let categoryName = null; 
                            
-                           if(props.categories && props.categories.length > 0 && site.category!="") { 
+                           if(props.categories && props.categories.length > 0 && site.category!=="") { 
                             const copyCateotires = [...props.categories];   
                             const category = copyCateotires.filter(cat => cat.id === site.category);
                             categoryName = category[0].name; 

@@ -11,7 +11,7 @@ import axios from '../../axios';
 import classes from './Users.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';                                        
 
-import {messages,API_SERVER} from '../../shared/consts';
+import {API_SERVER} from '../../shared/consts';
 
 const USERS_URL = `${API_SERVER}/users/`;
 
@@ -37,8 +37,9 @@ class UsersContainer extends Component {
                     const user = response.data[key];
                     if(user){
                         user.key = key;
-                        return usersLoaded.push(user)
-                    }    
+                        usersLoaded.push(user)
+                    } 
+                    return usersLoaded;   
                 });
                 this.setState({loading:false});
                 this.props.onFetchUsers(usersLoaded); 

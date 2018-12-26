@@ -48,8 +48,9 @@ class CategoriesAdmin extends Component {
                     const category = response.data[key];
                     if(category){
                         category.key = key;
-                        return categoriesLoaded.push(category)
+                        categoriesLoaded.push(category)
                     }    
+                    return categoriesLoaded;
                 }
 
                 );

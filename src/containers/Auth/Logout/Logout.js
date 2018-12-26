@@ -6,7 +6,6 @@ import {logout} from '../../../shared/auth';
 
 import * as actionTypes from '../../../store/reducers/auth';
 import * as siteActionTypes from '../../../store/reducers/site';
-import * as categoryActionTypes from '../../../store/reducers/category';
 import * as userActionTypes from '../../../store/reducers/user';
 
 class Logout extends Component {

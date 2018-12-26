@@ -57,8 +57,9 @@ class Home extends Component {
                     const category = response.data[key];
                     if(category){
                         category.key = key;
-                        return categoriesLoaded.push(category)
-                    }    
+                        categoriesLoaded.push(category)
+                    }
+                    return null;    
                 }
 
                 );
@@ -93,12 +94,11 @@ class Home extends Component {
             const sitesLoaded = [];
             Object.keys(response.data).map(key => {
                 const site = response.data[key];
-                if(!this.props.isAuthenticated && !site.active)
-                    return;
-                else {    
+                if(this.props.isAuthenticated || site.active) {
                     site.key = key;
-                    return sitesLoaded.push(site)
-                }    
+                    sitesLoaded.push(site)
+                }
+                return null;    
             });
             this.props.onFetchSites(sitesLoaded,category);
             this.setState({loading:false}); 
