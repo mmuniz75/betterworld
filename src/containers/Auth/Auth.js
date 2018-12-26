@@ -22,6 +22,10 @@ import {messages,API_SERVER} from '../../shared/consts';
 
 import Auxliary from '../../hoc/Auxiliary/Auxiliary';
 
+import Bundle from '../../components/UI/Bundle/bundle';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
+
+
 const AUTH_URL = `${API_SERVER}/login/`;
 const USERS_URL = `${API_SERVER}/users/`;
 
@@ -32,7 +36,7 @@ class Auth extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'email',
-                    placeholder: 'Email'
+                    placeholder: resourceMessage('AUTH_EMAIL')
                 },
                 value: '',
                 validation: {
@@ -46,7 +50,7 @@ class Auth extends Component {
                 elementType: 'input',
                 elementConfig: {
                     type: 'password',
-                    placeholder: 'Senha'
+                    placeholder: resourceMessage('AUTH_PASSWORD')
                 },
                 value: '',
                 validation: {
@@ -281,20 +285,20 @@ class Auth extends Component {
             <Auxliary>
                 <Modal show={!this.state.emailSent}>
                 <div className={classes.Auth}>
-                    <h3>{!isCreation?'Login':'Criar Usuário'}</h3>
+                    <h3>{!isCreation?resourceMessage('AUTH_TITLE'):resourceMessage('AUTH_CREATE')}</h3>
                     {authRedirect}
                     {errorMessage}
                     <form onSubmit={this.submitHandler}>
                         {form}
-                        <Button btnType="Success" disabled={!this.state.formIsValid} >{!isCreation?'Logar':'Criar'}</Button>
-                        <Button btnType="Danger" clicked={this.cancelLogin}>Cancelar</Button>
+                        <Button btnType="Success" disabled={!this.state.formIsValid} >{!isCreation?resourceMessage('AUTH_LOGIN'):resourceMessage('CREATE')}</Button>
+                        <Button btnType="Danger" clicked={this.cancelLogin}><Bundle message="CANCEL" /></Button>
 
                     </form>
-                    <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue">Esqueci minha senha</font> </a>
+                    <a onClick={() => this.resetPassword()} style={{cursor: 'pointer'}}><font size='1' color="blue"><Bundle message="AUTH_FORGOT" /></font> </a>
                 </div>
                 </Modal>
                  <Modal show={this.state.emailSent} modalClosed={() => this.closeMessage()}>
-                 <h3>Um email será enviado com instruções para criar uma nova senha</h3>
+                 <h3><Bundle message="AUTH_PASS_MESSAGE" /></h3>
                 </Modal>  
             </Auxliary>
         );

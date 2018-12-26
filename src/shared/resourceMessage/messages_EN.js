@@ -1,4 +1,6 @@
 export const messagesEn = {
+    CANCEL : "Cancel",
+    CREATE: "Add",
     TITLE : "Did you know that there is a lot of good going on in the world?",
     PARAGRAPH1 : "Watching the news on TV seems like the world is not going well, but this is not the reality, it is only a small percentage, of the facts that happen in the world.",
     PARAGRAPH2 : "Our alert instinct against threats makes us focus on negatives, and TV uses our behavior to create its programs. The side effect of this is having a society in fear and thinking that nothing good happens.",
@@ -21,6 +23,11 @@ export const messagesEn = {
     SITE_APPROVE: "Approve",
     SITE_REJECT: "Reject",
     SITE_CATEGORY: "Area:",
-
-
+    AUTH_TITLE: "Login",
+    AUTH_EMAIL: "Email",
+    AUTH_PASSWORD: "Password",
+    AUTH_LOGIN: "Login",
+    AUTH_FORGOT: "Password recovery",
+    AUTH_PASS_MESSAGE: "An email with instructions will be send for you create a new password",
+    AUTH_CREATE: "Add User"
 }
