@@ -7,11 +7,15 @@ import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import Users from '../../components/Users/Users';
 
+import Bundle from '../../components/UI/Bundle/bundle';
+
 import axios from '../../axios';
 import classes from './Users.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';                                        
 
 import {API_SERVER} from '../../shared/consts';
+
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
 
 const USERS_URL = `${API_SERVER}/users/`;
 
@@ -102,14 +106,14 @@ class UsersContainer extends Component {
         return (
                 <div className={classes.Users}>
                     <a onClick={() => this.addUser()} style={{cursor: 'pointer'}} >
-                                    <i className="fas fa-plus fa-lg" title='Adicionar Usuario' />
+                                    <i className="fas fa-plus fa-lg" title={resourceMessage('USER_ADD')} />
                                 </a>
                     <br/><br/>
                     {users}
                     <Modal show={this.state.deleteUserIndex!==null}>
-                        <h3>Confirma remoção da Usuario ?</h3>
-                        <Button btnType="Success" clicked={this.removeUser}>SIM</Button>
-                        <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                        <h3><Bundle message="USER_DEL_CONFIRM" /></h3>
+                        <Button btnType="Success" clicked={this.removeUser}><Bundle message="YES" /></Button>
+                        <Button btnType="Danger" clicked={this.cancelDelete}><Bundle message="NO" /></Button>
                     </Modal> 
                 </div>
         )

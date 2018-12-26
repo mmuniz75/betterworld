@@ -49,5 +49,11 @@ export const messages = {
     SUGGEST_SITE_DEL_QUESTION : "Confirma a rejeição da sugestão ?",
     SUGGEST_SITE_DEL : "A Sugestão será definidamente rejeitada.",
     SUGGEST_SITE_EMPTY : "Nenhum site foi sugerido",
-
+    USER_ADD : "Adidcionar Usuário",
+    USER_DELETE : "Remover Usuário",
+    USER_DEL_CONFIRM : "Confirma remoção da Usuario ?",
+    USER_ROLE_ADMIN : "Administrador",
+    USER_ROLE_EDITOR : "Editor",
+    USER_ROLE_DEFAULT : "Colaborador",
+    USER_ROLE_DISABLE : "Desativado",
 }

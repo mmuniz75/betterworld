@@ -49,6 +49,11 @@ export const messagesEn = {
     SUGGEST_SITE_DEL_QUESTION : "Confirm recommendation deletion ?",
     SUGGEST_SITE_DEL : "The recomendation will not be accepted.",
     SUGGEST_SITE_EMPTY : "No web site was recommended",
-
-
+    USER_ADD : "Add User",
+    USER_DELETE : "Delete User",
+    USER_DEL_CONFIRM : "Confirm user deletion ?",
+    USER_ROLE_ADMIN : "Administrator",
+    USER_ROLE_EDITOR : "Editor",
+    USER_ROLE_DEFAULT : "Collaborator",
+    USER_ROLE_DISABLE : "Disabled",
 }
