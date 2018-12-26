@@ -86,18 +86,18 @@ class Auth extends Component {
         const roleOptions =  [
               {
                 value:'default',
-                displayValue:'Colaborador',
+                displayValue:resourceMessage('USER_ROLE_DEFAULT'),
               },
               {
                 value:'editor',
-                displayValue:'Editor',
+                displayValue:resourceMessage('USER_ROLE_EDITOR'),
               }
             ];
         
         if(this.props.isAdmin){
             roleOptions.push({
                 value:'admin',
-                displayValue:'Administrator',
+                displayValue:resourceMessage('USER_ROLE_ADMIN'),
               });
         }    
 

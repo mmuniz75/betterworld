@@ -1,13 +1,13 @@
 import React from 'react';
 
 import classes from './SelectCategory.css';
-import Bundle from '../../components/UI/Bundle/bundle';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
 
 const SelectCategory = (props) => (
 
         <div className={classes.MainSelection}>
             <select  onChange={props.changed} value={props.selected?props.selected:'0'}>
-                <option value="0"><Bundle message="CATEGORY_TITLE" /></option>
+                <option value="0">{resourceMessage("CATEGORY_TITLE")}</option>
                 {
                 props.categories?     
                     props.categories.map(category => {
