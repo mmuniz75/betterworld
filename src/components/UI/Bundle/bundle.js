@@ -1,19 +1,10 @@
 import React from 'react';
 
-import {messages} from './messages';
-import {messagesEn} from './messages_EN';
+import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 
-const bundle = (props) => {
-    const language = window.navigator.userLanguage || window.navigator.language;
-    let message = null;
-    if(language.substring(0,2)==='pt')
-        message = messages[props.message];
-    else 
-        message = messagesEn[props.message];   
-    
-    return (
-        <span>{message}</span>
-    )    
-}
+const bundle = (props) => (
+        <span>{resourceMessage(props.message)}</span>
+);    
+
 
 export default bundle;

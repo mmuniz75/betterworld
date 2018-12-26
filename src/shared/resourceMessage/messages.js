@@ -13,5 +13,13 @@ export const messages = {
     NAV_CONTACT: "Fale Conosco",
     NAV_LOGIN: "Login",
     NAV_LOGOUT: "Logout",
+    SITE_FILTER: "filtre os sites encontrados",
+    SITE_EDIT: "Editar Site",
+    SITE_DELETE: "Remover Site",
+    SITE_ENABLE: "Site Atibo ?",
+    SITE_DETAIL: "Veja mais",
+    SITE_APPROVE: "Aprovar",
+    SITE_REJECT: "Rejeitar",
+    SITE_CATEGORY: "Area:",
 
 }

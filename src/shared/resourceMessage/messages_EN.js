@@ -13,4 +13,14 @@ export const messagesEn = {
     NAV_CONTACT: "Contact us",
     NAV_LOGIN: "Login",
     NAV_LOGOUT: "Logout",
+    SITE_FILTER: "site's filter",
+    SITE_EDIT: "Edit",
+    SITE_DELETE: "Delete",
+    SITE_ENABLE: "Enable ?",
+    SITE_DETAIL: "Go to",
+    SITE_APPROVE: "Approve",
+    SITE_REJECT: "Reject",
+    SITE_CATEGORY: "Area:",
+
+
 }

@@ -9,6 +9,7 @@ import * as siteActionTypes from '../../store/reducers/site';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
 
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 
@@ -173,7 +174,7 @@ class Home extends Component {
         if ( !this.state.loading ) {
             sites = <Auxiliary>
                         <SearchText show={this.props.sitesCashed.length>0}
-                                    placeholder="filtre os sites encontrados"
+                                    placeholder={resourceMessage("SITE_FILTER")}
                                     changed={this.filter} 
                                     value={this.props.lastFilter} />
                         <Sites show={this.state.showSites} 
