@@ -5,6 +5,7 @@ import Auxiliary from '../Auxiliary/Auxiliary';
 import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
+import {bundle} from '../../shared/bundle';
 
 class Layout extends Component {
     state = {
@@ -34,7 +35,7 @@ class Layout extends Component {
                         open={this.state.showSideDrawer}
                         closed={this.sideDrawerClosedHandler} />
                 <main className={classes.Layout}>
-                    <h1>Você sabia que tem muita coisa boa acontecendo no mundo ?</h1>
+                    <h1>{bundle('TITLE')}</h1>
                     <font color="white">
                     <p>
                         Assitindo as noticias na TV parece que o mundo não vai bem, mas isso não é a realidade, é apenas
