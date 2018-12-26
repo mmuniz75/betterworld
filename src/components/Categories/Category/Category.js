@@ -8,7 +8,6 @@ import Bundle from '../../../components/UI/Bundle/bundle';
 import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 
 
-
 const category = (props) => {
 
     const saveLink = props.auth && props.name

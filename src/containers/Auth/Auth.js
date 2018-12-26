@@ -18,7 +18,7 @@ import * as userActionTypes from '../../store/reducers/user';
 
 import { updateObject, checkValidity } from '../../shared/utility';
 
-import {messages,API_SERVER} from '../../shared/consts';
+import {API_SERVER} from '../../shared/consts';
 
 import Auxliary from '../../hoc/Auxiliary/Auxiliary';
 
@@ -267,7 +267,7 @@ class Auth extends Component {
             if(this.state.error.indexOf(":") > 0)
                 this.setState({error : this.state.error.substring(0,this.state.error.indexOf(":")-1)});
 
-            const message = messages[this.state.error]?messages[this.state.error]:messages['GENERIC_ERROR']; 
+            const message = resourceMessage(this.state.error)?resourceMessage(this.state.error):resourceMessage('GENERIC_ERROR'); 
             errorMessage = (
                 <p><font color="red">{message}</font></p>
                 
