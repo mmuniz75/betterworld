@@ -19,11 +19,11 @@ const Site = (props) => {
                     ?<Auxliary>
                         <button className={classes.ButtonApprove}
                                 onClick={() => props.approveClicked(props.index)}
-                                ><Bundle message="SITE_REJECT" /></button>
+                                ><Bundle message="SITE_APPROVE" /></button>
                         &nbsp;
                         <button className={classes.ButtonReject}
                                 onClick={() => props.rejectClicked(props.index)}
-                                ><Bundle message="SITE_APPROVE" /></button>
+                                ><Bundle message="SITE_REJECT" /></button>
                     </Auxliary>
                     :null;
 

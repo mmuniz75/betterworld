@@ -5,6 +5,8 @@ export const messages = {
     UPDATE: "Alterar",
     SUGGEST: "Sugerir",
     OK: "OK",
+    YES: "SIM",
+    NO: "NÂO",
     TITLE : "Você sabia que tem muita coisa boa acontecendo no mundo ?",
     PARAGRAPH1 : "Assitindo as noticias na TV parece que o mundo não vai bem, mas isso não é a realidade, é apenas uma pequena porcentagem, dos fatos que acontecem no mundo. ",
     PARAGRAPH2 : "Nosso instinto de alerta frente as ameças faz com que mantermos o foco nos aspecto negativos, e a TV usa esse nosso comportamento para criar seus programas. O efeito colateral disso é ter uma sociedade com medo e achar que nada de bom acontece.",
@@ -27,6 +29,7 @@ export const messages = {
     SITE_APPROVE: "Aprovar",
     SITE_REJECT: "Rejeitar",
     SITE_CATEGORY: "Area:",
+    SITES_DELETE_MESSAGE: "Confirma remoção do site ?",
     AUTH_TITLE: "Acessar recursos extras",
     AUTH_EMAIL: "Email",
     AUTH_PASSWORD: "Senha",
@@ -42,6 +45,9 @@ export const messages = {
     NEW_SITE_DESC : "Descrição",
     NEW_SITE : "Site",
     NEW_SITE_LOGO : "URL da imagem do logo do site",
-    NEW_SITE_LOC : "Localidade"
-    
+    NEW_SITE_LOC : "Localidade",
+    SUGGEST_SITE_DEL_QUESTION : "Confirma a rejeição da sugestão ?",
+    SUGGEST_SITE_DEL : "A Sugestão será definidamente rejeitada.",
+    SUGGEST_SITE_EMPTY : "Nenhum site foi sugerido",
+
 }

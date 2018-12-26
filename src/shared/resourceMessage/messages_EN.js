@@ -5,6 +5,8 @@ export const messagesEn = {
     UPDATE: "Update",
     SUGGEST: "Recommend",
     OK: "OK",
+    YES: "YES",
+    NO: "NO",
     TITLE : "Did you know that there is a lot of good going on in the world?",
     PARAGRAPH1 : "Watching the news on TV seems like the world is not going well, but this is not the reality, it is only a small percentage, of the facts that happen in the world.",
     PARAGRAPH2 : "Our alert instinct against threats makes us focus on negatives, and TV uses our behavior to create its programs. The side effect of this is having a society in fear and thinking that nothing good happens.",
@@ -27,6 +29,7 @@ export const messagesEn = {
     SITE_APPROVE: "Approve",
     SITE_REJECT: "Reject",
     SITE_CATEGORY: "Area:",
+    SITES_DELETE_MESSAGE: "Confirm web site deletion ?",
     AUTH_TITLE: "Login",
     AUTH_EMAIL: "Email",
     AUTH_PASSWORD: "Password",
@@ -42,6 +45,10 @@ export const messagesEn = {
     NEW_SITE_DESC : "Description",
     NEW_SITE : "Web Site URL",
     NEW_SITE_LOGO : "Logo's Image URL",
-    NEW_SITE_LOC : "From"
+    NEW_SITE_LOC : "From",
+    SUGGEST_SITE_DEL_QUESTION : "Confirm recommendation deletion ?",
+    SUGGEST_SITE_DEL : "The recomendation will not be accepted.",
+    SUGGEST_SITE_EMPTY : "No web site was recommended",
+
 
 }

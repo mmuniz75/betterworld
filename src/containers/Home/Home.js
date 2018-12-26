@@ -10,6 +10,7 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import resourceMessage from '../../shared/resourceMessage/resourceMessage';
+import Bundle from '../../components/UI/Bundle/bundle';
 
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 
@@ -196,9 +197,9 @@ class Home extends Component {
                 <br/>
                 {sites}
                 <Modal show={this.state.deleteSiteIndex!==null}>
-                    <h3>Confirma remoção do site ?</h3>
-                    <Button btnType="Success" clicked={this.removeSite}>SIM</Button>
-                    <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                    <h3><Bundle message="SITES_DELETE_MESSAGE" /></h3>
+                    <Button btnType="Success" clicked={this.removeSite}><Bundle message="YES" /></Button>
+                    <Button btnType="Danger" clicked={this.cancelDelete}><Bundle message="NO" /></Button>
                 </Modal>    
             </div>
             

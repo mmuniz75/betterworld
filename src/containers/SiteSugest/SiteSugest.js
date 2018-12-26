@@ -7,6 +7,7 @@ import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 
 import axios from '../../axios';
+import Bundle from '../../components/UI/Bundle/bundle';
 
 import classes from './SiteSugest.css';
 
@@ -94,7 +95,7 @@ class SiteSugest extends Component {
                 sites = <Modal
                             show={this.state.noResults}
                             modalClosed={this.messageConfirmedHandler}>
-                            Nenhum site foi sugerido
+                            <Bundle message="SUGGEST_SITE_EMPTY" />
                         </Modal>
             }else {
                 sites = <Sites show 
@@ -112,11 +113,11 @@ class SiteSugest extends Component {
             <div className={classes.Home}>
                 {sites}
                 <Modal show={this.state.rejectSiteIndex!==null}>
-                    <h3>Confirma reprovação da sugestão ?</h3>
-                    <b>A Sugestão será definidamente apagada.</b>
+                    <h3><Bundle message="SUGGEST_SITE_DEL_QUESTION" /></h3>
+                    <b><Bundle message="SUGGEST_SITE_DEL" /></b>
                     <br/>
-                    <Button btnType="Success" clicked={this.reject}>SIM</Button>
-                    <Button btnType="Danger" clicked={this.cancelReject}>NÃO</Button>
+                    <Button btnType="Success" clicked={this.reject}><Bundle message="YES" /></Button>
+                    <Button btnType="Danger" clicked={this.cancelReject}><Bundle message="NO" /></Button>
                 </Modal>
             </div>
             
