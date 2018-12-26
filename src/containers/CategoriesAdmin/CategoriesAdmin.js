@@ -14,6 +14,9 @@ import classes from './CategoriesAdmin.css';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import {CATEGORIES_URL} from '../../shared/consts';
 
+import Bundle from '../../components/UI/Bundle/bundle';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
+
 
 const categoriesURL = CATEGORIES_URL ;
 
@@ -159,7 +162,7 @@ class CategoriesAdmin extends Component {
         }
         const addButton = this.props.categories && this.props.categories[0] && this.props.categories[0].key
                                 ?<a onClick={() => this.startCategory()} style={{cursor: 'pointer'}} >
-                                    <i className="fas fa-plus fa-lg" title='Adicionar Categoria' />
+                                    <i className="fas fa-plus fa-lg" title={resourceMessage('CATEGORY_ADD')} />
                                 </a>
                                 :null;
         
@@ -169,12 +172,12 @@ class CategoriesAdmin extends Component {
                     <br/><br/>
                     {categories}
                     <Modal show={this.state.deleteCategoryIndex!==null}>
-                        <h3>Confirma remoção da Categoria ?</h3>
-                        <Button btnType="Success" clicked={this.removeCategory}>SIM</Button>
-                        <Button btnType="Danger" clicked={this.cancelDelete}>NÃO</Button>
+                        <h3><Bundle message="CATEGORY_DEL_CONFIRM" /></h3>
+                        <Button btnType="Success" clicked={this.removeCategory}><Bundle message="YES" /></Button>
+                        <Button btnType="Danger" clicked={this.cancelDelete}><Bundle message="NO" /></Button>
                     </Modal> 
                     <Modal show={this.state.salved}>
-                        <h3>Categoria Alterada</h3>
+                        <h3><Bundle message="CATEGORY_UPDATED" /></h3>
                     </Modal>     
                 </div>
         )

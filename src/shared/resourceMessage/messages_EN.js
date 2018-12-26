@@ -56,4 +56,10 @@ export const messagesEn = {
     USER_ROLE_EDITOR : "Editor",
     USER_ROLE_DEFAULT : "Collaborator",
     USER_ROLE_DISABLE : "Disabled",
+    CATEGORY_ADD : "Add area",
+    CATEGORY_DELETE : "Delete area",
+    CATEGORY_ACTIVE : "Active ?",
+    CATEGORY_SAVE : "Save area",
+    CATEGORY_DEL_CONFIRM : "Confirm area deletion ?",
+    CATEGORY_UPDATED : "Area updated",
 }
