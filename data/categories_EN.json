@@ -4,56 +4,55 @@
     "id" : "1",
     "index" : 0,
     "key" : "0",
-    "name" : "Saúde"
+    "name" : "Health"
   },
   "1" : {
     "active" : true,
     "id" : "2",
-    "name" : "Educação"
+    "name" : "Education"
   },
   "2" : {
     "active" : true,
     "id" : "3",
-    "name" : "Energia"
+    "name" : "Power"
   },
   "3" : {
     "active" : true,
     "id" : "4",
-    "name" : "Economia"
+    "name" : "Economy"
   },
   "4" : {
     "active" : true,
     "id" : "5",
-    "name" : "Alimentação"
+    "name" : "Feeding"
   },
   "5" : {
     "active" : true,
     "id" : "6",
-    "name" : "Desenvolvimento Pessoal"
+    "name" : "Personal development"
   },
   "6" : {
     "active" : true,
     "id" : "7",
-    "name" : "Organização Social"
+    "name" : "Social Organization"
   },
   "7" : {
     "active" : true,
     "id" : "8",
-    "name" : "Ecologia"
+    "name" : "Ecology"
   },
   "8" : {
     "active" : true,
     "id" : "9",
     "index" : 8,
     "key" : "8",
-    "name" : "Meio Ambiente"
+    "name" : "Environment"
   },
-  "-LTxl9WGosXVJFCA6rUC" : {
+  "9" : {
     "active" : true,
-    "id" : "1545077030582",
+    "id" : "10",
     "index" : 0,
-    "key" : "-LTxl9WGosXVJFCA6rUC",
-    "name" : "Transporte",
-    "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+    "key" : "9",
+    "name" : "Transport"
   }
 }

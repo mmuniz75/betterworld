@@ -1,0 +1,45 @@
+{
+    "rules": {
+      ".write": "auth != null && auth.uid!=='YwbaRRci3CUoX33OMMPl69hAfhw2'",
+      "categories" : {
+        ".read": "true",
+          ".indexOn": "active", 
+      },
+      "categories_EN" : {
+        ".read": "true",
+          ".indexOn": "active", 
+      },  
+      "categories_dev" : {  
+        ".read": "true",
+          ".indexOn": "active", 
+      },
+      "sites" : { 
+        ".read": "true",
+          ".indexOn": ["category","active"],
+      },
+      "sites_EN" : { 
+        ".read": "true",
+          ".indexOn": ["category","active"],
+      },
+      "sites_dev" : { 
+        ".read": "true",
+          ".indexOn": ["category","active"],
+      },
+      "sites_sugest" : {
+        ".read": "true",
+        ".write": "true"
+       },
+      "sites_sugest_EN" : {
+        ".read": "true",
+        ".write": "true"
+       },
+       "sites_sugest_dev" : {  
+          ".read": "true",
+        ".write": "true"
+       },
+       "usuarios"   : {
+         ".read": "auth != null",
+         ".indexOn" : ["email","creatorId"]
+       }
+    }
+  }

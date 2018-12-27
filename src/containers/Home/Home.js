@@ -55,6 +55,7 @@ class Home extends Component {
             axios.get(categoriesURL)
             .then(response => {
                 const categoriesLoaded = [];
+
                 Object.keys(response.data).map(key => {
                     const category = response.data[key];
                     if(category){
@@ -67,6 +68,10 @@ class Home extends Component {
                 );
                 this.props.onFetchCategories(categoriesLoaded);
                 this.setState({categoryLoading:false}); 
+            })
+            .catch( error => {
+                this.setState({categoryLoading:false}); 
+                console.log(error);
             })
         }
     }
