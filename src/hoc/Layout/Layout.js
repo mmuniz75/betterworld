@@ -29,11 +29,8 @@ class Layout extends Component {
                         isAuth={this.props.isAuthenticated}
                         isAdmin={this.props.isAdmin}
                         isEditor={this.props.isEditor}
-                        drawerToggleClicked={this.sideDrawerToggleHandler} />
-                    <SideDrawer
-                        isAuth={this.props.isAuthenticated}
-                        open={this.state.showSideDrawer}
-                        closed={this.sideDrawerClosedHandler} />
+                    />
+                    
                 <main className={classes.Layout}>
                     <h1><Bundle message="TITLE" /></h1>
                     <font color="white">
