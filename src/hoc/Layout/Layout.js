@@ -46,6 +46,30 @@ class Layout extends Component {
                     </font>
                     {this.props.children}
                 </main>
+
+                <footer>
+                    <div class="footer-bottom">
+                    <div class="row">
+
+                        <div class="col-twelve">
+                            <div class="copyright">
+                                <span>© Copyright 2019</span> 
+                                <span>Design by Muniz</span>		         	
+                            </div>
+
+                            <div id="go-top">
+                            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+                            </div>         
+                        </div>
+
+                    </div> 
+                    </div>
+
+                </footer>  
+                
+                <div id="preloader"> 
+                    <div id="loader"></div>
+                </div> 
             </Auxiliary>
         )
     }
