@@ -132,16 +132,16 @@ class Site extends Component {
         return (
             <div >
                 <section id="page-header">
-                    <div class="row current-cat">
-                        <div class="col-full">
+                    <div className="row current-cat">
+                        <div className="col-full">
                             <h1>Area: {categoryName}</h1>
                         </div>   		
                     </div>
                 </section>
 
-                <section id="bricks" class="with-top-sep">
+                <section id="bricks" className="with-top-sep">
 
-                    <div class="row masonry">
+                    <div className="row masonry">
                        {sites}
                     </div>
                 

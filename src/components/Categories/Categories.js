@@ -20,6 +20,7 @@ const categories = (props) => (
                         props.categories?props.categories.map( (category,index) => {
                            return (    
                                     <Category 
+                                        key={category.id}
                                         name={category.name} 
                                         active={category.active}
                                         index={index}

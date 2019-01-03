@@ -4,8 +4,8 @@ import Site from './Site/Site';
 
 const Sites = (props) => (
 
-    <div class="bricks-wrapper" style={!props.show?{display:'none'}:null}>
-        <div class="grid-sizer"></div>
+    <div className="bricks-wrapper" style={!props.show?{display:'none'}:null}>
+        <div className="grid-sizer"></div>
 
         {
             props.sites?props.sites.map( (site,index) => {

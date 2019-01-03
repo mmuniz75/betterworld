@@ -48,29 +48,29 @@ const Site = (props) => {
                      :null
     return (
 
-        <article class="brick entry format-standard animate-this">
+        <article className="brick entry format-standard animate-this">
 
-            <div class="entry-thumb">
-                <a href={props.site} target="_blank" class="thumb-link">
+            <div className="entry-thumb">
+                <a href={props.site} target="_blank" className="thumb-link">
                     <img src={props.logo} alt={props.site} height="650" width="1300"/>             
                 </a>
             </div>
 
-            <div class="entry-text">
-                <div class="entry-header">
+            <div className="entry-text">
+                <div className="entry-header">
 
-                    <div class="entry-meta">
-                        <span class="cat-links">
+                    <div className="entry-meta">
+                        <span className="cat-links">
                         {editButton}
                         {deleteButton}
                         {enableCheck}              				
                         </span>			
                     </div>
 
-                    <h1 class="entry-title"><a target="_blank" href={props.site}>{props.name}</a></h1>{categoryLabel}
+                    <h1 className="entry-title"><a target="_blank" href={props.site}>{props.name}</a></h1>{categoryLabel}
                     
                 </div>
-                        <div class="entry-excerpt">
+                        <div className="entry-excerpt">
                         {props.description}
                         <p>{location}</p>
                         <br/><br/>

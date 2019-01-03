@@ -1,7 +1,5 @@
 import React from 'react';
 
-import classes from './Category.css';
-
 import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 

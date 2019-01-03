@@ -1,6 +1,4 @@
 import React from 'react';
-
-import classes from './Toolbar.css';
 import NavigationItems from '../NavigationItems/NavigationItems';
 
 const toolbar = ( props ) => (
@@ -29,13 +27,13 @@ const toolbar = ( props ) => (
                     <input type="submit" className="search-submit" value="Search" />
                 </form>
 
-                <a href="#" id="close-search" className="close-btn">Close</a>
+                <a id="close-search" className="close-btn">Close</a>
 
             </div>
 
             <div className="triggers">
-                <a className="search-trigger" href="#"><i className="fa fa-search"></i></a>
-                <a className="menu-toggle" href="#"><span>Menu</span></a>
+                <a className="search-trigger" ><i className="fa fa-search"></i></a>
+                <a className="menu-toggle" ><span>Menu</span></a>
             </div>
             
         </div>
