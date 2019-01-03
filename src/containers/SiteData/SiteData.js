@@ -104,7 +104,7 @@ class SiteData extends Component {
 
     componentDidMount = () => {
         if(!this.props.categories || this.props.categories.length === 0) {
-            this.props.history.replace('/');
+            this.props.history.replace('/home');
             return;
         }
 
@@ -206,7 +206,7 @@ class SiteData extends Component {
                            this.props.onDeleteSite(site.id);         
                        }     
 
-                       this.props.history.replace( '/' );
+                       this.props.history.replace( '/home' );
                     }    
         } )
     }
@@ -231,7 +231,7 @@ class SiteData extends Component {
                         }else{
                             this.setState({loading:false});
                             if(this.props.isAuthenticated) {
-                                this.props.history.replace( '/');
+                                this.props.history.replace( '/home');
                             }else{
                                 this.setState({thanks:true});
                             }
@@ -242,7 +242,7 @@ class SiteData extends Component {
 
     ok = () => {
         this.setState({thanks:null});
-        this.props.history.replace( '/');
+        this.props.history.replace( '/home');
     }
 
     approvePostSteps = () =>{

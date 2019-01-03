@@ -229,7 +229,7 @@ class Auth extends Component {
 
     closeMessage = () => {
         this.setState({emailSent: false});
-        this.props.history.replace('/');
+        this.props.history.replace('/home');
     }
 
     render () {
@@ -277,7 +277,7 @@ class Auth extends Component {
         if ( this.props.isAuthenticated && !isCreation) {
             this.props.onSetCategory(0);
             this.props.onFetchusers([]);
-            authRedirect = <Redirect to='/' />
+            authRedirect = <Redirect to='/home' />
         }
         let recoryPassword = null;
         if ( !this.props.isAuthenticated) {

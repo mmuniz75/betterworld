@@ -16,7 +16,7 @@ class Logout extends Component {
     render () {
         this.props.onSetCategory(0);
        // this.props.onFetchUsers([]);
-        return <Redirect to="/"/>;
+        return <Redirect to="/home"/>;
     }
 }
 

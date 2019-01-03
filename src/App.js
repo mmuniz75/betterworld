@@ -55,14 +55,14 @@ class App extends Component {
         <Route path="/categories" exact component={asyncCategory} />
         <Route path="/categoryData" exact component={asyncCategoryData} />
         <Route path="/sites" exact component={asyncSite} />
-        <Route path="/" exact component={Home} />
+        <Route path="/home" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />
         <Route path="/users" exact component={asyncUsers} />
         <Route path="/createUser" exact component={asyncLogin} />
         <Route path="/logout" exact component={asyncLogout} />
         <Route path="/sugest" exact component={asyncSugest} />
-        <Redirect to="/" />
+        <Redirect to="/home" />
       </Switch>
     );
 

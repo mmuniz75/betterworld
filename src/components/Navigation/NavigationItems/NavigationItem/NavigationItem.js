@@ -5,6 +5,7 @@ const navigationItem = ( props ) => {
     const link = !props.emailLink?<NavLink 
                                     to={props.link}
                                     exact={props.exact}
+                                    activeClassName="current"
                                     >{props.children}
                                   </NavLink>
                  :<a href="mailto:betterworldemail@gmail.com" target="_top">{props.children}</a>                 

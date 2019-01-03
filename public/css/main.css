@@ -1734,6 +1734,12 @@ header .logo a {
 	font-family: "montserrat-bold", sans-serif;
 }
 
+.main-navigation a.current  {
+	border-bottom: 2px solid #151515;
+	color: #000000;
+	font-family: "montserrat-bold", sans-serif;
+}
+
 .main-navigation ul {
 	position: absolute;
 	top: 100%;
