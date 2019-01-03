@@ -8,9 +8,7 @@ const navigationItems = ( props ) => (
 
     <ul className="main-navigation sf-menu">
 
-        {props.isAuthenticated 
-            ? <NavigationItem link="/sites"><Bundle message="NAV_SITE" /></NavigationItem> 
-            : null}    
+        <NavigationItem link="/"><Bundle message="NAV_HOME" /></NavigationItem> 
         {props.isAuthenticated 
             ? <NavigationItem link="/siteData"><Bundle message="NAV_ADD_SITE" /></NavigationItem> 
             : <NavigationItem link="/siteData"><Bundle message="NAV_SITE_SUGGESTION" /></NavigationItem> }

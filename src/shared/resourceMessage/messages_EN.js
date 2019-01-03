@@ -13,6 +13,7 @@ export const messagesEn = {
     PARAGRAPH3 : "The purpose of this site is to give a more positive viewpoint to people seeing that we have many initiatives in all areas where people are making a difference and improving the world we live in.",
     CATEGORY_TITLE : "What is your interest ?",
     
+    NAV_HOME: "Home",
     NAV_SITE: "Sites",
     NAV_ADD_SITE: "Add a new Site",
     NAV_SITE_SUGGESTION: "Recommend a Site",

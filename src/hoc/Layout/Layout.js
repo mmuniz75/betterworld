@@ -31,19 +31,7 @@ class Layout extends Component {
                         isEditor={this.props.isEditor}
                     />
                     
-                <main className={classes.Layout}>
-                    <h1><Bundle message="TITLE" /></h1>
-                    <font color="white">
-                    <p>
-                    <Bundle message="PARAGRAPH1" />
-                    </p>        
-                    <p>
-                    <Bundle message="PARAGRAPH2" />                        
-                    </p>                                
-                    <p>
-                    <Bundle message="PARAGRAPH3" />                        
-                    </p>    
-                    </font>
+                <main>
                     {this.props.children}
                 </main>
 

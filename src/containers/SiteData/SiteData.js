@@ -104,7 +104,7 @@ class SiteData extends Component {
 
     componentDidMount = () => {
         if(!this.props.categories || this.props.categories.length === 0) {
-            this.props.history.replace('/sites');
+            this.props.history.replace('/');
             return;
         }
 

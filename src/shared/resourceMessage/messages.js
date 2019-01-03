@@ -13,6 +13,7 @@ export const messages = {
     PARAGRAPH3 : "O objetivo desse site é dar um ponto de vista mais positivo para as pessoas vendo que temos muitas iniciativas em todas as áreas onde as pessoas estão fazendo a diferença e melhorando o mundo em que vivemos.",
     CATEGORY_TITLE : "Qual o seu interesse ?",
 
+    NAV_HOME: "Inicio",
     NAV_SITE: "Sites",
     NAV_ADD_SITE: "Adicione um Site",
     NAV_SITE_SUGGESTION: "Sugira um Site",

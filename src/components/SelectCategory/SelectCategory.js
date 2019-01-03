@@ -1,11 +1,10 @@
 import React from 'react';
 
-import classes from './SelectCategory.css';
 import resourceMessage from '../../shared/resourceMessage/resourceMessage';
 
 const SelectCategory = (props) => (
 
-        <div className={classes.MainSelection}>
+        <div>
             <select  onChange={props.changed} value={props.selected?props.selected:'0'}>
                 <option value="0">{resourceMessage("CATEGORY_TITLE")}</option>
                 {

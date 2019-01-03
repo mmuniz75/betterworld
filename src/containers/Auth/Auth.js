@@ -278,7 +278,7 @@ class Auth extends Component {
         if ( this.props.isAuthenticated && !isCreation) {
             this.props.onSetCategory(0);
             this.props.onFetchusers([]);
-            authRedirect = <Redirect to='/sites' />
+            authRedirect = <Redirect to='/' />
         }
         let recoryPassword = null;
         if ( !this.props.isAuthenticated) {
