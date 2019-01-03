@@ -54,7 +54,46 @@ const Site = (props) => {
                      ?<i>({props.location})</i>
                      :null
     return (
-        <Auxliary>
+
+        <article class="brick entry format-standard animate-this">
+
+            <div class="entry-thumb">
+                <a href={props.site} target="_blank" class="thumb-link">
+                    <img src={props.logo} alt={props.site} height="650" width="1300"/>             
+                </a>
+            </div>
+
+            <div class="entry-text">
+                <div class="entry-header">
+
+                    <div class="entry-meta">
+                        <span class="cat-links">
+                        {editButton}
+                        &nbsp;&nbsp;&nbsp;
+                        {deleteButton}
+                        &nbsp;&nbsp;&nbsp;
+                        {enableCheck}              				
+                        </span>			
+                    </div>
+
+                    <h1 class="entry-title"><a href="single-standard.html">{props.name}</a></h1>
+                    
+                </div>
+                        <div class="entry-excerpt">
+                        {props.description}
+                        </div>
+            </div>
+
+        </article>
+
+
+        
+    )
+}      
+export default Site;
+
+/*
+    <Auxliary>
             {image}
             <div className={classes.ProductDetails}>
                 <h2>{props.name}</h2>
@@ -73,12 +112,7 @@ const Site = (props) => {
                 <br/><br/>
                 {buttons}
                 
-                {/*
-                &nbsp;
-                <button onClick={() => props.edit(site.id)}>Editar</button>
-                */}
             </div>
         </Auxliary>
-    )
-}      
-export default Site;
+
+*/

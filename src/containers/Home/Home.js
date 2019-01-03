@@ -28,14 +28,11 @@ const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 class Home extends Component {
         
     state = {
-        sites : null,
-        loading : false,
         categoryLoading: false,
     }
 
     componentDidMount= () => {
         this.loadCategories();
-        this.setState({showSites :this.props.lastCategory!==0});
     }
        
     loadCategories(){
@@ -63,6 +60,17 @@ class Home extends Component {
                 console.log(error);
             })
         }
+    }
+
+    showSitesHandler = (event) => {
+        const category = event.target.value;
+        if (category==='0'){
+            this.setState({showSites:false});
+            this.props.onSetCategory(0);
+        }else { 
+           this.props.onSetCategory(category); 
+           this.props.history.replace('/sites');
+        }    
     }
 
     render(){
