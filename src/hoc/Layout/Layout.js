@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Auxiliary from '../Auxiliary/Auxiliary';
-import classes from './Layout.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
-import Bundle from '../../components/UI/Bundle/bundle';
+
 
 class Layout extends Component {
     state = {
@@ -36,17 +35,17 @@ class Layout extends Component {
                 </main>
 
                 <footer>
-                    <div class="footer-bottom">
-                    <div class="row">
+                    <div className="footer-bottom">
+                    <div className="row">
 
-                        <div class="col-twelve">
-                            <div class="copyright">
+                        <div className="col-twelve">
+                            <div className="copyright">
                                 <span>© Copyright 2019</span> 
                                 <span>Design by Muniz</span>		         	
                             </div>
 
                             <div id="go-top">
-                            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+                            <a className="smoothscroll" title="Back to Top" href="#top"><i className="icon icon-arrow-up"></i></a>
                             </div>         
                         </div>
 

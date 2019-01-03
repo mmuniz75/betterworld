@@ -1,7 +1,4 @@
 import React from 'react';
-
-import classes from './Site.css';
-
 import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 import Bundle from '../../UI/Bundle/bundle';
 import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
@@ -70,7 +67,7 @@ const Site = (props) => {
                         </span>			
                     </div>
 
-                    <h1 class="entry-title"><a href="single-standard.html">{props.name}</a></h1>
+                    <h1 class="entry-title"><a target="_blank" href={props.site}>{props.name}</a></h1>{categoryLabel}
                     
                 </div>
                         <div class="entry-excerpt">

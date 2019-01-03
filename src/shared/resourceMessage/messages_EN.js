@@ -31,7 +31,7 @@ export const messagesEn = {
     SITE_DETAIL: "Go to",
     SITE_APPROVE: "Approve",
     SITE_REJECT: "Reject",
-    SITE_CATEGORY: "Area:",
+    SITE_CATEGORY: "Area",
     SITES_DELETE_MESSAGE: "Confirm web site deletion ?",
     
     AUTH_TITLE: "Login",

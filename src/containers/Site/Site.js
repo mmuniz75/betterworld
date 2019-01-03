@@ -1,28 +1,16 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
-import SelectCategory from '../../components/SelectCategory/SelectCategory';
-import SearchText from '../../components/SearchText/SearchText'
 import Sites from '../../components/Sites/Sites';
 import * as categoryActionTypes from '../../store/reducers/category';
 import * as siteActionTypes from '../../store/reducers/site';
-
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
-import resourceMessage from '../../shared/resourceMessage/resourceMessage';
 import Bundle from '../../components/UI/Bundle/bundle';
-
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
-
 import axios from '../../axios';
-
-import classes from './Site.css';
-
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
-import {SITES_URL,CATEGORIES_URL} from '../../shared/consts';
-
-const publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1hyjnMbHwXHJh4-HgAMAj92ephw30iQm9YhLduNtzjJQ/pubhtml';
-const categoriesURL = CATEGORIES_URL + '.json?orderBy="active"&equalTo=true';
+import {SITES_URL} from '../../shared/consts';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Site extends Component {

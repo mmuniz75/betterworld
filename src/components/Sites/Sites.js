@@ -1,6 +1,5 @@
 import React from 'react';
 
-import classes from './Sites.css';
 import Site from './Site/Site';
 
 const Sites = (props) => (
@@ -11,6 +10,14 @@ const Sites = (props) => (
         {
             props.sites?props.sites.map( (site,index) => {
 
+                let categoryName = null; 
+                           
+                if(props.categories && props.categories.length > 0 && site.category!=="") { 
+                    const copyCateotires = [...props.categories];   
+                    const category = copyCateotires.filter(cat => cat.id === site.category);
+                    categoryName = category[0].name; 
+                } 
+
                 return (
 
                     <Site 
@@ -19,6 +26,7 @@ const Sites = (props) => (
                             id={site.id}
                             name={site.name} 
                             description={site.description} 
+                            category={categoryName}
                             site={site.site}
                             location={site.location}
                             active={site.active}
