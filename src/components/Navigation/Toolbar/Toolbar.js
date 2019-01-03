@@ -10,10 +10,15 @@ const toolbar = ( props ) => (
         <div className="row header-content">
 
             <div className="logo">
-            <a href="index.html">Author</a>
+                <a href="/home">Best World</a>
             </div>
 
+            <div className="main-title-wrap">
+                 Best World
+            </div>
+            
             <nav id="main-nav-wrap">
+                
                 <NavigationItems isAuthenticated={props.isAuth} isAdmin={props.isAdmin} isEditor={props.isEditor} />
             </nav>
 

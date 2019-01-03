@@ -1582,6 +1582,18 @@ header a {
 /* ------------------------------------------------------------------- 
  * header logo - (_layout.css) 
  * ------------------------------------------------------------------- */
+
+
+ header .main-title-wrap {
+	position: absolute;
+	left: 150px;
+	top: 20px;
+	z-index: 601;
+	font-family: "montserrat-regular", sans-serif;
+	font-size: 25px;
+	color: #034e4a
+ }
+
 header .logo {
 	position: absolute;
 	left: 35px;
