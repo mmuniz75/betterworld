@@ -1,14 +1,24 @@
 import React from 'react';
 
-import classes from './Categories.css';
 import Category from './Category/Category';
+import Bundle from '../../components/UI/Bundle/bundle';
 
 const categories = (props) => (
-        <ul style={!props.show?{display:'none'}:null} className={classes.Categories}>
+
+        <table style={!props.show?{display:'none'}:null}>
+        <thead>
+        <tr>
+            <th><Bundle message="CATEGORY_HEADER_NAME" /></th>
+            <th><Bundle message="CATEGORY_HEADER_ENABLE" /></th>
+            <th><Bundle message="CATEGORY_HEADER_SAVE" /></th>
+            <th><Bundle message="CATEGORY_HEADER_DELETE" /></th>
+        </tr>
+        </thead>
+        <tbody>
+    
                     {
                         props.categories?props.categories.map( (category,index) => {
                            return (    
-                                <li key={index}>
                                     <Category 
                                         name={category.name} 
                                         active={category.active}
@@ -19,13 +29,12 @@ const categories = (props) => (
                                         auth={props.auth}
                                         enable={props.enable}
                                     />
-                                    
-                                </li>
                                 )
                         })
                                     :null
                     }
-        </ul>
+        </tbody>
+    </table>
 )
 
 export default categories;

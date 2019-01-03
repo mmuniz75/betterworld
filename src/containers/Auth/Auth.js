@@ -11,7 +11,6 @@ import Modal from '../../components/UI/Modal/Modal';
 
 import {checkAuthTimeout} from '../../shared/auth';
 
-import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
 import * as siteActionTypes from '../../store/reducers/site';
 import * as userActionTypes from '../../store/reducers/user';

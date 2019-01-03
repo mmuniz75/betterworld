@@ -73,6 +73,10 @@ export const messagesEn = {
     CATEGORY_SAVE : "Save area",
     CATEGORY_DEL_CONFIRM : "Confirm area deletion ?",
     CATEGORY_UPDATED : "Area updated",
+    CATEGORY_HEADER_NAME : "Area",
+    CATEGORY_HEADER_ENABLE : "Enable",
+    CATEGORY_HEADER_SAVE : "Save",
+    CATEGORY_HEADER_DELETE : "Delete",
 
     GENERIC_ERROR : "Operational error",
     INVALID_PASSWORD : "Invalid Password",

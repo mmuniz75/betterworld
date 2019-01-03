@@ -73,6 +73,10 @@ export const messages = {
     CATEGORY_SAVE : "Salvar área",
     CATEGORY_DEL_CONFIRM : "Confirma remoção da área ?",
     CATEGORY_UPDATED : "Área Alterada",
+    CATEGORY_HEADER_NAME : "Area",
+    CATEGORY_HEADER_ENABLE : "Ativa",
+    CATEGORY_HEADER_SAVE : "Salvar",
+    CATEGORY_HEADER_DELETE : "Remover",
 
     GENERIC_ERROR : "Erro ao efetuar operação",
     INVALID_PASSWORD : "Senha invalida",

@@ -3,8 +3,6 @@ import React from 'react';
 import classes from './Category.css';
 
 import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
-
-import Bundle from '../../../components/UI/Bundle/bundle';
 import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 
 
@@ -26,17 +24,17 @@ const category = (props) => {
                        </Auxliary> 
                       :null
     return (
-        <Auxliary>
-            <div className={classes.ProductDetails}>
-                <input type='text' placeholder='Categoria' value={props.name} className={classes.InputElement} 
+        <tr>
+            <td>
+                <input type='text' placeholder='Categoria' value={props.name}  
                 onChange={(event) => props.change(props.index,event.target.value)}/>
-                &nbsp;&nbsp;
-                <span  className={classes.Label}><Bundle message="CATEGORY_ACTIVE" /></span><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />
-                &nbsp;&nbsp;{saveLink}
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{deleteLink}
-                <p className={classes.ProductDescription}>{props.description}</p>
-            </div>
-        </Auxliary>
+            </td>
+            <td>
+                <input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />
+            </td>
+            <td>{saveLink}</td>
+            <td>{deleteLink}</td>   
+        </tr>
     )
 }      
 export default category;
