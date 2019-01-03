@@ -5,6 +5,7 @@ import classes from './Site.css';
 import Auxliary from '../../../hoc/Auxiliary/Auxiliary';
 import Bundle from '../../UI/Bundle/bundle';
 import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
+import Button from '../../../components/UI/Button/Button';
 
 const Site = (props) => {
     
@@ -12,13 +13,13 @@ const Site = (props) => {
     
     const buttons = approvation
                     ?<Auxliary>
-                        <button 
-                                onClick={() => props.approveClicked(props.index)}
-                                ><Bundle message="SITE_APPROVE" /></button>
+                        <Button btnType="Success"
+                                clicked={() => props.approveClicked(props.index)}
+                                ><Bundle message="SITE_APPROVE" /></Button>
                         &nbsp;
-                        <button 
-                                onClick={() => props.rejectClicked(props.index)}
-                                ><Bundle message="SITE_REJECT" /></button>
+                        <Button btnType="Danger"
+                                clicked={() => props.rejectClicked(props.index)}
+                                ><Bundle message="SITE_REJECT" /></Button>
                     </Auxliary>
                     :null;
 

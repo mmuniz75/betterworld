@@ -63,6 +63,9 @@ export const messagesEn = {
     USER_ROLE_EDITOR : "Editor",
     USER_ROLE_DEFAULT : "Collaborator",
     USER_ROLE_DISABLE : "Disabled",
+    USER_HEADER_NAME : "Name",
+    USER_HEADER_ROLE : "Role",
+    USER_HEADER_DELETE : "Delete",
 
     CATEGORY_ADD : "Add area",
     CATEGORY_DELETE : "Delete area",

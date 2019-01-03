@@ -288,7 +288,7 @@ class Auth extends Component {
         return (
             <Auxliary>
                 <Modal show={!this.state.emailSent}>
-                <div className={classes.Auth}>
+                <div >
                     <h3>{!isCreation?resourceMessage('AUTH_TITLE'):resourceMessage('AUTH_CREATE')}</h3>
                     {authRedirect}
                     {errorMessage}
