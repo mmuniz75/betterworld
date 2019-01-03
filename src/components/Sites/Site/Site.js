@@ -9,19 +9,14 @@ import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 const Site = (props) => {
     
     const approvation = props.approveClicked && props.rejectClicked;
-
-    const image = props.logo? <a className={classes.ProductPhoto}>
-                                <img src={props.logo} height="160" width="160" alt={props.site}/>
-                            </a>
-                    :null          
     
     const buttons = approvation
                     ?<Auxliary>
-                        <button className={classes.ButtonApprove}
+                        <button 
                                 onClick={() => props.approveClicked(props.index)}
                                 ><Bundle message="SITE_APPROVE" /></button>
                         &nbsp;
-                        <button className={classes.ButtonReject}
+                        <button 
                                 onClick={() => props.rejectClicked(props.index)}
                                 ><Bundle message="SITE_REJECT" /></button>
                     </Auxliary>
@@ -47,7 +42,7 @@ const Site = (props) => {
 
     const enableCheck = props.canEdit && !approvation
                         ?
-                        <p className={classes.ProductDescription}><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} /><Bundle message="SITE_ENABLE" /></p>
+                        <span><input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} /><Bundle message="SITE_ENABLE" /></span>
                         :null
 
     const location = props.location                  
@@ -69,9 +64,7 @@ const Site = (props) => {
                     <div class="entry-meta">
                         <span class="cat-links">
                         {editButton}
-                        &nbsp;&nbsp;&nbsp;
                         {deleteButton}
-                        &nbsp;&nbsp;&nbsp;
                         {enableCheck}              				
                         </span>			
                     </div>
@@ -81,6 +74,9 @@ const Site = (props) => {
                 </div>
                         <div class="entry-excerpt">
                         {props.description}
+                        <p>{location}</p>
+                        <br/><br/>
+                        {buttons}
                         </div>
             </div>
 
