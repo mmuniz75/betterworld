@@ -15,6 +15,7 @@ export const SITE_EDIT = 'SITE_EDIT';
 export const SITE_ENABLE = 'SITE_ENABLE';
 export const SITE_APPROVE = 'SITE_APPROVE';
 export const SET_CATEGORY = 'SET_CATEGORY';
+export const SET_FILTER = 'SET_FILTER';
 
 const initialState = {
     lastSitesLoaded: [],
@@ -137,6 +138,12 @@ const setCategory = ( state, action ) => {
     } );
 };
 
+const setFilter = ( state, action ) => {
+    return updateObject( state, {
+        filterCriteria : action.criteria
+    } );
+};
+
 const fetchSuggestion = ( state, action ) => {
     return updateObject( state, {
         suggestionsLoaded: action.suggestions,
@@ -155,6 +162,7 @@ const reducer = ( state = initialState, action ) => {
         case FETCH_SUGGESTIONS: return fetchSuggestion( state, action );
         case DELETE_SUGGESTION: return deleteSuggestion( state, action );
         case SET_CATEGORY: return setCategory( state, action );
+        case SET_FILTER: return setFilter( state, action );
         default: return state;
     }
 };

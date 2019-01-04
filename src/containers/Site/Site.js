@@ -26,6 +26,8 @@ class Site extends Component {
     componentDidMount= () => {
         this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
         this.loadSites(this.props.lastCategory);
+
+        
     }
   
 
@@ -73,6 +75,13 @@ class Site extends Component {
 
         axios.post(SITES_URL+ '_trash.json?auth=' + this.props.token ,site)
         .then(response => {
+
+            /*
+                                    <SearchText show={this.props.sitesCashed.length>0}
+                                                placeholder={resourceMessage("SITE_FILTER")}
+                                                changed={this.filter} 
+                                                value={this.props.lastFilter} />
+            */
             axios.delete(SITES_URL+'/' + site.key + '.json?auth=' + this.props.token)
         })
     }
@@ -85,10 +94,6 @@ class Site extends Component {
         this.setState({deleteSiteIndex:index});
     }
 
-    filter = (event) => {
-        this.props.onFilterSites(event.target.value);
-    }
-
     updateSite = (site) => {
         const url = SITES_URL+ '/' + site.key + '.json?auth=' + this.props.token ;
         
@@ -96,7 +101,7 @@ class Site extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
-                       this.props.onUpdateSite(site);
+                       this.props.onUpdateSite(site);this.props.history.push
                     }    
         } )
     }
@@ -209,11 +214,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(Site,axios));
-
-
-/*
-                        <SearchText show={this.props.sitesCashed.length>0}
-                                    placeholder={resourceMessage("SITE_FILTER")}
-                                    changed={this.filter} 
-                                    value={this.props.lastFilter} />
-*/

@@ -2119,6 +2119,7 @@ header .logo a {
 }
 
 .search-wrap input[type="search"] {
+	pointer-events: all;
 	background-color: transparent;
 	border: none;
 	color: #000;
