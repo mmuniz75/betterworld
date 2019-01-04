@@ -39,11 +39,12 @@ class Layout extends Component {
         } );
     }
     
-    switchMenu = () => {
-        this.setState( ( prevState ) => {
-            return { isMenuOpen: !prevState.isMenuOpen };
-        } );
-        
+    openMenu = () => {
+        this.setState( {isMenuOpen: true } );
+    }
+
+    closeMenu = () => {
+        this.setState( {isMenuOpen: false } );
     }
 
     render () { 
@@ -59,7 +60,8 @@ class Layout extends Component {
                         closeSearch={this.searchClosedHandler}
                         search={this.search}
                         showMenu={this.state.isMenuOpen}
-                        switchMenu={this.switchMenu}
+                        openMenu={this.openMenu}
+                        closeMenu={this.closeMenu}
                         categories={this.props.categories}
                     />
                     

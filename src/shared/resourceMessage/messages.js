@@ -20,6 +20,7 @@ export const messages = {
     NAV_SITE_SUGGESTIONS: "Sugestões de Site",
     NAV_USERS: "Usuarios",
     NAV_CATEGORY: "Áreas",
+    NAV_CATEGORY_ADMIN: "Admin Áreas",
     NAV_CONTACT: "Fale Conosco",
     NAV_LOGIN: "Login",
     NAV_LOGOUT: "Logout",

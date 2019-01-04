@@ -2,8 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Auxiliary from '../../../../hoc/Auxiliary/Auxiliary';
-
-let showMenu = false;
+import Bundle from '../../../UI/Bundle/bundle';
 
 
 const navigationItem = ( props ) => {
@@ -18,8 +17,11 @@ const navigationItem = ( props ) => {
                     </NavLink>
 
                  : <Auxiliary>
-                    <a href="category.html" onMouseOver={props.switchMenu}  >Areas</a>
-                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'inline':'none'}} onMouseLeave={props.switchMenu}>
+                    
+                    <NavLink onMouseOver={props.openMenu} onMouseLeave={props.closeMenu} onClick={(event) => event.preventDefault()} to={props.link} exact activeClassName="current">
+                        <Bundle message="NAV_CATEGORY" />
+                    </NavLink>
+                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'inline':'none'}} onMouseLeave={props.closeMenu} onMouseOver={props.openMenu}>
                     {
                         props.categories.map(category => {
                             return (
