@@ -2050,6 +2050,14 @@ header .logo a {
 /* ------------------------------------------------------------------- 
  * search wrap - (_layout.css) 
  * ------------------------------------------------------------------- */
+
+ .search-tip {
+	letter-spacing: 0.6px;
+	font-size: 1.6rem;
+	text-align: center;
+	color: #999999;
+}
+
 .search-wrap {
 	display: block;
 	text-align: center;
@@ -2078,15 +2086,6 @@ header .logo a {
 	transform: translateY(-50%);
 }
 
-.search-wrap .search-form::after {
-	content: "Press Enter to begin your search.";
-	display: block;
-	letter-spacing: 0.6px;
-	font-size: 1.6rem;
-	margin-top: 3rem;
-	text-align: center;
-	color: #999999;
-}
 
 .search-wrap .search-form ::-webkit-input-placeholder {
 	color: #000;

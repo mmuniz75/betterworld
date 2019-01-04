@@ -101,7 +101,7 @@ class Site extends Component {
                 .then( response => {
                     this.setState({loading:false});
                     if (response) {
-                       this.props.onUpdateSite(site);this.props.history.push
+                       this.props.onUpdateSite(site);
                     }    
         } )
     }

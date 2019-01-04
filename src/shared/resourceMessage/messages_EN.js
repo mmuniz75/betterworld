@@ -24,7 +24,8 @@ export const messagesEn = {
     NAV_LOGIN: "Login",
     NAV_LOGOUT: "Logout",
     
-    SITE_FILTER: "site's filter",
+    SITE_FILTER: "Type Your Keywords",
+    SITE_FILTER_TIP: "Press Enter to begin your search.",
     SITE_EDIT: "Edit",
     SITE_DELETE: "Delete",
     SITE_ENABLE: "Enable ?",

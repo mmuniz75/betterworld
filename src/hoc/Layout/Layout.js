@@ -46,7 +46,7 @@ class Layout extends Component {
                         isAuth={this.props.isAuthenticated}
                         isAdmin={this.props.isAdmin}
                         isEditor={this.props.isEditor}
-                        showSearch={this.props.history.location.pathname == '/sites'}
+                        showSearch={this.props.history.location.pathname === '/sites'}
                         openSearch={this.searchOpendHandler}
                         isSearchOpen={this.state.isSearchOpen}
                         closeSearch={this.searchClosedHandler}

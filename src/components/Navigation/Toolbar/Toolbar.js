@@ -1,5 +1,6 @@
 import React from 'react';
 import NavigationItems from '../NavigationItems/NavigationItems';
+import resourceMessage from '../../../shared/resourceMessage/resourceMessage';
 
 const toolbar = ( props ) => (
 
@@ -24,14 +25,17 @@ const toolbar = ( props ) => (
 
                 <div className="search-wrap" style={{opacity:props.isSearchOpen?1:0,visibility:props.isSearchOpen?'visible':'hidden'}} >
                     
-                    <form className="search-form" onSubmit={props.search}>
+                    <form className="search-form" onSubmit={props.search} >
                         <label>
                             <span className="hide-content">Search for:</span>
-                            <input type="search" placeholder="Type Your Keywords" name="s" title="Search for:" autoComplete="off" />
+                            <input type="search" placeholder={resourceMessage("SITE_FILTER")} name="s" title="Search for:" autoComplete="off" />
                         </label>
                         <input type="submit" className="search-submit" value="Search" />
+                        <div className="search-tip" >{resourceMessage("SITE_FILTER_TIP")}</div>
                     </form>
 
+                    
+                    
                     <a id="close-search" className="close-btn" onClick={props.closeSearch}>Close</a>
 
                 </div>
