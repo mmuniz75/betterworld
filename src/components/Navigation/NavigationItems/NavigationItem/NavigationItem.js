@@ -26,7 +26,7 @@ const navigationItem = ( props ) => {
                         props.categories.map(category => {
                             return (
                                 <li key={category.id}>
-                                    <NavLink to={`${props.link}?${category.id}`} exact activeClassName="current" >
+                                    <NavLink to={`${props.link}?${category.id}`} exact activeClassName="current" onClick={props.closeMenu}>
                                         {category.name}
                                     </NavLink>
                                 </li>

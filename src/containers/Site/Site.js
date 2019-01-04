@@ -16,7 +16,13 @@ import {SITES_URL} from '../../shared/consts';
 const sitesURL = SITES_URL + '.json?orderBy="category"&equalTo=';
 
 class Site extends Component {
-        
+    
+    unlisten = null;
+    
+    componentWillUnmount() {
+       this.unlisten();
+    }
+
     state = {
         sites : null,
         loading : false,
@@ -26,11 +32,21 @@ class Site extends Component {
     }
 
     componentDidMount= () => {
-        const category = this.props.history.location.search.substring(1);
         this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
+        
+        this.unlisten = this.props.history.listen((location, action) => {
+            this.checkLoadSites(location);
+        });
+
+        this.checkLoadSites(this.props.history.location);
+    }
+
+    checkLoadSites = (location) => {
+        const category = location.search.substring(1);
 
         if(category !== this.props.lastCategory)
-        this.loadSites(category);
+            this.loadSites(category);
+
     }
   
 
