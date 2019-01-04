@@ -7,6 +7,8 @@ import Spinner from '../../components/UI/Spinner/Spinner';
 import Modal from '../../components/UI/Modal/Modal';
 import Button from '../../components/UI/Button/Button';
 import Bundle from '../../components/UI/Bundle/bundle';
+import resourceMessage from '../../shared/resourceMessage/resourceMessage';
+
 import Auxiliary from '../../hoc/Auxiliary/Auxiliary';
 import axios from '../../axios';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
@@ -26,8 +28,6 @@ class Site extends Component {
     componentDidMount= () => {
         this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
         this.loadSites(this.props.lastCategory);
-
-        
     }
   
 
@@ -45,6 +45,10 @@ class Site extends Component {
                 return null;    
             });
             this.props.onFetchSites(sitesLoaded,category);
+            
+            if(this.props.lastFilter && this.props.lastFilter.length > 0) {
+                this.props.onFilterSites(this.props.lastFilter);
+            }  
 
             this.setState({loading:false}); 
         })
@@ -111,6 +115,7 @@ class Site extends Component {
         let sites = <Spinner />;
 
         let categoryName = null; 
+        
                            
         if(this.props.categories && this.props.categories.length > 0 && this.props.lastCategory!=="") { 
          const copyCateotires = [...this.props.categories];   
@@ -118,6 +123,11 @@ class Site extends Component {
          if(category.length > 0)
             categoryName = category[0].name; 
         } 
+
+        let filtered = null;
+        if(this.props.lastFilter && this.props.lastFilter.length > 0){
+           filtered = <font color="red"> / {resourceMessage('SITE_FILTERED')} : {this.props.lastFilter}</font>;
+        }
 
         if ( !this.state.loading ) {
             sites = <Auxiliary>
@@ -139,7 +149,7 @@ class Site extends Component {
                 <section id="page-header">
                     <div className="row current-cat">
                         <div className="col-full">
-                            <h1>Area: {categoryName}</h1>
+                            <h1>Area: {categoryName}{filtered}</h1>
                         </div>   		
                     </div>
                 </section>

@@ -39,7 +39,6 @@ class Layout extends Component {
     }
 
     render () { 
-        console.log(this.props.history.location.pathname);
         return (
             <Auxiliary>
                     <Toolbar

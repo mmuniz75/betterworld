@@ -138,11 +138,6 @@ const setCategory = ( state, action ) => {
     } );
 };
 
-const setFilter = ( state, action ) => {
-    return updateObject( state, {
-        filterCriteria : action.criteria
-    } );
-};
 
 const fetchSuggestion = ( state, action ) => {
     return updateObject( state, {
@@ -162,7 +157,6 @@ const reducer = ( state = initialState, action ) => {
         case FETCH_SUGGESTIONS: return fetchSuggestion( state, action );
         case DELETE_SUGGESTION: return deleteSuggestion( state, action );
         case SET_CATEGORY: return setCategory( state, action );
-        case SET_FILTER: return setFilter( state, action );
         default: return state;
     }
 };

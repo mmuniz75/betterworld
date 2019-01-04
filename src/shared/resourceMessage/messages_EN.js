@@ -26,6 +26,7 @@ export const messagesEn = {
     
     SITE_FILTER: "Type Your Keywords",
     SITE_FILTER_TIP: "Press Enter to begin your search.",
+    SITE_FILTERED: "Filter",
     SITE_EDIT: "Edit",
     SITE_DELETE: "Delete",
     SITE_ENABLE: "Enable ?",
