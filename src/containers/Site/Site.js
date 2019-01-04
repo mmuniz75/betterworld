@@ -27,12 +27,10 @@ class Site extends Component {
         sites : null,
         loading : false,
         categoryLoading: false,
-        showSites : false,
         deleteSiteIndex : null
     }
 
     componentDidMount= () => {
-        this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
         
         this.unlisten = this.props.history.listen((location, action) => {
             this.checkLoadSites(location);
@@ -44,7 +42,7 @@ class Site extends Component {
     checkLoadSites = (location) => {
         const category = location.search.substring(1);
 
-        if(category !== this.props.lastCategory)
+        if(category !== "" && category !== this.props.lastCategory)
             this.loadSites(category);
 
     }
@@ -98,13 +96,6 @@ class Site extends Component {
 
         axios.post(SITES_URL+ '_trash.json?auth=' + this.props.token ,site)
         .then(response => {
-
-            /*
-                                    <SearchText show={this.props.sitesCashed.length>0}
-                                                placeholder={resourceMessage("SITE_FILTER")}
-                                                changed={this.filter} 
-                                                value={this.props.lastFilter} />
-            */
             axios.delete(SITES_URL+'/' + site.key + '.json?auth=' + this.props.token)
         })
     }
@@ -150,7 +141,7 @@ class Site extends Component {
 
         if ( !this.state.loading ) {
             sites = <Auxiliary>
-                        <Sites show={this.state.showSites} 
+                        <Sites 
                             sites={this.props.lastSitesLoaded}
                             edit={this.editSite}
                             delete={this.confirmDelete}

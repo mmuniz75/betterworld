@@ -4,7 +4,7 @@ import Site from './Site/Site';
 
 const Sites = (props) => (
 
-    <div className="bricks-wrapper" style={!props.show?{display:'none'}:null}>
+    <div className="bricks-wrapper" >
         <div className="grid-sizer"></div>
 
         {
