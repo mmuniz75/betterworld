@@ -11,6 +11,7 @@ class Layout extends Component {
     state = {
         showSideDrawer: false,
         isSearchOpen: false,
+        isMenuOpen: false
     }
 
     sideDrawerClosedHandler = () => {
@@ -37,12 +38,19 @@ class Layout extends Component {
             return { showSideDrawer: !prevState.showSideDrawer };
         } );
     }
+    
+    switchMenu = () => {
+        this.setState( ( prevState ) => {
+            return { isMenuOpen: !prevState.isMenuOpen };
+        } );
+        
+    }
 
     render () { 
         return (
             <Auxiliary>
                     <Toolbar
-                        isAuth={this.props.isAuthenticated}
+                        isAuthenticated={this.props.isAuthenticated}
                         isAdmin={this.props.isAdmin}
                         isEditor={this.props.isEditor}
                         showSearch={this.props.history.location.pathname === '/sites'}
@@ -50,6 +58,9 @@ class Layout extends Component {
                         isSearchOpen={this.state.isSearchOpen}
                         closeSearch={this.searchClosedHandler}
                         search={this.search}
+                        showMenu={this.state.isMenuOpen}
+                        switchMenu={this.switchMenu}
+                        categories={this.props.categories}
                     />
                     
                 <main>
@@ -88,7 +99,8 @@ const mapStateToProps = state => {
     return {
         isAuthenticated: state.auth.token !== null,
         isAdmin: state.auth.role === 'admin',
-        isEditor: state.auth.role === 'editor'
+        isEditor: state.auth.role === 'editor',
+        categories: state.category.categories,
     };
 };
 

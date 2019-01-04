@@ -26,8 +26,11 @@ class Site extends Component {
     }
 
     componentDidMount= () => {
+        const category = this.props.history.location.search.substring(1);
         this.setState({showSites :this.props.lastSitesLoaded && this.props.lastCategory!==0});
-        this.loadSites(this.props.lastCategory);
+
+        if(category !== this.props.lastCategory)
+        this.loadSites(category);
     }
   
 

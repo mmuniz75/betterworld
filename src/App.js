@@ -54,7 +54,7 @@ class App extends Component {
       <Switch>
         <Route path="/categories" exact component={asyncCategory} />
         <Route path="/categoryData" exact component={asyncCategoryData} />
-        <Route path="/sites" exact component={asyncSite} />
+        <Route path="/sites" component={asyncSite} />
         <Route path="/home" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />

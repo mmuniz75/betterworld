@@ -58,8 +58,7 @@ class Home extends Component {
             this.setState({showSites:false});
             this.props.onSetCategory(0);
         }else { 
-           this.props.onSetCategory(category); 
-           this.props.history.replace('/sites');
+           this.props.history.replace('/sites?' + category);
         }    
     }
 
@@ -128,17 +127,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps,mapDispatchToProps)(withErrorHandler(Home,axios));
-
-/*
-         <SearchText show={this.props.sitesCashed.length>0}
-                                    placeholder={resourceMessage("SITE_FILTER")}
-                                    changed={this.filter} 
-                                    value={this.props.lastFilter} />
-
-            <Modal show={this.state.deleteSiteIndex!==null}>
-                    <h3><Bundle message="SITES_DELETE_MESSAGE" /></h3>
-                    <Button btnType="Success" clicked={this.removeSite}><Bundle message="YES" /></Button>
-                    <Button btnType="Danger" clicked={this.cancelDelete}><Bundle message="NO" /></Button>
-                </Modal>    
-
-*/

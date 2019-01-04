@@ -19,8 +19,7 @@ const toolbar = ( props ) => (
                 </div>
                 
                 <nav id="main-nav-wrap">
-                    
-                    <NavigationItems isAuthenticated={props.isAuth} isAdmin={props.isAdmin} isEditor={props.isEditor} />
+                    <NavigationItems {...props}/>
                 </nav>
 
                 <div className="search-wrap" style={{opacity:props.isSearchOpen?1:0,visibility:props.isSearchOpen?'visible':'hidden'}} >
