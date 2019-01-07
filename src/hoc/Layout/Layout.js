@@ -38,6 +38,10 @@ class Layout extends Component {
             return { showSideDrawer: !prevState.showSideDrawer };
         } );
     }
+
+    closeSideDrawerToggleHandler = () => {
+        this.setState( {showSideDrawer: false });
+    }
     
     openMenu = () => {
         this.setState( {isMenuOpen: true } );
@@ -64,7 +68,9 @@ class Layout extends Component {
                         closeMenu={this.closeMenu}
                         categories={this.props.categories}
                         switchToggle={this.sideDrawerToggleHandler}
+                        closeToggle={this.closeSideDrawerToggleHandler}
                         showSideDrawer={this.state.showSideDrawer}
+                        
                     />
                     
                 <main>

@@ -7,12 +7,13 @@ import Bundle from '../../../UI/Bundle/bundle';
 
 const navigationItem = ( props ) => {
     const link = props.emailLink?
-                        <a href="mailto:betterworldemail@gmail.com" target="_top">{props.children}</a>
+                        <a onClick={props.closeToggle} href="mailto:betterworldemail@gmail.com" target="_top">{props.children}</a>
                 :!props.listLink?
                     <NavLink 
                     to={props.link}
                     exact={props.exact}
                     activeClassName="current"
+                    onClick={props.closeToggle}
                     >{props.children}
                     </NavLink>
 
@@ -21,7 +22,7 @@ const navigationItem = ( props ) => {
                     <NavLink className="sf-with-ul" onMouseOver={props.openMenu} onMouseLeave={props.closeMenu} onClick={(event) => event.preventDefault()} to={props.link} exact activeClassName="current">
                         <Bundle message="NAV_CATEGORY" />
                     </NavLink>
-                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'block':'none'}} onMouseLeave={props.closeMenu} onMouseOver={props.openMenu}>
+                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'block':'none'}} onMouseLeave={props.closeMenu} onMouseOver={props.openMenu} onClick={props.closeToggle}>
                     {
                         props.categories.map(category => {
                             return (
