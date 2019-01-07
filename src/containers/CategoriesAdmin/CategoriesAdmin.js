@@ -157,7 +157,8 @@ class CategoriesAdmin extends Component {
                                 change={this.changeCategory}
                                 delete={this.confirmDelete}
                                 enable={this.enableCategory}
-                                auth={this.props.isAuthenticated}/>
+                                auth={this.props.isAuthenticated}
+                                isAdmin={this.props.isAdmin}/>
              
         }
         const addButton = this.props.categories && this.props.categories[0] && this.props.categories[0].key
@@ -190,6 +191,7 @@ const mapStateToProps = state => {
         token : state.auth.token,
         isAuthenticated: state.auth.token !== null,
         categories: state.category.categoriesAdmin,
+        isAdmin: state.auth.role === 'admin',
     };
 };
 

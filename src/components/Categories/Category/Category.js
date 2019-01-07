@@ -14,12 +14,12 @@ const category = (props) => {
                        </Auxliary> 
                       :null
     
-    const deleteLink = props.auth 
-                      ?<Auxliary>
+    const deleteLink = props.auth && props.isAdmin
+                      ?<td>
                         <a onClick={() => props.delete(props.index)} style={{cursor: 'pointer'}} >
                             <i className="fas fa-trash fa-lg" title={resourceMessage('CATEGORY_DELETE')} />
                         </a>
-                       </Auxliary> 
+                       </td> 
                       :null
     return (
         <tr>
@@ -31,7 +31,7 @@ const category = (props) => {
                 <input type="checkbox" checked={props.active} onChange={() => props.enable(props.index)} />
             </td>
             <td>{saveLink}</td>
-            <td>{deleteLink}</td>   
+            {deleteLink}
         </tr>
     )
 }      

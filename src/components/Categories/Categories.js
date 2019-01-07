@@ -11,7 +11,7 @@ const categories = (props) => (
             <th><Bundle message="CATEGORY_HEADER_NAME" /></th>
             <th><Bundle message="CATEGORY_HEADER_ENABLE" /></th>
             <th><Bundle message="CATEGORY_HEADER_SAVE" /></th>
-            <th><Bundle message="CATEGORY_HEADER_DELETE" /></th>
+            {props.isAdmin?<th><Bundle message="CATEGORY_HEADER_DELETE" /></th>:null}
         </tr>
         </thead>
         <tbody>
@@ -29,6 +29,7 @@ const categories = (props) => (
                                         delete={props.delete}
                                         auth={props.auth}
                                         enable={props.enable}
+                                        isAdmin={props.isAdmin}
                                     />
                                 )
                         })
