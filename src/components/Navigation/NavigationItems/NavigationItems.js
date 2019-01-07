@@ -20,7 +20,7 @@ const navigationItems = ( props ) => (
         {props.isAdmin || props.isEditor
             ? <NavigationItem link="/users" {...props}><Bundle message="NAV_USERS" /></NavigationItem> 
             : null} 
-        {props.isAdmin
+        {props.isAdmin || props.isEditor
             ? <NavigationItem link="/categories" {...props}><Bundle message="NAV_CATEGORY_ADMIN" /></NavigationItem> 
             : null} 
         {!props.isAuthenticated
