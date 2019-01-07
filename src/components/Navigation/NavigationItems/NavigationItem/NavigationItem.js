@@ -45,17 +45,3 @@ const navigationItem = ( props ) => {
 };
 
 export default navigationItem;
-
-/*
-        <li className="has-children current">
-            <a href="category.html" title="">Areas</a>
-            <ul className="sub-menu">
-                <li><a href="category.html">Economy</a></li>
-                <li><a href="category.html">Health</a></li>
-                <li><a href="category.html">Food</a></li>
-                <li><a href="category.html">Transportation</a></li>
-                <li><a href="category.html">Power</a></li>
-                <li><a href="category.html">Ecology</a></li>
-            </ul>
-        </li>
-        */
