@@ -206,7 +206,7 @@ class SiteData extends Component {
                            this.props.onDeleteSite(site.id);         
                        }     
 
-                       this.props.history.replace( '/home' );
+                       this.props.history.goBack();
                     }    
         } )
     }
