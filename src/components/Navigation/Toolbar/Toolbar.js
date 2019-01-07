@@ -32,16 +32,14 @@ const toolbar = ( props ) => (
                         <input type="submit" className="search-submit" value="Search" />
                         <div className="search-tip" >{resourceMessage("SITE_FILTER_TIP")}</div>
                     </form>
-
                     
-                    
-                    <a id="close-search" className="close-btn" onClick={props.closeSearch}>Close</a>
+                    <a id="close-search" className="close-btn" onClick={props.closeSearch} >Close</a>
 
                 </div>
 
                 <div className="triggers">
                     <a className="search-trigger" onClick={props.openSearch} style={{cursor:'pointer',display: props.showSearch?'inline':'none'}}><i className="fa fa-search"></i></a>
-                    <a className="menu-toggle" ><span>Menu</span></a>
+                    <a className="menu-toggle" onClick={props.switchToggle} ><span>Menu</span></a>
                 </div>
                 
             </div>

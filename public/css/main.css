@@ -1978,6 +1978,11 @@ header .logo a {
 		border: none;
 	}
 
+	.main-navigation a.current {
+		color: #000000;
+		border: none;
+	}
+
 	.main-navigation li.has-children a {
 		position: relative;
 	}

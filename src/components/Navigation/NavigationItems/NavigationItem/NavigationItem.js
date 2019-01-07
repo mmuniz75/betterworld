@@ -18,10 +18,10 @@ const navigationItem = ( props ) => {
 
                  : <Auxiliary>
                     
-                    <NavLink onMouseOver={props.openMenu} onMouseLeave={props.closeMenu} onClick={(event) => event.preventDefault()} to={props.link} exact activeClassName="current">
+                    <NavLink className="sf-with-ul" onMouseOver={props.openMenu} onMouseLeave={props.closeMenu} onClick={(event) => event.preventDefault()} to={props.link} exact activeClassName="current">
                         <Bundle message="NAV_CATEGORY" />
                     </NavLink>
-                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'inline':'none'}} onMouseLeave={props.closeMenu} onMouseOver={props.openMenu}>
+                    <ul id="subMenu" className="sub-menu" style={{display:props.showMenu?'block':'none'}} onMouseLeave={props.closeMenu} onMouseOver={props.openMenu}>
                     {
                         props.categories.map(category => {
                             return (
@@ -37,7 +37,7 @@ const navigationItem = ( props ) => {
                    </Auxiliary>                
     
     return (
-        <li >
+        <li className={props.listLink?"has-children sfHover":null}>
             {link}
         </li>
     )

@@ -63,6 +63,8 @@ class Layout extends Component {
                         openMenu={this.openMenu}
                         closeMenu={this.closeMenu}
                         categories={this.props.categories}
+                        switchToggle={this.sideDrawerToggleHandler}
+                        showSideDrawer={this.state.showSideDrawer}
                     />
                     
                 <main>

@@ -5,7 +5,7 @@ import Bundle from '../../UI/Bundle/bundle';
 
 const navigationItems = ( props ) => (
 
-    <ul className="main-navigation sf-menu">
+    <ul className="main-navigation sf-menu sf-js-enabled mobile" style={props.showSideDrawer?{touchAction: 'pan-y', display: 'block'}:null} >
 
         <NavigationItem link="/home"><Bundle message="NAV_HOME" /></NavigationItem> 
 
