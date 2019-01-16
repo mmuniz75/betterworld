@@ -11,7 +11,6 @@ import Modal from '../../components/UI/Modal/Modal';
 
 import {checkAuthTimeout} from '../../shared/auth';
 
-import classes from './Auth.css';
 import * as actionTypes from '../../store/reducers/auth';
 import * as siteActionTypes from '../../store/reducers/site';
 import * as userActionTypes from '../../store/reducers/user';
@@ -230,7 +229,7 @@ class Auth extends Component {
 
     closeMessage = () => {
         this.setState({emailSent: false});
-        this.props.history.replace('/');
+        this.props.history.replace('/home');
     }
 
     render () {
@@ -278,7 +277,7 @@ class Auth extends Component {
         if ( this.props.isAuthenticated && !isCreation) {
             this.props.onSetCategory(0);
             this.props.onFetchusers([]);
-            authRedirect = <Redirect to='/sites' />
+            authRedirect = <Redirect to='/home' />
         }
         let recoryPassword = null;
         if ( !this.props.isAuthenticated) {
@@ -288,7 +287,7 @@ class Auth extends Component {
         return (
             <Auxliary>
                 <Modal show={!this.state.emailSent}>
-                <div className={classes.Auth}>
+                <div >
                     <h3>{!isCreation?resourceMessage('AUTH_TITLE'):resourceMessage('AUTH_CREATE')}</h3>
                     {authRedirect}
                     {errorMessage}

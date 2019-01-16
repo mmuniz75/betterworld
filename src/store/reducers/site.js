@@ -15,6 +15,7 @@ export const SITE_EDIT = 'SITE_EDIT';
 export const SITE_ENABLE = 'SITE_ENABLE';
 export const SITE_APPROVE = 'SITE_APPROVE';
 export const SET_CATEGORY = 'SET_CATEGORY';
+export const SET_FILTER = 'SET_FILTER';
 
 const initialState = {
     lastSitesLoaded: [],
@@ -136,6 +137,7 @@ const setCategory = ( state, action ) => {
         category : action.category
     } );
 };
+
 
 const fetchSuggestion = ( state, action ) => {
     return updateObject( state, {

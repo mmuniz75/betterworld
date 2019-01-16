@@ -39,6 +39,10 @@ const asyncSugest = asyncComponent(() => {
   return import('./containers/SiteSugest/SiteSugest');
 });
 
+const asyncSite = asyncComponent(() => {
+  return import('./containers/Site/Site');
+});
+
 class App extends Component {
 
   componentDidMount () {
@@ -50,15 +54,15 @@ class App extends Component {
       <Switch>
         <Route path="/categories" exact component={asyncCategory} />
         <Route path="/categoryData" exact component={asyncCategoryData} />
-        <Route path="/sites" exact component={Home} />
-        <Route path="/" exact component={Home} />
+        <Route path="/sites" component={asyncSite} />
+        <Route path="/home" exact component={Home} />
         <Route path="/siteData" exact component={asyncSiteData} />
         <Route path="/login" exact component={asyncLogin} />
         <Route path="/users" exact component={asyncUsers} />
         <Route path="/createUser" exact component={asyncLogin} />
         <Route path="/logout" exact component={asyncLogout} />
         <Route path="/sugest" exact component={asyncSugest} />
-        <Redirect to="/sites" />
+        <Redirect to="/home" />
       </Switch>
     );
 

@@ -56,6 +56,29 @@
       "key" : "-LTxl9WGosXVJFCA6rUC",
       "name" : "Transporte",
       "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+    },
+    "-LVdEtdp9c_ia9ENmW8m" : {
+      "active" : true,
+      "id" : "1546880240786",
+      "index" : 0,
+      "key" : "-LVdEtdp9c_ia9ENmW8m",
+      "name" : "Empreendedorismo",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdGBjK4cTFeANSK8Mh" : {
+      "active" : true,
+      "id" : "1546880581687",
+      "index" : 0,
+      "name" : "Comunicação",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdimQjNsMihQmkWSVj" : {
+      "active" : true,
+      "id" : "1546888348271",
+      "index" : 0,
+      "key" : "-LVdimQjNsMihQmkWSVj",
+      "name" : "Inclusão Social",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     }
   },
   "categories_EN" : [ {
@@ -164,9 +187,9 @@
       "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
     },
     "-LUg42f_B0fxsYGoHxCf" : {
-      "active" : true,
+      "active" : false,
       "id" : "1545854003570",
-      "index" : 0,
+      "index" : 10,
       "key" : "-LUg42f_B0fxsYGoHxCf",
       "name" : "new",
       "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
@@ -188,11 +211,11 @@
       "active" : true,
       "category" : "4",
       "description" : "UBUNTU propoem que todos os nossos recursos e materiais são usados ​​para apoiar as pessoas, que, por sua vez, apoiam suas próprias cidades e comunidades criando materiais, produtos e serviços, que enriquecem a vida de todos. Dentro da UBUNTU, todos são parte integrante da sua comunidade. Todos contribuem com algo, e todos se sentem necessários. Em vez de prateleiras abastecidas com alimentos enquanto as pessoas morrem de fome, em vez de armazéns repletos de produtos brilhantes que poucos podem pagar, criamos supermercados e armazéns cheios de produtos sem rótulo de preços, e todos os que precisam fazer para acessar esta recompensa é ter feito sua semana contribuição para suas próprias comunidades .",
-      "id" : "1524168227114",
-      "logo" : "https://www.ubuntuplanet.org/static/assets/img/logo-default.png",
+      "id" : "1546868896676",
+      "logo" : "https://ubuntuplanet.org/wp-content/uploads/2018/06/ubuntuPlanet-logoPrime.png",
       "name" : "Ubuntu",
       "site" : "https://www.ubuntuplanet.org/",
-      "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "2" : {
       "active" : true,
@@ -250,11 +273,11 @@
       "active" : true,
       "category" : "7",
       "description" : "É um grupo explicitamente não-violento em defesa da sustentabilidade global, atualmente presente em mais de 1000 regionais - espalhadas por cerca de 70 países, ao redor do mundo.",
-      "id" : "1524168393621",
-      "logo" : "https://img.fstatic.com/TpI_tnfUp0LhCVROqxj1soJCisQ=/fit-in/290x478/smart/https://cdn.fstatic.com/media/movies/covers/2012/03/e87b8edd15cf6c984775423e6203cf2b.jpg",
+      "id" : "1546869098389",
+      "logo" : "http://movimentozeitgeist.com.br/media/rokgallery/1/12a7ea64-f258-46c2-c678-97985bd99134/94672fde-ae5e-41a0-cd77-e5d25ab23181.jpg",
       "name" : "Movimento Zeitgeist",
       "site" : "http://movimentozeitgeist.com.br",
-      "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "8" : {
       "active" : true,
@@ -312,10 +335,12 @@
       "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
     },
     "13" : {
-      "active" : true,
+      "active" : false,
       "category" : "7",
       "description" : "A Caminos de la Villa (ou \"caminhos da favela\") é uma plataforma online que exibe um diagnóstico dos serviços e obras públicas dentro de 20 favelas e assentamentos em Buenos Aires, na Argentina. Há ainda um espaço na ferramenta para os moradores realizarem pedidos às autoridades sobre o andamentos de obras, além de publicar comentários e imagens.",
       "id" : "1524649912664",
+      "index" : 7,
+      "key" : "13",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/caminhos.png",
       "name" : "Caminos de la Villa",
       "site" : "https://www.caminosdelavilla.org/about",
@@ -333,14 +358,14 @@
     },
     "15" : {
       "active" : true,
-      "category" : "7",
+      "category" : "1546888348271",
       "description" : "O Projeto RUAS trabalha para promover o bem estar e a cidadania da população em situação de rua com informação e estímulo por meio dos residentes dos bairros ao seu entorno.",
-      "id" : "1524649967619",
+      "id" : "1546888552294",
       "location" : "São Paulo",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/ruas.png",
       "name" : "Projeto ruas",
       "site" : "http://www.projetoruas.org.br/#inicio",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "16" : {
       "active" : true,
@@ -355,14 +380,14 @@
     },
     "17" : {
       "active" : true,
-      "category" : "7",
+      "category" : "1546888348271",
       "description" : "Há 10 anos no Brasil, o TETO é uma organização internacional presente na América Latina e Caribe, que trabalha pela defesa dos direitos de pessoas que vivem nas favelas mais precárias e invisíveis, diminuindo sua vulnerabilidade por meio do engajamento comunitário e da mobilização de jovens voluntários.Com a implementação de um modelo de intervenção focado no trabalho lado a lado com moradores de comunidades, o TETO busca construir moradias mais dignas, promover a educação de crianças por meio de oficinas de leitura, formar lideranças comunitárias e envolver toda comunidade em projetos de melhoria para seus bairros",
-      "id" : "1524650075064",
+      "id" : "1546888570474",
       "location" : "4 sedes no Brasil (SP, RJ, PR e BA)",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/teto.png",
       "name" : "Teto techo",
-      "site" : "http://www.techo.org/paises/brasil/teto/o-que-e-teto/",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "site" : "https://www.techo.org/brasil/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "18" : {
       "active" : true,
@@ -493,14 +518,14 @@
     },
     "30" : {
       "active" : true,
-      "category" : "7",
+      "category" : "1546888348271",
       "description" : "Primeiro empreendimento da ENEVA a entrar em operação, a usina termelétrica Itaqui está localizada no Distrito Industrial de São Luís, Maranhão. O licenciamento ambiental da UTE Itaqui é conduzido, desde 2008, pelo Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA), que emitiu as licenças ambientais prévias e de instalação aprovando, respectivamente, a viabilidade ambiental e locacional da usina e autorizando a execução das obras de instalação do empreendimento.A área escolhida para implantação da unidade, apesar de localizada em local de vocação industrial, era, à época, ocupada parcialmente por famílias que integravam a denominada Vila Madureira. Vivendo em condições de extrema pobreza e convivendo com um depósito de lixo clandestino, a realização de um programa de realocação foi concebido como uma oportunidade de conciliar a implantação de um empreendimento de utilidade pública com a realização de um projeto-modelo de reassentamento, capaz de promover a inclusão social e econômica das famílias beneficiadas.",
-      "id" : "1524650252017",
+      "id" : "1546888607184",
       "location" : "São Luiz (MA)",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/realocacao.png",
       "name" : "Projeto: Projeto de Realocação Vila Canaã: Modelo de produção agroecológica",
       "site" : "http://premiobrasilambiental.com/2017/banco-de-boas-praticas/projeto-de-realocacao-vila-canaa-modelo-de-producao-agroecologica/",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "31" : {
       "active" : true,
@@ -527,11 +552,11 @@
       "active" : true,
       "category" : "4",
       "description" : "A United Airlines compromete-se a ter uma operação sustentável e responsável, com iniciativas que minimizam os impactos ao meio-ambiente associados à sua operação e está sempre à procura por maneiras de reduzir sua “pegada de carbono”. Como parte destas iniciativas, o programa de lavagem dos motores de suas aeronaves visa a economia de combustível na operação das mesmas – com consequente redução de custos e, não menos importante, redução de emissões atmosféricas.",
-      "id" : "34",
+      "id" : "1546869861266",
       "logo" : "http://premiobrasilambiental.com/2017/wp-content/uploads/2017/12/logo_united_airlines.jpg",
       "name" : "Programa de Lavagem de Motores Aeronáuticos da United Airlines – Brasil",
-      "site" : "",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz36"
+      "site" : "http://premiobrasilambiental.com/2017/banco-de-boas-praticas/programa-de-lavagem-de-motores-aeronauticos-da-united-airlines-brasil/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "34" : {
       "active" : true,
@@ -868,10 +893,12 @@
       "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
     },
     "66" : {
-      "active" : true,
+      "active" : false,
       "category" : "6",
       "description" : "O Espalhe a Esperança é um projeto social sem fins lucrativos, que tem por objetivo compartilhar esperança na fase mais importante da vida: a infância. Tem a missão de propagar esperança para crianças e adolescentes em situações de vulnerabilidade social, através de eventos, doações culturais, parcerias com \"fadas madrinhas\" e conscientização social.",
       "id" : "1524647280650",
+      "index" : 2,
+      "key" : "66",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/esperanca.png",
       "name" : "Espalhe Esperança",
       "site" : "https://www.espalheaesperanca.org",
@@ -1056,10 +1083,12 @@
       "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz86"
     },
     "84" : {
-      "active" : true,
+      "active" : false,
       "category" : "5",
       "description" : "O Social Gourmet é um projeto de gastronomia solidária que tem como objetivo oferecer aulas de gastronomia e empreendedorismo para jovens de baixa renda com perfil empreendedor, colaborativo e que se preocupam em desenvolver sua comunidade. Busca com esse programa formar empreendedores e oferecer uma fonte de renda para estes jovens, criando um impacto positivo nas suas comunidades. Acreditam que a educação e a formação profissional são ingredientes fundamentais para o desenvolvimento humano e social. Pretendem com esse projeto dar a oportunidade para que mais pessoas tenham acesso a uma formação gratuita de qualidade, despertando talentos e o empreendedorismo como forma de empoderamento e inclusão social, colaborando assim para a formação de uma sociedade melhor, mais justa e igualitária. O projeto promoverá 1 turma de 14 jovens por mês, com a distribuição de 5 aulas semanais em uma imersão de 6 horas/aula, totalizando 30h/a, tudo isso dentro do modelo exclusivo de cursos Faça&Venda da Espaço Gourmet Escola de Gastronomia.",
       "id" : "1524473451982",
+      "index" : 2,
+      "key" : "84",
       "location" : "Curitiba",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/socialgourmet.png",
       "name" : "Social Gourmet",
@@ -1078,10 +1107,12 @@
       "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
     },
     "86" : {
-      "active" : true,
+      "active" : false,
       "category" : "2",
       "description" : "Desde 1940, atuamos sem fins lucrativos, políticos ou partidários, acolhendo integralmente jovens da região portuária do Rio. Acolher afetivamente e educar com excelência jovens da Região Portuária para uma sociedade mais justa, sustentável e colaborativa.",
       "id" : "1524558894977",
+      "index" : 6,
+      "key" : "86",
       "location" : "Rio de Janeiro",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/vargas.png",
       "name" : "Fundação Darcy Vargas",
@@ -1181,10 +1212,12 @@
       "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz98"
     },
     "96" : {
-      "active" : true,
+      "active" : false,
       "category" : "1",
       "description" : "A Rede Postinho de Saúde é uma ONG, sem fins lucrativos que promove a saúde através do atendimento ambulatorial e na orientação de medidas preventivas as mulheres moradoras das comunidades do Cantagalo, Pavão e Pavãozinho. O trabalho consiste em formar redes que irão atrair voluntários especiais e diferentes, gerir um modelo de processos de atendimentos da saúde e captar parcerias.",
       "id" : "1524417000211",
+      "index" : 1,
+      "key" : "96",
       "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/postinho.png",
       "name" : "Rede Postinho de Saúde",
       "site" : "http://redepostinhodesaude.org.br/",
@@ -1424,30 +1457,32 @@
     "-LB1l4SS6Vw5fLsaRWix" : {
       "active" : true,
       "category" : "1",
-      "description" : "Trabalham com hortas verticais e hortas urbanas coletivas.",
-      "id" : "1524759865670",
+      "description" : "O Pé de Feijão é um projeto que consiste em vender oficinas de educação alimentar utilizando hortas como meio de comunicação. O processo de instalar as hortas em locais inusitados (no topo de prédios corporativos, em quintais de ONGs) torna-a um meio e local para transmitir com mais sucesso ensinamentos sobre saúde, alimentação e sustentabilidade. Atua desde 2013",
+      "id" : "1546887600543",
       "location" : "São Paulo (SP)",
-      "logo" : "",
+      "logo" : "http://www.pedefeijao.com.br/wp-content/uploads/2018/03/PeDeFeij%C3%A3o-MarcaHorizontal-Branca.png",
       "name" : "Pé de Feijão",
       "site" : "http://pedefeijaosp.com/",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "-LB1lPgHJMRkWiuMrHNB" : {
       "active" : true,
       "category" : "4",
       "description" : "Site ensina como captar recursos para projetos do terceiro setor.",
-      "id" : "1524759953952",
+      "id" : "1546868953613",
       "location" : "Brasil",
-      "logo" : "http://quintessa.org.br/wp-content/uploads/2017/03/captamos.jpg",
+      "logo" : "http://4etapas.com.br/wp-content/uploads/2017/10/Logo-site_400px.png",
       "name" : "Captamos",
       "site" : "http://4etapas.com.br",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "-LB1msQIcxvFUsEneyFE" : {
-      "active" : true,
+      "active" : false,
       "category" : "4",
       "description" : "Hoje a Doisélles tem uma unidade de produção dentro do pavilhão 1 da Penitenciária Professor Ariosvaldo De Campos Pires, onde 18 detentos condenados em regime fechado trabalham com excelência na produção de peças artesanais feitas com técnicas de tecelagem manual: tricô e crochê, que são inspecionadas por rígido controle de qualidade tipo exportação. A felicidade da parceria é legitimada pela certeza de que ambas as partes estão ganhando, crescendo e melhorando todos os aspectos que as envolve. Relembramos as lições do jurista italiano Francesco Carnelutti em sua clássica obra \"As Misérias do Processo Penal\":",
       "id" : "1524760368666",
+      "index" : 14,
+      "key" : "-LB1msQIcxvFUsEneyFE",
       "location" : "São Paulo (SP)",
       "logo" : "http://www.doiselles.com.br/images/logo_holder.png",
       "name" : "Dois Elles",
@@ -1469,18 +1504,20 @@
       "active" : true,
       "category" : "9",
       "description" : "Acreditamos que é possível fazer diferente. Pensar diferente. Consumir diferente.\nAcreditamos que nada é lixo, tudo, até o inimaginável, pode ser transformado.\nEmpresa trabalha com reciclagem de resíduos e transforma em matéria prima para novos produtos.\nAtuamos para empresas e organizações de diversos tamanhos e de diferentes setores, sempre com foco em gerar valor a partir de uma nova lógica produtiva.",
-      "id" : "1524761885593",
+      "id" : "1546869057171",
       "location" : "São Paulo (SP)",
-      "logo" : "http://quintessa.org.br/wp-content/uploads/2017/10/boomera.png",
+      "logo" : "https://boomera.com.br/wp-content/themes/boomera/images/boomera-home.png",
       "name" : "Boomera",
       "site" : "http://boomera.com.br/",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "-LB1vYwQ5McfdpAuKYvS" : {
-      "active" : true,
+      "active" : false,
       "category" : "4",
       "description" : "O Moradigna é um negócio social que está buscando mudar a vida de milhões de brasileiros que moram em situação de insalubridade. O nosso trabalho já transformou a vida de centenas de pessoas e deu a elas uma melhor qualidade de vida. Pois, o que oferecemos não é apenas a opção de ter uma casa bonita, também oferecemos um ambiente saudável e longe de doenças que o mofo, a umidade e outros fatores podem causar.",
       "id" : "1524762621110",
+      "index" : 16,
+      "key" : "-LB1vYwQ5McfdpAuKYvS",
       "location" : "São Paulo – SP",
       "logo" : "http://quintessa.org.br/wp-content/uploads/2017/02/Moradigna-2-copy.png",
       "name" : "Moradigna",
@@ -1507,6 +1544,236 @@
       "name" : "Mobilize Brasil",
       "site" : "http://www.mobilize.org.br/",
       "userId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32"
+    },
+    "-LVciJMqn9cmsO3tF8RO" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "Atualmente, a MMM está organizada em 20 estados do  Brasil. Organizadas em núcleos e comitês, nas cidades e estados, e há duas maneiras para participar. Os grupos de mulheres que tenham identidade política com a MMM, podem aderir coletivamente. Mas, as mulheres que não são de nenhum grupo podem entrar em contato direto com os núcleos e comitês para se integrar na dinâmica da Marcha. Na Marcha vivemos a diversidade não apenas do ponto de vista internacional, mas também entre as próprias brasileiras. Somos tão diferentes e tão iguais. Temos uma identidade política construída cotidianamente através de um processo simbólico contínuo com gente lutando para transformar o mundo.",
+      "id" : "1546871456443",
+      "logo" : "http://www.marchamundialdasmulheres.org.br/wp-content/uploads/2015/04/capa2.png",
+      "name" : "Marcha Mundial das Mulheres",
+      "site" : "http://www.marchamundialdasmulheres.org.br/a-marcha/quem-somos/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdBRWm-yhrv6O7Xb9v" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "Awaken Love é o movimento de transformação coletiva para despertar o amor. Visa estimular todo ser humano a colocar todos os seus dons e seus talentos a serviço do amor.",
+      "id" : "1546879353417",
+      "logo" : "http://s3.amazonaws.com/hub-central/uploads/1535033011_awakenlove-amor_awakenlovehome2.png",
+      "name" : "Awaken Love",
+      "site" : "http://www.awakenlove.global/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdETcgHz1dWvyCZxRB" : {
+      "active" : true,
+      "category" : "2",
+      "description" : "Fast Food da Política, com o objetivo de promover a compreensão do Estado e da Política Brasileira de maneira dinâmica e criativa. A organização desenvolve e aplica processos de educação compostos por metodologias, jogos, técnicas de gamificação – uso de elementos e estruturas de jogos para desenvolver habilidades e compreender conceitos – e dinâmicas como ferramentas para disseminar o aprendizado de conteúdos complexos. Os processos de experimentação, tentativa e erro utilizados pela gamificação são excelentes para o desenvolvimento de senso crítico e análise. Os jogos são uma ferramenta poderosa para disseminar informações, iniciar reflexões e incentivar a elaboração de propostas de mudança sobre as relações entre a população e o Poder Público. Por isso, a Fast Food da Política utiliza essas metodologias em seus processos pedagógicos.",
+      "id" : "1546880149797",
+      "logo" : "http://fastfooddapolitica.com.br/wp-content/uploads/2017/01/logo_horizontal.png",
+      "name" : "Fas Food da Política",
+      "site" : "http://fastfooddapolitica.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdFLARzgsAmTCp_e7P" : {
+      "active" : true,
+      "category" : "1546880240786",
+      "description" : "O Projeto Brasil27 surgiu com o intuito de dar o próximo passo necessário para auxiliar e encorajar atuais e futuros empreendedores sociais. Como? Respondendo a duas simples perguntas: 1.Quais são os negócios sociais mais bem sucedidos do brasil? 2.Como eles funcionam?  A maioria dos negócios até então mapeados no Brasil concentravam-se no Sul e Sudeste. No entanto, os desafios dos negócios e necessidades sociais destas regiões diferem significativamente dos das demais. Como encontrar estes outros negócios que não estavam mapeados por nenhuma instituição? Como chegar até eles? Como captar recursos financeiros para visitá-los? Como analisá-los? Como divulgar os aprendizados? O Brasil27 investiga e a origem da ideia, como o projeto foi estruturado, a viabilização, as metodologias e processos de mapeamento e análise dos negócios sociais.  Esperam que ao divulgar as histórias destes empreendedores, explicar seus modelos de negócio e compartilhar as lições por eles aprendidas, mais pessoas engajem-se em iniciativas que ajudem a mudar a realidade para melhor.",
+      "id" : "1546883061421",
+      "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/brazil27.png",
+      "name" : "Brasil27",
+      "site" : "https://www.dropbox.com/s/r0fxo451kedkiyn/Brasil27_livro.pdf?dl=0",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdGIjwJmb8iIyow-Qd" : {
+      "active" : true,
+      "category" : "1546880581687",
+      "description" : "O pessoal do Social Docs se dedica a uni governos, empresas, organizações e pessoas para pensar soluções para demandas sociais. Contando boas histórias a partir do poder da comunicação, buscam combater a alienação e não fomentá-la. Por isso, contam histórias que geram impacto social e precisam se destacar em meio ao turbilhão de informações no qual vivemos. Acreditam que o engajamento em causas importantes é urgente. É preciso fazer algo hoje, agora.  Mais que mostrar os problemas, nossos filmes apontam e convidam para soluções. Contamos histórias para alcançar cada vez mais pessoas e inspirar transformações, visando um mundo mais justo, sustentável e socialmente equilibrado. ",
+      "id" : "1546883047741",
+      "logo" : "https://static.wixstatic.com/media/20ebaf_6e09890f60c74e0ba83c0599b0127b5d~mv2.png/v1/crop/x_148,y_213,w_712,h_117/fill/w_240,h_40,al_c,q_80,usm_0.66_1.00_0.01/20ebaf_6e09890f60c74e0ba83c0599b0127b5d~mv2.webp",
+      "name" : "Social Docs",
+      "site" : "https://www.socialdocs.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdMF2v-REW6ALPnjP0" : {
+      "active" : true,
+      "category" : "2",
+      "description" : "O Instituto Brasileiro de Estudos e Apoio Comunitário – IBEAC foi criado na cidade de São Paulo em 1981. Nesses 36 anos o IBEAC se mantém focado em potencializar direitos, educação e oportunidades para as pessoas, notadamente de comunidades vulneráveis. A missão é atuar no fortalecimento da educação e de uma cultura de direitos humanos,  de cidadania participativa e solidária.",
+      "id" : "1546882186462",
+      "logo" : "http://www.ibeac.org.br/wp-content/themes/ibeac/images/logo.png",
+      "name" : "Instituto Brasileiro de Estudos e Apoio Comunitário",
+      "site" : "http://www.ibeac.org.br",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdMqoZSKgKUKGqXAAM" : {
+      "active" : true,
+      "category" : "1545077030582",
+      "description" : "O bynd é uma plataforma de caronas para organizações. A ideia é melhorar a experiência no trânsito! Já que você passa 10% do seu dia dentro do carro, porque não transformar isso em uma experiência positiva? Os pilares do projeto são melhorar a experiência do usuário, permitindo o contato entre pessoas que tem interesses em comum para viver boas experiências; economizar com transporte, combustível, estacionamento e a prática da sustentabilidade, compartilhando carros provocando a redução da pegada de carbono",
+      "id" : "1546882345625",
+      "logo" : "https://bynd.com.br/img/logo.png",
+      "name" : "Bynd",
+      "site" : "https://bynd.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdOAX1EUfII4gE_-TR" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "Co-Criança é um projeto que tem como objetivo fortalecer o território da criança na cidade através da ressignificação dos espaços livres e de lazer do Jardim Elisa Maria, na Brasilândia, em conjunto com as crianças que habitam o bairro.",
+      "id" : "1546882684464",
+      "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/co-crianca.png",
+      "name" : "Co-Criança",
+      "site" : "https://www.facebook.com/Co-Crian%C3%A7a-1364657460281510/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdQF6-pPj5i57XxQGH" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "O Instituto Cidade Democrática nasceu em novembro de 2008 e já atuou em 16 cidades, envolvendo cerca de 20 mil pessoas. Hoje se consolida como um Think and Do Tank brasileiro de participação social. Levantamos e analisamos dados e produzimos e compartilhamos conhecimento para alavancar o poder da sociedade civil. Utilizando  ferramentas como mapeamento e análise de redes e tecnologia social.",
+      "id" : "1546883229502",
+      "logo" : "https://instituto.cidadedemocratica.org.br/wp-content/themes/icd-theme/img/logo.png",
+      "name" : "Insituto Cidade Democrática",
+      "site" : "https://instituto.cidadedemocratica.org.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdQTvxB2zq1xuegbzg" : {
+      "active" : true,
+      "category" : "2",
+      "description" : "A Énois é uma agência escola de jornalismo para jovens de 16 a 21 anos. Tem como missão produzir conteúdo que dialogue com outros jovens e comunique o que rola nas cidades e, principalmente, nas periferias. A Escola de Jornalismo trabalha com profissionais reconhecidos no mercado, tem videoaulas rápidas e simples, material de apoio e exercícios. Apresenta ferramentas para que o jovem analise criticamente a mídia, estimulando a busca por informação e a investigação sobre diversos temas. Pra completar, oferece um espaço para a publicação e divulgação dos trabalhos dos estudantes.",
+      "id" : "1546883296756",
+      "logo" : "http://escoladejornalismo.org/static/img/logo_escola_livre.png",
+      "name" : "Énois",
+      "site" : "http://escoladejornalismo.org/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdd6na8Xo4_i4EU409" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "O Programa de Apoio para a Recolocação dos Refugiados – PARR, foi criado em Outubro de 2011 pela EMDOC, consultoria especializada em imigração, transferências para o exterior e relocation, com o apoio do Alto Comissariado das Nações Unidas para os Refugiados (ACNUR) e o Centro de Referência para Refugiados da Caritas Arquidiocesana de São Paulo. O intuito é promover a integração de refugiados e solicitantes de refúgio na sociedade brasileira por meio da inclusão laboral. A convicção de que não há melhor maneira para facilitar a adaptação dessas pessoas no país do que assegurar que eles atinjam a autossuficiência por meio de seu próprio trabalho é nossa premissa central. Para tanto, temos por objetivo sensibilizar a sociedade e, principalmente, o empresariado nacional para a assimilação da capacidade que refugiados e solicitantes de refúgio têm de contribuir para a economia do Brasil.",
+      "id" : "1546886871986",
+      "logo" : "https://static.wixstatic.com/media/432add_986b98e2c3404e9c9af650193fff99e3~mv2.png/v1/fill/w_351,h_81,al_c,q_80,usm_0.66_1.00_0.01/432add_986b98e2c3404e9c9af650193fff99e3~mv2.webp",
+      "name" : "PARR - Programa de Apoio a Recolocação de Refugiados",
+      "site" : "https://www.refugiadosnobrasil.org/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVde-_h5oOjmXH8vAs5" : {
+      "active" : true,
+      "category" : "1546888348271",
+      "description" : "O Guri Santa Marcelina é um programa de edução musical e inclusão social para crianças e adolescentes de 6 a 18 anos da Grande São Paulo.",
+      "id" : "1546888677009",
+      "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/guri.png",
+      "name" : "Projeto Guri",
+      "site" : "http://gurisantamarcelina.org.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdeHJ8piCW3HXzG8r1" : {
+      "active" : true,
+      "category" : "",
+      "description" : "O PorQueNão? é uma mídia interdependente, difusora de iniciativas para uma sociedade mais inteligente e integrada. A missão do coletivo que forma o PorQueNão? é interligar pessoas que se dedicam a projetos capazes de transformar positivamente a realidade.",
+      "id" : "1546887176678",
+      "logo" : "https://cdn-images-1.medium.com/max/172/1*ctSx8dD8LUntMxQlcRjZ_Q@2x.png",
+      "name" : "PorQueNão?",
+      "site" : "http://www.porquenao.org/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdeVsdrkHa_9149O-9" : {
+      "active" : true,
+      "category" : "",
+      "description" : "O Imagina na Copa é um projeto de mobilização que busca promover uma virada para o Brasil até 2014. Como? Mostrando que pessoas como você têm, sim, o poder de construir um país melhor, despertando cada um para seu potencial de transformação.Nosso trabalho é divulgar iniciativas reais que ajudam a vida das pessoas e também reunir e organizar gente que está a fim de construir um país melhor. Para nós, a vitória do Brasil na Copa do Mundo é muito mais importante fora dos campos. Estamos vivendo um momento único para mudar nossa atitude e aproveitar ao máximo para botar a mão na massa. ",
+      "id" : "1546887236844",
+      "logo" : "http://imagina.vc/wp-content/themes/imagina/imagens/xlogo-filled.png.pagespeed.ic.OhmqXOYM-g.webp",
+      "name" : "Imagina na Copa",
+      "site" : "http://imaginanacopa.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdfHCEtBvVjXJJ_ONv" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "O SampaPé! foi fundado em julho de 2012 por 4 jovens que acreditaram que incentivar as pessoas a andarem a pé por São Paulo era a melhor forma de melhorar a relação das pessoas com a cidade e criar uma cidade melhor. Desde então o SampaPé! atua na cidade de forma a se tornar a vida urbana mais divertida, leve e humana através de projetos que envolvam melhorar a experiência do caminhar. Desde caminhadas culturais, mapeamentos de bancos para sentar, programas em rádios e mobilizações sociais. Sendo o caminhar um meio e um fim.",
+      "id" : "1546887438287",
+      "logo" : "https://static.wixstatic.com/media/1831d7_87b32703fb504b17bfc8cdd9f4217ea5.png/v1/fill/w_370,h_148,al_c,q_80,usm_0.66_1.00_0.01/1831d7_87b32703fb504b17bfc8cdd9f4217ea5.webp",
+      "name" : "Sampa a pé",
+      "site" : "http://leticialedasabino.wixsite.com/sampapeorg",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdfb1wmbL-BAi2G-hh" : {
+      "active" : true,
+      "category" : "2",
+      "description" : "O Politize! é uma associação sem fins lucrativos de direito privado, fundada em 2015. Busca levar a educação política de alto nível a TODO o Brasil, superando quaisquer barreiras geográficas, culturais e socioeconômicas. Também intenciona formar pessoas de todos os recortes sociais, especialmente os jovens, chegando às escolas de norte a sul. Com isso, querem se tornar a principal referência nacional no assunto, como ser um dos principais atores responsáveis por transformar a cultura política do Brasil, inspirando iniciativas similares em outros países. ",
+      "id" : "1546887524218",
+      "logo" : "https://www.politize.com.br/wp-content/uploads/2018/01/header-home-politize.png",
+      "name" : "Politize!",
+      "site" : "http://www.politize.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdgP2gs6QvnY6wW64H" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "O Instituto Sou da Paz é uma organização não governamental* que há mais de quinze anos trabalha para reduzir a violência no Brasil. Sua missão é contribuir para a efetivação de políticas públicas de segurança e prevenção da violência que sejam eficazes e pautadas pelos valores da democracia, da justiça social e dos direitos humanos. Partindo de diagnósticos que possibilitam conhecer a fundo as dinâmicas de violências, o Sou da Paz defende e coloca em prática um modelo de segurança pública sistêmico: que considera ações para prevenir a ocorrência de situações e também o que deve ser feito pelo aparato de segurança pública e justiça criminal para responder a estes casos.\r\n",
+      "id" : "1546887732751",
+      "logo" : "http://logos.bestworld.win.s3-website-sa-east-1.amazonaws.com/soudapaz.png",
+      "name" : "Instituto Sou da Paz",
+      "site" : "http://www.soudapaz.org/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdh3zQ62_Whqrf-Cxu" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "Um jogo que conecta investidores sociais e organizações da sociedade civil rumo à sustentatibilidade.",
+      "id" : "1546887909028",
+      "logo" : "https://static.wixstatic.com/media/7f4a79_8984f0993e9248e78803abe775dd1142~mv2.png/v1/fill/w_644,h_359,al_c,q_80,usm_0.66_1.00_0.01/7f4a79_8984f0993e9248e78803abe775dd1142~mv2.webp",
+      "name" : "Planeta Social ",
+      "site" : "http://planetasocial.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdh_CHrdMb_yMYwxCW" : {
+      "active" : true,
+      "category" : "1546888348271",
+      "description" : "A Brisanet é uma empresa que permite que moradores de 115 mil residências de 150 cidades de Ceará, Rio Grande do Norte e Paraíba se conectem ao mundo em alta velocidade por fibra ótica levando internet a baixo custo em locais esquecidos pelas grandes corporações.",
+      "id" : "1546888654119",
+      "logo" : "https://www.brisanet.com.br/assets/images/brisanet-logo.png?v=1120054be6",
+      "name" : "Brisanet",
+      "site" : "https://www.brisanet.com.br/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdhq4sCceE9QMzuCHx" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "A Muove Brasil é um negócio de impacto social cujo objetivo é qualificar a tomada de decisão de pessoas e organizações em municípios brasileiros em diversos temas como desenvolvimento econômico, finanças públicas, saúde, educação e outros. Nossas soluções auxiliam a tomada de decisão de atores locais como gestores públicos, sociedade, empresas, investidores e organizações sociais.",
+      "id" : "1546888110162",
+      "logo" : "https://www.muovebrasil.com/media/images/logo-muove-home.svg",
+      "name" : "Muove Brasil",
+      "site" : "https://www.muovebrasil.com",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdi4i8tGuWN-ZjIKO7" : {
+      "active" : true,
+      "category" : "",
+      "description" : "O Videocamp é uma plataforma que reúne filmes de impacto disponíveis para exibições públicas gratuitas - basta reunir cinco pessoas para poder assistir. Por filmes de impacto, a plataforma define como aqueles que apontam causas urgentes, que retratam situações que precisam ser destacadas, que ampliam o nosso olhar para temas sensíveis e que, sobretudo, promovem um mundo mais justo, solidário, sustentável e plural. O objetivo é a democratização do acesso à cultura e à informação. Mais da metade dos exibidores se declara “educador/educadora”, e usam os filmes  para promover belas reflexões em sala de aula. Já foram realizadas mais de 20 mil exibições em mais de 90 países, para mais de 800 mil espectadores. Também atuam no fomento à produção audiovisual por meio de editais.",
+      "id" : "1546888174154",
+      "logo" : "https://cdn.videocamp.com/images/logo-yellow.svg",
+      "name" : "Videocamp",
+      "site" : "http://www.videocamp.com/pt",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdiJHzRY1pao_cMCYw" : {
+      "active" : true,
+      "category" : "7",
+      "description" : "A Base Colaborativa é uma organização sem fins lucrativos que sustenta o ideal de não ser definida por um único campo de atuação. É um espaço coletivo e aberto a novas propostas e ideias que permite acolher e explorar, sob diversas óticas, a verdadeira revolução da inovação social. Sempre com embasamento científico e metodologias comprovadas e reconhecidas, inclusive no cenário internacional, tem programas e projetos sociais que focam no desenvolvimento de pessoas para que sejam capazes de aplicar e multiplicar seus aprendizados e experiências em influência da transformação positiva do país. Mais do que resolver e atender à crises pontuais, objetivam empoderar indivíduos para que todos se tornem agentes de transformação. Atua desde 2010.",
+      "id" : "1546888233856",
+      "logo" : "https://static.wixstatic.com/media/35cd7b_04ca57ba72374d9ba164e7a87096f359~mv2.jpeg/v1/fill/w_215,h_99,al_c,q_80,usm_0.66_1.00_0.01/35cd7b_04ca57ba72374d9ba164e7a87096f359~mv2.webp",
+      "name" : "Base Colaborativa",
+      "site" : "https://www.basecolaborativa.org/",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVdiqncc_JiW-1R7JtM" : {
+      "active" : true,
+      "category" : "1546888348271",
+      "description" : "Realizado pelo Observatório de Favelas, o Imagens do Povo é um centro de documentação, pesquisa, formação e inserção de fotógrafos populares no mercado de trabalho. Criado em 2004, o programa alia a técnica fotográfica às questões sociais, registrando o cotidiano das favelas através de uma percepção crítica, que leve em conta o respeito aos direitos humanos e à cultura local. O Imagens do Povo desenvolve ações nas esferas da educação, comunicação e arte, com objetivo de democratizar o acesso à linguagem fotográfica, apresentando a fotografia como técnica de expressão e visão autoral da sociedade.",
+      "id" : "1546888375237",
+      "logo" : "http://www.imagensdopovo.org.br/wp-content/themes/ip/imagens/global/logo.jpg",
+      "name" : "Imagens do Povo",
+      "site" : "http://www.imagensdopovo.org.br",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     }
   },
   "sites_EN" : {
@@ -2797,12 +3064,12 @@
       "active" : true,
       "category" : "1",
       "description" : "Trabalham com hortas verticais e hortas urbanas coletivas.",
-      "id" : "1524759865670",
+      "id" : "1546868724903",
       "location" : "São Paulo (SP)",
-      "logo" : "",
+      "logo" : "http://www.pedefeijao.com.br/wp-content/uploads/2018/03/PeDeFeij%C3%A3o-MarcaHorizontal-Branca.png",
       "name" : "Pé de Feijão",
       "site" : "http://pedefeijaosp.com/",
-      "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz03"
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     },
     "-LB1lPgHJMRkWiuMrHNB" : {
       "active" : true,
@@ -2923,6 +3190,19 @@
       "logo" : "",
       "name" : "novo site 2",
       "site" : "www.teste.com",
+      "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
+    },
+    "-LVJsSshOs6Gnzm-ptaP" : {
+      "active" : true,
+      "category" : "1",
+      "description" : "ultimo teste",
+      "id" : "1546538572755",
+      "index" : 3,
+      "key" : "-LVJsSshOs6Gnzm-ptaP",
+      "location" : "",
+      "logo" : "",
+      "name" : "teste3",
+      "site" : "www.teste.com.br",
       "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     }
   },
@@ -3496,295 +3776,18 @@
       "userId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1"
     }
   },
-  "sites_sugest" : [ null, null, {
-    "active" : true,
-    "category" : "",
-    "description" : "Atualmente, a MMM está organizada em 20 estados do  Brasil. Organizadas em núcleos e comitês, nas cidades e estados, e há duas maneiras para participar. Os grupos de mulheres que tenham identidade política com a MMM, podem aderir coletivamente. Mas, as mulheres que não são de nenhum grupo podem entrar em contato direto com os núcleos e comitês para se integrar na dinâmica da Marcha. Na Marcha vivemos a diversidade não apenas do ponto de vista internacional, mas também entre as próprias brasileiras. Somos tão diferentes e tão iguais. Temos uma identidade política construída cotidianamente através de um processo simbólico contínuo com gente lutando para transformar o mundo.",
-    "id" : "99",
-    "logo" : "",
-    "name" : "Marcha Mundial das Mulheres",
-    "site" : "http://www.marchamundialdasmulheres.org.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz101"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Awaken Love é o movimento de transformação coletiva para despertar o amor. Visa estimular todo ser humano a colocar todos os seus dons e seus talentos a serviço do amor.",
-    "id" : "114",
-    "logo" : "",
-    "name" : "Awaken Love",
-    "site" : "http://www.awakenlove.global/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz116"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Fast Food da Política, com o objetivo de promover a compreensão do Estado e da Política Brasileira de maneira dinâmica e criativa. A organização desenvolve e aplica processos de educação compostos por metodologias, jogos, técnicas de gamificação – uso de elementos e estruturas de jogos para desenvolver habilidades e compreender conceitos – e dinâmicas como ferramentas para disseminar o aprendizado de conteúdos complexos. Os processos de experimentação, tentativa e erro utilizados pela gamificação são excelentes para o desenvolvimento de senso crítico e análise. Os jogos são uma ferramenta poderosa para disseminar informações, iniciar reflexões e incentivar a elaboração de propostas de mudança sobre as relações entre a população e o Poder Público. Por isso, a Fast Food da Política utiliza essas metodologias em seus processos pedagógicos.",
-    "id" : "94",
-    "logo" : "",
-    "name" : "Fas Food da Política",
-    "site" : "http://fastfooddapolitica.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz96"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Projeto Brasil27 surgiu com o intuito de dar o próximo passo necessário para auxiliar e encorajar atuais e futuros empreendedores sociais. Como? Respondendo a duas simples perguntas: 1.Quais são os negócios sociais mais bem sucedidos do brasil? 2.Como eles funcionam?  A maioria dos negócios até então mapeados no Brasil concentravam-se no Sul e Sudeste. No entanto, os desafios dos negócios e necessidades sociais destas regiões diferem significativamente dos das demais. Como encontrar estes outros negócios que não estavam mapeados por nenhuma instituição? Como chegar até eles? Como captar recursos financeiros para visitá-los? Como analisá-los? Como divulgar os aprendizados? O Brasil27 investiga e a origem da ideia, como o projeto foi estruturado, a viabilização, as metodologias e processos de mapeamento e análise dos negócios sociais.  Esperam que ao divulgar as histórias destes empreendedores, explicar seus modelos de negócio e compartilhar as lições por eles aprendidas, mais pessoas engajem-se em iniciativas que ajudem a mudar a realidade para melhor.",
-    "id" : "74",
-    "logo" : "",
-    "name" : "Brasil27",
-    "site" : "https://www.dropbox.com/s/r0fxo451kedkiyn/Brasil27_livro.pdf?dl=0",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz76"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O pessoal do Social Docs se dedica a uni governos, empresas, organizações e pessoas para pensar soluções para demandas sociais. Contando boas histórias a partir do poder da comunicação, buscam combater a alienação e não fomentá-la. Por isso, contam histórias que geram impacto social e precisam se destacar em meio ao turbilhão de informações no qual vivemos. Acreditam que o engajamento em causas importantes é urgente. É preciso fazer algo hoje, agora.  Mais que mostrar os problemas, nossos filmes apontam e convidam para soluções. Contamos histórias para alcançar cada vez mais pessoas e inspirar transformações, visando um mundo mais justo, sustentável e socialmente equilibrado. ",
-    "id" : "79",
-    "logo" : "",
-    "name" : "Social Docs",
-    "site" : "https://www.socialdocs.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz81"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Instituto Brasileiro de Estudos e Apoio Comunitário – IBEAC foi criado na cidade de São Paulo em 1981. Nesses 36 anos o IBEAC se mantém focado em potencializar direitos, educação e oportunidades para as pessoas, notadamente de comunidades vulneráveis. A missão é atuar no fortalecimento da educação e de uma cultura de direitos humanos,  de cidadania participativa e solidária.",
-    "id" : "89",
-    "logo" : "",
-    "name" : "Instituto Brasileiro de Estudos e Apoio Comunitário",
-    "site" : "http://www.ibeac.org.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz91"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O bynd é uma plataforma de caronas para organizações. A ideia é melhorar a experiência no trânsito! Já que você passa 10% do seu dia dentro do carro, porque não transformar isso em uma experiência positiva? Os pilares do projeto são melhorar a experiência do usuário, permitindo o contato entre pessoas que tem interesses em comum para viver boas experiências; economizar com transporte, combustível, estacionamento e a prática da sustentabilidade, compartilhando carros provocando a redução da pegada de carbono",
-    "id" : "78",
-    "logo" : "",
-    "name" : "Bynd",
-    "site" : "https://bynd.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz80"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Co-Criança é um projeto que tem como objetivo fortalecer o território da criança na cidade através da ressignificação dos espaços livres e de lazer do Jardim Elisa Maria, na Brasilândia, em conjunto com as crianças que habitam o bairro.",
-    "id" : "111",
-    "logo" : "",
-    "name" : "Co-Criança",
-    "site" : "https://www.facebook.com/Co-Crian%C3%A7a-1364657460281510/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz113"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Instituto Cidade Democrática nasceu em novembro de 2008 e já atuou em 16 cidades, envolvendo cerca de 20 mil pessoas. Hoje se consolida como um Think and Do Tank brasileiro de participação social. Levantamos e analisamos dados e produzimos e compartilhamos conhecimento para alavancar o poder da sociedade civil. Utilizando  ferramentas como mapeamento e análise de redes e tecnologia social.",
-    "id" : "45",
-    "logo" : "",
-    "name" : "Insituto Cidade Democrática",
-    "site" : "https://instituto.cidadedemocratica.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz47"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Énois é uma agência escola de jornalismo para jovens de 16 a 21 anos. Tem como missão produzir conteúdo que dialogue com outros jovens e comunique o que rola nas cidades e, principalmente, nas periferias. A Escola de Jornalismo trabalha com profissionais reconhecidos no mercado, tem videoaulas rápidas e simples, material de apoio e exercícios. Apresenta ferramentas para que o jovem analise criticamente a mídia, estimulando a busca por informação e a investigação sobre diversos temas. Pra completar, oferece um espaço para a publicação e divulgação dos trabalhos dos estudantes.",
-    "id" : "51",
-    "logo" : "",
-    "name" : "Énois",
-    "site" : "http://escoladejornalismo.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz53"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Fundada em 2013, a Reviva é formada por um grupo sólido, comprometido e altamente motivado de voluntários e parceiros, a organização sem fins lucrativos identifica e ampara comunidades remotas e carentes fornecendo um tratamento de água movido à energia solar –  em âmbito nacional e internacional. Além do tratamento de água, que é um dos principais focos, desenvolvem planos de ação que envolvam a melhoria da qualidade de vida dessas comunidades: seja levando materiais escolares, roupas, brinquedos, ou até mesmo tratamento médico e odontológico. Projetos aplicados no Brasil e Moçambique.",
-    "id" : "62",
-    "logo" : "",
-    "name" : "Reviva",
-    "site" : "http://reviva.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz64"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Ilumina Rio é um Projeto de intervenção urbana de (co)criação, fundado em 5 de maio de 2014, onde as relações sociais encontram novos significados a partir de uma experiência coletiva. Através da música e das artes nasce um espaço de acolhimento fundado nos valores essenciais humanos como o Amor, a União, a Conexão, Verdade e Confiança. Utilizando a música como principal ferramenta, a intenção é transformar a relação com os espaços públicos da cidade, a partir da integração das pessoas que por eles circulam.\r\n",
-    "id" : "100",
-    "logo" : "",
-    "name" : "Ilumina Rio",
-    "site" : "https://www.facebook.com/iluminario1/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz102"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Historiorama é um projeto de educação e comunicação a partir do Campo Limpo, periferia da zona sul de São Paulo, que trabalha fortalecendo o direito que todas e todos tem de contar a história do mundo.No primeiro semestre de 2018, a Historiorama faz acontecer dois projetos próprios, sendo um laboratório popular de comunicação para jovens focado em tradução de direitos sociais para pessoas acima de 40 anos que moram nas margens, e um podcast semanal que usa técnicas de contação de histórias para narrar como nascem as ideias de quem vive nas margens das  cidades do país.",
-    "id" : "95",
-    "logo" : "",
-    "name" : "Historiorama",
-    "site" : "https://www.historiorama.com/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz97"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Programa de Apoio para a Recolocação dos Refugiados – PARR, foi criado em Outubro de 2011 pela EMDOC, consultoria especializada em imigração, transferências para o exterior e relocation, com o apoio do Alto Comissariado das Nações Unidas para os Refugiados (ACNUR) e o Centro de Referência para Refugiados da Caritas Arquidiocesana de São Paulo. O intuito é promover a integração de refugiados e solicitantes de refúgio na sociedade brasileira por meio da inclusão laboral. A convicção de que não há melhor maneira para facilitar a adaptação dessas pessoas no país do que assegurar que eles atinjam a autossuficiência por meio de seu próprio trabalho é nossa premissa central. Para tanto, temos por objetivo sensibilizar a sociedade e, principalmente, o empresariado nacional para a assimilação da capacidade que refugiados e solicitantes de refúgio têm de contribuir para a economia do Brasil.",
-    "id" : "84",
-    "logo" : "",
-    "name" : "PARR - Programa de Apoio a Recolocação de Refugiados",
-    "site" : "https://www.refugiadosnobrasil.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz86"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Guri Santa Marcelina é um programa de edução musical e inclusão social para crianças e adolescentes de 6 a 18 anos da Grande São Paulo.",
-    "id" : "104",
-    "logo" : "",
-    "name" : "Projeto Guri",
-    "site" : "http://gurisantamarcelina.org.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz106"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O PorQueNão? é uma mídia interdependente, difusora de iniciativas para uma sociedade mais inteligente e integrada. A missão do coletivo que forma o PorQueNão? é interligar pessoas que se dedicam a projetos capazes de transformar positivamente a realidade.",
-    "id" : "49",
-    "logo" : "",
-    "name" : "PorQueNão?",
-    "site" : "http://www.porquenao.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz51"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Imagina na Copa é um projeto de mobilização que busca promover uma virada para o Brasil até 2014. Como? Mostrando que pessoas como você têm, sim, o poder de construir um país melhor, despertando cada um para seu potencial de transformação.Nosso trabalho é divulgar iniciativas reais que ajudam a vida das pessoas e também reunir e organizar gente que está a fim de construir um país melhor. Para nós, a vitória do Brasil na Copa do Mundo é muito mais importante fora dos campos. Estamos vivendo um momento único para mudar nossa atitude e aproveitar ao máximo para botar a mão na massa. ",
-    "id" : "77",
-    "logo" : "",
-    "name" : "Imagina na Copa",
-    "site" : "http://imaginanacopa.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz79"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O SampaPé! foi fundado em julho de 2012 por 4 jovens que acreditaram que incentivar as pessoas a andarem a pé por São Paulo era a melhor forma de melhorar a relação das pessoas com a cidade e criar uma cidade melhor. Desde então o SampaPé! atua na cidade de forma a se tornar a vida urbana mais divertida, leve e humana através de projetos que envolvam melhorar a experiência do caminhar. Desde caminhadas culturais, mapeamentos de bancos para sentar, programas em rádios e mobilizações sociais. Sendo o caminhar um meio e um fim.",
-    "id" : "44",
-    "logo" : "",
-    "name" : "Sampa a pé",
-    "site" : "http://leticialedasabino.wixsite.com/sampapeorg",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz46"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Iniciativa formada por uma rede do terceiro setor, com o objetivo de viabilizar o uso da malha da Estrada de Ferro Leopoldina com finalidades turísticas. Biciclotrem Cataguases-MG foi certificado como \"Tecnologia Social\" pela Fundação Banco do Brasil (FBB). Segundo a FBB, \"Tecnologias Sociais\", ou \"Tecnologias Apropriadas\" são produtos, técnicas ou metodologias reaplicáveis e inovadoras, desenvolvidas na interação com a comunidade e que representem efetivas soluções de transformação social às diversas realidades aonde elas se aplicam.",
-    "id" : "109",
-    "logo" : "",
-    "name" : "Biciclotrem",
-    "site" : "https://www.facebook.com/biciclotrem/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz111"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Politize! é uma associação sem fins lucrativos de direito privado, fundada em 2015. Busca levar a educação política de alto nível a TODO o Brasil, superando quaisquer barreiras geográficas, culturais e socioeconômicas. Também intenciona formar pessoas de todos os recortes sociais, especialmente os jovens, chegando às escolas de norte a sul. Com isso, querem se tornar a principal referência nacional no assunto, como ser um dos principais atores responsáveis por transformar a cultura política do Brasil, inspirando iniciativas similares em outros países. ",
-    "id" : "81",
-    "logo" : "",
-    "name" : "Politize!",
-    "site" : "http://www.politize.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz83"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Nascido em 2017, o Se Vira, Mulher! oferece mini-cursos de manutenção residencial básica, que ensinam a fazer pequenos reparos e instalações elétricas e civis. Feito exclusivamente de e para mulheres, nosso público abrange toda e qualquer mulher acima dos 16 anos de idade.",
-    "id" : "83",
-    "logo" : "",
-    "name" : "Se vira, mulher",
-    "site" : "https://www.seviramulher.com/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz85"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Pé de Feijão é um projeto que consiste em vender oficinas de educação alimentar utilizando hortas como meio de comunicação. O processo de instalar as hortas em locais inusitados (no topo de prédios corporativos, em quintais de ONGs) torna-a um meio e local para transmitir com mais sucesso ensinamentos sobre saúde, alimentação e sustentabilidade. Atua desde 2013.",
-    "id" : "48",
-    "logo" : "",
-    "name" : "Pé de Feijão",
-    "site" : "http://pedefeijao.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz50"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Instituto Sou da Paz é uma organização não governamental* que há mais de quinze anos trabalha para reduzir a violência no Brasil. Sua missão é contribuir para a efetivação de políticas públicas de segurança e prevenção da violência que sejam eficazes e pautadas pelos valores da democracia, da justiça social e dos direitos humanos. Partindo de diagnósticos que possibilitam conhecer a fundo as dinâmicas de violências, o Sou da Paz defende e coloca em prática um modelo de segurança pública sistêmico: que considera ações para prevenir a ocorrência de situações e também o que deve ser feito pelo aparato de segurança pública e justiça criminal para responder a estes casos.\r\n",
-    "id" : "103",
-    "logo" : "",
-    "name" : "Instituto Sou da Paz",
-    "site" : "http://www.soudapaz.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz105"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Somos uma iniciativa social do Campo Limpo, zona sul de São Paulo, que usa as Tecnologias de Informação e Comunicação para o acesso e a ampliação de direitos sociais, culturais e econômicos da juventude. Liderada por jovens do Campo Limpo, a Escola de Notícias atuou como coletivo desde 2011 e foi fundada em 2014. Com metodologia própria, criou uma jornada de aprendizagem aplicada na Escola Comunitária de Comunicação – ECOMCOM, um programa de 3 ciclos que envolve jovens entre 16 e 24 anos, moradores e moradoras ou estudantes de escolas públicas e particulares da região do Campo Limpo e Taboão da Serra. Seguindo os princípios de um negócio social, a Escola de Notícias oferece serviços nas áreas de comunicação e formação, reinvestindo os recursos na ECOMCOM.",
-    "id" : "96",
-    "logo" : "",
-    "name" : "Escola de Notícias",
-    "site" : "http://escoladenoticias.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz98"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Um jogo que conecta investidores sociais e organizações da sociedade civil rumo à sustentatibilidade.",
-    "id" : "59",
-    "logo" : "",
-    "name" : "Planeta Social ",
-    "site" : "http://planetasocial.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz61"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Brisanet é uma empresa que permite que moradores de 115 mil residências de 150 cidades de Ceará, Rio Grande do Norte e Paraíba se conectem ao mundo em alta velocidade por fibra ótica levando internet a baixo custo em locais esquecidos pelas grandes corporações.",
-    "id" : "54",
-    "logo" : "",
-    "name" : "Brisanet",
-    "site" : "https://www.brisanet.com.br/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz56"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Brasil Tomorrow tem o objetivo de criar um Brasil baseado em colaboração para ampliar oportunidades de geração de impacto positivo. Queremos fortalecer a rede de inovação social nesse nosso Brasilzão e conectar três pilares da sociedade: cidadãos, organizações sociais e empresas privadas. Tudo isso com o respaldo de uma rede internacional já consolidada pela Europe Tomorrow. Nosso objetivo é mapear, conectar e democratizar inovações sociais de destaque no país.",
-    "id" : "76",
-    "logo" : "",
-    "name" : "Brasil Tomorrow",
-    "site" : "http://www.brasiltomorrow.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz78"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Muove Brasil é um negócio de impacto social cujo objetivo é qualificar a tomada de decisão de pessoas e organizações em municípios brasileiros em diversos temas como desenvolvimento econômico, finanças públicas, saúde, educação e outros. Nossas soluções auxiliam a tomada de decisão de atores locais como gestores públicos, sociedade, empresas, investidores e organizações sociais.",
-    "id" : "71",
-    "logo" : "",
-    "name" : "Muove Brasil",
-    "site" : "https://www.muovebrasil.com",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz73"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Participação e vigilância pública sobre as relações entre a economia e a política, buscando o aprofundamento da democracia brasileira. Organização não governamental.",
-    "id" : "102",
-    "logo" : "",
-    "name" : "Instituto Mais Democracia",
-    "site" : "https://www.facebook.com/pg/InsMaisDemocracia/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz104"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "O Videocamp é uma plataforma que reúne filmes de impacto disponíveis para exibições públicas gratuitas - basta reunir cinco pessoas para poder assistir. Por filmes de impacto, a plataforma define como aqueles que apontam causas urgentes, que retratam situações que precisam ser destacadas, que ampliam o nosso olhar para temas sensíveis e que, sobretudo, promovem um mundo mais justo, solidário, sustentável e plural. O objetivo é a democratização do acesso à cultura e à informação. Mais da metade dos exibidores se declara “educador/educadora”, e usam os filmes  para promover belas reflexões em sala de aula. Já foram realizadas mais de 20 mil exibições em mais de 90 países, para mais de 800 mil espectadores. Também atuam no fomento à produção audiovisual por meio de editais.",
-    "id" : "42",
-    "logo" : "",
-    "name" : "Videocamp",
-    "site" : "http://www.videocamp.com/pt",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz44"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "A Base Colaborativa é uma organização sem fins lucrativos que sustenta o ideal de não ser definida por um único campo de atuação. É um espaço coletivo e aberto a novas propostas e ideias que permite acolher e explorar, sob diversas óticas, a verdadeira revolução da inovação social. Sempre com embasamento científico e metodologias comprovadas e reconhecidas, inclusive no cenário internacional, tem programas e projetos sociais que focam no desenvolvimento de pessoas para que sejam capazes de aplicar e multiplicar seus aprendizados e experiências em influência da transformação positiva do país. Mais do que resolver e atender à crises pontuais, objetivam empoderar indivíduos para que todos se tornem agentes de transformação. Atua desde 2010.",
-    "id" : "64",
-    "logo" : "",
-    "name" : "Base Colaborativa",
-    "site" : "https://www.basecolaborativa.org/",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz66"
-  }, {
-    "active" : true,
-    "category" : "",
-    "description" : "Realizado pelo Observatório de Favelas, o Imagens do Povo é um centro de documentação, pesquisa, formação e inserção de fotógrafos populares no mercado de trabalho. Criado em 2004, o programa alia a técnica fotográfica às questões sociais, registrando o cotidiano das favelas através de uma percepção crítica, que leve em conta o respeito aos direitos humanos e à cultura local. O Imagens do Povo desenvolve ações nas esferas da educação, comunicação e arte, com objetivo de democratizar o acesso à linguagem fotográfica, apresentando a fotografia como técnica de expressão e visão autoral da sociedade.",
-    "id" : "53",
-    "logo" : "",
-    "name" : "Imagens do Povo",
-    "site" : "http://www.imagensdopovo.org.br",
-    "userId" : "nxskeZ8lxWaOqh6KXdf5L3S5yz55"
-  } ],
+  "sites_sugest_dev" : {
+    "-LVJ75Qwheq8x4qw8aa1" : {
+      "active" : true,
+      "category" : "1",
+      "description" : "apenas um teste",
+      "id" : "1546525894034",
+      "location" : "",
+      "logo" : "",
+      "name" : "teste",
+      "site" : "www.teste.com.br"
+    }
+  },
   "sites_trash" : {
     "-LAXsOb65Bjh8G8n4eEf" : {
       "active" : true,
@@ -3891,7 +3894,7 @@
     "6" : {
       "creatorId" : "lSu1P3rTbWdhHSv3CDvtxFlJnp32",
       "email" : "betterworldemail@gmail.com",
-      "role" : "admin"
+      "role" : "editor"
     },
     "-LUg3vTcTQAa3iPPcbXF" : {
       "creatorId" : "b9QhlZmPSaeAvzZEk3ANPyaWH4k1",
