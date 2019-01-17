@@ -78,7 +78,7 @@ class Home extends Component {
                 <div className="col-twelve">
                    <section>  
                         <div className="content-media">						
-		                    <img src="/images/hands-around-world-backgrounds-wallpapers.jpg" alt="" style={{width:1000, height:400}} />						  
+		                    <img src="/images/hands-around-world-backgrounds-wallpapers.jpg" alt=""  />						  
                         </div>
 
                         <div className="primary-content">
