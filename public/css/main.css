@@ -55,12 +55,7 @@ html {
 
 }
 
-@media only screen and (max-width:400px) {
-	html {
-		font-size: 9.411764705882353px;
-	}
 
-}
 
 html,
 body {
@@ -76,7 +71,18 @@ body {
 }
 
 main {
-	margin-top : 20%;
+	margin-top : 12%;
+}
+
+@media only screen and (max-width:400px) {
+	html {
+		font-size: 9.411764705882353px;
+	}
+
+	main {
+		margin-top : 12%;
+	}
+
 }
 
 /* ------------------------------------------------------------------- 
@@ -2233,7 +2239,7 @@ header .logo a {
  *
  * ------------------------------------------------------------------- */
 #page-header {
-	padding: 4.2rem 0 0 0;
+	padding: 2rem 0 0 0;
 	text-align: center;
 }
 
@@ -2254,9 +2260,6 @@ header .logo a {
  *  11. content wrap - (_layout.scss)
  *
  * ------------------------------------------------------------------- */
-#content-wrap {
-	margin-top: 20%;
-}
 
 #content-wrap .row {
 	max-width: 950px;
@@ -2330,12 +2333,17 @@ header .logo a {
 }
 
 @media only screen and (max-width:960px) {
+
+	main {
+		margin-top: 30%; 
+	}
+
 	#content-wrap .row {
 		max-width: 880px;
 	}
 	#content-wrap .primary-content {
-		padding-left: 4rem;
-		padding-right: 4rem;
+		padding: 4rem;
+		
 	}
 	#content-wrap .primary-content img {
 		max-width: 100%;
@@ -2344,9 +2352,17 @@ header .logo a {
 
 }
 
+@media only screen and (max-width:960px) and (orientation: landscape) {
+	main {
+		margin-top: 10%; 
+	}
+
+}
+
 @media only screen and (max-width:768px) {
+
 	#content-wrap {
-		margin-top: 4.8rem;
+		margin-top: 35% ;
 	}
 	#content-wrap .primary-content {
 		padding-left: 0;
@@ -2355,6 +2371,15 @@ header .logo a {
 	#content-wrap .entry-title,
 	#content-wrap .page-title {
 		font-size: 3rem;
+	}
+
+}
+
+@media only screen and (max-width:768px) and (orientation: landscape) {
+
+	#content-wrap,
+	main {
+		margin-top: 20%; 
 	}
 
 }

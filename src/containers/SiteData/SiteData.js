@@ -325,7 +325,7 @@ class SiteData extends Component {
 
         const beginTitle = this.props.isAuthenticated?resourceMessage('NEW_SITE_TITLE'):resourceMessage('SUGGEST_SITE_TITLE');
         return (
-            
+            <div className={classes.SiteDataContainer}>
                 <div className={classes.SiteData}>
                     <h3>{beginTitle} <Bundle message="NEW_SITE_TITLE2" /></h3>
                     <div>
@@ -336,6 +336,7 @@ class SiteData extends Component {
                         <Button btnType="Success" clicked={this.ok}><Bundle message="OK" /></Button>
                     </Modal>    
                 </div>
+            </div>                
             
         );
     }
