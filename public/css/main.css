@@ -74,6 +74,17 @@ main {
 	margin-top : 12%;
 }
 
+[disabled] {
+	color: darkgray;
+ }
+ 
+ button:active[disabled],
+ button:hover[disabled]{
+	 color: darkgrey;
+	 cursor: not-allowed;
+	 
+ }
+
 @media only screen and (max-width:400px) {
 	html {
 		font-size: 9.411764705882353px;
