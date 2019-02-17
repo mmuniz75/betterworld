@@ -104,6 +104,7 @@ class UsersContainer extends Component {
         }
         
         return (
+            <div className={classes.UsersContainer}>
                 <div className={classes.Users}>
                     <a onClick={() => this.addUser()} style={{cursor: 'pointer'}} >
                                     <i className="fas fa-plus fa-lg" title={resourceMessage('USER_ADD')} />
@@ -116,6 +117,7 @@ class UsersContainer extends Component {
                         <Button btnType="Danger" clicked={this.cancelDelete}><Bundle message="NO" /></Button>
                     </Modal> 
                 </div>
+            </div>
         )
     }
 }

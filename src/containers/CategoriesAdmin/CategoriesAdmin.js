@@ -168,6 +168,7 @@ class CategoriesAdmin extends Component {
                                 :null;
         
         return (
+            <div className={classes.CategoriesContainer}>
                 <div className={classes.Categories}>
                     {addButton}
                     <br/><br/>
@@ -181,6 +182,7 @@ class CategoriesAdmin extends Component {
                         <h3><Bundle message="CATEGORY_UPDATED" /></h3>
                     </Modal>     
                 </div>
+            </div>
         )
     }
 }

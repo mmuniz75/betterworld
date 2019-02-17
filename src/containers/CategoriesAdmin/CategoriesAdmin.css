@@ -1,9 +1,13 @@
 .Categories { 
-    width: 100%;
-    align-content: center;
+    width: 80%;
     list-style:none;
-    max-width: 600px;
-    margin: 10px auto;
-    margin-bottom: 50px;
+    max-width: 60rem;
+    margin-top: 2rem;
  }
  
+ .CategoriesContainer {
+     width: 100%;
+     display: flex;
+     
+     justify-content: center;
+ }
