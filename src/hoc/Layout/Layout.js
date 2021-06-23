@@ -83,7 +83,7 @@ class Layout extends Component {
 
                         <div className="col-twelve">
                             <div className="copyright">
-                                <span>© Copyright 2019</span> 
+                                <span>© Copyright 2019 | v1.0</span> 
                                 <span>Design by Muniz</span>		         	
                             </div>
 
